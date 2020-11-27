@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewBag.Title = "KhaoSatHS";
+    Layout = "~/Views/Shared/_Layout_KhaoSat.cshtml";
+}
+<style>
+    .ntd input
+    {
+        max-width:100%;
+       
+    }
+    .ntd textarea
+    {
+        max-width:100%;
+        width:100%;
+        resize:none
+    }
+    .group-tv {
+        padding: 0 5px;
+    }
+    input[type="radio"] {
+        max-width: 10% !important;
+        float: left;
+    }
+
+    .lb_check {
+        font-weight: 100 !important;
+        text-align: left;
+    }
+</style>
+<div class="dudoan" style="margin-top:50px">
+    <h2 style="font-weight:bold">NHU CẦU TUYỂN DỤNG</h2>
+    <h5 style="margin-bottom: 10px; text-align: center; font-weight: bold; color: red;padding:7px ">Quản trị mạng, vận hành hệ thống, nhân viên văn phòng, quản lý dự án,…</h5>
+    <div class="form-advisory">
+        <div class="content-form">
+            <div class="group-tv">
+                <label>1.Tên công ty/ doanh nghiệp:</label>
+                <input type="text" id="name" class="line-animation" /><div class="line"></div>
+            </div>
+
+            <div class="group-tv">
+                <label>2.Quy mô:</label>
+                <input type="text" id="quymo" class="line-animation" /><div class="line">
+                </div>
+
+            <div class="group-tv">
+                <label>3.Lĩnh vực áp dụng:</label>
+                <textarea id="linhvuc" rows="5"></textarea>
+            </div>
+
+            <div class="group-tv">
+                <label>4.Nền tảng ứng dụng:</label>
+                <textarea id="linhvuc" rows="5"></textarea>
+            </div>
+
+            <div class="group-tv">
+                <label>5.Môi trường ứng dụng/vận hành:</label>
+                <textarea id="linhvuc" rows="5"></textarea>
+            </div>
+            <div class="group-tv">
+                <label>6. Kinh nghiệm làm việc</label>
+            </div>
+            <div class="group-cb">
+                <input type="radio" name="exp" id="exp-lv" /> <label for="21">Không cần kinh nghiệm</label>
+            </div>
+            <div class="group-cb">
+                <input type="radio" name="exp" id="exp-lv" /> <label for="22">01 năm</label>
+            </div>
+            <div class="group-cb">
+                <input type="radio" name="exp" id="exp-lv" /> <label for="23">05 năm</label>
+            </div>
+            <div class="group-cb">
+                <input type="radio" name="exp" id="35" /> <label for="35">Khác:</label>
+                <div class="group-tv" style="padding-left:30px"><input style="margin-left: 0px !important" type="text" class="line-animation" /><div class="line"></div></div>
+            </div>
+            <div class="group-tv">
+                <label>7. Xu hướng sử dụng lao động sau khi tuyển dụng:</label>
+            </div>
+            <div class="group-cb">
+                <input type="radio" name="exp" id="exp-lv" /> <label for="21">Sử dụng luôn</label>
+            </div>
+            <div class="group-cb">
+                <input type="radio" name="exp" id="exp-lv" /> <label for="22">Thử việc (1 tháng)</label>
+            </div>
+            <div class="group-cb">
+                <input type="radio" name="exp" id="exp-lv" /> <label for="23">Thử việc (3 tháng)</label>
+            </div>
+            <div class="group-cb">
+                <input type="radio" name="exp" id="exp-lv" /> <label for="23">Phải đào tạo lại</label>
+            </div>
+            <div class="group-cb">
+                <input type="radio" name="exp" id="35" /> <label for="35">Khác:</label>
+                <div class="group-tv" style="padding-left:30px"><input style="margin-left: 0px !important" type="text" class="line-animation" /><div class="line"></div>
+            </div>
+            <div class="group-tv">
+                <label>8. Mức lương cơ bản khi tuyển dụng:</label>
+                <input type="text" id="name1" class="line-animation" /><div class="line"></div>
+            </div>
+            <div class="group-tv">
+                <label>9. Thời gian tăng lương sau khi hết thời gian thử việc:</label>
+                <input type="text" id="name2" class="line-animation" /><div class="line"></div>
+            </div>
+            <div class="group-tv">
+                <label>10. Chế độ chính sách cho nhân viên:</label>
+                <textarea rows="5"></textarea>
+            </div>
+            <div class="group-tv">
+                <label>11. Nhu cầu tuyển dụng:</label>
+                <textarea rows="5"></textarea>
+            </div>
+            <a class="btn-dudoan" id="send_khaosat" href="#result">Gửi khảo sát</a>
+
+        </div>
+    </div>
+             
+        </div>
+        </div>
+    </div>
+
+        <script>
+            $(document).ready(function () {
+                $(".dropdown").removeClass("active");
+                $(".list_dropks").css("display", "none");
+                $(".list_dn").css("display", "block");
+                $(".dn-drop").addClass("active");
+                $(".dn_child").removeClass("active");
+                $(".dn_2").addClass("active");
+            });
+        </script>

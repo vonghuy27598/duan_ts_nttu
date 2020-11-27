@@ -1,0 +1,39 @@
+﻿@model IEnumerable<AppTS.ViewModels.MenuView>
+<div class="container">
+    <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+        <a href="" class="scrollto"><img src="~/Content/img/logo.jpg" alt="" class="img-fluid"></a>
+    </div>
+
+    <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+            <li class="drop-down sv-drop">
+                <a href="">Sinh viên</a>
+                <ul class="list_dropks list_sv">
+                    <li class="sv_child sv_1"><a href="@Url.Action("KhaoSatTinhHinhSV", "KhaoSat")">Tình hình học tập</a></li>
+                    <li class="sv_child sv_2"><a href="@Url.Action("KhaoSatNangLuc", "KhaoSat")">Ngoại ngữ</a></li>
+                </ul>
+            </li>
+            <li class="drop-down hs-drop">
+                <a href="">Học sinh</a>
+                <ul class="list_dropks list_hs">
+                    <li class="hs_child hs_1"><a href="@Url.Action("KhaoSatHS", "KhaoSat")">Năng lực học sinh</a></li>
+                    <li class="hs_child "><a href="@Url.Action("KhaoSatNangLuc", "KhaoSat")">Khảo sát năng lực tư duy</a></li>
+                    <li class="hs_child "><a href="@Url.Action("KhaoSatNangLuc", "KhaoSat")">Khảo sát năng lực khôi A</a></li>
+                    <li class="hs_child "><a href="@Url.Action("KhaoSatNangLuc", "KhaoSat")">Khảo sát năng lực khôi B</a></li>
+                    <li class="hs_child "><a href="@Url.Action("KhaoSatNangLuc", "KhaoSat")">Khảo sát năng lực khôi C</a></li>
+                    <li class="hs_child "><a href="@Url.Action("KhaoSatNangLuc", "KhaoSat")">Khảo sát năng lực khôi D</a></li>
+                    <li class="hs_child "><a href="@Url.Action("KhaoSatNangLuc", "KhaoSat")">Khảo sát năng lực ngoại ngữ</a></li>
+                </ul>
+            </li>
+            <li class="drop-down dn-drop">
+                <a href="">Doanh nghiệp</a>
+                <ul class="list_dropks list_dn">
+                    <li class="dn_child dn_1"><a href="@Url.Action("KhaoSatNTD", "KhaoSat")">Lập trình viên</a></li>
+                    <li class="dn_child dn_2"><a href="@Url.Action("KhaoSatNTD_Khac", "KhaoSat")">Khác</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav><!-- .main-nav -->
+</div>

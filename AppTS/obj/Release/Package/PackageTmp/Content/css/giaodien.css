@@ -1,0 +1,105 @@
+﻿  body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .bg-blue-nttu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #3874e3;
+        height: 50vh;
+        width: 100%;
+        border-bottom-left-radius: 100%;
+        z-index: -1;
+    }
+
+    .child {
+        width: 125px;
+        height:125px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        font-weight: bold;
+        box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.35);
+        text-align: center;
+        visibility: visible;
+        animation-name: fadeInUp;
+    }
+
+    .item-login {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        background-color: #ffffff;
+        color:black
+    }
+
+    .item-tn-nganh {
+        position: absolute;
+        top: 32%;
+        left: 10%;
+        background-image: linear-gradient(white, #3874e3);
+        color:white
+    }
+
+    .item-chatbot {
+        position: absolute;
+        top: 54%;
+        left: 10%;
+        background-color: #3874e3;
+        color: white;
+    }
+
+    .item-contact {
+        position: absolute;
+        top: 76%;
+        left: 10%;
+        background-color: #3874e3;
+        color: white;
+    }
+
+    .item-about {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        background-color: #ffffff;
+    }
+
+    .item-infor-daotao {
+        position: absolute;
+        top: 32%;
+        right: 10%;
+        background-color: #ffffff;
+    }
+
+    .item-pats {
+        position: absolute;
+        top: 54%;
+        right: 10%;
+        background-image: linear-gradient(white, #3874e3);
+        color: white;
+    }
+
+    .item-dkxt {
+        position: absolute;
+        top: 76%;
+        right: 10%;
+        background-color: #3874e3;
+        color: white;
+    }
+    .d-lg-none {
+        display: none !important;
+    }
+    .child a {
+        font-size: calc(15px + (15 - 12) * ((100vw - 300px) / (1600 - 300)));
+    }
+
+@media all and (min-width:650px ) and (min-height:1000px){
+    .child{
+        width:200px;
+        height:200px;
+    }
+}

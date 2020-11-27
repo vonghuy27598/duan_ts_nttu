@@ -1,0 +1,648 @@
+﻿
+@{
+    ViewBag.Title = "TamLy";
+    Layout = "~/Views/Shared/_Layout_TuVan.cshtml";
+}
+
+<style>
+    body {
+        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .text {
+        font-size: 20px
+    }
+
+    label {
+        font-weight: normal
+    }
+
+    .btn-dudoan {
+        background-color: #217bbf;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    body {
+        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+</style>
+<section id="about">
+    <div class="container">
+
+        <header class="section-header">
+            <h4 style="margin-top:40px">XÁC ĐỊNH KIỂU TÂM LÝ VÀ KHÍ CHẤT</h4>
+        </header>
+
+        <div class="row about-container">
+            <div class="col-lg-6 content order-lg-1 order-2">
+                <p class="text" id="text">
+                    1.	Bạn có thường xuyên bị lôi cuốn vào những cảm tưởng, những ý tưởng mới mẻ hoặc đi tìm nguồn cảm xúc mạnh mẽ để giải buồn và làm mình phấn chấn lên không?
+                </p>
+                <div id="1" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs1" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs1" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    2.	 Bạn có thường xuyên cảm thấy cần có những người ý hợp tâm đầu để động viên và an ủi mình không?
+                </p>
+                <div id="2" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs2" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs2" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    3.	Bạn là người vô tư, không bận tâm đến điều gì phải không?
+                </p>
+                <div id="3" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs3" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs3" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    4.	Bạn cảm thấy rất khó khăn khi phải từ bỏ những ý định của mình hoặc phải trả lời người khác chữ “không” phải không?
+                </p>
+                <div id="4" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs4" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs4" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    5.	Bạn có cân nhắc, suy nghĩ trước khi hành động không?
+                </p>
+                <div id="5" class="text" data-id="2">
+                    <input onclick="" type="radio" name="needs5" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs5" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    6.	Khi đã hứa làm một việc gì, bạn có luôn luôn giữ lời hứa không? Bất kê lời hứa đó có thuận lợi với mình hay không?
+                </p>
+                <div id="6" class="text" data-id="4">
+                    <input onclick="" type="radio" name="needs6" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs6" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    7.	Bạn thường hay thay đổi tâm trạng: lúc vui, lúc buồn phải không?
+                </p>
+                <div id="7" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs7" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs7" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    8.	Bạn có hay nói năng, hành động một cách bột phát và vội vàng không suy nghĩ không?
+                </p>
+                <div id="8" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs8" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs8" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    9.	Có khi nào bạn cảm thấy mình là người bất hạnh mà không có nguyên nhân rõ ràng không?
+                </p>
+                <div id="9" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs9" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs9" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    10.	Bạn có thể xếp mình vào loại người không bao giờ phải lúng túng, ấp úng, mà luôn luôn sẵn sàng đối đáp với mọi nhận xét hoặc bất chấp tất cả để tranh cãi đến cùng hay không?
+                </p>
+                <div id="10" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs10" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs10" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    11.	Bạn có cảm thấy rụt rè, ngượng ngùng khi muốn bắt chuyện với một bạn khác giới dễ mến chưa quen biết hay không?
+                </p>
+                <div id="11" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs11" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs11" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    12.	Thỉnh thoảng bạn có nổi nóng và tức giận phải không?
+                </p>
+                <div id="12" class="text" data-id="5">
+                    <input onclick="" type="radio" name="needs12" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs12" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    13.	Bạn có hay hành động một cách bồng bột và nông nổi không?
+                </p>
+                <div id="13" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs13" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs13" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    14.	Bạn có hay ân hận với những lời nói hay việc làm mà đáng lẽ không nên nói hay làm như vậy không?
+                </p>
+                <div id="14" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs14" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs14" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    15.	Bạn thích đọc sách hơn là trò chuyện với người khác phải không?
+                </p>
+                <div id="15" class="text" data-id="2">
+                    <input onclick="" type="radio" name="needs15" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs15" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    16.	Bạn có dễ phật ý không?
+                </p>
+                <div id="16" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs16" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs16" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    17.	Bạn có thích thường xuyên có mặt trong nhóm hoặc hội của mình không?
+                </p>
+                <div id="17" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs17" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs17" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    18.	Bạn hay có những ý nghĩ mà bạn muốn giấu không cho người khác biết phải không?
+                </p>
+                <div id="18" class="text" data-id="5">
+                    <input onclick="" type="radio" name="needs18" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs18" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    19.	Có đúng đôi khi bạn là người đầy nhiệt tình với mọi công việc, nhưng cũng có lúc bạn chán chường và uể oải phải không?
+                </p>
+                <div id="19" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs19" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs19" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    20.	Bạn có thích thà rằng có ít bạn nhưng là bạn thân hay không?
+                </p>
+                <div id="20" class="text" data-id="2">
+                    <input onclick="" type="radio" name="needs20" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs20" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    21.	Bạn có hay mơ ước không?
+                </p>
+                <div id="21" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs21" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs21" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    22.	Lúc người ta quát tháo bạn, thì bạn cũng quát lại phải không?
+                </p>
+                <div id="22" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs22" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs22" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    23.	Bạn có thấy mình day dứt mỗi khi có sai lầm không?
+                </p>
+                <div id="23" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs23" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs23" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    24.	Tất cả mọi thói quen của bạn đều tốt và hợp với mong muốn của bạn phải không?
+                </p>
+                <div id="24" class="text" data-id="4">
+                    <input onclick="" type="radio" name="needs24" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs24" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    25.	Bạn có khả năng làm chủ được tình cảm của mình và hoàn toàn vui vẻ trong các buổi họp phải không?
+                </p>
+                <div id="25" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs25" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs25" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    26.	Bạn có cho mình là người nhạy cảm và dễ hưng phấn không?
+                </p>
+                <div id="26" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs26" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs26" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    27.	Người ta có cho bạn là người hoạt bát và vui vẻ không?
+                </p>
+                <div id="27" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs27" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs27" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    28.	Sau khi làm xong một công việc quan trọng nào đó, bạn có thường hay cảm thấy mình có thể làm được việc đó tốt hơn không?
+                </p>
+                <div id="28" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs28" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs28" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    29.	Trong đám đông bạn thường im lặng phải không?
+                </p>
+                <div id="29" class="text" data-id="2">
+                    <input onclick="" type="radio" name="needs29" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs29" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    30.	Đôi khi bạn cũng hay thêu dệt chuyện phải không?
+                </p>
+                <div id="30" class="text" data-id="5">
+                    <input onclick="" type="radio" name="needs30" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs30" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    31.	Bạn thường không ngủ được vì có nhiều ý nghĩ lộn xộn trong đầu phải không?
+                </p>
+                <div id="31" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs31" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs31" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    32.	Nếu bạn muốn biết một điều gì thì bạn tự tìm lấy trong sách báo chứ không đi hỏi người khác phải không?
+                </p>
+                <div id="32" class="text" data-id="2">
+                    <input onclick="" type="radio" name="needs32" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs32" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    33.	Có bao giờ bạn hồi hộp không?
+                </p>
+                <div id="33" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs33" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs33" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    34.	Bạn có thích những công việc đòi hỏi sự chú ý thường xuyên không?
+                </p>
+                <div id="34" class="text" data-id="2">
+                    <input onclick="" type="radio" name="needs34" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs34" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    35.	Bạn có hay run sợ không?
+                </p>
+                <div id="35" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs35" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs35" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    36.	Nếu không bị kiểm tra thì bạn có chịu mua vé tàu hay xe không?
+                </p>
+                <div id="36" class="text" data-id="4">
+                    <input onclick="" type="radio" name="needs36" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs36" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    37.	Bạn có thấy khó chịu khi sống trong một tập thể mà mọi người hay giễu cợt nhau không?
+                </p>
+                <div id="37" class="text" data-id="2">
+                    <input onclick="" type="radio" name="needs37" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs37" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    38.	Bạn có hay bực tức không?
+                </p>
+                <div id="38" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs38" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs38" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    39.	Bạn có thích những công việc phải làm gấp không?
+                </p>
+                <div id="39" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs39" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs39" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    40.	Bạn có hồi hộp trước một sự việc không hoặc có thể xảy ra không?
+                </p>
+                <div id="40" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs40" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs40" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    41.	Bạn đi đứng ung dung và thong thả phải không?
+                </p>
+                <div id="41" class="text" data-id="2">
+                    <input onclick="" type="radio" name="needs41" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs41" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    42.	Có khi nào bạn đến chỗ hẹn, hoặc đi làm, đi học muộn hay không?
+                </p>
+                <div id="42" class="text" data-id="5">
+                    <input onclick="" type="radio" name="needs42" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs42" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    43.	Bạn có hay thấy những cơn ác mộng không?
+                </p>
+                <div id="43" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs43" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs43" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    44.	Có đúng bạn là người thích nói chuyện đến mức không bao giờ bỏ lỡ cơ hội nói chuyện cả với những người không quen biết không?
+                </p>
+                <div id="44" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs44" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs44" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    45.	Có nỗi đau nào đó làm bạn lo lắng không?
+                </p>
+                <div id="45" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs45" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs45" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    46.	Bạn có cảm thấy mình rất bất hạnh nếu trong một thời gian dài không được tiếp xúc rộng rãi với mọi người không?
+                </p>
+                <div id="46" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs46" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs46" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    47.	Bạn có thể gọi mình là người dễ xúc động và dễ phản ứng không?
+                </p>
+                <div id="47" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs47" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs47" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    48.	Trong số những người quen, có người mà bạn không ưa thích một cách công khai phải không?
+                </p>
+                <div id="48" class="text" data-id="5">
+                    <input onclick="" type="radio" name="needs48" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs48" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    49.	Bạn có cho mình là người hoàn toàn tự tin không?
+                </p>
+                <div id="49" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs49" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs49" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    50.	Bạn có dễ phật ý khi mọi người chỉ ra những lỗi lầm của mình trong công tác hay các thiếu sót riêng tư của mình hay không?
+                </p>
+                <div id="50" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs50" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs50" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    51.	Bạn có cho rằng: khó có thể có được niềm vui thật sự trong các buổi liên hoan  không?
+                </p>
+                <div id="51" class="text" data-id="2">
+                    <input onclick="" type="radio" name="needs51" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs51" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    52.	Cảm giác thấp kém hơn người khác có làm bạn khó chịu không?
+                </p>
+                <div id="52" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs52" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs52" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    53.	Bạn có dễ dàng làm cho nhóm bè bạn của mình đang buồn chán trở nên sôi nổi và vui vẻ được không?
+                </p>
+                <div id="53" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs53" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs53" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    54.	Bạn có thường hay nói về những điều mà bạn chưa hiểu kỹ không?
+                </p>
+                <div id="54" class="text" data-id="5">
+                    <input onclick="" type="radio" name="needs54" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs54" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    55.	Bạn có lo lắng về sức khỏe của mình không?
+                </p>
+                <div id="55" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs55" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs55" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    56.	Bạn có thích trêu chọc người khác không?
+                </p>
+                <div id="56" class="text" data-id="1">
+                    <input onclick="" type="radio" name="needs56" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs56" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <p class="text" id="text">
+                    57.	Bạn có bị mất ngủ không?
+                </p>
+                <div style="margin-bottom:20px" id="57" class="text" data-id="3">
+                    <input onclick="" type="radio" name="needs57" id="abs11" value="Yes">
+                    <label for="abs11">Có</label>
+                    <input onclick="" type="radio" name="needs57" id="abs21" value="No">
+                    <label for="abs21">Không</label>
+                </div>
+                <div>
+                    <a onclick="" class="btn-dudoan" id="send_dudoan">
+                        Dự đoán
+                    </a>
+                    <p id="demo"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    
+    $(" div input[type='radio']").click(function () {
+        var suma = parseInt("0");
+        var sumb = parseInt("0");
+        var sumc = parseInt("0");
+        $("div").each(function (index) {
+            if ($(this).data("id") == 1) {
+                if ($(this).find("input[type='radio']:checked").val() == "Yes") {
+                    suma++;
+                }
+            }
+            if ($(this).data("id") == 2) {
+                if ($(this).find("input[type='radio']:checked").val() == "No") {
+                    suma++;
+                }
+            }
+            if ($(this).data("id") == 3) {
+                if ($(this).find("input[type='radio']:checked").val() == "Yes") {
+                    sumb++;
+                }
+            }
+            if ($(this).data("id") == 4) {
+                if ($(this).find("input[type='radio']:checked").val() == "Yes") {
+                    sumc++;
+                }
+            }
+            if ($(this).data("id") == 5) {
+                if ($(this).find("input[type='radio']:checked").val() == "No") {
+                    sumc++;
+                }
+            }
+        });
+        $("div a").click(function () {
+            if (sumc > 4) {
+                swal({
+                    title: "Không hiệu lực",
+                    text: "Bạn đã trả lời không trung thực với bản thân mình và tờ phiếu trả lời xem như không có giá trị !!!",
+                    icon: "warning",
+                    button: "OK",
+                });
+            }
+            else {
+                if (suma < 12 && sumb < 12) {
+                    swal({
+                        title: "Thành công",
+                        text: "Bạn là người hướng nội, đằm tính và điềm tĩnh",
+                        icon: "success",
+                        button: "OK",
+                    });
+                }
+                if (suma < 12 && sumb > 12) {
+                    swal({
+                        title: "Thành công",
+                        text: "Bạn là người hướng nội, phản ứng mạnh và ưu tú",
+                        icon: "success",
+                        button: "OK",
+                    });
+                }
+                if (suma > 12 && sumb < 12) {
+                    swal({
+                        title: "Thành công",
+                        text: "Bạn là người hướng ngoại, đằm tính và linh hoạt",
+                        icon: "success",
+                        button: "OK",
+                    });
+                }
+                if (suma > 12 && sumb > 12) {
+                    swal({
+                        title: "Thành công",
+                        text: "Bạn là người hướng ngoại, phản ứng mạnh và sôi nổi",
+                        icon: "success",
+                        button: "OK",
+                    });
+                }
+            }
+        });
+    })
+</script>
+
+

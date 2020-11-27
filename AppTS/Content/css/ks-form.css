@@ -1,0 +1,132 @@
+﻿body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 80%;
+}
+
+.scene {
+    perspective: 600px;
+}
+
+.card {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+    .card.is-flipped {
+        transform: rotateY(180deg);
+    }
+
+.card__face {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card__face--front {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.card__face--back {
+    width: 100%;
+    transform: rotateY(180deg);
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.content ul {
+    list-style: none
+}
+
+.card__face--back .info-group label {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+@media all and (min-width: 320px) {
+    .infor-form {
+        width: 90%;
+        height: 82vh;
+        overflow-y: scroll;
+        margin: auto;
+        line-height: 30px;
+        font-size: 1.3em
+    }
+
+        .infor-form h4 {
+            text-align: center;
+            font-weight: bold;
+            color: red;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            margin-top: 5px
+        }
+
+        .infor-form hr {
+            width: 75%;
+            margin-bottom: 20px
+        }
+
+
+    .content {
+        margin-top: 10px;
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    .content button 
+    {
+        font-size:20px
+    }
+
+    .info-group label {
+        width: 100%
+    }
+
+    .info-group input {
+        font-size: calc(12px +(61-12)*((100vw-300px)/(1600-300)));
+        width: 100%;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+        margin-bottom: 15px
+    }
+
+        .info-group input[type=radio] {
+            font-size: 1.1em;
+            width: 5%;
+        }
+}
+
+.to-after-form {
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #024283;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.to-before-form {
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #024283;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    margin: 10px 0px 10px 0px
+}
+.group-cb label{
+    font-weight:400
+}
+.group-cb input[type=checkbox] {
+    margin-left: 15px
+}
+.cb-gr input{
+    margin-left: 30px;
+}

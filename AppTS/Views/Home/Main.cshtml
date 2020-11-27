@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Main";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/css/giaodien.css" rel="stylesheet" />
+<section id="about" style="padding:0">
+    <div class="nttu-home">
+        <div class="bg-blue-nttu">
+        </div>
+        <div class="main-layout-nttu">
+            <div class="child item-login" onclick="window.location.href='/HocSinh/DangNhap'">
+                <a>Đăng nhập</a>
+            </div>
+            <div class="child item-tn-nganh" onclick="window.location.href = '/TuVan/DinhHuong'">
+                <a>Trắc nghiệm chọn ngành</a>
+            </div>
+            <div class="child item-chatbot" onclick="window.location.href='/ChatView/Index'">
+                <a>Tư vấn trực tuyến</a>
+            </div>
+            <div class="child item-contact" onclick="window.location.href='/Home/LienHe'">
+                <a>Thông tin liên hệ</a>
+            </div>
+            <div class="child item-about" onclick="window.location.href='/Home/Index'">
+                <a>Giới thiệu Trường ĐH Nguyễn Tất Thành</a>
+
+            </div>
+            <div class="child item-infor-daotao" >
+                <a>Thông tin các ngành đào tạo</a>
+            </div>
+            <div class="child item-pats" >
+                <a>Phương án tuyển sinh</a>
+            </div>
+            <div class="child item-dkxt" >
+                <a>Đăng ký xét tuyển</a>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+
+    });
+</script>

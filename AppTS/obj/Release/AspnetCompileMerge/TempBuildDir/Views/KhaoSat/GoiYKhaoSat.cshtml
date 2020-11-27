@@ -1,0 +1,11 @@
+﻿@model IEnumerable<AppTS.Models.Table_KhaoSat> 
+<ul>
+
+
+    @foreach (var item in Model)
+    {
+       
+        <li>@Html.RadioButton(item.ID_ROOT.ToString(), item.CAUHOI, new { required = "required", @id = ""+item.CAUHOI+"" }) @item.CAUHOI</li>
+    }
+</ul>
+

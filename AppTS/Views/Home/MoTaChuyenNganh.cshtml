@@ -1,0 +1,47 @@
+﻿@model  AppTS.Models.Table_ChuyenNganh
+@{
+    ViewBag.Title = "MoTaChuyenNganh";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/css/dangnhap.css" rel="stylesheet" />
+<!--==========================
+      About Us Section
+    ============================-->
+<section id="about">
+
+    <div class="container">
+        <header class="section-header">
+            <h3 style="text-align: center">@Model.TENCHUYENNGANH</h3>
+        </header>
+        @foreach (var item in ViewData["Chitiet"] as IEnumerable<AppTS.ViewModels.ChuyenNganhFull>)
+        {
+            <div class="row about-container">
+
+            <div class="col-lg-6 content order-lg-1 order-2">
+                <p style="text-align: center">
+                   @item.MOTA
+                </p>
+            </div>
+            <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
+                <img src="@item.HINHANH" class="img-fluid" alt="">
+            </div>
+        </div> 
+        }     
+    </div>
+    @{
+        string a = "";
+    }
+    @if (Session["User"] != null)
+    {
+        a = "DangKyCN";
+    }
+    else
+    {
+        a = "CheckLogin";
+    }
+    <div class="submit-button">
+        <a href="@Url.Action(a, "DangKyCN", new { id = @Model.ID_NGANH })" class="primary-btn">Đăng ký vào ngành</a>
+    </div>
+
+</section><!-- #about -->
+

@@ -1,0 +1,40 @@
+﻿@model AppTS.ViewModels.MenuView
+@{
+    ViewBag.Title = "MoTaChuyenNganh";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--==========================
+      About Us Section
+    ============================-->
+<section id="about">
+    <div class="container">
+
+        <header class="section-header">
+            <h3>@Model.TENNGANH</h3>
+        </header>
+
+        <div class="row about-container">
+
+            <div class="col-lg-6 content order-lg-1 order-2">
+                <p>
+                    @Model.MOTA
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+    @{
+        string a = "";
+    }
+    @if (Session["User"] != null)
+    {
+        a = "DangKyCN";
+    }
+    else
+    {
+        a = "CheckLogin";
+    }
+    <a href="@Url.Action(a, "DangKyCN", new { id = @Model.ID_NGANH })" class="primary-btn">Đăng ký vào ngành</a>
+</section><!-- #about -->

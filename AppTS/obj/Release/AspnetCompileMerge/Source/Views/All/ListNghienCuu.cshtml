@@ -1,0 +1,18 @@
+﻿@model IEnumerable<AppTS.ViewModels.NghienCuuFull>
+@{
+    ViewBag.Title = "ListNghienCuu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@foreach (var item in Model)
+{
+    <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="product__item">
+            <div class="product__item__pic set-bg" onclick="window.location.href = '/All/NghienCuuIndex?id=@item.ID_NGHIENCUU'" style="background-image: url('@item.ANHBIA')">
+            </div>
+            <div class="product__item__text">
+                <h6><a href="@Url.Action("NghienCuuIndex", "All", new { id = item.ID_NGHIENCUU })">@item.TENNGHIENCUU</a></h6>
+            </div>
+        </div>
+    </div>
+}
+

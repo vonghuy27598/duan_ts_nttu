@@ -1,0 +1,125 @@
+﻿@model IEnumerable<AppTS.Models.Table_KhaoSat>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>KhaoSat</title>
+    <link href="~/Content/css/ks-form.css" rel="stylesheet" />
+    <link href="~/Content/css/dangnhap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <div style="text-align: center">
+        <img style="width:100px" src="~/Content/img/logo.jpg" />
+    </div>
+
+    <div class="scene scene--card">
+        <div class="card">
+            @using (Html.BeginForm())
+            {
+                <div class="card__face card__face--front">
+                    <div class="infor-form">
+                        <h4>THÔNG TIN CÁ NHÂN</h4>
+                        <hr />
+                        @if (Session["User"] != null)
+                        {
+                            var model = (AppTS.ViewModels.HocSinh_TK)Session["User"];
+                            <div class="content">
+                                <div class="info-group">
+                                    <label>Họ sinh viên</label><span style="color:red"> *</span>
+                                    @Html.TextBox("hoten", model.HOTENHS, new { @required = "required" })
+                                </div>
+                               
+                                <div class="info-group">
+                                    <label>Số điện thoại</label><span style="color: red"> *</span>
+                                    @Html.TextBox("sdt", model.SDT, new { @required = "required", type = "tel", maxlength = "10" })
+                                </div>
+                                <div class="info-group">
+                                    <label>Email</label><span style="color: red"> *</span>
+                                    @Html.TextBox("email", model.EMAIL, new { @required = "required", type = "email" })
+                                </div>
+
+                                <div class="submit-button">
+                                    <span class="to-after-form">Tiếp theo</span>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="content">
+
+                                <div class="info-group">
+                                    <label>Họ sinh viên</label><span style="color:red"> *</span>
+                                    @Html.TextBox("hoten", null, new { @required = "required" })
+                                </div>
+                               
+                                <div class="info-group">
+                                    <label>Số điện thoại</label><span style="color: red"> *</span>
+                                    @Html.TextBox("sdt", null, new { @required = "required", type = "tel", maxlength = "10" })
+                                </div>
+                                <div class="info-group">
+                                    <label>Email</label><span style="color: red"> *</span>
+                                    @Html.TextBox("email", null, new { @required = "required", type = "email" })
+                                </div>
+
+                                <div class="submit-button">
+                                    <span class="to-after-form">Tiếp theo</span>
+                                </div>
+
+                            </div>
+                        }
+                    </div>
+
+                </div>
+                <div class="card__face card__face--back">
+                    <div class="infor-form">
+                        <h4>KHẢO SÁT Ý KIẾN</h4>
+                        <hr />
+                        <div class="content">
+
+                            @foreach (var item in Model)
+                            {
+                                <div class="info-group">
+                                    <label>@item.CAUHOI</label><span style="color:red"> *</span>
+                                    @Html.Action("GoiYKhaoSat", "KhaoSat", new { ID_KS = @item.ID_KS })
+                                </div>
+                            }
+                            <div class="submit-button">
+                                <input class="btn main-btn" type="submit" id="sub-save" value="Gửi câu trả lời" />
+                            </div>
+
+                            <div class="submit-button">
+                                <button class="to-before-form">Quay lại</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <script>
+        $(function () {
+
+            $("form").submit(function (e) {
+                e.preventDefault();
+                var f = $(this);
+                $.post(f.attr("action"), f.serialize(), function (res) {
+                    if (res.Status === "success") {
+                        alert(res.Message);
+                        window.location.href = "/Home/Index";
+                    }
+                });
+            });
+
+        });
+    </script>
+
+    <script src="~/Content/Admin/Scripts/khaosat.js"></script>
+
+</body>
+</html>

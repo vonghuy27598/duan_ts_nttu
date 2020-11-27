@@ -1,0 +1,119 @@
+﻿@model AppTS.ViewModels.ChuyenNganhFull
+@{
+    ViewBag.Title = "ChuyenNganh";
+    Layout = "~/Areas/Admin/Views/Shared/layout_admin.cshtml";
+}
+
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Quản lý chuyên ngành</h1>
+<p class="mb-4">Tất cả chuyên ngành của Khoa Công Nghệ Thông Tin  sẽ hiển thị tại đây.</p>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        
+    </div>
+    <div class="card-body">
+        <img src="~/Content/Admin/img/icon_add.png" width="50" title="Thêm mới chuyên ngành" style="margin-bottom:20px" onclick="addChuyenNganh()"/>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Mã chuyên ngành</th>
+                        <th>Tên chuyên ngành</th>  
+                        <th>Số lượng SV</th>                                            
+                        <th colspan="2"></th>
+                    </tr>
+                </thead>
+                <tbody class="table_change" id="myTable">
+                        <tr id="row_@Model.ID_CHUYENNGANH">
+                            <td>@Model.ID_CHUYENNGANH</td>
+                            <td class="tennganh" id="tennganh_@Model.ID_CHUYENNGANH">@Model.TENCHUYENNGANH</td> 
+                            <td>@Model.SOLUONGSV</td>
+                                              
+                            <td width="4%"><img src="~/Content/Admin/img/icon_edit.png" width="90%" onclick="editNganh(@Model.ID_CHUYENNGANH)" title="Sửa" class="icon_edit" id="icon_edit_@Model.ID_CHUYENNGANH" style="cursor:pointer" /></td>
+                            <td width="4%">
+                                @Ajax.ImageActionLink("../../Content/Admin/img/icon_delete.png", "Xóa", "DeleteChuyenNganh", new { @id_chuyennganh = @Model.ID_CHUYENNGANH }, new AjaxOptions { Confirm = "Bạn có muốn xóa không?", HttpMethod = "DELETE" }, new { style = "width:90%;padding-top: 5px;",title="Xóa" })
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    <button id="myBtnChuyenNganh" hidden="hidden">Open Modal</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 style="color:white">THÊM MỚI CHUYÊN NGÀNH</h4>
+                <span class="close">&times;</span>
+            </div>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-body" style="height:300px">
+
+                    <div class="info">
+                        @Html.ValidationSummary(true)
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-5 in">
+                                    Mã chuyên ngành
+                                </div>
+                                <div class="col-md-7 in">         
+                                    @Html.TextBoxFor(m=>m.ID_CHUYENNGANH,"", new { required = "required" })
+                                   @Html.ValidationMessage("ID_CHUYENNGANH", new { style = "display: inline-block;color:red" })
+                              
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-5 in">
+                                    Tên chuyên ngành
+                                </div>
+                                <div class="col-md-7 in">
+                                    @Html.TextBoxFor(m=>m.TENCHUYENNGANH, "", new { required = "required" })
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-5 in">
+                                    Mô tả
+                                </div>
+                                <div class="col-md-7 in">
+                                    @Html.TextBoxFor(m=>m.MOTA, "", new { required = "required" })
+                                </div>
+                            </div>
+
+                        </div>
+                      
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-secondary xoasv" >Làm mới</a>
+                    <input type="submit" class="btn btn-primary" id="themmoi" value="Thêm" />
+                </div>
+            }
+        </div>
+
+    </div>
+    @if (ViewBag.Mess != null)
+    {
+        <script type="text/javascript">
+            window.onload = function () {
+                alert("@Html.Raw(ViewBag.Mess)");         
+                       
+            };
+         
+    </script>
+    }
+   
+    <script src="~/Content/Admin/Scripts/ScriptChuyenNganh.js"></script>

@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/css/dangnhap.css" rel="stylesheet" />
+<div class="primari-box registered-account dn">
+    <form class="new-account-box" id="accountLogin" method="post" action="#">
+        <h3 class="box-subheading">Đăng nhập</h3>
+        <hr style="border: 1px solid; width: 100px;margin-bottom:35px" />
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <div class="form-content">
+                <div class="form-group primary-form-group">
+                    <label for="loginemail">Tài khoản</label>
+                    @*<input type="text" value="" name="email" id="loginemail" class="">*@
+                    @Html.TextBox("TenDN", null, new { required = "required", @class = " input-feild line-animation" })
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group">
+                    <label for="password">Mật khẩu</label>
+                    @*<input type="password" value="" name="password" id="password" class="form-control input-feild">*@
+                    @Html.Password("MatKhau", null, new { required = "required", @class = "input-feild line-animation" })
+                    <div class="line"></div>
+                </div>
+                <div class="forget-password">
+                    <a href="@Url.Action("DangKy","HocSinh")">Chưa có tài khoản? Đăng ký</a>
+                </div>
+
+                <div class="submit-button">
+
+                    <input type="submit" value="Đăng nhập" id="signinCreate" class="btn main-btn" />
+
+                </div>
+                <div class="mess">@ViewBag.ThongBao</div>
+            </div>
+        }
+    </form>
+
+</div>
+

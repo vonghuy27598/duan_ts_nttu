@@ -1,0 +1,825 @@
+D:\DATA\NTT\AppTS\bin\AppTS.dll.config
+D:\DATA\NTT\AppTS\bin\AppTS.dll
+D:\DATA\NTT\AppTS\bin\AppTS.pdb
+D:\DATA\NTT\AppTS\bin\Antlr3.Runtime.dll
+D:\DATA\NTT\AppTS\bin\EntityFramework.dll
+D:\DATA\NTT\AppTS\bin\EntityFramework.SqlServer.dll
+D:\DATA\NTT\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+D:\DATA\NTT\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\DATA\NTT\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.dll
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Security.dll
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Security.Google.dll
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+D:\DATA\NTT\AppTS\bin\Microsoft.Web.Infrastructure.dll
+D:\DATA\NTT\AppTS\bin\Newtonsoft.Json.dll
+D:\DATA\NTT\AppTS\bin\Owin.dll
+D:\DATA\NTT\AppTS\bin\System.Web.Helpers.dll
+D:\DATA\NTT\AppTS\bin\System.Web.Mvc.dll
+D:\DATA\NTT\AppTS\bin\System.Web.Optimization.dll
+D:\DATA\NTT\AppTS\bin\System.Web.Razor.dll
+D:\DATA\NTT\AppTS\bin\System.Web.WebPages.Deployment.dll
+D:\DATA\NTT\AppTS\bin\System.Web.WebPages.dll
+D:\DATA\NTT\AppTS\bin\System.Web.WebPages.Razor.dll
+D:\DATA\NTT\AppTS\bin\WebGrease.dll
+D:\DATA\NTT\AppTS\bin\System.Web.Helpers.xml
+D:\DATA\NTT\AppTS\bin\System.Web.Mvc.xml
+D:\DATA\NTT\AppTS\bin\System.Web.Optimization.xml
+D:\DATA\NTT\AppTS\bin\System.Web.Razor.xml
+D:\DATA\NTT\AppTS\bin\System.Web.WebPages.xml
+D:\DATA\NTT\AppTS\bin\System.Web.WebPages.Deployment.xml
+D:\DATA\NTT\AppTS\bin\System.Web.WebPages.Razor.xml
+D:\DATA\NTT\AppTS\bin\Newtonsoft.Json.xml
+D:\DATA\NTT\AppTS\bin\Antlr3.Runtime.pdb
+D:\DATA\NTT\AppTS\bin\EntityFramework.xml
+D:\DATA\NTT\AppTS\bin\EntityFramework.SqlServer.xml
+D:\DATA\NTT\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+D:\DATA\NTT\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\DATA\NTT\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.xml
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Security.xml
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Security.Google.xml
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+D:\DATA\NTT\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\DATA\NTT\AppTS\obj\Debug\AppTS.dll
+D:\DATA\NTT\AppTS\obj\Debug\AppTS.pdb
+D:\DATA\NTT\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\AppTS.dll.config
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\AppTS.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\AppTS.pdb
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Antlr3.Runtime.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\EntityFramework.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\EntityFramework.SqlServer.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Security.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Security.Google.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Web.Infrastructure.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Newtonsoft.Json.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Owin.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\System.Web.Helpers.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\System.Web.Mvc.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\System.Web.Optimization.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\System.Web.Razor.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\System.Web.WebPages.Deployment.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\System.Web.WebPages.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\System.Web.WebPages.Razor.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\WebGrease.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\System.Web.Helpers.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\System.Web.Mvc.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\System.Web.Optimization.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\System.Web.Razor.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\System.Web.WebPages.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\System.Web.WebPages.Deployment.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\System.Web.WebPages.Razor.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Newtonsoft.Json.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Antlr3.Runtime.pdb
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\EntityFramework.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\EntityFramework.SqlServer.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Security.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Security.Google.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\MVC\DuAn\New folder\NTT\AppTS\obj\Debug\AppTS.dll
+D:\MVC\DuAn\New folder\NTT\AppTS\obj\Debug\AppTS.pdb
+G:\MVC\A.DuAn\NTT\AppTS\bin\AppTS.dll.config
+G:\MVC\A.DuAn\NTT\AppTS\bin\AppTS.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\AppTS.pdb
+G:\MVC\A.DuAn\NTT\AppTS\bin\Antlr3.Runtime.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\EntityFramework.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\EntityFramework.SqlServer.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Security.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Security.Google.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Web.Infrastructure.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Newtonsoft.Json.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\Owin.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\System.Web.Helpers.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\System.Web.Mvc.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\System.Web.Optimization.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\System.Web.Razor.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\System.Web.WebPages.Deployment.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\System.Web.WebPages.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\System.Web.WebPages.Razor.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\WebGrease.dll
+G:\MVC\A.DuAn\NTT\AppTS\bin\System.Web.Helpers.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\System.Web.Mvc.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\System.Web.Optimization.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\System.Web.Razor.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\System.Web.WebPages.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\System.Web.WebPages.Deployment.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\System.Web.WebPages.Razor.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\Newtonsoft.Json.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\Antlr3.Runtime.pdb
+G:\MVC\A.DuAn\NTT\AppTS\bin\EntityFramework.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\EntityFramework.SqlServer.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Security.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Security.Google.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+G:\MVC\A.DuAn\NTT\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\MVC\A.DuAn\NTT\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache
+G:\MVC\A.DuAn\NTT\AppTS\obj\Debug\AppTS.dll
+G:\MVC\A.DuAn\NTT\AppTS\obj\Debug\AppTS.pdb
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\AppTS.dll.config
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\AppTS.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\AppTS.pdb
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Antlr3.Runtime.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\EntityFramework.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\EntityFramework.SqlServer.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Security.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Security.Google.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Web.Infrastructure.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Newtonsoft.Json.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Owin.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\System.Web.Helpers.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\System.Web.Mvc.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\System.Web.Optimization.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\System.Web.Razor.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\System.Web.WebPages.Deployment.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\System.Web.WebPages.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\System.Web.WebPages.Razor.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\WebGrease.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\System.Web.Helpers.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\System.Web.Mvc.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\System.Web.Optimization.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\System.Web.Razor.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\System.Web.WebPages.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\System.Web.WebPages.Deployment.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\System.Web.WebPages.Razor.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Newtonsoft.Json.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Antlr3.Runtime.pdb
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\EntityFramework.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\EntityFramework.SqlServer.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Security.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Security.Google.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\MVC\DuAn\Ok\NTT\AppTS\obj\Debug\AppTS.dll
+D:\MVC\DuAn\Ok\NTT\AppTS\obj\Debug\AppTS.pdb
+D:\MVC\DuAn\Ok\NTT\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\obj\Debug\AppTS.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\AppTS.dll.config
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\AppTS.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\AppTS.pdb
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Antlr3.Runtime.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\EntityFramework.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\EntityFramework.SqlServer.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Security.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Security.Google.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Web.Infrastructure.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Newtonsoft.Json.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Owin.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\System.Web.Helpers.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\System.Web.Mvc.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\System.Web.Optimization.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\System.Web.Razor.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\System.Web.WebPages.Deployment.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\System.Web.WebPages.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\System.Web.WebPages.Razor.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\WebGrease.dll
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\System.Web.Helpers.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\System.Web.Mvc.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\System.Web.Optimization.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\System.Web.Razor.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\System.Web.WebPages.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\System.Web.WebPages.Deployment.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\System.Web.WebPages.Razor.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Newtonsoft.Json.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Antlr3.Runtime.pdb
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\EntityFramework.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\EntityFramework.SqlServer.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Security.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Security.Google.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\obj\Debug\AppTS.pdb
+D:\MVC\DuAn\Ok\HoanChinh\NTT\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\AppTS.dll.config
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\AppTS.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\AppTS.pdb
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Owin.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\WebGrease.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\obj\Debug\AppTS.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\ntt\AppTS\obj\Debug\AppTS.pdb
+E:\DuAn\NTTU\ntt\AppTS\bin\AppTS.dll.config
+E:\DuAn\NTTU\ntt\AppTS\bin\AppTS.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\AppTS.pdb
+E:\DuAn\NTTU\ntt\AppTS\bin\Antlr3.Runtime.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\EntityFramework.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\EntityFramework.SqlServer.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Google.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Web.Infrastructure.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Newtonsoft.Json.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\Owin.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\System.Web.Helpers.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\System.Web.Mvc.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\System.Web.Optimization.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\System.Web.Razor.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\System.Web.WebPages.Deployment.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\System.Web.WebPages.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\System.Web.WebPages.Razor.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\WebGrease.dll
+E:\DuAn\NTTU\ntt\AppTS\bin\System.Web.Helpers.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\System.Web.Mvc.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\System.Web.Optimization.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\System.Web.Razor.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\System.Web.WebPages.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\System.Web.WebPages.Deployment.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\System.Web.WebPages.Razor.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\Newtonsoft.Json.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\Antlr3.Runtime.pdb
+E:\DuAn\NTTU\ntt\AppTS\bin\EntityFramework.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\EntityFramework.SqlServer.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Google.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+E:\DuAn\NTTU\ntt\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\DuAn\NTTU\ntt\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache
+E:\DuAn\NTTU\ntt\AppTS\obj\Debug\AppTS.dll
+E:\DuAn\NTTU\ntt\AppTS\obj\Debug\AppTS.pdb
+E:\New folder (2)\ntt\AppTS\bin\AppTS.dll.config
+E:\New folder (2)\ntt\AppTS\bin\AppTS.dll
+E:\New folder (2)\ntt\AppTS\bin\AppTS.pdb
+E:\New folder (2)\ntt\AppTS\bin\Antlr3.Runtime.dll
+E:\New folder (2)\ntt\AppTS\bin\EntityFramework.dll
+E:\New folder (2)\ntt\AppTS\bin\EntityFramework.SqlServer.dll
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.dll
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Security.dll
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Security.Google.dll
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Web.Infrastructure.dll
+E:\New folder (2)\ntt\AppTS\bin\Newtonsoft.Json.dll
+E:\New folder (2)\ntt\AppTS\bin\Owin.dll
+E:\New folder (2)\ntt\AppTS\bin\System.Web.Helpers.dll
+E:\New folder (2)\ntt\AppTS\bin\System.Web.Mvc.dll
+E:\New folder (2)\ntt\AppTS\bin\System.Web.Optimization.dll
+E:\New folder (2)\ntt\AppTS\bin\System.Web.Razor.dll
+E:\New folder (2)\ntt\AppTS\bin\System.Web.WebPages.Deployment.dll
+E:\New folder (2)\ntt\AppTS\bin\System.Web.WebPages.dll
+E:\New folder (2)\ntt\AppTS\bin\System.Web.WebPages.Razor.dll
+E:\New folder (2)\ntt\AppTS\bin\WebGrease.dll
+E:\New folder (2)\ntt\AppTS\bin\System.Web.Helpers.xml
+E:\New folder (2)\ntt\AppTS\bin\System.Web.Mvc.xml
+E:\New folder (2)\ntt\AppTS\bin\System.Web.Optimization.xml
+E:\New folder (2)\ntt\AppTS\bin\System.Web.Razor.xml
+E:\New folder (2)\ntt\AppTS\bin\System.Web.WebPages.xml
+E:\New folder (2)\ntt\AppTS\bin\System.Web.WebPages.Deployment.xml
+E:\New folder (2)\ntt\AppTS\bin\System.Web.WebPages.Razor.xml
+E:\New folder (2)\ntt\AppTS\bin\Newtonsoft.Json.xml
+E:\New folder (2)\ntt\AppTS\bin\Antlr3.Runtime.pdb
+E:\New folder (2)\ntt\AppTS\bin\EntityFramework.xml
+E:\New folder (2)\ntt\AppTS\bin\EntityFramework.SqlServer.xml
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.xml
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Security.xml
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Security.Google.xml
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+E:\New folder (2)\ntt\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\New folder (2)\ntt\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache
+E:\New folder (2)\ntt\AppTS\obj\Debug\AppTS.dll
+E:\New folder (2)\ntt\AppTS\obj\Debug\AppTS.pdb
+D:\NTT\ntt\AppTS\bin\AppTS.dll.config
+D:\NTT\ntt\AppTS\bin\AppTS.dll
+D:\NTT\ntt\AppTS\bin\AppTS.pdb
+D:\NTT\ntt\AppTS\bin\Antlr3.Runtime.dll
+D:\NTT\ntt\AppTS\bin\EntityFramework.dll
+D:\NTT\ntt\AppTS\bin\EntityFramework.SqlServer.dll
+D:\NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+D:\NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.dll
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Security.dll
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Google.dll
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+D:\NTT\ntt\AppTS\bin\Microsoft.Web.Infrastructure.dll
+D:\NTT\ntt\AppTS\bin\Newtonsoft.Json.dll
+D:\NTT\ntt\AppTS\bin\Owin.dll
+D:\NTT\ntt\AppTS\bin\System.Web.Helpers.dll
+D:\NTT\ntt\AppTS\bin\System.Web.Mvc.dll
+D:\NTT\ntt\AppTS\bin\System.Web.Optimization.dll
+D:\NTT\ntt\AppTS\bin\System.Web.Razor.dll
+D:\NTT\ntt\AppTS\bin\System.Web.WebPages.Deployment.dll
+D:\NTT\ntt\AppTS\bin\System.Web.WebPages.dll
+D:\NTT\ntt\AppTS\bin\System.Web.WebPages.Razor.dll
+D:\NTT\ntt\AppTS\bin\WebGrease.dll
+D:\NTT\ntt\AppTS\bin\System.Web.Helpers.xml
+D:\NTT\ntt\AppTS\bin\System.Web.Mvc.xml
+D:\NTT\ntt\AppTS\bin\System.Web.Optimization.xml
+D:\NTT\ntt\AppTS\bin\System.Web.Razor.xml
+D:\NTT\ntt\AppTS\bin\System.Web.WebPages.xml
+D:\NTT\ntt\AppTS\bin\System.Web.WebPages.Deployment.xml
+D:\NTT\ntt\AppTS\bin\System.Web.WebPages.Razor.xml
+D:\NTT\ntt\AppTS\bin\Newtonsoft.Json.xml
+D:\NTT\ntt\AppTS\bin\Antlr3.Runtime.pdb
+D:\NTT\ntt\AppTS\bin\EntityFramework.xml
+D:\NTT\ntt\AppTS\bin\EntityFramework.SqlServer.xml
+D:\NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+D:\NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.xml
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Security.xml
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Google.xml
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+D:\NTT\ntt\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\NTT\ntt\AppTS\obj\Debug\AppTS.csproj.CoreCompileInputs.cache
+D:\NTT\ntt\AppTS\obj\Debug\AppTS.csproj.CopyComplete
+D:\NTT\ntt\AppTS\obj\Debug\AppTS.dll
+D:\NTT\ntt\AppTS\obj\Debug\AppTS.pdb
+E:\DUAN_NTT\ntt\AppTS\bin\AppTS.dll.config
+E:\DUAN_NTT\ntt\AppTS\bin\AppTS.dll
+E:\DUAN_NTT\ntt\AppTS\bin\AppTS.pdb
+E:\DUAN_NTT\ntt\AppTS\bin\Antlr3.Runtime.dll
+E:\DUAN_NTT\ntt\AppTS\bin\EntityFramework.dll
+E:\DUAN_NTT\ntt\AppTS\bin\EntityFramework.SqlServer.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Google.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Web.Infrastructure.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Newtonsoft.Json.dll
+E:\DUAN_NTT\ntt\AppTS\bin\Owin.dll
+E:\DUAN_NTT\ntt\AppTS\bin\System.Web.Helpers.dll
+E:\DUAN_NTT\ntt\AppTS\bin\System.Web.Mvc.dll
+E:\DUAN_NTT\ntt\AppTS\bin\System.Web.Optimization.dll
+E:\DUAN_NTT\ntt\AppTS\bin\System.Web.Razor.dll
+E:\DUAN_NTT\ntt\AppTS\bin\System.Web.WebPages.Deployment.dll
+E:\DUAN_NTT\ntt\AppTS\bin\System.Web.WebPages.dll
+E:\DUAN_NTT\ntt\AppTS\bin\System.Web.WebPages.Razor.dll
+E:\DUAN_NTT\ntt\AppTS\bin\WebGrease.dll
+E:\DUAN_NTT\ntt\AppTS\bin\System.Web.Helpers.xml
+E:\DUAN_NTT\ntt\AppTS\bin\System.Web.Mvc.xml
+E:\DUAN_NTT\ntt\AppTS\bin\System.Web.Optimization.xml
+E:\DUAN_NTT\ntt\AppTS\bin\System.Web.Razor.xml
+E:\DUAN_NTT\ntt\AppTS\bin\System.Web.WebPages.xml
+E:\DUAN_NTT\ntt\AppTS\bin\System.Web.WebPages.Deployment.xml
+E:\DUAN_NTT\ntt\AppTS\bin\System.Web.WebPages.Razor.xml
+E:\DUAN_NTT\ntt\AppTS\bin\Newtonsoft.Json.xml
+E:\DUAN_NTT\ntt\AppTS\bin\Antlr3.Runtime.pdb
+E:\DUAN_NTT\ntt\AppTS\bin\EntityFramework.xml
+E:\DUAN_NTT\ntt\AppTS\bin\EntityFramework.SqlServer.xml
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.xml
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.xml
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Google.xml
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+E:\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\DUAN_NTT\ntt\AppTS\obj\Debug\AppTS.dll
+E:\DUAN_NTT\ntt\AppTS\obj\Debug\AppTS.pdb
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\AppTS.dll.config
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\AppTS.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\AppTS.pdb
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Antlr3.Runtime.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\EntityFramework.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\EntityFramework.SqlServer.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Google.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Web.Infrastructure.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Newtonsoft.Json.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Owin.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\System.Web.Helpers.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\System.Web.Mvc.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\System.Web.Optimization.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\System.Web.Razor.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\System.Web.WebPages.Deployment.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\System.Web.WebPages.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\System.Web.WebPages.Razor.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\WebGrease.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\System.Web.Helpers.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\System.Web.Mvc.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\System.Web.Optimization.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\System.Web.Razor.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\System.Web.WebPages.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\System.Web.WebPages.Deployment.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\System.Web.WebPages.Razor.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Newtonsoft.Json.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Antlr3.Runtime.pdb
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\EntityFramework.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\EntityFramework.SqlServer.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Google.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\MVC\DUAN_NTT\ntt\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache
+D:\MVC\DUAN_NTT\ntt\AppTS\obj\Debug\AppTS.dll
+D:\MVC\DUAN_NTT\ntt\AppTS\obj\Debug\AppTS.pdb
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\AppTS.dll.config
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\AppTS.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\AppTS.pdb
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Antlr3.Runtime.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\EntityFramework.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\EntityFramework.SqlServer.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Newtonsoft.Json.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Owin.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\System.Web.Helpers.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\System.Web.Mvc.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\System.Web.Optimization.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\System.Web.Razor.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\System.Web.WebPages.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\System.Web.WebPages.Razor.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\WebGrease.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\System.Web.Helpers.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\System.Web.Mvc.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\System.Web.Optimization.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\System.Web.Razor.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\System.Web.WebPages.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\System.Web.WebPages.Razor.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Newtonsoft.Json.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Antlr3.Runtime.pdb
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\EntityFramework.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\EntityFramework.SqlServer.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\obj\Debug\AppTS.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_nttu\AppTS\obj\Debug\AppTS.pdb
+E:\NTT\duan_nttu\AppTS\bin\AppTS.dll.config
+E:\NTT\duan_nttu\AppTS\bin\AppTS.dll
+E:\NTT\duan_nttu\AppTS\bin\AppTS.pdb
+E:\NTT\duan_nttu\AppTS\bin\Antlr3.Runtime.dll
+E:\NTT\duan_nttu\AppTS\bin\EntityFramework.dll
+E:\NTT\duan_nttu\AppTS\bin\EntityFramework.SqlServer.dll
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.dll
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Security.dll
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Google.dll
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Web.Infrastructure.dll
+E:\NTT\duan_nttu\AppTS\bin\Newtonsoft.Json.dll
+E:\NTT\duan_nttu\AppTS\bin\Owin.dll
+E:\NTT\duan_nttu\AppTS\bin\System.Web.Helpers.dll
+E:\NTT\duan_nttu\AppTS\bin\System.Web.Mvc.dll
+E:\NTT\duan_nttu\AppTS\bin\System.Web.Optimization.dll
+E:\NTT\duan_nttu\AppTS\bin\System.Web.Razor.dll
+E:\NTT\duan_nttu\AppTS\bin\System.Web.WebPages.Deployment.dll
+E:\NTT\duan_nttu\AppTS\bin\System.Web.WebPages.dll
+E:\NTT\duan_nttu\AppTS\bin\System.Web.WebPages.Razor.dll
+E:\NTT\duan_nttu\AppTS\bin\WebGrease.dll
+E:\NTT\duan_nttu\AppTS\bin\System.Web.Helpers.xml
+E:\NTT\duan_nttu\AppTS\bin\System.Web.Mvc.xml
+E:\NTT\duan_nttu\AppTS\bin\System.Web.Optimization.xml
+E:\NTT\duan_nttu\AppTS\bin\System.Web.Razor.xml
+E:\NTT\duan_nttu\AppTS\bin\System.Web.WebPages.xml
+E:\NTT\duan_nttu\AppTS\bin\System.Web.WebPages.Deployment.xml
+E:\NTT\duan_nttu\AppTS\bin\System.Web.WebPages.Razor.xml
+E:\NTT\duan_nttu\AppTS\bin\Newtonsoft.Json.xml
+E:\NTT\duan_nttu\AppTS\bin\Antlr3.Runtime.pdb
+E:\NTT\duan_nttu\AppTS\bin\EntityFramework.xml
+E:\NTT\duan_nttu\AppTS\bin\EntityFramework.SqlServer.xml
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.xml
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Security.xml
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Google.xml
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+E:\NTT\duan_nttu\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\NTT\duan_nttu\AppTS\obj\Debug\AppTS.csprojAssemblyReference.cache
+E:\NTT\duan_nttu\AppTS\obj\Debug\AppTS.csproj.CoreCompileInputs.cache
+E:\NTT\duan_nttu\AppTS\obj\Debug\AppTS.csproj.CopyComplete
+E:\NTT\duan_nttu\AppTS\obj\Debug\AppTS.dll
+E:\NTT\duan_nttu\AppTS\obj\Debug\AppTS.pdb
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\AppTS.dll.config
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\AppTS.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\AppTS.pdb
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Owin.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\WebGrease.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\obj\Debug\AppTS.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_nttu\AppTS\obj\Debug\AppTS.pdb
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\AppTS.dll.config
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\AppTS.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\AppTS.pdb
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Antlr3.Runtime.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\EntityFramework.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\EntityFramework.SqlServer.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Security.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Newtonsoft.Json.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Owin.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\System.Web.Helpers.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\System.Web.Mvc.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\System.Web.Optimization.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\System.Web.Razor.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\System.Web.WebPages.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\System.Web.WebPages.Razor.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\WebGrease.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\System.Web.Helpers.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\System.Web.Mvc.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\System.Web.Optimization.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\System.Web.Razor.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\System.Web.WebPages.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\System.Web.WebPages.Razor.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Newtonsoft.Json.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Antlr3.Runtime.pdb
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\EntityFramework.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\EntityFramework.SqlServer.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Security.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\DELL\Downloads\duan_nttu\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Downloads\duan_nttu\AppTS\obj\Debug\AppTS.dll
+C:\Users\DELL\Downloads\duan_nttu\AppTS\obj\Debug\AppTS.pdb

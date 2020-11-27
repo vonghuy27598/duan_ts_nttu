@@ -1,0 +1,149 @@
+﻿
+@{
+    ViewBag.Title = "TuVanChonNgheNghiep";
+    Layout = "~/Views/Shared/_Layout_TuVan.cshtml";
+}
+
+<link href="~/Content/css/form_dudoan.css" rel="stylesheet" />
+<div class="dudoan" style="margin-top:100px">
+    <h2>TƯ VẤN CHỌN NGHỀ NGHIỆP</h2>
+    <div class="form-advisory">       
+        <div class="content-form">
+
+            
+
+          
+            <div class="group-tv">
+                <label>1. Môn học yêu thích (ở THPT)</label>
+                <input type="text" id="txtMuc1" class="line-animation" />
+                <div class="line"></div>
+            </div>
+
+
+            <div class="group-tv">
+                <label>2. Sở trường</label>
+                <input type="text" id="txtMuc2" class="line-animation" />
+                <div class="line"></div>
+            </div>
+
+
+            <div class="group-tv">
+                <label>3. Sở đoản</label>
+                <input type="text" id="txtMuc3" class="line-animation" />
+                <div class="line"></div>
+            </div>
+            <div class="group-tv">
+                <label>4. Điểm thi tốt nghiệp (dự đoán)</label>
+                <input type="text" id="txtMuc4" class="line-animation" />
+                <div class="line"></div>
+            </div>
+            <div class="group-tv">
+                <label>5. Ngành nghề mà bạn muốn hướng tới</label>
+                <textarea rows="5" id="txtMuc5" class="line-area"></textarea>
+                
+            </div>
+            <div class="group-tv">
+                <label>6. Điểm kiểm tra năng lực tư duy</label>
+                <input type="text"  id="txtMuc6" class="line-animation">
+                <div class="line"></div>
+                
+            </div>
+            <div class="group-tv">
+                <label>7. Điểm kiểm tra năng lực học tập (trong ứng dụng):</label>
+                <div class="child-group">
+                    <label>7.1. Điểm kiểm tra năng lực khối tự nhiên (khối A): <input type="text" id="txtMuc71" class="line-animation" /><div class="line"></div></label>
+                   
+                    <label>7.2. Điểm kiểm tra năng lực khối tự nhiên (khối B): <input type="text" id="txtMuc72" class="line-animation" /><div class="line"></div></label>
+                   
+                    <label>7.3. Điểm kiểm tra năng lực khối xã hội: <input type="text" id="txtMuc73" class="line-animation" /><div class="line"></div></label>
+                   
+                    <label>7.4 Điểm kiểm tra năng lực ngoại ngữ: <input type="text" id="txtMuc74" class="line-animation" /><div class="line"></div></label>
+                   
+                </div>
+            </div>
+            <div class="group-tv">
+                <label>8. Mức lương mong muốn sau này:</label>
+                <input type="text" id="txtMuc8" class="line-animation" />
+                <div class="line"></div>
+            </div>
+            <a class="btn-dudoan" id="send_dudoan" href="#result">Dự đoán</a>
+        </div>
+        <div class="result-form" id="result">
+            <h3 style="font-weight:bold">KẾT QUẢ</h3>
+            <div class="result">
+                <p>Bạn nên chọn nghề:  <span id="sp_chonnghe"></span></p>
+                <p>Khả năng tìm việc: <span id="sp_khanang"></span></p>                
+                <p>Số lượng nhà tuyển dụng có nhu cầu: <span id="sp_soluong"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.menu-tv').removeClass("active");
+        $('.tv_chonnghe').addClass("active");
+    });
+    $('#send_dudoan').click(function () {
+                var monyeuthich = $('#txtMuc1').val();
+                var sotruong = $('#txtMuc2').val();
+                var sodoan = $('#txtMuc3').val();
+                var diemthi_tn = $('#txtMuc4').val();
+                var nganhnghe = $('#txtMuc5').val();
+                var diemtuduy = $('#txtMuc6').val();
+                var diemA = $('#txtMuc71').val();
+                var diemB = $('#txtMuc72').val();
+                var diemXH = $('#txtMuc73').val();
+                var diemNN = $('#txtMuc74').val();
+                var mucluong = $('#txtMuc8').val();
+               
+                if (monyeuthich.length == 0)
+                    alert("Vui lòng nhập môn yêu thích");
+                else if (sotruong.length == 0)
+                    alert("Vui lòng nhập sở trường");
+                else if (sodoan.length == 0)
+                    alert("Vui lòng nhập sở đoản");
+                else if (diemthi_tn.length == 0)
+                    alert("Vui lòng nhập điểm thi tốt nghiệp");
+                else if (nganhnghe.length == 0)
+                    alert("Vui lòng nhập ngành nghề mà bạn muốn hướng tới");
+                else if (diemtuduy.length == 0)
+                    alert("Vui lòng nhập điểm năng lực tư duy");
+                else if (diemA.length == 0)
+                    alert("Vui lòng nhập điểm năng lực khối tự nhiên (A)");
+                else if (diemB.length == 0)
+                    alert("Vui lòng nhập điểm năng lực khối tự nhiên (B)");
+                else if (diemXH.length == 0)
+                    alert("Vui lòng nhập điểm năng lực khối xã hội");
+                else if (diemNN.length == 0)
+                    alert("Vui lòng nhập điểm năng lực ngoại ngữ");
+                else if (mucluong.length == 0)
+                    alert("Vui lòng nhập mức lương mong muốn");
+                else
+                    $('.result-form').css('display', 'block');
+                    // Make sure this.hash has a value before overriding default behavior
+                    // Prevent default anchor click behavior
+                     event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 100, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                    $("#sp_chonnghe").text("Lập trình viên");
+                    $("#sp_khanang").text("50%");
+                    $("#sp_soluong").text("2000");
+                   
+
+    });
+</script>
+
+
+

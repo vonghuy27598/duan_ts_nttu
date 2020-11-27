@@ -1,0 +1,224 @@
+﻿@{
+    ViewBag.Title = "DuDoan";
+    Layout = "~/Views/Shared/_Layout_TuVan.cshtml";
+}
+<link href="~/Content/css/form_dudoan.css" rel="stylesheet" />
+<div class="dudoan" style="margin-top:100px">
+    <h2>TƯ VẤN CHỌN NGÀNH</h2>
+    <div class="form-advisory">
+        <div class="select-form">
+            <select>
+                <option>Cuối năm 11</option>
+                <option>Cuối năm 12</option>
+            </select>
+        </div>
+        <div class="content-form">
+            <label>1. Điểm </label>
+            <p style="margin-bottom:10px;color:blue;font-weight:bold">Vui lòng nhập điểm các môn học</p>
+            <table border="1" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th>Tên môn học</th>
+                        <th>Điểm cả năm lớp</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Toán</td>
+                        <td><input type="number" id="txtToan" onkeypress="if(this.value.length==2) return false; " class="line-animation" /><div class="line"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Vật lý</td>
+                        <td><input type="number" id="txtLy" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Hóa học</td>
+                        <td><input type="number" id="txtHoa" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Ngữ văn</td>
+                        <td><input type="number" id="txtVan" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Lịch sử</td>
+                        <td><input type="number" id="txtSu" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Địa lý</td>
+                        <td><input type="number" id="txtDia" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Sinh học</td>
+                        <td><input type="number" id="txtSinh" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Anh văn</td>
+                        <td><input type="number" id="txtAnh" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Giáo dục công dân</td>
+                        <td><input type="number" id="txtGD" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Tin học</td>
+                        <td><input type="number" id="txtTin" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="group-tv">
+                <label>2. Môn học yêu thích (ở THPT)</label>
+                <input type="text" id="txtMuc2" class="line-animation" /><div class="line"></div>
+            </div>
+
+
+            <div class="group-tv">
+                <label>3. Sở trường</label>
+                <input type="text" id="txtMuc3" class="line-animation" /><div class="line"></div>
+            </div>
+
+
+            <div class="group-tv">
+                <label>4. Sở đoản</label>
+                <input type="text" id="txtMuc4" class="line-animation" /><div class="line"></div>
+            </div>
+
+            <div class="group-tv">
+                <label>5. Ngành nghề mà bạn muốn hướng tới</label>
+                <textarea rows="5" id="txtMuc5"></textarea>
+            </div>
+
+
+            <a class="btn-dudoan" id="send_dudoan" href="#result">Dự đoán</a>
+        </div>
+        <div class="result-form" id="result">
+            <h3 style="font-weight:bold">KẾT QUẢ</h3>
+            <div class="result">
+                <p>Tổng điểm:  <span id="sp_tongdiem"></span></p>
+                <p>Bạn nên chọn ngành: <span id="sp_chonganh"></span></p>
+                <p>Khả năng tìm việc: <span id="sp_khanang"></span></p>
+                <p>Số lượng nhà tuyển dụng có nhu cầu: <span id="sp_soluong"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.menu-tv').removeClass("active");
+        $('.tv_chonnganh').addClass("active");
+    });
+    $('#send_dudoan').click(function () {
+        var toan = $('#txtToan').val();
+        var ntoan = parseInt(toan);
+        $(".result-toan").text(toan);
+        var ly = $('#txtLy').val();
+        var nly = parseInt(toan);
+        $(".result-ly").text(toan);
+        var hoa = $('#txtHoa').val();
+        var nhoa = parseInt(toan);
+        $(".result-hoa").text(toan);
+        var sinh = $('#txtSinh').val();
+        var nsinh = parseInt(toan);
+        $(".result-sinh").text(toan);
+        var van = $('#txtVan').val();
+        var nvan = parseInt(toan);
+        $(".result-van").text(toan);
+        var su = $('#txtSu').val();
+        var nsu = parseInt(toan);
+        $(".result-su").text(toan);
+        var dia = $('#txtDia').val();
+        var ndia = parseInt(toan);
+        $(".result-dia").text(toan);
+        var anh = $('#txtAnh').val();
+        var nanh = parseInt(toan);
+        $(".result-anh").text(toan);
+        var gd = $('#txtGD').val();
+        var ngd = parseInt(toan);
+        $(".result-gd").text(toan);
+        var tin = $('#txtTin').val();
+        var ntin = parseInt(toan);
+        var monyeuthich = $('#txtMuc2').val();
+        var sotruong = $('#txtMuc3').val();
+        var sodoan = $('#txtMuc4').val();
+        var nganhnghe = $('#txtMuc5').val();
+        if (toan.length == 0)
+            alert('Vui lòng nhập điểm môn Toán');
+        else if (ly.length == 0)
+            alert('Vui lòng nhập điểm môn Vật lý');
+        else if (hoa.length == 0)
+            alert('Vui lòng nhập điểm môn Hóa học');
+        else if (van.length == 0)
+            alert('Vui lòng nhập điểm môn Ngữ văn');
+        else if (su.length == 0)
+            alert('Vui lòng nhập điểm môn Lịch sử');
+        else if (dia.length == 0)
+            alert('Vui lòng nhập điểm môn Địa lý');
+        else if (sinh.length == 0)
+            alert('Vui lòng nhập điểm môn Sinh học');
+        else if (anh.length == 0)
+            alert('Vui lòng nhập điểm môn Anh văn');
+        else if (gd.length == 0)
+            alert('Vui lòng nhập điểm môn Giáo dục công dân');
+        else if (tin.length == 0)
+            alert('Vui lòng nhập điểm môn Tin học');
+        else
+            if (toan < 0 || toan > 10)
+                alert('Điểm toán khoảng từ 0 đến 10');
+            else if (ly < 0 || ly > 10)
+                alert('Điểm lý khoảng từ 0 đến 10');
+            else if (hoa < 0 || hoa > 10)
+                alert('Điểm hóa khoảng từ 0 đến 10');
+            else if (van < 0 || van > 10)
+                alert('Điểm văn khoảng từ 0 đến 10');
+            else if (su < 0 || su > 10)
+                alert('Điểm sử khoảng từ 0 đến 10');
+            else if (dia < 0 || dia > 10)
+                alert('Điểm địa khoảng từ 0 đến 10');
+            else if (sinh < 0 || sinh > 10)
+                alert('Điểm sinh khoảng từ 0 đến 10');
+            else if (anh < 0 || anh > 10)
+                alert('Điểm anh khoảng từ 0 đến 10');
+            else if (gd < 0 || gd > 10)
+                alert('Điểm giáo dục công dân khoảng từ 0 đến 10');
+            else if (tin < 0 || tin > 10)
+                alert('Điểm tin khoảng từ 0 đến 10');
+            else {
+                if (monyeuthich.length == 0)
+                    alert("Vui lòng nhập môn yêu thích");
+                else if (sotruong.length == 0)
+                    alert("Vui lòng nhập sở trường");
+                else if (sodoan.length == 0)
+                    alert("Vui lòng nhập sở đoản");
+                else if (nganhnghe.length == 0)
+                    alert("Vui lòng nhập ngành nghề mà bạn muốn hướng tới");
+                else
+                    $('.result-form').css('display', 'block');
+                    // Make sure this.hash has a value before overriding default behavior
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                // Store hash
+                    var hash = this.hash;
+
+                                // Using jQuery's animate() method to add smooth page scroll
+                                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 100, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                    var tongtb = (ntoan + nly + nhoa + nsinh + nsu + ndia + nvan + ntin + ngd + nanh) / 10;
+                $("#sp_tongdiem").text(tongtb);
+                $("#sp_chonganh").text("Công nghệ thông tin");
+                $("#sp_khanang").text("50%");
+                $("#sp_soluong").text("2000");
+                    
+                
+            }
+
+    });
+</script>

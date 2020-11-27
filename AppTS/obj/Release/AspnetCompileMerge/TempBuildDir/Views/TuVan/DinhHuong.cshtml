@@ -1,0 +1,1165 @@
+﻿
+@{
+    ViewBag.Title = "DinhHuong";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    table td {
+        font-size: calc(15px + (18 - 15) * ((100vw - 300px) / (1600 - 300)));
+    }
+    table th {
+        font-size: calc(16px + (16 - 15) * ((100vw - 300px) / (1600 - 300)));
+    }
+    /*rate*/
+    label:before {
+        content: '☆';
+        color: #eade4c;
+        font-size: 2em;
+    }
+
+    label.on:before {
+        content: '★';
+        color: #eade4c;
+        /* uncomment for iOS */
+        /*   font-size: 2.4em;
+  top: -0.1em;
+  left: -0.1em; */
+    }
+
+    input:checked + label:before {
+        content: '★';
+        color: #eade4c;
+        /* uncomment for iOS */
+        /*   font-size: 2.4em;
+  top: -0.1em;
+  left: -0.1em; */
+    }
+
+    label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding-left: 30px;
+        font-size: 20px;
+    }
+
+        label:before {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            border-radius: 10px;
+        }
+
+    input[type=radio] {
+        display: none;
+        -webkit-appearance: none;
+    }
+
+    .question {
+        margin-bottom: 5em;
+        width: 140px;
+    }
+</style>
+<section id="about">
+    <div class="container">
+
+        <header class="section-header">
+            <h4>
+                TRẮC NGHIỆM ĐỊNH HƯỚNG NGHỀ NGHIỆP 
+            </h4>
+            <p>
+                Bộ công cụ trắc nghiệm định hướng nghề nghiệp của John Holland. Bộ công cụ này được xây dựng trên cơ sở lý thuyết do chính ông dày công tìm hiểu.
+            </p>
+        </header>
+
+        <div class="row about-container">
+
+            <div class="col-lg-6 content order-lg-1 order-2">
+                <p id="text">
+                    <b style="color:red">Bước 1: </b>Các câu hỏi liệt kê trong mỗi bảng hướng đến các tố chất và năng lực cá nhân. Mỗi câu hỏi sẽ có nhiều mức độ phù hợp, tương ứng với mỗi mức độ phù hợp, sẽ được quy định một điểm số tương ứng. Điểm số tương ứng này do người làm trắc nghiệm đánh giá và tự cho điểm theo quy ước sau:<br />
+                    1. Bạn thấy câu hỏi đó chưa bao giờ đúng với bạn – tương ứng 0 điểm<br />
+                    2. Bạn thấy câu hỏi đó chỉ đúng trong một vài trường hợp – tương ứng 1 điểm<br />
+                    3. Bạn thấy Bạn thấy đó chỉ một nửa là đúng với bạn – tương ứng 2 điểm<br />
+                    4. Bạn thấy câu hỏi đó gần như là đúng với bạn trong hầu hết mọi trường hợp, chỉ có một vài trường hợp là chưa đúng lắm – tương ứng 3 điểm<br />
+                    5. Bạn thấy câu hỏi đó là hoàn toàn đúng với bạn, không thể nào khác đi được – tương ứng 4 điểm
+                </p>
+                <p id="text">
+                    <b style="color:red">Bước 2: </b>Cho điểm vào từng ý trong mỗi bảng, và cộng tổng điểm của từng bảng, xác định những bảng có điểm số cao nhất.
+                </p>
+                <div class="content-form"></div>
+                <form>
+                    <table style="text-align:center" border="1" cellpadding="10" id="tableA">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Bảng A (R: Realistic - Người thực tế)	</th>
+                                <th>Điểm</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tôi có tính tự lập</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs1" id="a1" value="1">
+                                        <label for="a1"></label>
+                                        <input type="radio" name="needs1" id="a2" value="2">
+                                        <label for="a2"></label>
+                                        <input type="radio" name="needs1" id="a3" value="3">
+                                        <label for="a3"></label>
+                                        <input type="radio" name="needs1" id="a4" value="4">
+                                        <label for="a4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Tôi suy nghĩ thực tế</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs2" id="aa1" value="1">
+                                        <label for="aa1"></label>
+                                        <input type="radio" name="needs2" id="aa2" value="2">
+                                        <label for="aa2"></label>
+                                        <input type="radio" name="needs2" id="aa3" value="3">
+                                        <label for="aa3"></label>
+                                        <input type="radio" name="needs2" id="aa4" value="4">
+                                        <label for="aa4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Tôi là người thích nghi với môi trường mới</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs3" id="ab1" value="1">
+                                        <label for="ab1"></label>
+                                        <input type="radio" name="needs3" id="ab2" value="2">
+                                        <label for="ab2"></label>
+                                        <input type="radio" name="needs3" id="ab3" value="3">
+                                        <label for="ab3"></label>
+                                        <input type="radio" name="needs3" id="ab4" value="4">
+                                        <label for="ab4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Tôi có thể vận hành, điều khiển các máy móc thiết bị</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs4" id="ac1" value="1">
+                                        <label for="ac1"></label>
+                                        <input type="radio" name="needs4" id="ac2" value="2">
+                                        <label for="ac2"></label>
+                                        <input type="radio" name="needs4" id="ac3" value="3">
+                                        <label for="ac3"></label>
+                                        <input type="radio" name="needs4" id="ac4" value="4">
+                                        <label for="ac4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Tôi làm các công việc thủ công như gấp giấy, đan, móc</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs5" id="ad1" value="1">
+                                        <label for="ad1"></label>
+                                        <input type="radio" name="needs5" id="ad2" value="2">
+                                        <label for="ad2"></label>
+                                        <input type="radio" name="needs5" id="ad3" value="3">
+                                        <label for="ad3"></label>
+                                        <input type="radio" name="needs5" id="ad4" value="4">
+                                        <label for="ad4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Tôi thích tiếp xúc với thiên nhiên, động vật, cây cỏ</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs6" id="ae1" value="1">
+                                        <label for="ae1"></label>
+                                        <input type="radio" name="needs6" id="ae2" value="2">
+                                        <label for="ae2"></label>
+                                        <input type="radio" name="needs6" id="ae3" value="3">
+                                        <label for="ae3"></label>
+                                        <input type="radio" name="needs6" id="ae4" value="4">
+                                        <label for="ae4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Tôi thích những công việc sử dụng tay chân hơn là trí óc</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs7" id="aq1" value="1">
+                                        <label for="aq1"></label>
+                                        <input type="radio" name="needs7" id="aq2" value="2">
+                                        <label for="aq2"></label>
+                                        <input type="radio" name="needs7" id="aq3" value="3">
+                                        <label for="aq3"></label>
+                                        <input type="radio" name="needs7" id="aq4" value="4">
+                                        <label for="aq4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Tôi thích những công việc thấy ngay kết quả</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs8" id="as1" value="1">
+                                        <label for="as1"></label>
+                                        <input type="radio" name="needs8" id="as2" value="2">
+                                        <label for="as2"></label>
+                                        <input type="radio" name="needs8" id="as3" value="3">
+                                        <label for="as3"></label>
+                                        <input type="radio" name="needs8" id="as4" value="4">
+                                        <label for="as4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Tôi thích làm việc ngoài trời hơn là trong phòng học, văn phòng</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs9" id="aw1" value="1">
+                                        <label for="aw1"></label>
+                                        <input type="radio" name="needs9" id="aw2" value="2">
+                                        <label for="aw2"></label>
+                                        <input type="radio" name="needs9" id="aw3" value="3">
+                                        <label for="aw3"></label>
+                                        <input type="radio" name="needs9" id="aw4" value="4">
+                                        <label for="aw4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="end">
+                                <td></td>
+                                <td><b><u>Tổng: </u></b></td>
+                                <td><span id="sum_A">0</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <br/>
+                <form>
+                    <table style="text-align:center" border="1" cellpadding="10" id="tableB">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Bảng B (I: Investigative - Người thích nghiên cứu)</th>
+                                <th>Điểm</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tôi có tìm hiểu khám phá nhiều vấn đề mới</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs10" id="a11" value="1">
+                                        <label for="a11"></label>
+                                        <input type="radio" name="needs10" id="a12" value="2">
+                                        <label for="a12"></label>
+                                        <input type="radio" name="needs10" id="a13" value="3">
+                                        <label for="a13"></label>
+                                        <input type="radio" name="needs10" id="a14" value="4">
+                                        <label for="a14"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Tôi có khả năng phân tích vấn đề</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs11" id="aaa1" value="1">
+                                        <label for="aaa1"></label>
+                                        <input type="radio" name="needs11" id="aaa2" value="2">
+                                        <label for="aaa2"></label>
+                                        <input type="radio" name="needs11" id="aaa3" value="3">
+                                        <label for="aaa3"></label>
+                                        <input type="radio" name="needs11" id="aaa4" value="4">
+                                        <label for="aaa4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Tôi biết suy nghĩ một cách mạch lạc, chặt chẽ</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs12" id="aab1" value="1">
+                                        <label for="aab1"></label>
+                                        <input type="radio" name="needs12" id="aab2" value="2">
+                                        <label for="aab2"></label>
+                                        <input type="radio" name="needs12" id="aab3" value="3">
+                                        <label for="aab3"></label>
+                                        <input type="radio" name="needs12" id="aab4" value="4">
+                                        <label for="aab4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Tôi thích thực hiện các thí nghiệm hoặc nghiên cứu</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs13" id="aac1" value="1">
+                                        <label for="aac1"></label>
+                                        <input type="radio" name="needs13" id="aac2" value="2">
+                                        <label for="aac2"></label>
+                                        <input type="radio" name="needs13" id="aac3" value="3">
+                                        <label for="aac3"></label>
+                                        <input type="radio" name="needs13" id="aac4" value="4">
+                                        <label for="aac4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Tôi có khả năng tổng hợp, khái quát, suy đoán những vấn đề</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs14" id="aad1" value="1">
+                                        <label for="aad1"></label>
+                                        <input type="radio" name="needs14" id="aad2" value="2">
+                                        <label for="aad2"></label>
+                                        <input type="radio" name="needs14" id="aad3" value="3">
+                                        <label for="aad3"></label>
+                                        <input type="radio" name="needs14" id="aad4" value="4">
+                                        <label for="aad4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Tôi thích những hoạt động điều tra, phân loại, kiểm tra, đánh giá</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs15" id="aae1" value="1">
+                                        <label for="aae1"></label>
+                                        <input type="radio" name="needs15" id="aae2" value="2">
+                                        <label for="aae2"></label>
+                                        <input type="radio" name="needs15" id="aae3" value="3">
+                                        <label for="aae3"></label>
+                                        <input type="radio" name="needs15" id="aae4" value="4">
+                                        <label for="aae4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Tôi tự tổ chức công việc mình phải làm</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs16" id="aaq1" value="1">
+                                        <label for="aaq1"></label>
+                                        <input type="radio" name="needs16" id="aaq2" value="2">
+                                        <label for="aaq2"></label>
+                                        <input type="radio" name="needs16" id="aaq3" value="3">
+                                        <label for="aaq3"></label>
+                                        <input type="radio" name="needs16" id="aaq4" value="4">
+                                        <label for="aaq4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Tôi thích suy nghĩ về những vấn đề phức tạp, làm những công việc phức tạp</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs17" id="aas1" value="1">
+                                        <label for="aas1"></label>
+                                        <input type="radio" name="needs17" id="aas2" value="2">
+                                        <label for="aas2"></label>
+                                        <input type="radio" name="needs17" id="aas3" value="3">
+                                        <label for="aas3"></label>
+                                        <input type="radio" name="needs17" id="aas4" value="4">
+                                        <label for="aas4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Tôi có khả năng giải quyết các vấn đề</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs18" id="aaw1" value="1">
+                                        <label for="aaw1"></label>
+                                        <input type="radio" name="needs18" id="aaw2" value="2">
+                                        <label for="aaw2"></label>
+                                        <input type="radio" name="needs18" id="aaw3" value="3">
+                                        <label for="aaw3"></label>
+                                        <input type="radio" name="needs18" id="aaw4" value="4">
+                                        <label for="aaw4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="end">
+                                <td></td>
+                                <td><b><u>Tổng: </u></b></td>
+                                <td><span id="sum_B">0</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <br/>
+                <form>
+                    <table style="text-align:center" border="1" cellpadding="10" id="tableC">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Bảng C (A : Artistic - Người có tính nghệ sĩ )</th>
+                                <th>Điểm</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tôi là người dễ xúc động</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs19" id="al1" value="1">
+                                        <label for="al1"></label>
+                                        <input type="radio" name="needs19" id="al2" value="2">
+                                        <label for="al2"></label>
+                                        <input type="radio" name="needs19" id="al3" value="3">
+                                        <label for="al3"></label>
+                                        <input type="radio" name="needs19" id="al4" value="4">
+                                        <label for="al4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Tôi có óc tưởng tượng phong phú</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs20" id="aba1" value="1">
+                                        <label for="aba1"></label>
+                                        <input type="radio" name="needs20" id="aba2" value="2">
+                                        <label for="aba2"></label>
+                                        <input type="radio" name="needs20" id="aba3" value="3">
+                                        <label for="aba3"></label>
+                                        <input type="radio" name="needs20" id="aba4" value="4">
+                                        <label for="aba4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Tôi thích sự tự do, không theo những quy định , quy tắc</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs21" id="abb1" value="1">
+                                        <label for="abb1"></label>
+                                        <input type="radio" name="needs21" id="abb2" value="2">
+                                        <label for="abb2"></label>
+                                        <input type="radio" name="needs21" id="abb3" value="3">
+                                        <label for="abb3"></label>
+                                        <input type="radio" name="needs21" id="abb4" value="4">
+                                        <label for="abb4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Tôi có khả năng thuyết trình, diễn xuất</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs22" id="abc1" value="1">
+                                        <label for="abc1"></label>
+                                        <input type="radio" name="needs22" id="abc2" value="2">
+                                        <label for="abc2"></label>
+                                        <input type="radio" name="needs22" id="abc3" value="3">
+                                        <label for="abc3"></label>
+                                        <input type="radio" name="needs22" id="abc4" value="4">
+                                        <label for="abc4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Tôi có thể chụp hình hoặc vẽ tranh, trang trí, điêu khắc</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs23" id="abd1" value="1">
+                                        <label for="abd1"></label>
+                                        <input type="radio" name="needs23" id="abd2" value="2">
+                                        <label for="abd2"></label>
+                                        <input type="radio" name="needs23" id="abd3" value="3">
+                                        <label for="abd3"></label>
+                                        <input type="radio" name="needs23" id="abd4" value="4">
+                                        <label for="abd4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Tôi có năng khiếu âm nhạc</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs24" id="abe1" value="1">
+                                        <label for="abe1"></label>
+                                        <input type="radio" name="needs24" id="abe2" value="2">
+                                        <label for="abe2"></label>
+                                        <input type="radio" name="needs24" id="abe3" value="3">
+                                        <label for="abe3"></label>
+                                        <input type="radio" name="needs24" id="abe4" value="4">
+                                        <label for="abe4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Tôi có khả năng viết, trình bày những ý tưởng của mình</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs25" id="abq1" value="1">
+                                        <label for="abq1"></label>
+                                        <input type="radio" name="needs25" id="abq2" value="2">
+                                        <label for="abq2"></label>
+                                        <input type="radio" name="needs25" id="abq3" value="3">
+                                        <label for="abq3"></label>
+                                        <input type="radio" name="needs25" id="abq4" value="4">
+                                        <label for="abq4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Tôi thích làm những công việc mới, những công việc đòi hỏi sự sáng tạo</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs26" id="abs1" value="1">
+                                        <label for="abs1"></label>
+                                        <input type="radio" name="needs26" id="abs2" value="2">
+                                        <label for="abs2"></label>
+                                        <input type="radio" name="needs26" id="abs3" value="3">
+                                        <label for="abs3"></label>
+                                        <input type="radio" name="needs26" id="abs4" value="4">
+                                        <label for="abs4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Tôi thoải mái bộc lộ những ý thích</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs27" id="abw1" value="1">
+                                        <label for="abw1"></label>
+                                        <input type="radio" name="needs27" id="abw2" value="2">
+                                        <label for="abw2"></label>
+                                        <input type="radio" name="needs27" id="abw3" value="3">
+                                        <label for="abw3"></label>
+                                        <input type="radio" name="needs27" id="abw4" value="4">
+                                        <label for="abw4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="end">
+                                <td></td>
+                                <td><b><u>Tổng: </u></b></td>
+                                <td><span id="sum_C">0</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <br/>
+                <form>
+                    <table style="text-align:center" border="1" cellpadding="10" id="tableD">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Bảng D ( S: Social - người có Tính xã hội )</th>
+                                <th>Điểm</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tôi có tính tự lập</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs28" id="a81" value="1">
+                                        <label for="a81"></label>
+                                        <input type="radio" name="needs28" id="a82" value="2">
+                                        <label for="a82"></label>
+                                        <input type="radio" name="needs28" id="a83" value="3">
+                                        <label for="a83"></label>
+                                        <input type="radio" name="needs28" id="a84" value="4">
+                                        <label for="a84"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Tôi suy nghĩ thực tế</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs29" id="aca1" value="1">
+                                        <label for="aca1"></label>
+                                        <input type="radio" name="needs29" id="aca2" value="2">
+                                        <label for="aca2"></label>
+                                        <input type="radio" name="needs29" id="aca3" value="3">
+                                        <label for="aca3"></label>
+                                        <input type="radio" name="needs29" id="aca4" value="4">
+                                        <label for="aca4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Tôi là người thích nghi với môi trường mới</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs30" id="acb1" value="1">
+                                        <label for="acb1"></label>
+                                        <input type="radio" name="needs30" id="acb2" value="2">
+                                        <label for="acb2"></label>
+                                        <input type="radio" name="needs30" id="acb3" value="3">
+                                        <label for="acb3"></label>
+                                        <input type="radio" name="needs30" id="acb4" value="4">
+                                        <label for="acb4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Tôi có thể vận hành, điều khiển các máy móc thiết bị</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs31" id="acc1" value="1">
+                                        <label for="acc1"></label>
+                                        <input type="radio" name="needs31" id="acc2" value="2">
+                                        <label for="acc2"></label>
+                                        <input type="radio" name="needs31" id="acc3" value="3">
+                                        <label for="acc3"></label>
+                                        <input type="radio" name="needs31" id="acc4" value="4">
+                                        <label for="acc4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Tôi làm các công việc thủ công như gấp giấy, đan, móc</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs32" id="acd1" value="1">
+                                        <label for="acd1"></label>
+                                        <input type="radio" name="needs32" id="acd2" value="2">
+                                        <label for="acd2"></label>
+                                        <input type="radio" name="needs32" id="acd3" value="3">
+                                        <label for="acd3"></label>
+                                        <input type="radio" name="needs32" id="acd4" value="4">
+                                        <label for="acd4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Tôi thích tiếp xúc với thiên nhiên, động vật, cây cỏ</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs33" id="ace1" value="1">
+                                        <label for="ace1"></label>
+                                        <input type="radio" name="needs33" id="ace2" value="2">
+                                        <label for="ace2"></label>
+                                        <input type="radio" name="needs33" id="ace3" value="3">
+                                        <label for="ace3"></label>
+                                        <input type="radio" name="needs33" id="ace4" value="4">
+                                        <label for="ace4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Tôi thích những công việc sử dụng tay chân hơn là trí óc</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs34" id="acq1" value="1">
+                                        <label for="acq1"></label>
+                                        <input type="radio" name="needs34" id="acq2" value="2">
+                                        <label for="acq2"></label>
+                                        <input type="radio" name="needs34" id="acq3" value="3">
+                                        <label for="acq3"></label>
+                                        <input type="radio" name="needs34" id="acq4" value="4">
+                                        <label for="acq4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Tôi thích những công việc thấy ngay kết quả</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs35" id="acs1" value="1">
+                                        <label for="acs1"></label>
+                                        <input type="radio" name="needs35" id="acs2" value="2">
+                                        <label for="acs2"></label>
+                                        <input type="radio" name="needs35" id="acs3" value="3">
+                                        <label for="acs3"></label>
+                                        <input type="radio" name="needs35" id="acs4" value="4">
+                                        <label for="acs4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Tôi thích làm việc ngoài trời hơn là trong phòng học, văn phòng</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs36" id="acw1" value="1">
+                                        <label for="acw1"></label>
+                                        <input type="radio" name="needs36" id="acw2" value="2">
+                                        <label for="acw2"></label>
+                                        <input type="radio" name="needs36" id="acw3" value="3">
+                                        <label for="acw3"></label>
+                                        <input type="radio" name="needs36" id="acw4" value="4">
+                                        <label for="acw4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="end">
+                                <td></td>
+                                <td><b><u>Tổng: </u></b></td>
+                                <td><span id="sum_D">0</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <br/>
+                <form>
+                    <table style="text-align:center" border="1" cellpadding="10" id="tableE">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Bảng E ( E: Enterprising - Người dám nghĩ dám làm)</th>
+                                <th>Điểm</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tôi là người có tính phiêu lưu, mạo hiểm</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs37" id="ah1" value="1">
+                                        <label for="ah1"></label>
+                                        <input type="radio" name="needs37" id="ah2" value="2">
+                                        <label for="ah2"></label>
+                                        <input type="radio" name="needs37" id="ah3" value="3">
+                                        <label for="ah3"></label>
+                                        <input type="radio" name="needs37" id="ah4" value="4">
+                                        <label for="ah4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Tôi có tính quyết đoán</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs38" id="aqa1" value="1">
+                                        <label for="aqa1"></label>
+                                        <input type="radio" name="needs38" id="aqa2" value="2">
+                                        <label for="aqa2"></label>
+                                        <input type="radio" name="needs38" id="aqa3" value="3">
+                                        <label for="aqa3"></label>
+                                        <input type="radio" name="needs38" id="aqa4" value="4">
+                                        <label for="aqa4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Tôi là người năng động</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs39" id="aqb1" value="1">
+                                        <label for="aqb1"></label>
+                                        <input type="radio" name="needs39" id="aqb2" value="2">
+                                        <label for="aqb2"></label>
+                                        <input type="radio" name="needs39" id="aqb3" value="3">
+                                        <label for="aqb3"></label>
+                                        <input type="radio" name="needs39" id="aqb4" value="4">
+                                        <label for="aqb4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Tôi có khả năng diễn đạt, tranh luận, và thuyết phục người khác</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs40" id="aqc1" value="1">
+                                        <label for="aqc1"></label>
+                                        <input type="radio" name="needs40" id="aqc2" value="2">
+                                        <label for="aqc2"></label>
+                                        <input type="radio" name="needs40" id="aqc3" value="3">
+                                        <label for="aqc3"></label>
+                                        <input type="radio" name="needs40" id="aqc4" value="4">
+                                        <label for="aqc4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Tôi thích các việc quản lý, đánh giá</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs41" id="aqd1" value="1">
+                                        <label for="aqd1"></label>
+                                        <input type="radio" name="needs41" id="aqd2" value="2">
+                                        <label for="aqd2"></label>
+                                        <input type="radio" name="needs41" id="aqd3" value="3">
+                                        <label for="aqd3"></label>
+                                        <input type="radio" name="needs41" id="aqd4" value="4">
+                                        <label for="aqd4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Tôi thường đặt ra các mục tiêu, kế hoạch trong cuộc sống</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs42" id="aqe1" value="1">
+                                        <label for="aqe1"></label>
+                                        <input type="radio" name="needs42" id="aqe2" value="2">
+                                        <label for="aqe2"></label>
+                                        <input type="radio" name="needs42" id="aqe3" value="3">
+                                        <label for="aqe3"></label>
+                                        <input type="radio" name="needs42" id="aqe4" value="4">
+                                        <label for="aqe4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Tôi thích gây ảnh hưởng đến người khác</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs43" id="aqq1" value="1">
+                                        <label for="aqq1"></label>
+                                        <input type="radio" name="needs43" id="aqq2" value="2">
+                                        <label for="aqq2"></label>
+                                        <input type="radio" name="needs43" id="aqq3" value="3">
+                                        <label for="aqq3"></label>
+                                        <input type="radio" name="needs43" id="aqq4" value="4">
+                                        <label for="aqq4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Tôi là người thích cạnh tranh, và muốn mình giói hơn người khác</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs44" id="aqs1" value="1">
+                                        <label for="aqs1"></label>
+                                        <input type="radio" name="needs44" id="aqs2" value="2">
+                                        <label for="aqs2"></label>
+                                        <input type="radio" name="needs44" id="aqs3" value="3">
+                                        <label for="aqs3"></label>
+                                        <input type="radio" name="needs44" id="aqs4" value="4">
+                                        <label for="aqs4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Tôi muốn người khác  phải kính trọng, nể phục tôi</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs45" id="aqw1" value="1">
+                                        <label for="aqw1"></label>
+                                        <input type="radio" name="needs45" id="aqw2" value="2">
+                                        <label for="aqw2"></label>
+                                        <input type="radio" name="needs45" id="aqw3" value="3">
+                                        <label for="aqw3"></label>
+                                        <input type="radio" name="needs45" id="aqw4" value="4">
+                                        <label for="aqw4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="end">
+                                <td></td>
+                                <td><b><u>Tổng: </u></b></td>
+                                <td><span id="sum_E">0</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <br/>
+                <form>
+                    <table style="text-align:center" border="1" cellpadding="10" id="tableF">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Bảng F ( C : Conventional - người công chức )</th>
+                                <th>Điểm</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tôi là người có đầu óc sắp xếp, tổ chức</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs46" id="ash1" value="1">
+                                        <label for="ash1"></label>
+                                        <input type="radio" name="needs46" id="ash2" value="2">
+                                        <label for="ash2"></label>
+                                        <input type="radio" name="needs46" id="ash3" value="3">
+                                        <label for="ash3"></label>
+                                        <input type="radio" name="needs46" id="ash4" value="4">
+                                        <label for="ash4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Tôi có tính cẩn thận</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs47" id="azqa1" value="1">
+                                        <label for="azqa1"></label>
+                                        <input type="radio" name="needs47" id="azqa2" value="2">
+                                        <label for="azqa2"></label>
+                                        <input type="radio" name="needs47" id="azqa3" value="3">
+                                        <label for="azqa3"></label>
+                                        <input type="radio" name="needs47" id="azqa4" value="4">
+                                        <label for="azqa4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Tôi là người chu đáo, chính xác và đáng tin cậy</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs48" id="azqb1" value="1">
+                                        <label for="azqb1"></label>
+                                        <input type="radio" name="needs48" id="azqb2" value="2">
+                                        <label for="azqb2"></label>
+                                        <input type="radio" name="needs48" id="azqb3" value="3">
+                                        <label for="azqb3"></label>
+                                        <input type="radio" name="needs48" id="azqb4" value="4">
+                                        <label for="azqb4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Tôi thích công việc tính toán sổ sách, ghi chép số liệu</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs49" id="azqc1" value="1">
+                                        <label for="azqc1"></label>
+                                        <input type="radio" name="needs49" id="azqc2" value="2">
+                                        <label for="azqc2"></label>
+                                        <input type="radio" name="needs49" id="azqc3" value="3">
+                                        <label for="azqc3"></label>
+                                        <input type="radio" name="needs49" id="azqc4" value="4">
+                                        <label for="azqc4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Tôi thích các công việc lưu trữ, phân loại, cập nhật thông tin</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs50" id="azqd1" value="1">
+                                        <label for="azqd1"></label>
+                                        <input type="radio" name="needs50" id="azqd2" value="2">
+                                        <label for="azqd2"></label>
+                                        <input type="radio" name="needs50" id="azqd3" value="3">
+                                        <label for="azqd3"></label>
+                                        <input type="radio" name="needs50" id="azqd4" value="4">
+                                        <label for="azqd4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Tôi thường đặt ra những mục tiêu, kế hoạch trong cuộc sống</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs51" id="azqe1" value="1">
+                                        <label for="azqe1"></label>
+                                        <input type="radio" name="needs51" id="azqe2" value="2">
+                                        <label for="azqe2"></label>
+                                        <input type="radio" name="needs51" id="azqe3" value="3">
+                                        <label for="azqe3"></label>
+                                        <input type="radio" name="needs51" id="azqe4" value="4">
+                                        <label for="azqe4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Tôi thích dự kiến các khoản thu chi</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs52" id="azqq1" value="1">
+                                        <label for="azqq1"></label>
+                                        <input type="radio" name="needs52" id="azqq2" value="2">
+                                        <label for="azqq2"></label>
+                                        <input type="radio" name="needs52" id="azqq3" value="3">
+                                        <label for="azqq3"></label>
+                                        <input type="radio" name="needs52" id="azqq4" value="4">
+                                        <label for="azqq4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Tôi thích lập thời khóa biểu, sắp xếp lịch làm việc</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs53" id="azqs1" value="1">
+                                        <label for="azqs1"></label>
+                                        <input type="radio" name="needs53" id="azqs2" value="2">
+                                        <label for="azqs2"></label>
+                                        <input type="radio" name="needs53" id="azqs3" value="3">
+                                        <label for="azqs3"></label>
+                                        <input type="radio" name="needs53" id="azqs4" value="4">
+                                        <label for="azqs4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Tôi thích làm việc với các con số, làm việc theo hướng dẫn, quy trình</td>
+                                <td>
+                                    <div class="question" id="q1">
+                                        <input type="radio" name="needs54" id="azqw1" value="1">
+                                        <label for="azqw1"></label>
+                                        <input type="radio" name="needs54" id="azqw2" value="2">
+                                        <label for="azqw2"></label>
+                                        <input type="radio" name="needs54" id="azqw3" value="3">
+                                        <label for="azqw3"></label>
+                                        <input type="radio" name="needs54" id="azqw4" value="4">
+                                        <label for="azqw4"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="end">
+                                <td></td>
+                                <td><b><u>Tổng: </u></b></td>
+                                <td><span id="sum_F">0</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <br/>
+                <p id="text">
+                    <b style="color:red">Bước 3: </b>Tìm bảng có điểm số cao nhất, điểm số cao nhất đó chính là bảng có kiểu người phù hợp ở mức độ cao với bạn.
+                </p>
+                <p id="text">
+                    <b style="color:cornflowerblue">1.Kiểu người R (Realistic – Kỹ thuật): (tổng điểm số của bảng A là cao nhất so với các bảng khác)</b><br />
+                    - Người thuộc nhóm sở thích nghề nghiệp này thường có khả năng về kỹ thuật, công nghệ, hệ thống; ưa thích làm việc với đồ vật, máy móc, động thực vật; thích làm các công việc ngoài trời.<br />
+
+                    - Ngành nghề phù hợp với nhóm này bao gồm những nghề về kiến trúc, an toàn lao động, nghề mộc, xây dựng, thủy sản, kỹ thuật, máy tàu thủy, lái xe, huấn luyện viên, nông - lâm nghiệp (quản lý trang trại, nhân giống cá, lâm nghiệp...), cơ khí (chế tạo máy, bảo trì và sửa chữa thiết bị, luyện kim, cơ khí ứng dụng, tự động...), điện - điện tử, địa lý - địa chất (đo đạc, vẽ bản đồ địa chính), dầu khí, hải dương học, quản lý công nghiệp...<br />
+                </p>
+                <p id="text">
+                    <b style="color:cornflowerblue">2.Kiểu người I (Investigative - Nghiên cứu): (tổng điểm số của bảng B là cao nhất so với các bảng khác)</b><br />
+                    - Có khả năng về quan sát, khám phá, phân tích đánh giá và giải quyết các vấn đề.<br />
+
+                    - Ngành nghề phù hợp với nhóm này bao gồm: Các ngành thuộc lĩnh vực khoa học tự nhiên (toán, lý, hóa, sinh, địa lý, địa chất, thống kê...); khoa học xã hội (nhân học, tâm lý, địa lý...); kỹ thuật y tế, kỹ thuật phòng thí nghiệm, nha sĩ; khoa học công nghệ (công nghệ thông tin, môi trường, điện, vật lý kỹ thuật, xây dựng...); nông lâm (nông học, thú y...).<br />
+                </p>
+                <p id="text">
+                    <b style="color:cornflowerblue">3.Kiểu người A (Artistic - Nghệ thuật): (tổng điểm số của bảng C là cao nhất so với các bảng khác)</b><br />
+                    - Người thuộc nhóm sở thích nghề nghiệp này thường có khả năng về kỹ thuật, công nghệ, hệ thống; ưa thích làm việc với đồ vật, máy móc, động thực vật; thích làm các công việc ngoài trời.<br />
+
+                    - Ngành nghề phù hợp với nhóm này bao gồm: Các ngành về văn chương; báo chí (bình luận viên, dẫn chương trình...); điện ảnh, sân khấu, mỹ thuật, ca nhạc, múa, kiến trúc, thời trang, hội họa, giáo viên dạy sử/Anh văn, bảo tàng, bảo tồn...<br />
+                </p>
+                <p id="text">
+                    <b style="color:cornflowerblue">4.Kiểu người S (Social - Xã hội): (tổng điểm số của bảng D là cao nhất so với các bảng khác)</b><br />
+                    - Có khả năng về ngôn ngữ, giảng giải, thích làm những việc như giảng giải, cung cấp thông tin, sự chăm sóc, giúp đỡ, hoặc huấn luyện cho người khác.<br />
+
+                    - Ngành nghề phù hợp với nhóm này bao gồm: sư phạm; giảng viên; huấn luyện viên điền kinh; tư vấn - hướng nghiệp; dịch vụ khách hàng, công tác xã hội, cán bộ Hội LHPN, thư viện, các nghề trong ngành y (điều dưỡng, y tá, bác sĩ), sức khỏe cộng đồng.<br />
+                </p>
+                <p id="text">
+                    <b style="color:cornflowerblue">5.Kiểu người E (Enterprise – Quản lý): (tổng điểm số của bảng E là cao nhất so với các bảng khác)</b><br />
+                    - Có khả năng về kinh doanh, mạnh bạo, dám nghĩ dám làm, có thể gây ảnh hưởng, thuyết phục người khác, có khả năng quản lý.<br />
+                    - Ngành nghề phù hợp với nhóm này bao gồm: Công an, quân đội, các ngành về quản trị kinh doanh (quản lý khách sạn, quản trị nhân sự...), quản lý hệ thống thông tin, mạng, chủ doanh nghiệp, chủ đại lý, thương mại, marketing, luật sư, chuyên viên PR, tiếp thị, CEO, chủ thầu,…<br />
+                </p>
+                <p id="text">
+                    <b style="color:cornflowerblue">6.Kiểu người C (Conventional – Nghiệp vụ): (tổng điểm số của bảng F là cao nhất so với các bảng khác)</b><br />
+                    - Có khả năng về số học, thích thực hiện những công việc chi tiết, thích làm việc với những số liệu, thích tuân thủ quy định theo chỉ dẫn của người khác hoặc các công việc văn phòng, kỹ lưỡng chặt chẽ.<br />
+                    - Ngành nghề phù hợp với nhóm này bao gồm: Các ngành nghề về hành chính, thư ký, lưu trữ hồ sơ, chuyên viên thuế, thủ quỹ, tiếp tân, thống kê, thanh tra ngành, người giữ trẻ, điện thoại viên, biên tập viên, nhân viên làm việc trong các lĩnh vực: Bưu điện, ngân hàng, kế toán, bảo hiểm, phân tích tính dụng.<br />
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $('input[type="radio"]').click(function () {
+        var theNumber = $(this).attr('id').slice(-1);
+        $(this).siblings('label').each(function () {
+            var sibNumber = $(this).attr('for').slice(-1);
+            if (sibNumber <= theNumber) {
+                $(this).addClass('on');
+            } else {
+                $(this).removeClass('on');
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function()
+    {           
+        var nametable_A = "#tableA";
+        var result_A = "#sum_A";
+        var nametable_B = "#tableB";
+        var result_B = "#sum_B";
+        var nametable_C = "#tableC";
+        var result_C = "#sum_C";
+        var nametable_D = "#tableD";
+        var result_D = "#sum_D";
+        var nametable_E = "#tableE";
+        var result_E = "#sum_E";
+        var nametable_F = "#tableF";
+        var result_F = "#sum_F";
+        autoSum(nametable_A, result_A);
+        autoSum(nametable_B, result_B);
+        autoSum(nametable_C, result_C);
+        autoSum(nametable_D, result_D);
+        autoSum(nametable_E, result_E);
+        autoSum(nametable_F, result_F);
+
+       
+    })
+    function autoSum(table_name,result_name)
+    {        
+        $(table_name+" tr input[type='radio']").change(function () {
+            var sum = parseInt("0");
+            $(table_name+" tr").each(function (index) {                
+                var point = parseInt($(this).find("input[type='radio']:checked").val());
+                if (!isNaN(point)) {
+                    sum += point;
+                }                  
+            })
+            $(result_name).text(sum);
+        })
+    }
+   
+   
+</script>

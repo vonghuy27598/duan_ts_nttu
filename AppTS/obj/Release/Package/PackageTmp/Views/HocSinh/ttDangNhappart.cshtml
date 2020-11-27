@@ -1,0 +1,13 @@
+﻿@model AppTS.ViewModels.HocSinh_TK
+
+@if (Session["User"] == null || Session["User"].ToString() == "")
+{
+    <li><a href="@Url.Action("DangNhap","HocSinh")">Đăng nhập</a></li>
+    <li><a href="@Url.Action("DangKy","HocSinh")">Đăng ký</a></li>
+}
+else
+{
+     <li><a style="color:#fff">Tài khoản @Model.HOTENHS</a></li>
+     <li><a href="@Url.Action("DangXuat","HocSinh")">Đăng xuất</a></li>
+           
+}
