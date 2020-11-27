@@ -5,70 +5,75 @@
     border: 1px solid;
     border-radius: 15px;
     box-shadow: 0px 5px 10px 0px #898989;
-    margin-top:50px!important
-    
+    margin-top: 50px !important
 }
+
 #message {
-        display: none;
-        background: #f1f1f1;
-        color: #000;
-        position: relative;
-        padding: 10px;
-      
-        clear:both;
-        
-    }
-        #message h4 {
-            font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1600 - 300)));
-        }
-         #message p {
-            padding: 2px 17px;
-           font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
-            line-height:20px;
-            margin-top:5px
-        }
-         .radiobtn{
-              font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
-         }
-         .forget-password{
-              font-size: calc(14px + (15 - 14) * ((100vw - 300px) / (1600 - 300)));
-         }
-.dn label{
-    display:block;
-     font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 10px;
+    clear: both;
 }
 
-    .dn h3 {
-        text-align: center;
-        margin-bottom: 15px;
-        font-size: calc(30px + (30 - 33) * ((100vw - 300px) / (1600 - 300)));
-        text-transform:uppercase;
-        font-weight:bold
+    #message h4 {
+        font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1600 - 300)));
     }
-    .dn h4 {
 
-        color:#02add7;
-        margin-top:15px;
-        margin-bottom: 15px;
-        font-size: calc(20px + (25 - 20) * ((100vw - 300px) / (1600 - 300)));
-        text-transform:uppercase;
-        font-weight:bold
+    #message p {
+        padding: 2px 17px;
+        font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+        line-height: 20px;
+        margin-top: 5px
     }
-.dn input
-{
-    border:none;
-    border-bottom:1px solid;
-    
+
+.radiobtn {
+    font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
 }
-.form-content input:focus{
-    outline:none!important;
+
+.forget-password {
+    font-size: calc(14px + (15 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
-.txtDiachi{
+
+.dn label {
+    display: block;
+    font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.dn h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: calc(30px + (30 - 33) * ((100vw - 300px) / (1600 - 300)));
+    text-transform: uppercase;
+    font-weight: bold
+}
+
+.dn h4 {
+    color: #02add7;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: calc(20px + (25 - 20) * ((100vw - 300px) / (1600 - 300)));
+    text-transform: uppercase;
+    font-weight: bold
+}
+
+.dn input {
+    border: none;
+    border-bottom: 1px solid;
+}
+
+.form-content input:focus {
+    outline: none !important;
+}
+
+.txtDiachi {
     width: 100%;
 }
- .radiobtn{
-     margin-left:5px
- }
+
+.radiobtn {
+    margin-left: 5px
+}
 
 .submit-button {
     text-align: center;
@@ -100,7 +105,7 @@
 .input-feild {
     font-size: calc(15px + (18 - 15) * ((100vw - 300px) / (1600 - 300)));
     width: 100%;
-    max-width:100%;
+    max-width: 100%;
     margin-bottom: 10px;
 }
 
@@ -112,43 +117,45 @@
 
 
 
-@media all and (min-width: 320px){
-  .dn {
+@media all and (min-width: 320px) {
+    .dn {
         font-size: 100%%;
         width: 90%;
         padding: 5% 10%;
         margin: auto;
-        margin-bottom:100px
+        margin-bottom: 100px
     }
 
         .dn h3 {
-           
-            margin-bottom:10px
+            margin-bottom: 10px
         }
 
-    
-    .form-content{
-         font-size: 1.8em;
+
+    .form-content {
+        font-size: 1.8em;
     }
+
     .forget-password a {
-    font-size: 1em;
-}
-     .submit-button input {
-        font-size:1em;
-        margin-top:5px
+        font-size: 1em;
     }
-     .dn .mess{
-         text-align:center;
-         font-size:1em;
-         color:red;
-         margin-top:5px
-     }
+
+    .submit-button input {
+        font-size: 1em;
+        margin-top: 5px
+    }
+
+    .dn .mess {
+        text-align: center;
+        font-size: 1em;
+        color: red;
+        margin-top: 5px
+    }
 
 
 
 
-         /* The message box is shown when the user clicks on the password field */
-    
+    /* The message box is shown when the user clicks on the password field */
+
 
     /* Add a green text color and a checkmark when the requirements are right */
     .valid {
@@ -173,34 +180,35 @@
         }
 }
 
-@media all and (min-width: 480px){
-  .dn {
+@media all and (min-width: 480px) {
+    .dn {
         font-size: 70.5%;
         width: 70%;
         padding: 5% 10%;
         margin: auto;
-        margin-bottom:100px
+        margin-bottom: 100px
     }
 
         .dn h3 {
-           
-            margin-bottom:10px
+            margin-bottom: 10px
         }
 
-   
+
     .forget-password a {
-    font-size: 1em;
-}
-     .submit-button input {
-        font-size:1em;
-        margin-top:5px
+        font-size: 1em;
     }
-     .dn .mess{
-         text-align:center;
-         font-size:1em;
-         color:red;
-         margin-top:5px
-     }
+
+    .submit-button input {
+        font-size: 1em;
+        margin-top: 5px
+    }
+
+    .dn .mess {
+        text-align: center;
+        font-size: 1em;
+        color: red;
+        margin-top: 5px
+    }
 }
 
 @media all and (min-width: 600px) {
@@ -209,94 +217,92 @@
         width: 55%;
         padding: 5% 7%;
         margin: auto;
-        margin-bottom:100px
+        margin-bottom: 100px
     }
 
         .dn h3 {
-            
-            margin-bottom:10px
+            margin-bottom: 10px
         }
 
-   
-    .forget-password a {
-    font-size: 1em;
-}
-     .submit-button input {
-        font-size:1em;
-        margin-top:5px
-    }
-     .dn .mess{
-         text-align:center;
-         font-size:1em;
-         color:red;
-         margin-top:5px
-     }
 
+    .forget-password a {
+        font-size: 1em;
+    }
+
+    .submit-button input {
+        font-size: 1em;
+        margin-top: 5px
+    }
+
+    .dn .mess {
+        text-align: center;
+        font-size: 1em;
+        color: red;
+        margin-top: 5px
+    }
 }
 
 @media all and (min-width: 1024px) {
 
     .dn {
-    width: 400px;
-    margin: auto;
-    padding: 20px 40px;
-    border: 0.5px solid #e6dbdb;
-    border-radius: 20px;
-    box-shadow: inset 0px 1px 4px 0px;
-    font-size:100%;
-    margin-bottom:100px
-}
+        width: 400px;
+        margin: auto;
+        padding: 20px 40px;
+        border: 0.5px solid #e6dbdb;
+        border-radius: 20px;
+        box-shadow: inset 0px 1px 4px 0px;
+        font-size: 100%;
+        margin-bottom: 100px
+    }
 
-    .dn h3 {
+        .dn h3 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .dn label {
+        }
+
+    .submit-button {
         text-align: center;
-        margin-bottom: 15px;
-     
     }
 
-    .dn label {
+        .submit-button input {
+            background-color: #024283;
+            color: white;
+            font-weight: bold;
+        }
+
+    .forget-password {
+        text-align: center;
     }
 
-.submit-button {
-    text-align: center;
-}
-
-    .submit-button input {
-        background-color: #024283;
-        color: white;
-        font-weight: bold;
+    .main-btn {
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
     }
 
-.forget-password {
-    text-align: center;
-}
+    .loi {
+        float: left;
+        padding: 8px 5px;
+        font-size: 20px;
+        color: red;
+    }
 
-.main-btn {
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-}
+    .input-feild {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 
-.loi {
-    float: left;
-    padding: 8px 5px;
-    font-size: 20px;
-    color: red;
-}
+    .forget-password a {
+        color: #beb5b5;
+        margin-top: 5px;
+    }
 
-.input-feild {
-   
-    width:100%;
-    margin-bottom: 10px;
-}
-
-.forget-password a {
-    color: #beb5b5;
-    margin-top: 5px;
-}
-.dn .radiobtn{
-    float:left
-}
-
+    .dn .radiobtn {
+        float: left
+    }
 }
 
 
@@ -428,38 +434,36 @@
 }
 }*/
 
-.form-content input[type=text],input[type=password],input[type=tel],input[type=date] {
-  border: none;
-  border-bottom: 2px solid darkgrey;
-  background-color: inherit;
-  display: block;
-  transition: 1s width ease-in-out;
-  transition-delay:1s;
-  width: 100%;
-  
+.form-content input[type=text], input[type=password], input[type=tel], input[type=date] {
+    border: none;
+    border-bottom: 2px solid darkgrey;
+    background-color: inherit;
+    display: block;
+    transition: 1s width ease-in-out;
+    transition-delay: 1s;
+    width: 100%;
 }
-.form-content input[type=text]:focus,input[type=password]:focus,input[type=tel]:focus,input[type=date]:focus{
-  outline: none;
- border:none
-  
-}
+
+    .form-content input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=date]:focus {
+        outline: none;
+        border: none
+    }
+
 .form-content .line {
-  height: 5px;
-  width: 0px;
-  position: absolute;
-  background-color: darkgrey;
-  display: inline-block;
-  transition: .3s width ease-in-out;
-  position: relative;
-  top: -23px;
+    height: 5px;
+    width: 0px;
+    position: absolute;
+    background-color: darkgrey;
+    display: inline-block;
+    transition: .3s width ease-in-out;
+    position: relative;
+    top: -23px;
 }
-.form-content input:focus
-{
-   
+
+.form-content input:focus {
 }
-.form-content input:focus+.line{
-  width: 100%;
-   
-  background-color: #02add7;
-  
-}
+
+    .form-content input:focus + .line {
+        width: 100%;
+        background-color: #02add7;
+    }
