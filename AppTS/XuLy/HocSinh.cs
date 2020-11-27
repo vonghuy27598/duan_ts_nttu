@@ -1,4 +1,4 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -20,7 +20,7 @@ namespace AppTS.XuLy
                             ID_HS = a.ID_HS,
                             ID_TK = a.ID_TK,
                             HOTENHS = a.HOTENHS,
-                          
+
                             SDT = a.SDT,
                             EMAIL = a.EMAIL,
                             ID_CHUYENNGANH = a.ID_CHUYENNGANH

@@ -67,14 +67,14 @@ namespace AppTS.Controllers
             var model = from a in db.Table_ChuyenNganhs where a.ID_CHUYENNGANH == id select a;
             return View(model.Single());
         }
-        
+
         public ActionResult AcceptDangKyCN(int id_cn)
         {
             //Thêm CN vao HS
-           
+
             var hs = (HocSinh_TK)Session["User"];
 
-           
+
             var themCN = db.Table_HocSinhs.First(m => m.ID_HS == hs.ID_HS);
             themCN.ID_CHUYENNGANH = id_cn;
             UpdateModel(themCN);
@@ -85,5 +85,5 @@ namespace AppTS.Controllers
         {
             return View();
         }
-	}
+    }
 }

@@ -42,5 +42,5 @@ namespace AppTS.Controllers
             var model = NghienCuu.NghienCuuFull();
             return View(model);
         }
-	}
+    }
 }

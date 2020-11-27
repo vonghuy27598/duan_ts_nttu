@@ -26,7 +26,7 @@ namespace AppTS.XuLy
         {
             dbQL_NTTDataContext data = new dbQL_NTTDataContext();
             var model = from a in data.Table_NghienCuus
-                        where a.ID_NGHIENCUU== id
+                        where a.ID_NGHIENCUU == id
                         select new NghienCuuFull()
                         {
                             ID_NGHIENCUU = a.ID_NGHIENCUU,

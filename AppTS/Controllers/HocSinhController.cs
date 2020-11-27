@@ -54,7 +54,7 @@ namespace AppTS.Controllers
                     {
                         ViewBag.ThongBao = "Tên đăng nhập hoặc mật khẩu không đúng";
                     }
-                  
+
                 }
                 else
                 {
@@ -70,33 +70,33 @@ namespace AppTS.Controllers
         [HttpPost]
         public ActionResult DangKy(HocSinh_TK hs_tk)
         {
-                bool tontaitk = db.Table_TaiKhoans.Any(m => hs_tk.USERNAME == m.USERNAME);
-                if (tontaitk)
-                {
-                    ViewData["LoiUS"] = "Tài khoản đã được sử dụng";
-                }
-                else
-                {
-                    Table_TaiKhoan tk = new Table_TaiKhoan();
-                    tk.USERNAME = hs_tk.USERNAME;
-                    tk.PASSWORD = Str_Encoder(hs_tk.PASSWORD);
-                    tk.ADMIN = false;
-                    db.Table_TaiKhoans.InsertOnSubmit(tk);
-                    db.SubmitChanges();
-                    Table_HocSinh hs = new Table_HocSinh();
-                    hs.ID_TK = tk.ID_TK;
-                    hs.HOTENHS = hs_tk.HOTENHS;
-                    hs.TRUONGCAP3 = hs_tk.TRUONGCAP3;
-                    hs.GIOITINH = hs_tk.GIOITINH;
-                    hs.EMAIL = hs_tk.EMAIL;
-                    hs.NGAYSINH = hs_tk.NGAYSINH;
-                    hs.SDT = hs_tk.SDT;
-                    hs.DIACHI = hs_tk.DIACHI;
-                    db.Table_HocSinhs.InsertOnSubmit(hs);
-                    db.SubmitChanges();
-                   
-                    return RedirectToAction("DangNhap");
-                }          
+            bool tontaitk = db.Table_TaiKhoans.Any(m => hs_tk.USERNAME == m.USERNAME);
+            if (tontaitk)
+            {
+                ViewData["LoiUS"] = "Tài khoản đã được sử dụng";
+            }
+            else
+            {
+                Table_TaiKhoan tk = new Table_TaiKhoan();
+                tk.USERNAME = hs_tk.USERNAME;
+                tk.PASSWORD = Str_Encoder(hs_tk.PASSWORD);
+                tk.ADMIN = false;
+                db.Table_TaiKhoans.InsertOnSubmit(tk);
+                db.SubmitChanges();
+                Table_HocSinh hs = new Table_HocSinh();
+                hs.ID_TK = tk.ID_TK;
+                hs.HOTENHS = hs_tk.HOTENHS;
+                hs.TRUONGCAP3 = hs_tk.TRUONGCAP3;
+                hs.GIOITINH = hs_tk.GIOITINH;
+                hs.EMAIL = hs_tk.EMAIL;
+                hs.NGAYSINH = hs_tk.NGAYSINH;
+                hs.SDT = hs_tk.SDT;
+                hs.DIACHI = hs_tk.DIACHI;
+                db.Table_HocSinhs.InsertOnSubmit(hs);
+                db.SubmitChanges();
+
+                return RedirectToAction("DangNhap");
+            }
 
             return this.DangKy();
         }
@@ -119,5 +119,5 @@ namespace AppTS.Controllers
             HocSinh_TK tk = (HocSinh_TK)Session["User"];
             return PartialView(tk);
         }
-	}
+    }
 }

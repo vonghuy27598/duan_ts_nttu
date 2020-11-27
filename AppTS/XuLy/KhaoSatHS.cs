@@ -9,6 +9,6 @@ namespace AppTS.XuLy
 {
     public class KhaoSatHS
     {
-       
+
     }
 }

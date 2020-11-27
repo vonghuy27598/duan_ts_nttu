@@ -22,56 +22,56 @@ namespace AppTS.Controllers
         [HttpPost]
         public ActionResult KhaoSat(FormCollection form)
         {
-                    var getCauHoi = from a in db.Table_KhaoSats where a.ID_ROOT == 0 select a;
-                 var getTraLoi = from a in db.Table_KhaoSats where a.ID_ROOT != 0 select a;
+            var getCauHoi = from a in db.Table_KhaoSats where a.ID_ROOT == 0 select a;
+            var getTraLoi = from a in db.Table_KhaoSats where a.ID_ROOT != 0 select a;
 
-                 var hohs = form["hoten"];
-                 var sodt = form["sdt"];
-                 var Email = form["email"];
+            var hohs = form["hoten"];
+            var sodt = form["sdt"];
+            var Email = form["email"];
 
-                 var hs = new Table_HocSinh();
-                 hs.HOTENHS = hohs;
-               
-                 hs.SDT = sodt;
-                 hs.EMAIL = Email;
-                 db.Table_HocSinhs.InsertOnSubmit(hs);
-                 db.SubmitChanges();
+            var hs = new Table_HocSinh();
+            hs.HOTENHS = hohs;
 
-                 if (Request.IsAjaxRequest())
-                 {
-                 if (Session["User"] != null)
-                 {
-                 var tk = (HocSinh_TK)Session["User"];
-                 foreach (var item in getCauHoi)
-                 {
-                 Table_ChiTietKhaoSat ct_ks = new Table_ChiTietKhaoSat();
-                 ct_ks.ID_KS = item.ID_KS;
-                 ct_ks.ID_HS = (int)tk.ID_HS;
-                 ct_ks.CAUTRALOI = form[item.ID_KS - 1];
-                 db.Table_ChiTietKhaoSats.InsertOnSubmit(ct_ks);
-                 db.SubmitChanges();
-                 }
+            hs.SDT = sodt;
+            hs.EMAIL = Email;
+            db.Table_HocSinhs.InsertOnSubmit(hs);
+            db.SubmitChanges();
 
-                 }
-                 else
-                 {
+            if (Request.IsAjaxRequest())
+            {
+                if (Session["User"] != null)
+                {
+                    var tk = (HocSinh_TK)Session["User"];
+                    foreach (var item in getCauHoi)
+                    {
+                        Table_ChiTietKhaoSat ct_ks = new Table_ChiTietKhaoSat();
+                        ct_ks.ID_KS = item.ID_KS;
+                        ct_ks.ID_HS = (int)tk.ID_HS;
+                        ct_ks.CAUTRALOI = form[item.ID_KS - 1];
+                        db.Table_ChiTietKhaoSats.InsertOnSubmit(ct_ks);
+                        db.SubmitChanges();
+                    }
 
-                 foreach (var item in getCauHoi)
-                 {
-                 Table_ChiTietKhaoSat ct_ks = new Table_ChiTietKhaoSat();
-                 ct_ks.ID_KS = item.ID_KS;
-                 ct_ks.ID_HS = (int)hs.ID_HS;
-                 ct_ks.CAUTRALOI = form[item.ID_KS +3];
-                 db.Table_ChiTietKhaoSats.InsertOnSubmit(ct_ks);
-                 db.SubmitChanges();
-                 }
+                }
+                else
+                {
+
+                    foreach (var item in getCauHoi)
+                    {
+                        Table_ChiTietKhaoSat ct_ks = new Table_ChiTietKhaoSat();
+                        ct_ks.ID_KS = item.ID_KS;
+                        ct_ks.ID_HS = (int)hs.ID_HS;
+                        ct_ks.CAUTRALOI = form[item.ID_KS + 3];
+                        db.Table_ChiTietKhaoSats.InsertOnSubmit(ct_ks);
+                        db.SubmitChanges();
+                    }
 
 
-                 }
-                 return Json(new { Status = "success", Message = "Cảm ơn bạn đã thực hiện bảng khảo sát này" });
-                 }
-                 return RedirectToAction("Index", "Home" ) ;
-           
+                }
+                return Json(new { Status = "success", Message = "Cảm ơn bạn đã thực hiện bảng khảo sát này" });
+            }
+            return RedirectToAction("Index", "Home");
+
 
 
         }
@@ -104,6 +104,6 @@ namespace AppTS.Controllers
         {
             return View();
         }
-        
+
     }
 }
