@@ -1,0 +1,171 @@
+﻿
+@{
+    ViewBag.Title = "TinhCach";
+    Layout = "~/Views/Shared/_Layout_TuVan.cshtml";
+}
+<style>
+
+    .text {
+        font-size: 20px
+    }
+
+    label {
+        font-weight: normal
+    }
+
+    .btn-dudoan {
+        background-color: #217bbf;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+</style>
+<section id="about">
+    <div class="container">
+
+        <header class="section-header">
+            <h4 style="margin-top:40px">XÁC ĐỊNH KIỂU TÂM LÝ VÀ KHÍ CHẤT</h4>
+        </header>
+
+        <div class="row about-container">
+            <div class="col-lg-6 content order-lg-1 order-2">
+                <p class="text" id="text">
+                    1.	Bạn có thường xuyên bị lôi cuốn vào những cảm tưởng, những ý tưởng mới mẻ hoặc đi tìm nguồn cảm xúc mạnh mẽ để giải buồn và làm mình phấn chấn lên không?
+                </p>
+                <div id="1" class="text">
+                    <input type="radio" name="needs1" id="abs11" value="A">
+                    <label for="abs11">A đúng với bạn</label><br />
+                    <input type="radio" name="needs1" id="abs21" value="B">
+                    <label for="abs21">B đúng với bạn</label><br />
+                    <input type="radio" name="needs1" id="abs31" value="B">
+                    <label for="abs31">Cả A & B đúng với bạn</label><br />
+                </div>
+                <p class="text" id="text">
+                    2.	 Bạn có thường xuyên cảm thấy cần có những người ý hợp tâm đầu để động viên và an ủi mình không?
+                </p>
+                <div id="2" class="text">
+                    <input type="radio" name="needs2" id="abs11" value="A">
+                    <label for="abs11">A đúng với bạn</label><br />
+                    <input type="radio" name="needs2" id="abs21" value="B">
+                    <label for="abs21">B đúng với bạn</label><br />
+                    <input type="radio" name="needs2" id="abs31" value="B">
+                    <label for="abs31">Cả A & B đúng với bạn</label><br />
+                </div>
+                <p class="text" id="text">
+                    3.	Bạn là người vô tư, không bận tâm đến điều gì phải không?
+                </p>
+                <div id="3" class="text">
+                    <input type="radio" name="needs3" id="abs11" value="A">
+                    <label for="abs11">A đúng với bạn</label><br />
+                    <input type="radio" name="needs3" id="abs21" value="B">
+                    <label for="abs21">B đúng với bạn</label><br />
+                    <input type="radio" name="needs3" id="abs31" value="B">
+                    <label for="abs31">Cả A & B đúng với bạn</label><br />
+                </div>
+                <p class="text" id="text">
+                    4.	Bạn cảm thấy rất khó khăn khi phải từ bỏ những ý định của mình hoặc phải trả lời người khác chữ “không” phải không?
+                </p>
+                <div id="4" class="text">
+                    <input type="radio" name="needs4" id="abs11" value="A">
+                    <label for="abs11">A đúng với bạn</label><br />
+                    <input type="radio" name="needs4" id="abs21" value="B">
+                    <label for="abs21">B đúng với bạn</label><br />
+                    <input type="radio" name="needs4" id="abs31" value="B">
+                    <label for="abs31">Cả A & B đúng với bạn</label><br />
+                </div>
+                <p class="text" id="text">
+                    5.	Bạn có cân nhắc, suy nghĩ trước khi hành động không?
+                </p>
+                <div id="5" class="text">
+                    <input type="radio" name="needs5" id="abs11" value="A">
+                    <label for="abs11">A đúng với bạn</label><br />
+                    <input type="radio" name="needs5" id="abs21" value="B">
+                    <label for="abs21">B đúng với bạn</label><br />
+                    <input type="radio" name="needs5" id="abs31" value="B">
+                    <label for="abs31">Cả A & B đúng với bạn</label><br />
+                </div>
+                <p class="text" id="text">
+                    6.	Khi đã hứa làm một việc gì, bạn có luôn luôn giữ lời hứa không? Bất kê lời hứa đó có thuận lợi với mình hay không?
+                </p>
+                <div id="6" class="text">
+                    <input type="radio" name="needs6" id="abs11" value="A">
+                    <label for="abs11">A đúng với bạn</label><br />
+                    <input type="radio" name="needs6" id="abs21" value="B">
+                    <label for="abs21">B đúng với bạn</label><br />
+                    <input type="radio" name="needs6" id="abs31" value="B">
+                    <label for="abs31">Cả A & B đúng với bạn</label><br />
+                </div>
+                <p class="text" id="text">
+                    7.	Bạn thường hay thay đổi tâm trạng: lúc vui, lúc buồn phải không?
+                </p>
+                <div id="7" class="text">
+                    <input type="radio" name="needs7" id="abs11" value="A">
+                    <label for="abs11">A đúng với bạn</label><br />
+                    <input type="radio" name="needs7" id="abs21" value="B">
+                    <label for="abs21">B đúng với bạn</label><br />
+                    <input type="radio" name="needs7" id="abs31" value="B">
+                    <label for="abs31">Cả A & B đúng với bạn</label><br />
+                </div>
+                <p class="text" id="text">
+                    8.	Bạn có hay nói năng, hành động một cách bột phát và vội vàng không suy nghĩ không?
+                </p>
+                <div id="8" class="text">
+                    <input type="radio" name="needs8" id="abs11" value="A">
+                    <label for="abs11">A đúng với bạn</label><br />
+                    <input type="radio" name="needs8" id="abs21" value="B">
+                    <label for="abs21">B đúng với bạn</label><br />
+                    <input type="radio" name="needs8" id="abs31" value="B">
+                    <label for="abs31">Cả A & B đúng với bạn</label><br />
+                </div>
+                <p class="text" id="text">
+                    9.	Có khi nào bạn cảm thấy mình là người bất hạnh mà không có nguyên nhân rõ ràng không?
+                </p>
+                <div id="9" class="text">
+                    <input type="radio" name="needs9" id="abs11" value="A">
+                    <label for="abs11">A đúng với bạn</label><br />
+                    <input type="radio" name="needs9" id="abs21" value="B">
+                    <label for="abs21">B đúng với bạn</label><br />
+                    <input type="radio" name="needs9" id="abs31" value="B">
+                    <label for="abs31">Cả A & B đúng với bạn</label><br />
+                </div>
+                <p class="text" id="text">
+                    10.	Bạn có thể xếp mình vào loại người không bao giờ phải lúng túng, ấp úng, mà luôn luôn sẵn sàng đối đáp với mọi nhận xét hoặc bất chấp tất cả để tranh cãi đến cùng hay không?
+                </p>
+                <div id="10" class="text">
+                    <input type="radio" name="needs10" id="abs11" value="A">
+                    <label for="abs11">A đúng với bạn</label><br />
+                    <input type="radio" name="needs10" id="abs21" value="B">
+                    <label for="abs21">B đúng với bạn</label><br />
+                    <input type="radio" name="needs10" id="abs31" value="B">
+                    <label for="abs31">Cả A & B đúng với bạn</label><br />
+                </div>
+                <p class="text" id="text">
+                    11.	Bạn có cảm thấy rụt rè, ngượng ngùng khi muốn bắt chuyện với một bạn khác giới dễ mến chưa quen biết hay không?
+                </p>
+                <div id="11" class="text">
+                    <input type="radio" name="needs11" id="abs11" value="A">
+                    <label for="abs11">A đúng với bạn</label><br />
+                    <input type="radio" name="needs11" id="abs21" value="B">
+                    <label for="abs21">B đúng với bạn</label><br />
+                    <input type="radio" name="needs11" id="abs31" value="B">
+                    <label for="abs31">Cả A & B đúng với bạn</label><br />
+                </div>
+                <p class="text" id="text">
+                    12.	Thỉnh thoảng bạn có nổi nóng và tức giận phải không?
+                </p>
+                <div style="margin-bottom:20px" id="12" class="text">
+                    <input type="radio" name="needs12" id="abs11" value="A">
+                    <label for="abs11">A đúng với bạn</label><br />
+                    <input type="radio" name="needs12" id="abs21" value="B">
+                    <label for="abs21">B đúng với bạn</label><br />
+                    <input type="radio" name="needs12" id="abs31" value="B">
+                    <label for="abs31">Cả A & B đúng với bạn</label><br />
+                </div>
+                <a class="btn-dudoan" id="send_dudoan" href="#result">Dự đoán</a>
+            </div>
+        </div>
+    </div>
+</section>

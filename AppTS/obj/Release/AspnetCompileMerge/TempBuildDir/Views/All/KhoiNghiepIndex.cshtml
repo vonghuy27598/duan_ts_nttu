@@ -6,9 +6,9 @@
 
 <section id="about">
     <div class="container">
-            <header class="section-header">
-                <h3 style="text-align: center">@Model.TENKHOINGHIEP</h3>
-            </header>
+        <header class="section-header">
+            <h3 style="text-align: center">@Model.TENKHOINGHIEP</h3>
+        </header>
         @foreach (var item in ViewData["Chitiet"] as IEnumerable<AppTS.ViewModels.KhoiNghiepFull>)
         {
             <div class="row about-container">

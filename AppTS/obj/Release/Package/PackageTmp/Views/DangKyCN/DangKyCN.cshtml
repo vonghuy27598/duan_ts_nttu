@@ -5,18 +5,18 @@
 }
 
 
-    <section id="about">
-        <div class="container">
-            <form class="new-account-box" id="accountLogin" method="post" action="#">
-                <header class="section-header">
-                    <h3>Bạn có muốn đăng ký ngành @Model.TENCHUYENNGANH ?</h3>
-                    <div class="submit-button">
-                        <a  id="signinCreate" href="@Url.Action("AcceptDangKyCN", "DangKyCN", new { id_cn = @Model.ID_CHUYENNGANH })" class="btn main-btn">Đăng ký</a>
-                        <a href="@Url.Action("Index","Home")" class="primary-btn">Hủy</a>
-                    </div>
-                </header>
-            </form>
-        </div>
-    </section>
+<section id="about">
+    <div class="container">
+        <form class="new-account-box" id="accountLogin" method="post" action="#">
+            <header class="section-header">
+                <h3>Bạn có muốn đăng ký ngành @Model.TENCHUYENNGANH ?</h3>
+                <div class="submit-button">
+                    <a id="signinCreate" href="@Url.Action("AcceptDangKyCN", "DangKyCN", new { id_cn = @Model.ID_CHUYENNGANH })" class="btn main-btn">Đăng ký</a>
+                    <a href="@Url.Action("Index","Home")" class="primary-btn">Hủy</a>
+                </div>
+            </header>
+        </form>
+    </div>
+</section>
 
 

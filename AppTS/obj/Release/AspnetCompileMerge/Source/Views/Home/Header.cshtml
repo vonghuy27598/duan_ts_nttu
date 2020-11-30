@@ -1,40 +1,40 @@
 ﻿@model IEnumerable<AppTS.ViewModels.MenuView>
-    <div class="container">
-        <div class="logo float-left">
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
-            <a  class="scrollto"><img src="~/Content/img/logo.jpg" alt="" class="img-fluid" style="width:80%;height:60px"></a>
-        </div>
-
-        <nav class="main-nav float-right d-none d-lg-block">
-            <ul>
-                <li ><a href="@Url.Action("Main", "Home")">Trang chủ</a></li>
-                <li ><a href="@Url.Action("Index", "Home")">Giới thiệu</a></li>
-                <li class="drop-down">
-                    <a href="">Thành tựu</a>
-                    <ul>
-                        <li><a href="#">Thành tựu Khoa</a></li>
-                        <li><a href="#">Thành tựu Trường</a></li>
-                    </ul>
-                </li>
-               
-              
-                
-                <li><a href="@Url.Action("ListNghienCuu", "All")">Nghiên cứu</a></li>
-                <li class="drop-down">
-                    <a href="">Các ngành</a>
-                    <ul>
-                        @foreach (var item in Model)
-                        {
-                            <li class="drop-down">
-                                <a href="@Url.Action("MoTaNganh", "Home", new { id = item.ID_NGANH })">@item.TENNGANH</a>
-                                @Html.Action("Menu", "Home", new { id = @item.ID_NGANH })
-                            </li>
-                        }
-                    </ul>
-                </li>
-                <li><a href="@Url.Action("LienHe", "Home")">Liên hệ</a></li>
-                <li>@Html.Action("ttDangNhappart", "HocSinh")</li>
-            </ul>
-        </nav><!-- .main-nav -->
+<div class="container">
+    <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+        <a class="scrollto"><img src="~/Content/img/logo.jpg" alt="" class="img-fluid" style="width:80%;height:60px"></a>
     </div>
+
+    <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+            <li><a href="@Url.Action("Main", "Home")">Trang chủ</a></li>
+            <li><a href="@Url.Action("Index", "Home")">Giới thiệu</a></li>
+            <li class="drop-down">
+                <a href="">Thành tựu</a>
+                <ul>
+                    <li><a href="#">Thành tựu Khoa</a></li>
+                    <li><a href="#">Thành tựu Trường</a></li>
+                </ul>
+            </li>
+
+
+
+            <li><a href="@Url.Action("ListNghienCuu", "All")">Nghiên cứu</a></li>
+            <li class="drop-down">
+                <a href="">Các ngành</a>
+                <ul>
+                    @foreach (var item in Model)
+                    {
+                        <li class="drop-down">
+                            <a href="@Url.Action("MoTaNganh", "Home", new { id = item.ID_NGANH })">@item.TENNGANH</a>
+                            @Html.Action("Menu", "Home", new { id = @item.ID_NGANH })
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li><a href="@Url.Action("LienHe", "Home")">Liên hệ</a></li>
+            <li>@Html.Action("ttDangNhappart", "HocSinh")</li>
+        </ul>
+    </nav><!-- .main-nav -->
+</div>

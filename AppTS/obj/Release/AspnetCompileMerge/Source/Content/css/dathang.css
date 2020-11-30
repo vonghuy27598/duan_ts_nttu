@@ -15,125 +15,138 @@
 
 
 
-.img-sp{
-    width:25%
-}
-.img-sp img{
-    min-width: 50%;
-    max-width: 70%;
-    height:150px;
-    float: left;
-}
-.chitiet-sp{
-    width:55%;
-  
-}
-.cart-thanhtien{
-    width:15%
+.img-sp {
+    width: 25%
 }
 
-.dongTenSP{
-     position: relative;
+    .img-sp img {
+        min-width: 50%;
+        max-width: 70%;
+        height: 150px;
+        float: left;
+    }
+
+.chitiet-sp {
+    width: 55%;
+}
+
+.cart-thanhtien {
+    width: 15%
+}
+
+.dongTenSP {
+    position: relative;
     top: 0;
-    left:0;
+    left: 0;
     font-size: 65%;
-    width:100%;
-    
+    width: 100%;
     margin-bottom: 45px;
+}
 
+    .dongTenSP h5 a {
+        font-size: 1.2em !important;
+        font-weight: bold;
+        color: black
+    }
+
+.dongGia form {
+    width: 100%
 }
-.dongTenSP h5 a{
-    font-size:1.2em!important;
-    font-weight:bold;
-    color:black
+
+.left-gia {
+    float: left;
+    width: 40%;
+    text-align: left;
+    padding-top: 20px
 }
-.dongGia form{
-    width:100%
+
+.right-sl {
+    float: left;
+    width: 60%
 }
-.left-gia{
-    float:left;
-    width:40%;
-    text-align:left;
-   
-    padding-top:20px
-        
+
+.shoping__cart__item__close {
+    padding-top: 120px;
+    width: 5%
 }
-.right-sl{
-    float:left;
-    width:60%
-}
-   
-.shoping__cart__item__close{
-    padding-top:120px;
-    width:5%
-}
-.cart-thanhtien{
-    padding-top:120px;
-     color:red;
-    font-weight:600;
+
+.cart-thanhtien {
+    padding-top: 120px;
+    color: red;
+    font-weight: 600;
 }
 
 @media all and (min-width: 320px) {
-    .shoping__cart__table{
-        font-size:65%
+    .shoping__cart__table {
+        font-size: 65%
     }
-    .tb_dathang th{
-        font-size:1.1em !important
+
+    .tb_dathang th {
+        font-size: 1.1em !important
     }
+
     .dongTenSP h5 a {
-        font-size:0.7em !important
+        font-size: 0.7em !important
     }
-    .pro-qty{
+
+    .pro-qty {
         width: 105px;
-    height: 30px;
+        height: 30px;
     }
-     .pro-qty input{
-         font-size:1.2em;
-         width: 25px;
-     }
-     .img-sp img{
-           min-width: 50%;
-    max-width: 70%;
-    height: 100px;
-     }
-   
+
+        .pro-qty input {
+            font-size: 1.2em;
+            width: 25px;
+        }
+
+    .img-sp img {
+        min-width: 50%;
+        max-width: 70%;
+        height: 100px;
+    }
 }
 
 @media all and (min-width: 400px) {
-     .tb_dathang th{
-        font-size:1.5em !important
+    .tb_dathang th {
+        font-size: 1.5em !important
     }
-    .chitiet-sp{
-        width:40%
+
+    .chitiet-sp {
+        width: 40%
     }
-    .pro-qty{
+
+    .pro-qty {
         width: 100px;
-    height: 31px;
+        height: 31px;
     }
-    .left-gia{
-        font-size:1.2em
+
+    .left-gia {
+        font-size: 1.2em
     }
-    .cart-thanhtien{
-        font-size:1.1em
+
+    .cart-thanhtien {
+        font-size: 1.1em
     }
-     .pro-qty input{
-         font-size:1.2em;
-         width: 21px;
-     }
+
+    .pro-qty input {
+        font-size: 1.2em;
+        width: 21px;
+    }
 }
 
 @media all and (min-width: 600px) {
- .tb_dathang th{
-        font-size:2em !important
+    .tb_dathang th {
+        font-size: 2em !important
     }
-  .tb_dathang td{
-        font-size:1.2em !important
+
+    .tb_dathang td {
+        font-size: 1.2em !important
     }
-  .cart-thanhtien{
-        font-size:1.2em !important
-  }
+
+    .cart-thanhtien {
+        font-size: 1.2em !important
+    }
 }
 
 @media all and (min-width: 1024px) {
-    
 }

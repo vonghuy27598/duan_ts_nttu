@@ -195,29 +195,29 @@
                     alert("Vui lòng nhập ngành nghề mà bạn muốn hướng tới");
                 else
                     $('.result-form').css('display', 'block');
-                    // Make sure this.hash has a value before overriding default behavior
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
+                // Make sure this.hash has a value before overriding default behavior
+                // Prevent default anchor click behavior
+                event.preventDefault();
 
                 // Store hash
-                    var hash = this.hash;
+                var hash = this.hash;
 
-                                // Using jQuery's animate() method to add smooth page scroll
-                                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 100, function () {
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 100, function () {
 
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                    });
-                    var tongtb = (ntoan + nly + nhoa + nsinh + nsu + ndia + nvan + ntin + ngd + nanh) / 10;
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+                var tongtb = (ntoan + nly + nhoa + nsinh + nsu + ndia + nvan + ntin + ngd + nanh) / 10;
                 $("#sp_tongdiem").text(tongtb);
                 $("#sp_chonganh").text("Công nghệ thông tin");
                 $("#sp_khanang").text("50%");
                 $("#sp_soluong").text("2000");
-                    
-                
+
+
             }
 
     });

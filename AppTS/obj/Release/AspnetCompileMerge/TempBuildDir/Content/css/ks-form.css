@@ -76,10 +76,10 @@
         font-size: 18px;
         margin-left: 10px;
     }
-    .content button 
-    {
-        font-size:20px
-    }
+
+        .content button {
+            font-size: 20px
+        }
 
     .info-group label {
         width: 100%
@@ -121,12 +121,15 @@
     font-size: 1em;
     margin: 10px 0px 10px 0px
 }
-.group-cb label{
-    font-weight:400
+
+.group-cb label {
+    font-weight: 400
 }
+
 .group-cb input[type=checkbox] {
     margin-left: 15px
 }
-.cb-gr input{
+
+.cb-gr input {
     margin-left: 30px;
 }

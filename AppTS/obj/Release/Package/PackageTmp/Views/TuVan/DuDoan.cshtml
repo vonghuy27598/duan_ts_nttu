@@ -4,24 +4,24 @@
     Layout = "~/Views/Shared/_Layout_TuVan.cshtml";
 }
 <link href="~/Content/css/form_dudoan.css" rel="stylesheet" />
-<div class="dudoan"  style="margin-top:100px">
-    <h2 >DỰ ĐOÁN ĐIỂM THI TỐT NGHIỆP</h2>
+<div class="dudoan" style="margin-top:100px">
+    <h2>DỰ ĐOÁN ĐIỂM THI TỐT NGHIỆP</h2>
     <div class="form-advisory">
         <div class="select-form">
             <select>
                 <option value="1">Cuối năm 11</option>
-                <option value="2">Cuối năm 12</option>              
+                <option value="2">Cuối năm 12</option>
             </select>
         </div>
         <div class="content-form">
             <p style="margin-bottom:10px;color:blue">Vui lòng nhập điểm các môn học</p>
-            <table border="1" cellpadding="10"> 
+            <table border="1" cellpadding="10">
                 <thead>
                     <tr>
-                    <th>Tên môn học</th>
-                    <th>Điểm cả năm lớp</th>
+                        <th>Tên môn học</th>
+                        <th>Điểm cả năm lớp</th>
                     </tr>
-                    
+
                 </thead>
                 <tbody>
                     <tr>
@@ -66,7 +66,7 @@
                     </tr>
                 </tbody>
             </table>
-           <a class="btn-dudoan" id="send_dudoan" href="#result">Dự đoán</a>
+            <a class="btn-dudoan" id="send_dudoan" href="#result">Dự đoán</a>
         </div>
         <div class="result-form" id="result">
             <h3 style="font-weight:bold">KẾT QUẢ</h3>
@@ -85,7 +85,7 @@
                     </tr>
                     <tr>
                         <td>Vật lý</td>
-                         <td class="result-ly"></td>
+                        <td class="result-ly"></td>
                     </tr>
                     <tr>
                         <td>Hóa học</td>
@@ -137,7 +137,7 @@
     $(document).ready(function () {
         // Add smooth scrolling to all links
         $("#send_dudoan").on('click', function (event) {
-           
+
             var toan = $('#txtToan').val();
             var ntoan = parseInt(toan);
             $(".result-toan").text(toan);
@@ -211,7 +211,7 @@
                     alert('Điểm tin khoảng từ 0 đến 10');
                 else {
                     $('.result-form').css('display', 'block');
-                    var tongtb = (ntoan + nly + nhoa + nsinh + nsu + ndia + nvan + ntin + ngd + nanh)/10;
+                    var tongtb = (ntoan + nly + nhoa + nsinh + nsu + ndia + nvan + ntin + ngd + nanh) / 10;
                     var phantram = "";
                     if (tongtb == 0)
                         phantram = "0%";
@@ -230,7 +230,7 @@
                     else if (tongtb >= 10 && tongtb <= 10)
                         phantram = "100%";
                     $('.result-tb').text("Khả năng đậu " + phantram);
-                    
+
                     // Make sure this.hash has a value before overriding default behavior
                     // Prevent default anchor click behavior
                     event.preventDefault();
@@ -247,10 +247,10 @@
                         // Add hash (#) to URL when done scrolling (default click behavior)
                         window.location.hash = hash;
                     });
-                    
+
                 }
-            
+
         });
     });
-  
+
 </script>

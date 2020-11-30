@@ -1,144 +1,138 @@
-﻿.dudoan h2{
-    text-align:center;color:#db2e2e;font-weight:bold
+﻿.dudoan h2 {
+    text-align: center;
+    color: #db2e2e;
+    font-weight: bold
 }
 
-.content-form table
-{
-   margin-top:10px;
-    margin:auto;
-    margin-bottom:20px
-    
+.content-form table {
+    margin-top: 10px;
+    margin: auto;
+    margin-bottom: 20px
 }
-.end{
+
+.end {
     height: 15px
 }
-.form-advisory
-{   
-    
-    padding:15px;
+
+.form-advisory {
+    padding: 15px;
     font-size: calc(15px + (20 - 15) * ((100vw - 300px) / (1600 - 300)));
 }
-.select-form{
-    margin-bottom:15px
+
+.select-form {
+    margin-bottom: 15px
 }
-.content-form{
-    text-align:center
+
+.content-form {
+    text-align: center
 }
-.content-form input
-{
-    border:none;
-    border-bottom:1px solid;
-    width:100%;
-    
+
+    .content-form input {
+        border: none;
+        border-bottom: 1px solid;
+        width: 100%;
+    }
+
+.btn-dudoan {
+    background-color: #217bbf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-transform: uppercase
 }
-.btn-dudoan{
-    background-color:#217bbf;
-    color:white;
-    border:none;
-    border-radius:5px;
-    padding:10px 20px;
-    text-transform:uppercase
-    
-    
-        
+
+.result-form {
+    text-align: center;
+    margin-top: 30px;
+    display: none;
 }
-.result-form{
-   text-align:center;
-   margin-top:30px;
-   display:none;
-}
-.result-form table
-{
-     margin-top:10px;
-     margin-bottom:10px;
-    margin:auto 
-}
+
+    .result-form table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin: auto
+    }
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
-.result-tb{
+
+.result-tb {
     color: #a90f0f;
     font-weight: bold;
     line-height: 5;
 }
 
 /*form Tu Van Nganh*/
-.content-form label
-{
-    display:block;
-    text-align:left;
-    color:black;
-    font-weight:bold
+.content-form label {
+    display: block;
+    text-align: left;
+    color: black;
+    font-weight: bold
 }
-.content-form .group-tv input
-{
-    max-width:100%;
-    
+
+.content-form .group-tv input {
+    max-width: 100%;
 }
- .content-form .group-tv textarea
- {
+
+.content-form .group-tv textarea {
     width: 100%;
     resize: none;
-    max-width:100%;
+    max-width: 100%;
     margin-bottom: 17px;
- }
- .content-form textarea:focus
- {
-    color:#000;
-    outline:none;
-    border:#35a5e5 1px solid;
-    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.content-form textarea:focus {
+    color: #000;
+    outline: none;
+    border: #35a5e5 1px solid;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
     -webkit-box-shadow: 0 0 5px rgba(81, 203, 238, 1);
     -moz-box-shadow: 0 0 5px rgba(81, 203, 238, 1);
- }
- .result-form span
- {
-     font-weight:bold
- }
- .result{
-     margin-top:10px
- }
-
- /*form TuVan Chon NgheNghiep*/
- .child-group{
-     font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
-     padding:10px 20px
- }
-
-
- .content-form input {
-  border: none;
-  border-bottom: 2px solid darkgrey;
-  background-color: inherit;
-  display: block;
-  width: 100%;
-  
 }
-.content-form input:focus{
-  outline: none;
-  border:none
-  
+
+.result-form span {
+    font-weight: bold
 }
+
+.result {
+    margin-top: 10px
+}
+
+/*form TuVan Chon NgheNghiep*/
+.child-group {
+    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
+    padding: 10px 20px
+}
+
+
+.content-form input {
+    border: none;
+    border-bottom: 2px solid darkgrey;
+    background-color: inherit;
+    display: block;
+    width: 100%;
+}
+
+    .content-form input:focus {
+        outline: none;
+        border: none
+    }
+
 .content-form .line {
-  height: 3px;
-  width: 0px;
-  position: absolute;
-  background-color: darkgrey;
-  display: inline-block;
-  transition: .3s width ease-in-out;
-  position: relative;
-  top: -18px;
-}
-.content-form input:focus+.line{
-  width: 100%;
-  background-color: #02add7;
-  
+    height: 3px;
+    width: 0px;
+    position: absolute;
+    background-color: darkgrey;
+    display: inline-block;
+    transition: .3s width ease-in-out;
+    position: relative;
+    top: -18px;
 }
 
-
-
-
- 
-
-
+.content-form input:focus + .line {
+    width: 100%;
+    background-color: #02add7;
+}
