@@ -1871,6 +1871,27 @@
     <Content Include="Content\css\form_dudoan.css" />
     <Content Include="Content\css\giaodien.css" />
     <Content Include="Content\css\ks-form.css" />
+    <Content Include="Content\css\main\css\owl.carousel.min.css" />
+    <Content Include="Content\css\main\css\owl.theme.default.min.css" />
+    <Content Include="Content\css\main\images\AI.jpeg" />
+    <Content Include="Content\css\main\images\banner-main-1.jpg" />
+    <Content Include="Content\css\main\images\banner-main-2.jpg" />
+    <Content Include="Content\css\main\images\banner-main-3.jpg" />
+    <Content Include="Content\css\main\images\banner-main-4.jpg" />
+    <Content Include="Content\css\main\images\banner-main-5.jpg" />
+    <Content Include="Content\css\main\images\banner-main-6.jpg" />
+    <Content Include="Content\css\main\images\icon_chatbot.png" />
+    <Content Include="Content\css\main\images\icon_daotao.png" />
+    <Content Include="Content\css\main\images\icon_dinhhuong.png" />
+    <Content Include="Content\css\main\images\icon_gioithieu.png" />
+    <Content Include="Content\css\main\images\icon_lienhe.png" />
+    <Content Include="Content\css\main\images\icon_login.png" />
+    <Content Include="Content\css\main\images\icon_phuongan.png" />
+    <Content Include="Content\css\main\images\icon_xettuyen.png" />
+    <Content Include="Content\css\main\images\logo.jpg" />
+    <Content Include="Content\css\main\js\jquery-1.10.2.min.js" />
+    <Content Include="Content\css\main\js\jquery-2.2.4.min.js" />
+    <Content Include="Content\css\main\js\owl.carousel.min.js" />
     <Content Include="Content\css\scss-files.txt" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\css\style_DinhHuong.css" />
@@ -2202,7 +2223,6 @@
     <Content Include="Views\Home\Header_KhaoSat.cshtml" />
     <Content Include="Views\KhaoSat\KhaoSatTinhHinhSV.cshtml" />
     <Content Include="Views\KhaoSat\KhaoSatNTD_Khac.cshtml" />
-    <Content Include="Views\Home\Main.cshtml" />
     <Content Include="Views\TuVan\DinhHuong.cshtml" />
     <Content Include="Views\TuVan\TamLy.cshtml" />
     <Content Include="Views\TuVan\TinhCach.cshtml" />
@@ -2211,6 +2231,7 @@
     <Content Include="SweetAlert2\sweetalert2.scss" />
     <Content Include="SweetAlert2\mixins.scss" />
     <Content Include="SweetAlert2\animations.scss" />
+    <Content Include="Views\Home\Main.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

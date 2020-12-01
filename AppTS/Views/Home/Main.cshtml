@@ -1,46 +1,289 @@
 ﻿
 @{
-    ViewBag.Title = "Main";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
 }
-<link href="~/Content/css/giaodien.css" rel="stylesheet" />
-<section id="about" style="padding:0">
-    <div class="nttu-home">
-        <div class="bg-blue-nttu">
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="~/Content/css/main/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/css/main/css/owl.theme.default.min.css">
+   
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .owl-stage-outer {
+            z-index: -1;
+        }
+
+        .owl-dots {
+            margin-top: -25px !important;
+        }
+
+            .owl-dots span {
+                width: 20px !important;
+                outline: none;
+            }
+
+        .owl-dot {
+            outline: none;
+        }
+
+        .table_main td {
+            font-size: calc(17px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
+            width: 33.333333333333%;
+            border: 0.2px solid #eeeeee;
+            border-right: 0px;
+            text-align: center;
+            vertical-align: top;
+            padding-top: 30px;
+            padding-bottom: 5px;
+        }
+        
+
+        .table_main .active_td {
+            background-color: black;
+        }
+
+
+
+        .table_main td:focus {
+            background-color: black;
+        }
+
+       
+
+        .table_main td img {
+            width: 50%;
+            height: auto;
+        }
+
+        .item-tb {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .table-item td {
+            padding: 0px 10px;
+            border: none;
+            padding-top:0;
+            padding-bottom:0
+           
+        }
+
+        .table-item {
+            width: 100%;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-radius: 1em;
+            overflow: hidden;
+        }
+
+        .table_main {
+            box-shadow: 0px 0px 9px 4px #808080;
+            background-color: transparent;
+            opacity: 1;
+            color: #000;
+            font-weight: bold;
+            border: 1px solid #000;
+        }
+
+        .main-home {
+            /*background: url(images/AI.jpeg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;*/
+        }
+
+            .main-home .bg-img {
+                opacity: 0.5;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+                background-image: url(/Content/css/main/images/AI.jpeg);
+                background-position: center;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+
+        .bg-main-black {
+            padding: 10px;
+            padding-top: 40px;
+        }
+
+        .header-logo {
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .owl-carousel img {
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <div class="header-logo">
+            <img src="~/Content/css/main/images/logo.jpg" style="width:80%;height:auto" />
         </div>
-        <div class="main-layout-nttu">
-            <div class="child item-login" onclick="window.location.href='/HocSinh/DangNhap'">
-                <a>Đăng nhập</a>
-            </div>
-            <div class="child item-tn-nganh" onclick="window.location.href = '/TuVan/DinhHuong'">
-                <a>Trắc nghiệm chọn ngành</a>
-            </div>
-            <div class="child item-chatbot" onclick="window.location.href='/ChatView/Index'">
-                <a>Tư vấn trực tuyến</a>
-            </div>
-            <div class="child item-contact" onclick="window.location.href='/Home/LienHe'">
-                <a>Thông tin liên hệ</a>
-            </div>
-            <div class="child item-about" onclick="window.location.href='/Home/Index'">
-                <a>Giới thiệu Trường ĐH Nguyễn Tất Thành</a>
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img src="~/Content/css/main/images/banner-main-1.jpg" /></div>
+            <div class="item"><img src="~/Content/css/main/images/banner-main-2.jpg" /></div>
+            <div class="item"><img src="~/Content/css/main/images/banner-main-3.jpg" /></div>
+            <div class="item"><img src="~/Content/css/main/images/banner-main-4.jpg" /></div>
+            <div class="item"><img src="~/Content/css/main/images/banner-main-5.jpg" /></div>
+            <div class="item"><img src="~/Content/css/main/images/banner-main-6.jpg" /></div>
+        </div>
+        <div class="main-home">
+            <!--<img src="images/AI.jpeg" class="bg-img"/>-->
+            <div class="bg-img">
 
             </div>
-            <div class="child item-infor-daotao">
-                <a>Thông tin các ngành đào tạo</a>
-            </div>
-            <div class="child item-pats">
-                <a>Phương án tuyển sinh</a>
-            </div>
-            <div class="child item-dkxt">
-                <a>Đăng ký xét tuyển</a>
-            </div>
+            <div class="bg-main-black">
+                <table border="0" cellspacing="0" width="100%" class="table_main">
+                    <tr>
+                        <td onclick="window.location='/Home/Index'">
+                            <table border="0" class="table-item">
+                                <tr>
+                                    <td><img src="~/Content/css/main/images/icon_gioithieu.png" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Giới thiệu về trường</p></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td onclick="window.location='/Home/LienHe'">
 
+                            <table border="0" class="table-item">
+                                <tr>
+                                    <td><img src="~/Content/css/main/images/icon_lienhe.png" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Thông tin liên hệ</p></td>
+                                </tr>
+                            </table>
 
+                        </td>
+                        <td style="border-right: 0.2px solid #eeeeee;" >
+                            <table border="0" class="table-item">
+                                <tr>
+                                    <td><img src="~/Content/css/main/images/icon_daotao.png" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Các ngành đào tạo</p></td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td onclick="window.location='/TuVan/DinhHuong'">
+                            <table border="0" class="table-item">
+                                <tr>
+                                    <td><img src="~/Content/css/main/images/icon_dinhhuong.png" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Trắc nghiệm chọn ngành</p></td>
+                                </tr>
+                            </table>
+
+                        </td>
+                        <td></td>
+
+                        <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/ChatView/Index'">
+                            <table border="0" class="table-item">
+                                <tr>
+                                    <td><img src="~/Content/css/main/images/icon_chatbot.png" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Tư vấn trực tuyến</p></td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table border="0" class="table-item">
+                                <tr>
+                                    <td><img src="~/Content/css/main/images/icon_phuongan.png" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Phương án tuyển sinh</p></td>
+                                </tr>
+                            </table>
+
+                        </td>
+                        <td>
+                            <table border="0" class="table-item">
+                                <tr>
+                                    <td><img src="~/Content/css/main/images/icon_xettuyen.png" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Đăng ký xét tuyển</p></td>
+                                </tr>
+                            </table>
+
+                        </td>
+                        <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/HocSinh/DangNhap'">
+                            <table border="0" class="table-item">
+                                <tr>
+                                    <td><img src="~/Content/css/main/images/icon_login.png" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Đăng nhập</p></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
-</section>
-<script>
-    $(document).ready(function () {
+  
+    <script>
+       
+    </script>
 
-    });
-</script>
+
+
+    <script src="~/Content/css/main/js/jquery-2.2.4.min.js"></script>
+   
+    <script src="~/Content/css/main/js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                loop: true,
+                margin: 10,
+                dots: true,
+                items: 1,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+
+            });
+           
+        });
+    </script>
+    
+</body>
+
+</html>
