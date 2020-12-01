@@ -92,7 +92,7 @@ body {
 }
 
 .js-btn-next, .js-btn-prev {
-    font-size: 30px
+    font-size: calc(18px + (18 - 15) * ((100vw - 300px) / (1600 - 300))) !important;
 }
 
 @media (min-width: 500px) {

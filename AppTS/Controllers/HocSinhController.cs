@@ -112,7 +112,7 @@ namespace AppTS.Controllers
         public ActionResult DangXuat()
         {
             Session["User"] = null;
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Main", "Home");
         }
         public ActionResult ttDangNhappart()
         {

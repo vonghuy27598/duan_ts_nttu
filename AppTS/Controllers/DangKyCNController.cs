@@ -21,7 +21,7 @@ namespace AppTS.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult CheckLogin(FormCollection collection)
+        public ActionResult CheckLogin(FormCollection collection, string id)
         {
             var tendn = collection["TenDN"];
             string tdn = tendn;
@@ -43,7 +43,7 @@ namespace AppTS.Controllers
                     ViewBag.Mess = "Đăng nhập thành công";
 
                     Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("AcceptDangKyCN", "DangKyCN", new { id_cn = id });
                 }
                 else
                 {
