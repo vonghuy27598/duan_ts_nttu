@@ -1874,6 +1874,7 @@
     <Content Include="Content\css\main\css\owl.carousel.min.css" />
     <Content Include="Content\css\main\css\owl.theme.default.min.css" />
     <Content Include="Content\css\main\images\AI.jpeg" />
+    <Content Include="Content\css\main\images\AI.jpg" />
     <Content Include="Content\css\main\images\banner-main-1.jpg" />
     <Content Include="Content\css\main\images\banner-main-2.jpg" />
     <Content Include="Content\css\main\images\banner-main-3.jpg" />
@@ -1886,6 +1887,7 @@
     <Content Include="Content\css\main\images\icon_gioithieu.png" />
     <Content Include="Content\css\main\images\icon_lienhe.png" />
     <Content Include="Content\css\main\images\icon_login.png" />
+    <Content Include="Content\css\main\images\icon_logout.png" />
     <Content Include="Content\css\main\images\icon_phuongan.png" />
     <Content Include="Content\css\main\images\icon_xettuyen.png" />
     <Content Include="Content\css\main\images\logo.jpg" />
@@ -2232,6 +2234,7 @@
     <Content Include="SweetAlert2\mixins.scss" />
     <Content Include="SweetAlert2\animations.scss" />
     <Content Include="Views\Home\Main.cshtml" />
+    <Content Include="Views\Home\PhuongAnTS.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

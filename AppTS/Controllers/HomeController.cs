@@ -63,5 +63,9 @@ namespace AppTS.Controllers
             return PartialView(model);
 
         }
+        public ActionResult PhuongAnTS()
+        {
+            return View();
+        }
     }
 }
