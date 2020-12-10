@@ -2235,6 +2235,7 @@
     <Content Include="SweetAlert2\animations.scss" />
     <Content Include="Views\Home\Main.cshtml" />
     <Content Include="Views\Home\PhuongAnTS.cshtml" />
+    <Content Include="Views\DangKyCN\DangKyNganh.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
