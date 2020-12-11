@@ -119,5 +119,51 @@ namespace AppTS.Controllers
             HocSinh_TK tk = (HocSinh_TK)Session["User"];
             return PartialView(tk);
         }
+
+        public ActionResult DangKyXetTuyen()
+        {
+            setDDlistNganh();
+            return View();
+        }
+
+        //dropdown ngành
+        public void setDDlistNganh(int? selectedId = null)
+        {
+
+            ViewBag.Nganh = new SelectList(Nganh.getKhoiNganh_ddl(), "ID_NGANH", "TENNGANH", selectedId);
+        }
+
+
+        //getTenNganh
+        [HttpPost]
+        public JsonResult getTenNganh(int id_khoinganh)
+        {
+            var result = Nganh.getKhoiNganh(id_khoinganh);
+            return Json(new
+            {
+                status = result
+            }, JsonRequestBehavior.AllowGet);
+        }
+
+        //getToHop
+        [HttpPost]
+        public JsonResult getToHop(int id_chuyennganh)
+        {
+            var result = Nganh.getToHop(id_chuyennganh);
+            return Json(new
+            {
+                status = result
+            }, JsonRequestBehavior.AllowGet);
+        }
+        //getMon_ToHop  
+        public JsonResult getMon_ToHop(string to_hop)
+        {
+            var result = Nganh.getMon_ToHop(to_hop);
+            return Json(new
+            {
+                status = result
+            }, JsonRequestBehavior.AllowGet);
+        }
+       
     }
 }

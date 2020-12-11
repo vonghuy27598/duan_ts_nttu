@@ -1,0 +1,214 @@
+﻿@model AppTS.ViewModels.HocSinh_TK
+@{
+    ViewBag.Title = "DangKyXetTuyen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .dn h5 {
+        color: #02add7;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: calc(17px + (18 - 17) * ((100vw - 300px) / (1600 - 300)));
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .dn select {
+        padding: 5px 0;
+        font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        margin-top:10px
+    }
+    .dn option {
+        font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
+    }
+    
+     .dn option[value=""] {
+        background: #dddddd;
+    }
+</style>
+<link href="~/Content/css/dangnhap.css" rel="stylesheet" />
+
+
+<div class="primari-box registered-account dn">
+    <form class="new-account-box" id="accountLogin" method="post" action="#">
+        <h4 class="box-subheading" style="color: black; text-align: center;">Đăng ký xét tuyển</h4>
+        <hr style="border: 1px solid; width: 100px;margin-bottom:35px" />
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <div class="form-content">
+                <h5>Thông tin học sinh</h5>
+                <div class="form-group primary-form-group">
+                    <label for="HOTENHS">Họ tên</label>
+                    @Html.TextBoxFor(m => m.HOTENHS, null, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", @class = " input-feild line-animation" })
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group">
+                    <label for="DIACHI">Địa chỉ</label>
+                    @Html.TextBoxFor(m => m.DIACHI, null, new { required = "required", @class = " input-feild line-animation" })
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group">
+                    <label for="TRUONGCAP3">Trường(THPT)</label>
+                    @Html.TextBoxFor(m => m.TRUONGCAP3, null, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", @class = " input-feild line-animation" })
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group">
+                    <label for="SDT">Số điện thoại</label>
+                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}" })
+                    <div class="line"></div>
+                </div>
+                <h5 style="margin-top:15px">Đăng ký ngành học</h5>
+                <div class="form-group primary-form-group">
+                    <label for="CKN">Chọn khối ngành</label>
+                    <!--dropdown-->
+                    @Html.DropDownList("dropdownlist_chon", (IEnumerable<SelectListItem>)ViewBag.Nganh, "Chọn khối ngành" , new { @id = "dropdownlist_chonkhoinganh" })
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group">
+                    <label for="CN">Tên ngành</label>
+                    <!--dropdown-->
+                    <select id="dropdownlist_chontennganh" disabled>                       
+                            <option>Chọn tên ngành - Mã ngành</option>                                                
+                    </select>
+
+
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group">
+                    <label for="TH">Tổ hợp xét tuyển</label>
+                    <!--dropdown-->
+                    <select id="dropdownlist_chontohop" disabled>
+                        <option>Chọn tổ hợp môn</option>
+                    </select>    
+
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group">
+                    <label for="M1">Điểm môn <span id="th_1">1</span></label>
+                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}" })
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group">
+                    <label for="M2">Điểm môn <span id="th_2">2</span></label>
+                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}" })
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group">
+                    <label for="M3">Điểm môn <span id="th_3">3</span></label>
+                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}" })
+                    <div class="line"></div>
+                </div>
+
+                <div class="submit-button">
+                    <input type="submit" value="Đăng ký" id="signinCreate" class="btn main-btn" />
+                </div>
+            </div>
+        }
+    </form>
+
+</div>
+
+<script>
+   
+    $(document).ready(function () {
+        $("#dropdownlist_chonkhoinganh option[value='']").attr('disabled', 'disabled')
+        $("#dropdownlist_chonkhoinganh").change(function () {
+            var id_khoinganh = this.value;
+            $("#dropdownlist_chontennganh").empty();
+            $("#dropdownlist_chontennganh").removeAttr("disabled");
+            $("#dropdownlist_chontohop").empty();
+            $("#dropdownlist_chontohop").removeAttr("disabled");
+            getTenNganh(id_khoinganh);
+        });
+        $("#dropdownlist_chontennganh").change(function () {
+            var id_chuyennganh = this.value;
+
+            $("#dropdownlist_chontohop").empty();
+            $("#dropdownlist_chontohop").removeAttr("disabled");
+            getToHop(id_chuyennganh);
+
+
+        });
+        $("#dropdownlist_chontohop").change(function () {
+            var to_hop = this.value;
+            getMonTheoToHop(to_hop);
+        });
+
+    });
+    function getTenNganh(id_khoinganh) {
+        $.ajax({
+            url: "getTenNganh",
+            data: { id_khoinganh: id_khoinganh },
+            datatype: "json",
+            type: "POST",
+            success: function (response) {
+                if (response.status != null) {
+
+                   
+                    $.each(response.status, function () {
+                        var ten_nganh = this.TENCHUYENNGANH;
+                        var id_chuyennganh = this.ID_CHUYENNGANH
+                        var ma_nganh = this.MANGANH;
+
+                        if ($("#dropdownlist_chontennganh option").length <= 0) {
+                            var to_hop = this.TOHOP;
+                            var array_tohop = to_hop.split(',');
+                            $.each(array_tohop, function (index, item) {
+                                $("#dropdownlist_chontohop").append("<option value='" + item + "'>" + item + "</option>");
+
+                            })
+                        }
+                        $("#dropdownlist_chontennganh").append("<option value='" + id_chuyennganh + "'>" + ten_nganh + " - " + ma_nganh + "</option>");
+                    });
+
+                }
+            }
+        });
+    }
+        function getToHop(id_chuyennganh) {
+            $.ajax({
+                url: "getToHop",
+                data: { id_chuyennganh: id_chuyennganh },
+                datatype: "json",
+                type: "POST",
+                success: function (response) {
+                    if (response.status != null) {
+                        $.each(response.status, function () {
+                            var to_hop = this.TOHOP;
+                            var array_tohop = to_hop.split(',');
+                            $.each(array_tohop, function (index, item) {
+                                $("#dropdownlist_chontohop").append("<option value='"+item+"'>" + item + "</option>");
+
+                            })
+                        });
+                    }
+                }
+            });
+        }
+        function getMonTheoToHop(to_hop)
+        {
+            $.ajax({
+                url: "getMon_ToHop",
+                data: { to_hop: to_hop },
+                datatype: "json",
+                type: "POST",
+                success: function (response) {
+                    if (response.status != null) {
+                        $.each(response.status, function () {
+                            alert(this.MON1 + this.MON2 + this.MON3);
+                        })
+                       
+                    }
+                }
+            });
+        }
+    
+</script>
+
+
+
