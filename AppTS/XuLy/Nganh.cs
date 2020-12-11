@@ -101,7 +101,7 @@ namespace AppTS.XuLy
         {
             dbQL_NTTDataContext data = new dbQL_NTTDataContext();
             var model = from a in data.Table_ToHops
-                        where a.TENTOHOP == tohop
+                        where a.TENTOHOP.Contains(tohop)
                         select new ToHop()
                         {
                            IDTOHOP = a.IDTOHOP,

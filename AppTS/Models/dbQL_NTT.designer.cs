@@ -4736,7 +4736,7 @@ namespace AppTS.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTOHOP", DbType="NChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTOHOP", DbType="NVarChar(50)")]
 		public string TENTOHOP
 		{
 			get

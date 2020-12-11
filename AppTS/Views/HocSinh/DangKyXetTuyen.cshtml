@@ -8,7 +8,7 @@
     .dn h5 {
         color: #02add7;
         margin-top: 15px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         font-size: calc(17px + (18 - 17) * ((100vw - 300px) / (1600 - 300)));
         text-transform: uppercase;
         font-weight: bold;
@@ -19,8 +19,11 @@
         border-top: none;
         border-left: none;
         border-right: none;
+        max-width:100%;
         width: 100%;
-        margin-top:10px
+        margin-top:10px;
+
+        
     }
     .dn option {
         font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
@@ -28,6 +31,9 @@
     
      .dn option[value=""] {
         background: #dddddd;
+    }
+    .d-lg-none{
+        display:none
     }
 </style>
 <link href="~/Content/css/dangnhap.css" rel="stylesheet" />
@@ -42,26 +48,56 @@
             @Html.ValidationSummary(true)
             <div class="form-content">
                 <h5>Thông tin học sinh</h5>
-                <div class="form-group primary-form-group">
+                @if(Session["User"] != null)
+                {
+                    
+                     <div class="form-group primary-form-group">
                     <label for="HOTENHS">Họ tên</label>
-                    @Html.TextBoxFor(m => m.HOTENHS, null, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", @class = " input-feild line-animation" })
+                    @Html.TextBoxFor(m => m.HOTENHS, Model.HOTENHS, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", disabled = "disabled", @class = " input-feild line-animation", @Style = "color: #777777;" })
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group">
                     <label for="DIACHI">Địa chỉ</label>
-                    @Html.TextBoxFor(m => m.DIACHI, null, new { required = "required", @class = " input-feild line-animation" })
+                    @Html.TextBoxFor(m => m.DIACHI, Model.DIACHI, new { required = "required", disabled = "disabled", @class = " input-feild line-animation", @Style = "color: #777777;" })
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group">
                     <label for="TRUONGCAP3">Trường(THPT)</label>
-                    @Html.TextBoxFor(m => m.TRUONGCAP3, null, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", @class = " input-feild line-animation" })
+                    @Html.TextBoxFor(m => m.TRUONGCAP3, Model.TRUONGCAP3, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", disabled = "disabled", @class = " input-feild line-animation", @Style = "color: #777777;" })
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group">
                     <label for="SDT">Số điện thoại</label>
-                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}" })
+                    @Html.TextBoxFor(m => m.SDT, Model.SDT, new { required = "required", title = "LabourCost is requried", disabled = "disabled", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}", @Style = "color: #777777;" })
                     <div class="line"></div>
                 </div>
+                    
+                   
+                }
+                else
+                {
+                      <div class="form-group primary-form-group">
+                    <label for="HOTENHS">Họ tên</label>
+                    @Html.TextBoxFor(m => m.HOTENHS, null , new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", @class = " input-feild line-animation" })
+                    <div class="line"></div>
+                     </div>
+                    <div class="form-group primary-form-group">
+                        <label for="DIACHI">Địa chỉ</label>
+                        @Html.TextBoxFor(m => m.DIACHI, null, new { required = "required", @class = " input-feild line-animation" })
+                        <div class="line"></div>
+                    </div>
+                    <div class="form-group primary-form-group">
+                        <label for="TRUONGCAP3">Trường(THPT)</label>
+                        @Html.TextBoxFor(m => m.TRUONGCAP3, null, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", @class = " input-feild line-animation" })
+                        <div class="line"></div>
+                    </div>
+                    <div class="form-group primary-form-group">
+                        <label for="SDT">Số điện thoại</label>
+                        @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}" })
+                        <div class="line"></div>
+                    </div>
+                }
+               
                 <h5 style="margin-top:15px">Đăng ký ngành học</h5>
                 <div class="form-group primary-form-group">
                     <label for="CKN">Chọn khối ngành</label>
@@ -90,28 +126,31 @@
                 </div>
                 <div class="form-group primary-form-group">
                     <label for="M1">Điểm môn <span id="th_1">1</span></label>
-                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}" })
+                    @Html.TextBox("mon1", null, new { required = "required", title = "", @class = " input-feild line-animation", type = "tel", maxlength = "2", pattern = "[0-9]" })
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group">
                     <label for="M2">Điểm môn <span id="th_2">2</span></label>
-                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}" })
+                    @Html.TextBox("mon2", null, new { required = "required", title = "", @class = " input-feild line-animation", type = "tel", maxlength = "2", pattern = "[0-9]" })
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group">
                     <label for="M3">Điểm môn <span id="th_3">3</span></label>
-                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}" })
+                    @Html.TextBox("mon3", null, new { required = "required", title = "", @class = " input-feild line-animation", type = "tel", maxlength = "2", pattern = "[0-9]" })
                     <div class="line"></div>
                 </div>
 
                 <div class="submit-button">
-                    <input type="submit" value="Đăng ký" id="signinCreate" class="btn main-btn" />
+                    <input type="button" value="Đăng ký" id="admission" class="btn main-btn" />
                 </div>
             </div>
         }
     </form>
 
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script>
    
@@ -124,6 +163,8 @@
             $("#dropdownlist_chontohop").empty();
             $("#dropdownlist_chontohop").removeAttr("disabled");
             getTenNganh(id_khoinganh);
+           
+            
         });
         $("#dropdownlist_chontennganh").change(function () {
             var id_chuyennganh = this.value;
@@ -131,15 +172,17 @@
             $("#dropdownlist_chontohop").empty();
             $("#dropdownlist_chontohop").removeAttr("disabled");
             getToHop(id_chuyennganh);
-
+            
 
         });
-        $("#dropdownlist_chontohop").change(function () {
+        $("#dropdownlist_chontohop").on("change",function () {
             var to_hop = this.value;
             getMonTheoToHop(to_hop);
+           
         });
 
     });
+   
     function getTenNganh(id_khoinganh) {
         $.ajax({
             url: "getTenNganh",
@@ -164,13 +207,17 @@
                             })
                         }
                         $("#dropdownlist_chontennganh").append("<option value='" + id_chuyennganh + "'>" + ten_nganh + " - " + ma_nganh + "</option>");
+                        if ($("#dropdownlist_chontohop").val() != null || $("#dropdownlist_chontohop").val() != "")
+                        {
+                            getMonTheoToHop($("#dropdownlist_chontohop").val());
+                        }
                     });
 
                 }
             }
         });
     }
-        function getToHop(id_chuyennganh) {
+       function getToHop(id_chuyennganh) {
             $.ajax({
                 url: "getToHop",
                 data: { id_chuyennganh: id_chuyennganh },
@@ -186,21 +233,27 @@
 
                             })
                         });
+                        if ($("#dropdownlist_chontohop").val() != null || $("#dropdownlist_chontohop").val() != "") {
+                            getMonTheoToHop($("#dropdownlist_chontohop").val());
+                        }
                     }
                 }
             });
         }
         function getMonTheoToHop(to_hop)
-        {
+       {
+            var tentohop = to_hop.trim();
             $.ajax({
                 url: "getMon_ToHop",
-                data: { to_hop: to_hop },
+                data: { to_hop: tentohop },
                 datatype: "json",
                 type: "POST",
                 success: function (response) {
                     if (response.status != null) {
                         $.each(response.status, function () {
-                            alert(this.MON1 + this.MON2 + this.MON3);
+                            $("#th_1").text(this.MON1);
+                            $("#th_2").text(this.MON2);
+                            $("#th_3").text(this.MON3);
                         })
                        
                     }
@@ -208,6 +261,40 @@
             });
         }
     
+        $("#admission").click(function()
+        {
+            var diemmon_1 = $("#mon1").val();
+            var diemmon_2 = $("#mon2").val();
+            var diemmon_3 = $("#mon3").val();
+            var tenmon_1 = $("#th_1").text();
+            var tenmon_2 = $("#th_2").text();
+            var tenmon_3 = $("#th_3").text();
+            if (diemmon_1 < 0 || diemmon_1 > 10)
+                alert("Điểm môn " + tenmon_1 + " phải từ 0 đến 10");
+            else if(diemmon_2 < 0 || diemmon_2 > 10)
+                alert("Điểm môn " + tenmon_2 + " phải từ 0 đến 10");
+            else if (diemmon_3 < 0 || diemmon_3 > 10)
+                alert("Điểm môn " + tenmon_3 + " phải từ 0 đến 10");
+            else {
+
+                Swal.fire({
+                    title: 'Custom width, padding, background.',
+                    width: 600,
+                    padding: '3em',
+                    background: '#fff url(https://sweetalert2.github.io/images/trees.png)',
+                    backdrop: 'rgba(0,0,123,0.4) url("https://sweetalert2.github.io/images/nyan-cat.gif")  center top no-repeat'
+                      
+                 
+               
+                
+            })
+
+
+
+
+
+            }
+        })
 </script>
 
 

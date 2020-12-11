@@ -123,6 +123,11 @@ namespace AppTS.Controllers
         public ActionResult DangKyXetTuyen()
         {
             setDDlistNganh();
+            if(Session["User"] != null)
+            {
+                HocSinh_TK tk = (HocSinh_TK)Session["User"];
+                return View(tk);
+            }
             return View();
         }
 

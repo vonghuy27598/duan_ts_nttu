@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_NTT" Class="dbQL_NTTDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-9INOVM4;Initial Catalog=QL_NTT;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QL_NTTConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-12J6D6C;Initial Catalog=QL_NTT;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QL_NTTConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Table_Admin" Member="Table_Admins">
     <Type Name="Table_Admin">
       <Column Name="ID_ADMIN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -232,7 +232,7 @@
   <Table Name="dbo.Table_ToHop" Member="Table_ToHops">
     <Type Name="Table_ToHop">
       <Column Name="IDTOHOP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TENTOHOP" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="TENTOHOP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="MONTOHOP" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Column Name="MON1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="MON2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
