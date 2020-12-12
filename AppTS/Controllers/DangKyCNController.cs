@@ -85,9 +85,6 @@ namespace AppTS.Controllers
         {
             return View();
         }
-        public ActionResult DangKyNganh()
-        {
-            return View();
-        }
+        
     }
 }

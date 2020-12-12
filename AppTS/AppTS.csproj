@@ -224,6 +224,7 @@
     <Compile Include="ViewModels\KhoiNghiepFull.cs" />
     <Compile Include="ViewModels\MenuView.cs" />
     <Compile Include="ViewModels\NghienCuuFull.cs" />
+    <Compile Include="ViewModels\ToHop.cs" />
     <Compile Include="XuLy\CNganh.cs" />
     <Compile Include="XuLy\HocSinh.cs" />
     <Compile Include="XuLy\KhaoSatHS.cs" />
@@ -2235,7 +2236,7 @@
     <Content Include="SweetAlert2\animations.scss" />
     <Content Include="Views\Home\Main.cshtml" />
     <Content Include="Views\Home\PhuongAnTS.cshtml" />
-    <Content Include="Views\DangKyCN\DangKyNganh.cshtml" />
+    <Content Include="Views\HocSinh\DangKyXetTuyen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
