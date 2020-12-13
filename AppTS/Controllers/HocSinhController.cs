@@ -170,5 +170,16 @@ namespace AppTS.Controllers
             }, JsonRequestBehavior.AllowGet);
         }
        
+        //submit xét tuyển
+        public JsonResult submit_XetTuyen(float tongdiem,float mon1,float mon2, float mon3,string hoten,string diachi, string truong, string sdt, string email)
+        {
+            Table_TrungTuyen trungtuyen = new Table_TrungTuyen();
+
+            return Json(new
+            {
+                
+            }, JsonRequestBehavior.AllowGet);
+        }
+        
     }
 }
