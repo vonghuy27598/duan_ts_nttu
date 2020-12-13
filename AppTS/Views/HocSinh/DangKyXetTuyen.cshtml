@@ -105,7 +105,7 @@
                     </div>
                      <div class="form-group primary-form-group">
                     <label for="EMAIL">Email</label>
-                    @Html.TextBoxFor(m => m.EMAIL, null, new { required = "required", id = "email", disabled = "disabled", @class = " input-feild line-animation ", type = "email" })
+                    @Html.TextBoxFor(m => m.EMAIL, null, new { required = "required", id = "email", @class = " input-feild line-animation ", type = "email" })
                     <div class="line"></div>
                 </div> 
                 }
@@ -136,17 +136,17 @@
 
                     <div class="line"></div>
                 </div>
-                <div class="form-group primary-form-group">
+                <div class="form-group primary-form-group dv_mon1">
                     <label for="M1">Điểm môn <span id="th_1">1</span></label>
                     @Html.TextBox("mon1", null, new { required = "required", title = "", @class = " input-feild line-animation allownumericwithdecimal", type = "number", pattern = "[0-9]", onkeypress = "if(this.value.length==2) return false; ",disabled="disabled"})
                     <div class="line"></div>
                 </div>
-                <div class="form-group primary-form-group">
+                <div class="form-group primary-form-group dv_mon2">
                     <label for="M2">Điểm môn <span id="th_2">2</span></label>
                     @Html.TextBox("mon2", null, new { required = "required", title = "", @class = " input-feild line-animation allownumericwithdecimal", type = "number", pattern = "[0-9]", onkeypress = "if(this.value.length==2) return false; ", disabled = "disabled" })
                     <div class="line"></div>
                 </div>
-                <div class="form-group primary-form-group">
+                <div class="form-group primary-form-group dv_mon3">
                     <label for="M3">Điểm môn <span id="th_3">3</span></label>
                     @Html.TextBox("mon3", null, new { required = "required", title = "", @class = " input-feild line-animation allownumericwithdecimal", type = "number", pattern = "[0-9]", onkeypress = "if(this.value.length==2) return false; ", disabled = "disabled" })
                     <div class="line"></div>
@@ -163,8 +163,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="~/Content/Admin/Scripts/XetTuyen.js"></script>
 
+<script src="~/Scripts/XetTuyen.js"></script>
 
 
 
