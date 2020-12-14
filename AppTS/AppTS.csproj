@@ -270,6 +270,10 @@
     <Content Include="Content\Admin\Scripts\khaosat.js" />
     <Content Include="Content\Admin\Scripts\ScriptChuyenNganh.js" />
     <Content Include="Content\Admin\Scripts\ScriptNganh.js" />
+    <Content Include="Content\img\tuyensinh1.jpg" />
+    <Content Include="Content\img\tuyensinh2.jpg" />
+    <Content Include="Content\img\tuyensinh3.png" />
+    <Content Include="Content\img\tuyensinh4.jpg" />
     <Content Include="Scripts\XetTuyen.js" />
     <Content Include="Content\Admin\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="Content\Admin\vendor\bootstrap\js\bootstrap.bundle.min.js" />
