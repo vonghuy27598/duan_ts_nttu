@@ -55,16 +55,27 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/01/2020 13:14:47</publishTime>
     </File>
     <File Include="bin/AppTS.dll">
+<<<<<<< HEAD
       <publishTime>12/19/2020 16:42:32</publishTime>
+=======
+      <publishTime>12/14/2020 08:39:13</publishTime>
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
     </File>
     <File Include="bin/AppTS.pdb">
-      <publishTime>12/02/2020 09:59:34</publishTime>
+      <publishTime>12/14/2020 08:39:13</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
+<<<<<<< HEAD
       <publishTime>12/19/2020 16:42:35</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
       <publishTime>12/19/2020 16:42:35</publishTime>
+=======
+      <publishTime>12/14/2020 08:39:25</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>12/14/2020 08:39:25</publishTime>
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>12/01/2020 13:14:48</publishTime>
@@ -5521,7 +5532,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/01/2020 13:14:43</publishTime>
     </File>
     <File Include="Content/css/dangnhap.css">
+<<<<<<< HEAD
       <publishTime>12/15/2020 22:37:22</publishTime>
+=======
+      <publishTime>12/12/2020 21:34:19</publishTime>
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
     </File>
     <File Include="Content/css/dathang.css">
       <publishTime>12/01/2020 13:14:43</publishTime>
@@ -5669,6 +5684,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/img/thuvien.jpg">
       <publishTime>12/01/2020 13:14:43</publishTime>
+    </File>
+    <File Include="Content/img/tuyensinh1.jpg">
+      <publishTime>12/14/2020 08:20:58</publishTime>
+    </File>
+    <File Include="Content/img/tuyensinh2.jpg">
+      <publishTime>12/14/2020 08:21:11</publishTime>
+    </File>
+    <File Include="Content/img/tuyensinh3.png">
+      <publishTime>12/14/2020 08:21:32</publishTime>
+    </File>
+    <File Include="Content/img/tuyensinh4.jpg">
+      <publishTime>12/14/2020 08:21:46</publishTime>
     </File>
     <File Include="Content/jquery-ui.css">
       <publishTime>12/01/2020 13:14:43</publishTime>
@@ -5878,13 +5905,21 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/01/2020 13:14:43</publishTime>
     </File>
     <File Include="Models/dbQL_NTT.dbml">
+<<<<<<< HEAD
       <publishTime>12/13/2020 14:53:42</publishTime>
+=======
+      <publishTime>12/14/2020 07:00:32</publishTime>
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
     </File>
     <File Include="packages.config">
       <publishTime>12/01/2020 13:14:47</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
+<<<<<<< HEAD
       <publishTime>12/19/2020 16:42:34</publishTime>
+=======
+      <publishTime>12/14/2020 08:39:18</publishTime>
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>12/01/2020 13:14:43</publishTime>
@@ -5936,6 +5971,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/send_khaosat.js">
       <publishTime>12/01/2020 13:14:43</publishTime>
+    </File>
+    <File Include="Scripts/XetTuyen.js">
+      <publishTime>12/14/2020 07:00:32</publishTime>
     </File>
     <File Include="Scripts/_references.js">
       <publishTime>12/19/2020 16:29:49</publishTime>
@@ -6004,7 +6042,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/01/2020 13:14:43</publishTime>
     </File>
     <File Include="Views/HocSinh/DangKyXetTuyen.cshtml">
+<<<<<<< HEAD
       <publishTime>12/19/2020 12:32:34</publishTime>
+=======
+      <publishTime>12/14/2020 07:00:32</publishTime>
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
     </File>
     <File Include="Views/HocSinh/DangNhap.cshtml">
       <publishTime>12/10/2020 22:25:27</publishTime>
@@ -6046,7 +6088,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/01/2020 13:14:43</publishTime>
     </File>
     <File Include="Views/Home/PhuongAnTS.cshtml">
+<<<<<<< HEAD
       <publishTime>12/10/2020 20:08:38</publishTime>
+=======
+      <publishTime>12/14/2020 08:27:37</publishTime>
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
     </File>
     <File Include="Views/KhaoSat/GoiYKhaoSat.cshtml">
       <publishTime>12/01/2020 13:14:43</publishTime>
@@ -6085,7 +6131,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/01/2020 13:14:43</publishTime>
     </File>
     <File Include="Views/TuVan/DinhHuong.cshtml">
+<<<<<<< HEAD
       <publishTime>12/13/2020 14:53:42</publishTime>
+=======
+      <publishTime>12/14/2020 08:11:09</publishTime>
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
     </File>
     <File Include="Views/TuVan/DuDoan.cshtml">
       <publishTime>12/13/2020 15:18:39</publishTime>
@@ -6112,7 +6162,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/01/2020 13:14:43</publishTime>
     </File>
     <File Include="Web.config">
+<<<<<<< HEAD
       <publishTime>12/19/2020 11:38:24</publishTime>
+=======
+      <publishTime>12/14/2020 08:39:15</publishTime>
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
     </File>
   </ItemGroup>
 </Project>

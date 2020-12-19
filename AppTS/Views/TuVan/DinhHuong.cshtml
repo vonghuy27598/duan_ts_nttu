@@ -50,6 +50,7 @@
     .result-dinhhuong > li > ul > li {
         margin-left: 10px
     }
+
     input[type="radio"] {
         visibility: hidden;
         height: 0;
@@ -72,6 +73,12 @@
 
     input[type="radio"]:checked + label {
         background-color: #f7a600;
+    }
+
+    .question {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 </style>
 <section id="about" style="padding:0">
@@ -312,7 +319,7 @@
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
                                                                 <input type="radio" name="needs10" id="a10" value="0" class="no_check" checked />
-                                                                <label for="a10" class="no_check"0></label>
+                                                                <label for="a10" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs10" id="a11" value="1">
                                                                 <label for="a11">1</label>
                                                                 <input type="radio" class="rd_rate" name="needs10" id="a12" value="2">

@@ -97,9 +97,33 @@ function getMonTheoToHop(to_hop)
         success: function (response) {
             if (response.status != null) {
                 $.each(response.status, function () {
-                    $("#th_1").text(this.MON1);
-                    $("#th_2").text(this.MON2);
-                    $("#th_3").text(this.MON3);
+                    
+                    var mon1=this.MON1;
+                    var mon2=this.MON2;
+                    var mon3=this.MON3;
+                    if(mon1 != null)
+                    {
+                        $("#th_1").text(this.MON1);
+                        $(".dv_mon1").css("display","block");
+                    }else{
+                        $(".dv_mon1").css("display","none");
+                    }
+                    if(mon2 != null)
+                    {
+                        $("#th_2").text(this.MON2);
+                        $(".dv_mon2").css("display","block");
+                    }else{
+                        $(".dv_mon2").css("display","none");
+                    }
+                    if(mon3 != null)
+                    {
+                        $("#th_3").text(this.MON3);
+                         $(".dv_mon3").css("display","block");
+                    }else{
+                        $("#mon3").val("0");
+                        $(".dv_mon3").css("display","none");
+                    }
+                  
                 })
                        
             }
@@ -114,7 +138,7 @@ $("#admission").click(function()
     var diachi = $("#diachi").val();
     var sdt = $("#sdt").val();
     var email = $("#email").val();
-    var diemmon_1 =$("#mon1").val();
+    var diemmon_1 = $("#mon1").val();
     var diemmon_2 = $("#mon2").val();
     var diemmon_3 = $("#mon3").val();
     var tenmon_1 = $("#th_1").text();
@@ -199,14 +223,16 @@ $("#admission").click(function()
         }           
         else {
             var tongdiem = parseFloat(diemmon_1) + parseFloat(diemmon_2) + parseFloat(diemmon_3);
-
+            var tohop = $("#dropdownlist_chontohop option:selected").text();
+            var nganh = $("#dropdownlist_chontennganh option:selected").val();
             $.ajax({
                 url: "submit_XetTuyen",
-                data: { tongdiem: tongdiem,mon1:parseFloat(diemmon_1),mon2:parseFloat(diemmon_2),mon3:parseFloat(diemmon_3),hoten:hoten,diachi:diachi,truong:truong,sdt:sdt,email:email },
+                data: { tongdiem: tongdiem,tohop:tohop,nganh:nganh,mon1:parseFloat(diemmon_1),mon2:parseFloat(diemmon_2),mon3:parseFloat(diemmon_3),hoten:hoten,diachi:diachi,truong:truong,sdt:sdt,email:email },
                 datatype: "json",
                 type: "POST",
                 success: function (response) {
                     
+<<<<<<< HEAD:AppTS/Content/Admin/Scripts/XetTuyen.js
                 }
             });
             if(tongdiem >= 18)
@@ -214,40 +240,52 @@ $("#admission").click(function()
                 Swal.fire({
                     title: 'Thông báo.',
                     text:'Bạn đã trúng tuyển vào Trường Đại học Nguyễn Tất Thành với số điểm: '+tongdiem +'. Ngành học: '+$("#dropdownlist_chontennganh option:selected").text()+'',
+=======
+
+                    if(tongdiem >= 18)
+                    {
+                        Swal.fire({
+                            title: 'Thông báo.',
+                            text:'Bạn đã trúng tuyển vào Trường Đại học Nguyễn Tất Thành với số điểm: '+tongdiem +'. Ngành học: '+$("#dropdownlist_chontennganh option:selected").text()+'',
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647:AppTS/Scripts/XetTuyen.js
                            
-                    width: 600,
-                    padding: '3em',                            
-                    confirmButtonText: 'Tiếp tục',
+                            width: 600,
+                            padding: '3em',                            
+                            confirmButtonText: 'Tiếp tục',
                               
   
-                }).then((result) => {
+                        }).then((result) => {
+                            Swal.fire({
+                                text:'Trường Đại học Nguyễn Tất Thành sẽ liên hệ bạn để hướng dãn làm thủ tục nhập học.',
+                                width: 600,
+                                padding: '3em',                            
+                                confirmButtonText: 'Đồng ý',
+
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                        location.reload();
+                    }
+                })
+                       
+        });
+                       
+} else {
                     Swal.fire({
-                        text:'Trường Đại học Nguyễn Tất Thành sẽ liên hệ bạn để hướng dãn làm thủ tục nhập học.',
+                        text:'Rất tiếc! Bạn không đạt yêu cầu.',
                         width: 600,
                         padding: '3em',                            
                         confirmButtonText: 'Đồng ý',
 
                     }).then((result) => {
                         if (result.isConfirmed) {
-                                location.reload();
-            }
-        })
-                       
-                });
-                       
-} else {
-                    Swal.fire({
-                    text:'Rất tiếc! Bạn không đạt yêu cầu.',
-                    width: 600,
-                    padding: '3em',                            
-                    confirmButtonText: 'Đồng ý',
-
-                    }).then((result) => {
-                        if (result.isConfirmed) {
                             location.reload();
-                    }
-                    })
 }
+})
+}    
+}
+});
+
+
                
 }
 }

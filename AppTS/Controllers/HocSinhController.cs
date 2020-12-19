@@ -171,10 +171,28 @@ namespace AppTS.Controllers
         }
        
         //submit xét tuyển
-        public JsonResult submit_XetTuyen(float tongdiem,float mon1,float mon2, float mon3,string hoten,string diachi, string truong, string sdt, string email)
+        [HttpPost]
+        public JsonResult submit_XetTuyen(float tongdiem,string tohop,int nganh,float mon1,float mon2, float mon3,string hoten,string diachi, string truong, string sdt, string email)
         {
             Table_TrungTuyen trungtuyen = new Table_TrungTuyen();
-
+            trungtuyen.HOTEN = hoten;
+            trungtuyen.DIACHI = diachi;
+            trungtuyen.TRUONG = truong;
+            trungtuyen.SDT = sdt;
+            trungtuyen.EMAIL = email;
+            trungtuyen.TENTOHOP = tohop;
+            trungtuyen.MON1 = mon1;
+            trungtuyen.MON2 = mon2;
+            trungtuyen.MON3 = mon3;
+            trungtuyen.ID_CHUYENNGANH = nganh;
+            bool trung = true;         
+            if(tongdiem<18)
+            {
+                trung = false;
+            }
+            trungtuyen.TRUNGTUYEN = trung;
+            db.Table_TrungTuyens.InsertOnSubmit(trungtuyen);
+            db.SubmitChanges();
             return Json(new
             {
                 

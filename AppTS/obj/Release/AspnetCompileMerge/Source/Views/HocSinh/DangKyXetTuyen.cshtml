@@ -52,7 +52,12 @@
             <div class="form-content">
                 <h5>Thông tin học sinh</h5>
                 @if(Session["User"] != null)
+<<<<<<< HEAD
                 {                   
+=======
+                {
+                    
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
                      <div class="form-group primary-form-group">
                     <label for="HOTENHS">Họ tên</label>
                     @Html.TextBoxFor(m => m.HOTENHS, Model.HOTENHS, new { title = "Vui lòng nhập thông tin", id = "hoten", required = "required", disabled = "disabled", @class = " input-feild line-animation", @Style = "color: #777777;" })
@@ -75,7 +80,11 @@
                 </div>
                 <div class="form-group primary-form-group">
                     <label for="EMAIL">Email</label>
+<<<<<<< HEAD
                     @Html.TextBoxFor(m => m.EMAIL, Model.EMAIL, new { required = "required", id = "email", @class = " input-feild line-animation ", type = "email", @Style = "color: #777777;" })
+=======
+                    @Html.TextBoxFor(m => m.EMAIL, Model.EMAIL, new { required = "required", id = "email", disabled = "disabled", @class = " input-feild line-animation ", type = "email", @Style = "color: #777777;" })
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
                     <div class="line"></div>
                 </div>   
                    
@@ -122,6 +131,11 @@
                     <select id="dropdownlist_chontennganh" disabled>                       
                             <option>Chọn tên ngành - Mã ngành</option>                                                
                     </select>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group">
@@ -133,17 +147,29 @@
 
                     <div class="line"></div>
                 </div>
+<<<<<<< HEAD
                 <div class="form-group primary-form-group">
+=======
+                <div class="form-group primary-form-group dv_mon1">
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
                     <label for="M1">Điểm môn <span id="th_1">1</span></label>
                     @Html.TextBox("mon1", null, new { required = "required", title = "", @class = " input-feild line-animation allownumericwithdecimal", type = "number", pattern = "[0-9]", onkeypress = "if(this.value.length==2) return false; ",disabled="disabled"})
                     <div class="line"></div>
                 </div>
+<<<<<<< HEAD
                 <div class="form-group primary-form-group">
+=======
+                <div class="form-group primary-form-group dv_mon2">
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
                     <label for="M2">Điểm môn <span id="th_2">2</span></label>
                     @Html.TextBox("mon2", null, new { required = "required", title = "", @class = " input-feild line-animation allownumericwithdecimal", type = "number", pattern = "[0-9]", onkeypress = "if(this.value.length==2) return false; ", disabled = "disabled" })
                     <div class="line"></div>
                 </div>
+<<<<<<< HEAD
                 <div class="form-group primary-form-group">
+=======
+                <div class="form-group primary-form-group dv_mon3">
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
                     <label for="M3">Điểm môn <span id="th_3">3</span></label>
                     @Html.TextBox("mon3", null, new { required = "required", title = "", @class = " input-feild line-animation allownumericwithdecimal", type = "number", pattern = "[0-9]", onkeypress = "if(this.value.length==2) return false; ", disabled = "disabled" })
                     <div class="line"></div>
@@ -160,8 +186,13 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<<<<<<< HEAD
 <script src="~/Content/Admin/Scripts/XetTuyen.js"></script>
 
+=======
+
+<script src="~/Scripts/XetTuyen.js"></script>
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647
 
 
 

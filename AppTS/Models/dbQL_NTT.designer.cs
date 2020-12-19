@@ -33,6 +33,9 @@ namespace AppTS.Models
     partial void InsertTable_Admin(Table_Admin instance);
     partial void UpdateTable_Admin(Table_Admin instance);
     partial void DeleteTable_Admin(Table_Admin instance);
+    partial void InsertTable_TrungTuyen(Table_TrungTuyen instance);
+    partial void UpdateTable_TrungTuyen(Table_TrungTuyen instance);
+    partial void DeleteTable_TrungTuyen(Table_TrungTuyen instance);
     partial void InsertTable_ChiTietKhaoSat(Table_ChiTietKhaoSat instance);
     partial void UpdateTable_ChiTietKhaoSat(Table_ChiTietKhaoSat instance);
     partial void DeleteTable_ChiTietKhaoSat(Table_ChiTietKhaoSat instance);
@@ -569,8 +572,10 @@ namespace AppTS.Models
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Table_TrungTuyen")]
-	public partial class Table_TrungTuyen
+	public partial class Table_TrungTuyen : INotifyPropertyChanging, INotifyPropertyChanged
 	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _ID;
 		
@@ -580,19 +585,58 @@ namespace AppTS.Models
 		
 		private string _TRUONG;
 		
-		private System.Nullable<int> _SDT;
+		private string _SDT;
 		
 		private string _EMAIL;
 		
-		private System.Nullable<int> _IDTENNGANH;
+		private string _TENTOHOP;
+		
+		private System.Nullable<int> _ID_CHUYENNGANH;
+		
+		private System.Nullable<double> _MON1;
+		
+		private System.Nullable<double> _MON2;
+		
+		private System.Nullable<double> _MON3;
 		
 		private System.Nullable<bool> _TRUNGTUYEN;
 		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnHOTENChanging(string value);
+    partial void OnHOTENChanged();
+    partial void OnDIACHIChanging(string value);
+    partial void OnDIACHIChanged();
+    partial void OnTRUONGChanging(string value);
+    partial void OnTRUONGChanged();
+    partial void OnSDTChanging(string value);
+    partial void OnSDTChanged();
+    partial void OnEMAILChanging(string value);
+    partial void OnEMAILChanged();
+    partial void OnTENTOHOPChanging(string value);
+    partial void OnTENTOHOPChanged();
+    partial void OnID_CHUYENNGANHChanging(System.Nullable<int> value);
+    partial void OnID_CHUYENNGANHChanged();
+    partial void OnMON1Changing(System.Nullable<double> value);
+    partial void OnMON1Changed();
+    partial void OnMON2Changing(System.Nullable<double> value);
+    partial void OnMON2Changed();
+    partial void OnMON3Changing(System.Nullable<double> value);
+    partial void OnMON3Changed();
+    partial void OnTRUNGTUYENChanging(System.Nullable<bool> value);
+    partial void OnTRUNGTUYENChanged();
+    #endregion
+		
 		public Table_TrungTuyen()
 		{
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID
 		{
 			get
@@ -603,7 +647,11 @@ namespace AppTS.Models
 			{
 				if ((this._ID != value))
 				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
 					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
 				}
 			}
 		}
@@ -619,7 +667,11 @@ namespace AppTS.Models
 			{
 				if ((this._HOTEN != value))
 				{
+					this.OnHOTENChanging(value);
+					this.SendPropertyChanging();
 					this._HOTEN = value;
+					this.SendPropertyChanged("HOTEN");
+					this.OnHOTENChanged();
 				}
 			}
 		}
@@ -635,7 +687,11 @@ namespace AppTS.Models
 			{
 				if ((this._DIACHI != value))
 				{
+					this.OnDIACHIChanging(value);
+					this.SendPropertyChanging();
 					this._DIACHI = value;
+					this.SendPropertyChanged("DIACHI");
+					this.OnDIACHIChanged();
 				}
 			}
 		}
@@ -651,13 +707,17 @@ namespace AppTS.Models
 			{
 				if ((this._TRUONG != value))
 				{
+					this.OnTRUONGChanging(value);
+					this.SendPropertyChanging();
 					this._TRUONG = value;
+					this.SendPropertyChanged("TRUONG");
+					this.OnTRUONGChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SDT", DbType="Int")]
-		public System.Nullable<int> SDT
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SDT", DbType="VarChar(13)")]
+		public string SDT
 		{
 			get
 			{
@@ -667,7 +727,11 @@ namespace AppTS.Models
 			{
 				if ((this._SDT != value))
 				{
+					this.OnSDTChanging(value);
+					this.SendPropertyChanging();
 					this._SDT = value;
+					this.SendPropertyChanged("SDT");
+					this.OnSDTChanged();
 				}
 			}
 		}
@@ -683,23 +747,111 @@ namespace AppTS.Models
 			{
 				if ((this._EMAIL != value))
 				{
+					this.OnEMAILChanging(value);
+					this.SendPropertyChanging();
 					this._EMAIL = value;
+					this.SendPropertyChanged("EMAIL");
+					this.OnEMAILChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDTENNGANH", DbType="Int")]
-		public System.Nullable<int> IDTENNGANH
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTOHOP", DbType="VarChar(50)")]
+		public string TENTOHOP
 		{
 			get
 			{
-				return this._IDTENNGANH;
+				return this._TENTOHOP;
 			}
 			set
 			{
-				if ((this._IDTENNGANH != value))
+				if ((this._TENTOHOP != value))
 				{
-					this._IDTENNGANH = value;
+					this.OnTENTOHOPChanging(value);
+					this.SendPropertyChanging();
+					this._TENTOHOP = value;
+					this.SendPropertyChanged("TENTOHOP");
+					this.OnTENTOHOPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_CHUYENNGANH", DbType="Int")]
+		public System.Nullable<int> ID_CHUYENNGANH
+		{
+			get
+			{
+				return this._ID_CHUYENNGANH;
+			}
+			set
+			{
+				if ((this._ID_CHUYENNGANH != value))
+				{
+					this.OnID_CHUYENNGANHChanging(value);
+					this.SendPropertyChanging();
+					this._ID_CHUYENNGANH = value;
+					this.SendPropertyChanged("ID_CHUYENNGANH");
+					this.OnID_CHUYENNGANHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MON1", DbType="Float")]
+		public System.Nullable<double> MON1
+		{
+			get
+			{
+				return this._MON1;
+			}
+			set
+			{
+				if ((this._MON1 != value))
+				{
+					this.OnMON1Changing(value);
+					this.SendPropertyChanging();
+					this._MON1 = value;
+					this.SendPropertyChanged("MON1");
+					this.OnMON1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MON2", DbType="Float")]
+		public System.Nullable<double> MON2
+		{
+			get
+			{
+				return this._MON2;
+			}
+			set
+			{
+				if ((this._MON2 != value))
+				{
+					this.OnMON2Changing(value);
+					this.SendPropertyChanging();
+					this._MON2 = value;
+					this.SendPropertyChanged("MON2");
+					this.OnMON2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MON3", DbType="Float")]
+		public System.Nullable<double> MON3
+		{
+			get
+			{
+				return this._MON3;
+			}
+			set
+			{
+				if ((this._MON3 != value))
+				{
+					this.OnMON3Changing(value);
+					this.SendPropertyChanging();
+					this._MON3 = value;
+					this.SendPropertyChanged("MON3");
+					this.OnMON3Changed();
 				}
 			}
 		}
@@ -715,8 +867,32 @@ namespace AppTS.Models
 			{
 				if ((this._TRUNGTUYEN != value))
 				{
+					this.OnTRUNGTUYENChanging(value);
+					this.SendPropertyChanging();
 					this._TRUNGTUYEN = value;
+					this.SendPropertyChanged("TRUNGTUYEN");
+					this.OnTRUNGTUYENChanged();
 				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

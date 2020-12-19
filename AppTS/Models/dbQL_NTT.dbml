@@ -14,13 +14,17 @@
   </Table>
   <Table Name="dbo.Table_TrungTuyen" Member="Table_TrungTuyens">
     <Type Name="Table_TrungTuyen">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="DIACHI" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Column Name="TRUONG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="SDT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
       <Column Name="EMAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="IDTENNGANH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TENTOHOP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID_CHUYENNGANH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MON1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MON2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MON3" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="TRUNGTUYEN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
