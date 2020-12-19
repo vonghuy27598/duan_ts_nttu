@@ -5,7 +5,8 @@
     border: 1px solid;
     border-radius: 15px;
     box-shadow: 0px 5px 10px 0px #898989;
-    margin-top: 50px !important
+    margin-top: 50px !important;
+    background-color:#fff!important
 }
 
 #message {
@@ -81,7 +82,7 @@
 
     .submit-button input {
         background-color: #024283;
-        color: white;
+        color: #fff;
         font-weight: bold;
     }
 
@@ -119,11 +120,12 @@
 
 @media all and (min-width: 320px) {
     .dn {
-        font-size: 100%%;
+        font-size: 100%;
         width: 90%;
         padding: 5% 10%;
         margin: auto;
-        margin-bottom: 100px
+        margin-bottom: 100px;
+        background-color:#fff!important
     }
 
         .dn h3 {
@@ -151,7 +153,9 @@
         margin-top: 5px
     }
 
-
+    .submit-button input:focus{
+        color:#fff
+    }
 
 
     /* The message box is shown when the user clicks on the password field */
@@ -186,7 +190,8 @@
         width: 70%;
         padding: 5% 10%;
         margin: auto;
-        margin-bottom: 100px
+        margin-bottom: 100px;
+        background-color:#fff!important
     }
 
         .dn h3 {
@@ -217,7 +222,8 @@
         width: 55%;
         padding: 5% 7%;
         margin: auto;
-        margin-bottom: 100px
+        margin-bottom: 100px;
+        background-color:#fff!important
     }
 
         .dn h3 {
@@ -252,7 +258,8 @@
         border-radius: 20px;
         box-shadow: inset 0px 1px 4px 0px;
         font-size: 100%;
-        margin-bottom: 100px
+        margin-bottom: 100px;
+        background-color:#fff!important
     }
 
         .dn h3 {
@@ -269,7 +276,7 @@
 
         .submit-button input {
             background-color: #024283;
-            color: white;
+            color: #fff;
             font-weight: bold;
         }
 
@@ -306,137 +313,11 @@
 }
 
 
-/*@media only screen and (max-width: 480px) {
-     .dn {
-        font-size: 150%;
-        width: 90%;
-        padding: 5% 10%;
-        margin: auto;
-        margin-top: 50px;
-        margin-bottom:100px
-    }
 
-        .dn h3 {
-            font-size: 2em;
-            margin-bottom:10px
-        }
-
-    .input-feild {
-        font-size: 1em;
-    }
-    .forget-password a {
-    font-size: 1em;
-}
-     .submit-button input {
-        font-size:1em;
-        margin-top:5px
-    }
-     .dn .mess{
-         text-align:center;
-         font-size:1em;
-         color:red;
-         margin-top:5px
-     }
-}*/
-
-/*@media only screen and (min-width: 00px) {
-    .dn {
-        font-size: 150%;
-        width: 70%;
-        padding: 5% 10%;
-        margin: auto;
-        margin-top: 50px;
-        margin-bottom:100px
-    }
-
-        .dn h3 {
-            font-size: 2em;
-            margin-bottom:10px
-        }
-
-    .input-feild {
-        font-size: 1em;
-    }
-    .forget-password a {
-    font-size: 1em;
-}
-     .submit-button input {
-        font-size:1em;
-        margin-top:5px
-    }
-     .dn .mess{
-         text-align:center;
-         font-size:1em;
-         color:red;
-         margin-top:5px
-     }
-}*/
-
-
-/*@media only screen and (min-width: 1024px) {
-  .dn {
-    width: 400px;
-    margin: auto;
-    margin-top: 100px;
-    padding: 20px 25px;
-    border: 0.5px solid #e6dbdb;
-    border-radius: 20px;
-    box-shadow: inset 0px 1px 4px 0px;
-    font-size:100%;
-    margin-bottom:100px
-}
-
-    .dn h3 {
-        text-align: center;
-        margin-bottom: 15px;
-     
-    }
-
-    .dn label {
-    }
-
-.submit-button {
-    text-align: center;
-}
-
-    .submit-button input {
-        background-color: #7ead39;
-        color: white;
-        font-weight: bold;
-    }
-
-.forget-password {
-    text-align: center;
-}
-
-.main-btn {
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.loi {
-    float: left;
-    padding: 8px 5px;
-    font-size: 20px;
-    color: red;
-}
-
-.input-feild {
-    float: left;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.forget-password a {
-    color: #beb5b5;
-    margin-top: 5px;
-}
-}*/
 
 .form-content input[type=text], input[type=password], input[type=tel], input[type=date] {
     border: none;
-    border-bottom: 2px solid darkgrey;
+    border-bottom: 1px solid;
     background-color: inherit;
     display: block;
     transition: 1s width ease-in-out;
@@ -453,7 +334,7 @@
     height: 5px;
     width: 0px;
     position: absolute;
-    background-color: darkgrey;
+    background-color: #fff;
     display: inline-block;
     transition: .3s width ease-in-out;
     position: relative;

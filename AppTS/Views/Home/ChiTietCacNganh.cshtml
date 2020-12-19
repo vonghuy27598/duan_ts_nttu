@@ -1,0 +1,178 @@
+﻿@model IEnumerable<AppTS.Models.Table_ChuyenNganh>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChiTietCacNganh</title>
+
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        thead, tr, th {
+            border-top: none;
+        }
+
+        thead {
+            color: #fff;
+        }
+
+        td, th {
+            border-left: none;
+            border-right: none;
+        }
+
+        th {
+            font-size: calc(15px + (18 - 15) * ((100vw - 300px) / (1600 - 300)));
+        }
+
+        td {
+            border-bottom: 1px solid #b6b1b1;
+            font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1600 - 300)));
+        }
+
+        table caption {
+            text-align: left;
+            padding: 20px 10px;
+            font-weight: bold;
+            font-size: calc(16px + (19 - 16) * ((100vw - 300px) / (1600 - 300)));
+            text-transform: uppercase;
+        }
+
+        .ct-nganh {
+            margin-top: 5px;
+        }
+        #header{
+            height:auto;
+            padding-top:10px;
+            padding-bottom:10px
+        }
+        #header a:active{
+            outline:none
+        }
+        #header img:active{
+            background-color:transparent
+        }
+    </style>
+</head>
+<body>
+    <div class="ct-nganh">
+        <section id="header">
+            <div class="header-logo" style="padding-left:10px">
+                <a href="@Url.Action("CacNganhDaoTao", "Home")"><img src="~/Content/img/arrow_left.png" alt="" class="go_back" style="width:30px"></a>
+            </div>
+        </section>
+       
+        <div>
+            <table width="100%" border="0" cellpadding="10" cellspacing="0">
+                @if (Session["ct_nganh"].Equals("1"))
+                {
+                    <caption style="color: #2da1de; background-image: url('/Content/img/suc_khoe.png'); background-repeat: no-repeat; background-position: center right">Khối ngành Sức khỏe</caption>
+                    <thead style="background-color: #2da1de; ">
+                        <tr>
+                            <th width="50%">
+                                Tên ngành
+                            </th>
+                            <th width="20%">
+                                Mã ngành
+                            </th>
+                            <th width="30%">
+                                Tổ hợp xét tuyển
+                            </th>
+                        </tr>
+                    </thead>
+                }
+                else if (Session["ct_nganh"].Equals("2"))
+                {
+                    <caption style="color: #354f78; background-image: url('/Content/img/cong_nghe.png'); background-repeat: no-repeat; background-position: center right">Khối ngành Kỹ thuật - Công nghệ</caption>
+                    <thead style="background-color: #354f78; ">
+                        <tr>
+                            <th width="50%">
+                                Tên ngành
+                            </th>
+                            <th width="20%">
+                                Mã ngành
+                            </th>
+                            <th width="30%">
+                                Tổ hợp xét tuyển
+                            </th>
+                        </tr>
+                    </thead>
+                }
+                else if (Session["ct_nganh"].Equals("3"))
+                {
+                    <caption style="color: #df8a35; background-image: url('/Content/img/kinhte.png'); background-repeat: no-repeat; background-position: center right">Khối ngành Kinh tế</caption>
+                    <thead style="background-color: #df8a35; ">
+                        <tr>
+                            <th width="50%">
+                                Tên ngành
+                            </th>
+                            <th width="20%">
+                                Mã ngành
+                            </th>
+                            <th width="30%">
+                                Tổ hợp xét tuyển
+                            </th>
+                        </tr>
+                    </thead>
+                }
+                else if (Session["ct_nganh"].Equals("4"))
+                {
+                    <caption style="color: #009687; background-image: url('/Content/img/nhan_van.png'); background-repeat: no-repeat; background-position: center right">Khối ngành Nhân văn</caption>
+                    <thead style="background-color: #009687; ">
+                        <tr>
+                            <th width="50%">
+                                Tên ngành
+                            </th>
+                            <th width="20%">
+                                Mã ngành
+                            </th>
+                            <th width="30%">
+                                Tổ hợp xét tuyển
+                            </th>
+                        </tr>
+                    </thead>
+                }
+                else
+                {
+                    <caption style="color: #ce535b; background-image: url('/Content/img/my_thuat.png'); background-repeat: no-repeat; background-position: center right">Khối ngành Mỹ Thuật – Nghệ thuật</caption>
+                    <thead style="background-color: #ce535b; ">
+                        <tr>
+                            <th width="50%">
+                                Tên ngành
+                            </th>
+                            <th width="20%">
+                                Mã ngành
+                            </th>
+                            <th width="30%">
+                                Tổ hợp xét tuyển
+                            </th>
+                        </tr>
+                    </thead>
+                }
+
+                <tbody>
+                 
+                    @foreach(var item in Model)
+                    {
+                        <tr>
+                            <td>@item.TENCHUYENNGANH</td>
+                            <td>@item.MANGANH</td>
+                            <td>@item.TOHOP</td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</body>
+</html>

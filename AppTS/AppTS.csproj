@@ -1903,12 +1903,20 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\img\all.jpg" />
     <Content Include="Content\img\APD.jpg" />
+    <Content Include="Content\img\arrow_left.png" />
+    <Content Include="Content\img\arrow_right.png" />
     <Content Include="Content\img\baove.jpg" />
     <Content Include="Content\img\cntt.png" />
     <Content Include="Content\img\cntt1.png" />
     <Content Include="Content\img\cntt3.png" />
+    <Content Include="Content\img\cong_nghe.png" />
+    <Content Include="Content\img\danhsach_nganh.jpg" />
+    <Content Include="Content\img\kinhte.png" />
     <Content Include="Content\img\logo.jpg" />
     <Content Include="Content\img\logo_ntt.png" />
+    <Content Include="Content\img\my_thuat.png" />
+    <Content Include="Content\img\nhan_van.png" />
+    <Content Include="Content\img\suc_khoe.png" />
     <Content Include="Content\img\thuvien.jpg" />
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\jquery-ui.min.css" />
@@ -2238,6 +2246,8 @@
     <Content Include="Views\Home\Main.cshtml" />
     <Content Include="Views\Home\PhuongAnTS.cshtml" />
     <Content Include="Views\HocSinh\DangKyXetTuyen.cshtml" />
+    <Content Include="Views\Home\CacNganhDaoTao.cshtml" />
+    <Content Include="Views\Home\ChiTietCacNganh.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

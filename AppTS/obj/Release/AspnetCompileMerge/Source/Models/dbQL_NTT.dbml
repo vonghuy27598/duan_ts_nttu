@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_NTT" Class="dbQL_NTTDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-9INOVM4;Initial Catalog=QL_NTT;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QL_NTTConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-12J6D6C;Initial Catalog=QL_NTT;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QL_NTTConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Table_Admin" Member="Table_Admins">
     <Type Name="Table_Admin">
       <Column Name="ID_ADMIN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -12,12 +12,16 @@
       <Association Name="Table_TaiKhoan_Table_Admin" Member="Table_TaiKhoan" ThisKey="ID_TK" OtherKey="ID_TK" Type="Table_TaiKhoan" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Table_ThanhTuuTruong" Member="Table_ThanhTuuTruongs">
-    <Type Name="Table_ThanhTuuTruong">
-      <Column Name="ID_THANHTUUTRUONG" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TENTHANHTUUTRUONG" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="NGAY" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Association Name="Table_ThanhTuuTruong_Table_CTTTT" Member="Table_CTTTTs" ThisKey="ID_THANHTUUTRUONG" OtherKey="ID_THANHTUUTRUONG" Type="Table_CTTTT" />
+  <Table Name="dbo.Table_TrungTuyen" Member="Table_TrungTuyens">
+    <Type Name="Table_TrungTuyen">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TRUONG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IDTENNGANH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TRUNGTUYEN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Table_ChiTietKhaoSat" Member="Table_ChiTietKhaoSats">
@@ -34,6 +38,8 @@
       <Column Name="ID_CHUYENNGANH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TENCHUYENNGANH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ID_NGANH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MANGANH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TOHOP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="Table_ChuyenNganh_Table_CTCN" Member="Table_CTCNs" ThisKey="ID_CHUYENNGANH" OtherKey="ID_CHUYENNGANH" Type="Table_CTCN" />
       <Association Name="Table_ChuyenNganh_Table_GiangVien" Member="Table_GiangViens" ThisKey="ID_CHUYENNGANH" OtherKey="ID_CHUYENNGANH" Type="Table_GiangVien" />
       <Association Name="Table_ChuyenNganh_Table_HocSinh" Member="Table_HocSinhs" ThisKey="ID_CHUYENNGANH" OtherKey="ID_CHUYENNGANH" Type="Table_HocSinh" />
@@ -143,7 +149,7 @@
   <Table Name="dbo.Table_HocSinh" Member="Table_HocSinhs">
     <Type Name="Table_HocSinh">
       <Column Name="ID_HS" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="HOTENHS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HOTENHS" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="GIOITINH" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="NGAYSINH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
@@ -176,7 +182,6 @@
     <Type Name="Table_Nganh">
       <Column Name="ID_NGANH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TENNGANH" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Table_Nganh_Table_ChuyenNganh" Member="Table_ChuyenNganhs" ThisKey="ID_NGANH" OtherKey="ID_NGANH" Type="Table_ChuyenNganh" />
       <Association Name="Table_Nganh_Table_CTN" Member="Table_CTNs" ThisKey="ID_NGANH" OtherKey="ID_NGANH" Type="Table_CTN" />
       <Association Name="Table_Nganh_Table_GiangVienDN" Member="Table_GiangVienDNs" ThisKey="ID_NGANH" OtherKey="ID_NGANH" Type="Table_GiangVienDN" />
@@ -185,7 +190,8 @@
   <Table Name="dbo.Table_NghienCuu" Member="Table_NghienCuus">
     <Type Name="Table_NghienCuu">
       <Column Name="ID_NGHIENCUU" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TENGHIENCUU" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TENGHIENCUU" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="ANHBIA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Association Name="Table_NghienCuu_Table_CTNC" Member="Table_CTNCs" ThisKey="ID_NGHIENCUU" OtherKey="ID_NGHIENCUU" Type="Table_CTNC" />
     </Type>
   </Table>
@@ -213,6 +219,24 @@
       <Column Name="TENTHANHTUUKHOA" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Column Name="NGAY" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="Table_ThanhTuuKhoa_Table_CTTTK" Member="Table_CTTTKs" ThisKey="ID_THANHTUUKHOA" OtherKey="ID_THANHTUUKHOA" Type="Table_CTTTK" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_ThanhTuuTruong" Member="Table_ThanhTuuTruongs">
+    <Type Name="Table_ThanhTuuTruong">
+      <Column Name="ID_THANHTUUTRUONG" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENTHANHTUUTRUONG" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NGAY" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Table_ThanhTuuTruong_Table_CTTTT" Member="Table_CTTTTs" ThisKey="ID_THANHTUUTRUONG" OtherKey="ID_THANHTUUTRUONG" Type="Table_CTTTT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_ToHop" Member="Table_ToHops">
+    <Type Name="Table_ToHop">
+      <Column Name="IDTOHOP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENTOHOP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MONTOHOP" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="MON1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MON2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MON3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

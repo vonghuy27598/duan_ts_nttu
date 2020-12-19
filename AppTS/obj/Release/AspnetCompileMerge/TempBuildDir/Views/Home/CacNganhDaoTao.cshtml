@@ -1,0 +1,75 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChiTietCacNganh</title>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 100%;
+            padding: 10px;
+            border-bottom: 1px solid #dfdfdf;
+            background-origin: content-box;
+            padding-left: 15px;
+        }
+
+            .column p {
+                padding-left: 65px;
+                background-image: url('/Content/img/arrow_right.png');
+                background-position: center right;
+                background-repeat: no-repeat;
+                background-size: contain;
+                font-size: calc(15px + (20 - 15) * ((100vw - 300px) / (1600 - 300)));
+            }
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="header-logo" >
+            <img src="~/Content/css/main/images/logo.jpg" style="width:80%;height:auto" />
+        </div>
+        <img src="/Content/img/danhsach_nganh.jpg" style="width:100%;height:auto" />
+        <div class="row">
+            <div class="column" style=" background-image: url('/Content/img/suc_khoe.png'); background-repeat: no-repeat; background-position: center left;" onclick="window.location='/Home/ChiTietCacNganh?id_nganh=1'">
+                <p style="">Khối ngành Sức khỏe </p>
+            </div>
+            <div class="column" style="background-image: url('/Content/img/cong_nghe.png'); background-repeat: no-repeat; background-position: center left; " onclick="window.location='/Home/ChiTietCacNganh?id_nganh=2'">
+                <p style="">Khối ngành Kỹ thuật - Công nghệ</p>
+            </div>
+            <div class="column" style="background-image: url('/Content/img/kinhte.png'); background-repeat: no-repeat;  background-position: center left; " onclick="window.location='/Home/ChiTietCacNganh?id_nganh=3'">
+                <p style="">Khối ngành Kinh tế</p>
+            </div>
+            <div class="column" style="background-image: url('/Content/img/nhan_van.png'); background-repeat: no-repeat; background-position: center left; " onclick="window.location='/Home/ChiTietCacNganh?id_nganh=4'">
+                <p style="">Khối ngành Nhân văn</p>
+            </div>
+            <div class="column" style="background-image: url('/Content/img/my_thuat.png'); background-repeat: no-repeat; background-position: center left; " onclick="window.location='/Home/ChiTietCacNganh?id_nganh=5'">
+                <p style="">Khối ngành Mỹ thuật - Nghệ thuật</p>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

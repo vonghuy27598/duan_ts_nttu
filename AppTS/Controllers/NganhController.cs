@@ -10,9 +10,10 @@ namespace AppTS.Controllers
     {
         //
         // GET: /Nganh/
-        public ActionResult Index()
+        public ActionResult CacNganhDaoTao()
         {
             return View();
         }
+
     }
 }
