@@ -146,37 +146,44 @@ $("#admission").click(function()
     var tenmon_3 = $("#th_3").text();
     if(hoten.length<=0)
     {
-        $("#hoten").focus();
         alert("Vui lòng nhập họ tên ");
+        $("#hoten").focus();
+       
     }
     else if(diachi.length<=0)
     {
-        $("#diachi").focus();
         alert("Vui lòng nhập địa chỉ ");
+        $("#diachi").focus();
+       
 
     }
     else if (truong.length <= 0) {
-        $("#truong").focus();
         alert("Vui lòng nhập tên trường cấp 3 ");
+        $("#truong").focus();
+       
 
     }
     else if (sdt.length == 0) {
-        $("#sdt").focus();
         alert("Vui lòng nhập số điện thoại ");
+        $("#sdt").focus();
+        
     }
     else if (sdt.length <10){
-        $("#sdt").focus();
         alert("Số điện thoại vui lòng nhập đủ 10 số ");
+        $("#sdt").focus();
+      
     }
     else if(email.length <=0)
     {
-        $("#email").focus();
         alert("Vui lòng nhập địa chỉ email ");
+        $("#email").focus();
+        
     }
     else if(!IsEmail(email))
     {
-        $("#email").focus();
         alert("Email chưa đúng định dạng");
+        $("#email").focus();
+        
     }
     else if($("#dropdownlist_chonkhoinganh").val() == null)
     {
@@ -185,25 +192,35 @@ $("#admission").click(function()
     }
     else if(diemmon_1.length <= 0)
     {
-        $("#mon1").focus();
         alert("Vui lòng nhập điểm môn " + tenmon_1);
+        $("#mon1").focus();
+       
     }
     else if(diemmon_2.length <= 0)
     {
-        $("#mon2").focus();
         alert("Vui lòng nhập điểm môn " + tenmon_2);
+        $("#mon2").focus();       
     }
     else if (diemmon_3.length <= 0)
     {
-        $("#mon3").focus();
         alert("Vui lòng nhập điểm môn " + tenmon_3);
+        $("#mon3").focus();      
     } else {          
         if (diemmon_1 < 0 || diemmon_1 > 10)
+        {
             alert("Điểm môn " + tenmon_1 + " phải từ 0 đến 10");
+            $("#mon1").focus();
+        }   
         else if(diemmon_2 < 0 || diemmon_2 > 10)
+        {
             alert("Điểm môn " + tenmon_2 + " phải từ 0 đến 10");
+            $("#mon2").focus();
+        }          
         else if (diemmon_3 < 0 || diemmon_3 > 10)
+        {
             alert("Điểm môn " + tenmon_3 + " phải từ 0 đến 10");
+            $("#mon3").focus();
+        }           
         else {
             var tongdiem = parseFloat(diemmon_1) + parseFloat(diemmon_2) + parseFloat(diemmon_3);
             var tohop = $("#dropdownlist_chontohop option:selected").text();
@@ -215,12 +232,22 @@ $("#admission").click(function()
                 type: "POST",
                 success: function (response) {
                     
+<<<<<<< HEAD:AppTS/Content/Admin/Scripts/XetTuyen.js
+                }
+            });
+            if(tongdiem >= 18)
+            {
+                Swal.fire({
+                    title: 'Thông báo.',
+                    text:'Bạn đã trúng tuyển vào Trường Đại học Nguyễn Tất Thành với số điểm: '+tongdiem +'. Ngành học: '+$("#dropdownlist_chontennganh option:selected").text()+'',
+=======
 
                     if(tongdiem >= 18)
                     {
                         Swal.fire({
                             title: 'Thông báo.',
                             text:'Bạn đã trúng tuyển vào Trường Đại học Nguyễn Tất Thành với số điểm: '+tongdiem +'. Ngành học: '+$("#dropdownlist_chontennganh option:selected").text()+'',
+>>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647:AppTS/Scripts/XetTuyen.js
                            
                             width: 600,
                             padding: '3em',                            

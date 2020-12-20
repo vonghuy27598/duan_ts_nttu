@@ -18,6 +18,7 @@ namespace AppTS.Controllers
         dbQL_NTTDataContext db = new dbQL_NTTDataContext();
         public ActionResult CheckLogin()
         {
+            ViewBag.ThongBao = "Vui lòng đăng nhập trước khi đăng ký ngành";
             return View();
         }
         [HttpPost]
@@ -26,6 +27,7 @@ namespace AppTS.Controllers
             var tendn = collection["TenDN"];
             string tdn = tendn;
             var matkhau = collection["MatKhau"];
+           
             if (String.IsNullOrEmpty(tendn))
             {
                 ViewBag.Mess = string.Format("Tên đăng nhập không được rỗng");

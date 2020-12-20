@@ -100,6 +100,7 @@ namespace AppTS.Controllers
                 Session["ct_nganh"] = "5";
                 model = from a in db.Table_ChuyenNganhs where a.ID_NGANH == 1003 select a;
             }
+            ViewData["tohop"] = from a in db.Table_ToHops select a;
             return View(model);
         }
     }

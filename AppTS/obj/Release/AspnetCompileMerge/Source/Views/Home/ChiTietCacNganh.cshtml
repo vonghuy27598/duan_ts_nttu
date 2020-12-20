@@ -50,10 +50,14 @@
         .ct-nganh {
             margin-top: 5px;
         }
-        #header{
-            height:auto;
-            padding-top:10px;
-            padding-bottom:10px
+        #header {
+            height: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
         }
         #header a:active{
             outline:none
@@ -61,6 +65,7 @@
         #header img:active{
             background-color:transparent
         }
+        
     </style>
 </head>
 <body>
@@ -71,8 +76,8 @@
             </div>
         </section>
        
-        <div>
-            <table width="100%" border="0" cellpadding="10" cellspacing="0">
+        <div style="margin-top: 60px;">
+            <table width="100%" border="0" cellpadding="10" cellspacing="0" style="background-color: #f0f0f0;">
                 @if (Session["ct_nganh"].Equals("1"))
                 {
                     <caption style="color: #2da1de; background-image: url('/Content/img/suc_khoe.png'); background-repeat: no-repeat; background-position: center right">Khối ngành Sức khỏe</caption>
@@ -160,8 +165,8 @@
                 }
 
                 <tbody>
-                 
-                    @foreach(var item in Model)
+
+                    @foreach (var item in Model)
                     {
                         <tr>
                             <td>@item.TENCHUYENNGANH</td>
@@ -170,6 +175,19 @@
                         </tr>
                     }
                 </tbody>
+
+            </table>
+        </div>
+        <div class="tohop">
+            <table width="100%" border="0" cellpadding="10" cellspacing="0" style="background-color: #fcecd6;">
+                <caption style="color: #cb1313;">Tổ hợp xét tuyển</caption>
+                @foreach (var item in ViewData["tohop"] as IEnumerable<AppTS.Models.Table_ToHop>)
+                {
+                    <tr>
+                        <td>@item.TENTOHOP</td>
+                        <td>@item.MONTOHOP</td>
+                    </tr>
+                }
 
             </table>
         </div>
