@@ -32,6 +32,7 @@
         width: 50%;
         margin: auto;
     }
+
     }
 
     body {
@@ -606,47 +607,68 @@
             }
         });
         $("div a").click(function () {
-            if (sumc > 4) {
+            if (suma != 0 && sumb != 0 && sumc != 0) {
+                if ($('input:checkbox', this).is(':checked') &&
+                    $('input:radio', this).is(':checked')) {
+                    if (sumc > 4) {
+                        swal({
+                            title: "Không hiệu lực",
+                            text: "Bạn đã trả lời không trung thực với bản thân mình và tờ phiếu trả lời xem như không có giá trị !!!",
+                            icon: "warning",
+                            button: "OK",
+                        });
+                    }
+                    else {
+                        if (suma < 12 && sumb < 12) {
+                            swal({
+                                title: "Thành công",
+                                text: "Bạn là người hướng nội, đằm tính và điềm tĩnh",
+                                icon: "success",
+                                button: "OK",
+                            });
+                        }
+                        if (suma < 12 && sumb > 12) {
+                            swal({
+                                title: "Thành công",
+                                text: "Bạn là người hướng nội, phản ứng mạnh và ưu tú",
+                                icon: "success",
+                                button: "OK",
+                            });
+                        }
+                        if (suma > 12 && sumb < 12) {
+                            swal({
+                                title: "Thành công",
+                                text: "Bạn là người hướng ngoại, đằm tính và linh hoạt",
+                                icon: "success",
+                                button: "OK",
+                            });
+                        }
+                        if (suma > 12 && sumb > 12) {
+                            swal({
+                                title: "Thành công",
+                                text: "Bạn là người hướng ngoại, phản ứng mạnh và sôi nổi",
+                                icon: "success",
+                                button: "OK",
+                            });
+                        }
+                    }
+                }
+                else {
+                    swal({
+                        title: "Không hiệu lực",
+                        text: "Vui lòng điều phiếu đầy đủ !!!",
+                        icon: "warning",
+                        button: "OK",
+                    });
+                }
+            }
+            else {
                 swal({
                     title: "Không hiệu lực",
-                    text: "Bạn đã trả lời không trung thực với bản thân mình và tờ phiếu trả lời xem như không có giá trị !!!",
+                    text: "Vui lòng điều phiếu đầy đủ !!!",
                     icon: "warning",
                     button: "OK",
                 });
-            }
-            else {
-                if (suma < 12 && sumb < 12) {
-                    swal({
-                        title: "Thành công",
-                        text: "Bạn là người hướng nội, đằm tính và điềm tĩnh",
-                        icon: "success",
-                        button: "OK",
-                    });
-                }
-                if (suma < 12 && sumb > 12) {
-                    swal({
-                        title: "Thành công",
-                        text: "Bạn là người hướng nội, phản ứng mạnh và ưu tú",
-                        icon: "success",
-                        button: "OK",
-                    });
-                }
-                if (suma > 12 && sumb < 12) {
-                    swal({
-                        title: "Thành công",
-                        text: "Bạn là người hướng ngoại, đằm tính và linh hoạt",
-                        icon: "success",
-                        button: "OK",
-                    });
-                }
-                if (suma > 12 && sumb > 12) {
-                    swal({
-                        title: "Thành công",
-                        text: "Bạn là người hướng ngoại, phản ứng mạnh và sôi nổi",
-                        icon: "success",
-                        button: "OK",
-                    });
-                }
             }
         });
     })
