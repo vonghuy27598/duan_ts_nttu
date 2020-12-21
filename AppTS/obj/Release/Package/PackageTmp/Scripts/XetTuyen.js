@@ -131,8 +131,7 @@ function getMonTheoToHop(to_hop)
     });
 }
     
-$("#admission").click(function()
-{
+$("#admission").click(function () {
     var hoten = $("#hoten").val();
     var truong = $("#truong").val();
     var diachi = $("#diachi").val();
@@ -144,152 +143,128 @@ $("#admission").click(function()
     var tenmon_1 = $("#th_1").text();
     var tenmon_2 = $("#th_2").text();
     var tenmon_3 = $("#th_3").text();
-    if(hoten.length<=0)
-    {
+    if (hoten.length <= 0) {
         alert("Vui lòng nhập họ tên ");
         $("#hoten").focus();
-       
+
     }
-    else if(diachi.length<=0)
-    {
+    else if (diachi.length <= 0) {
         alert("Vui lòng nhập địa chỉ ");
         $("#diachi").focus();
-       
+
 
     }
     else if (truong.length <= 0) {
         alert("Vui lòng nhập tên trường cấp 3 ");
         $("#truong").focus();
-       
+
 
     }
     else if (sdt.length == 0) {
         alert("Vui lòng nhập số điện thoại ");
         $("#sdt").focus();
-        
+
     }
-    else if (sdt.length <10){
+    else if (sdt.length < 10) {
         alert("Số điện thoại vui lòng nhập đủ 10 số ");
         $("#sdt").focus();
-      
+
     }
-    else if(email.length <=0)
-    {
+    else if (email.length <= 0) {
         alert("Vui lòng nhập địa chỉ email ");
         $("#email").focus();
-        
+
     }
-    else if(!IsEmail(email))
-    {
+    else if (!IsEmail(email)) {
         alert("Email chưa đúng định dạng");
         $("#email").focus();
-        
+
     }
-    else if($("#dropdownlist_chonkhoinganh").val() == null)
-    {
-                
+    else if ($("#dropdownlist_chonkhoinganh").val() == null) {
+
         alert("Vui lòng chọn khối ngành ");
     }
-    else if(diemmon_1.length <= 0)
-    {
+    else if (diemmon_1.length <= 0) {
         alert("Vui lòng nhập điểm môn " + tenmon_1);
         $("#mon1").focus();
-       
+
     }
-    else if(diemmon_2.length <= 0)
-    {
+    else if (diemmon_2.length <= 0) {
         alert("Vui lòng nhập điểm môn " + tenmon_2);
-        $("#mon2").focus();       
+        $("#mon2").focus();
     }
-    else if (diemmon_3.length <= 0)
-    {
+    else if (diemmon_3.length <= 0) {
         alert("Vui lòng nhập điểm môn " + tenmon_3);
-        $("#mon3").focus();      
-    } else {          
-        if (diemmon_1 < 0 || diemmon_1 > 10)
-        {
+        $("#mon3").focus();
+    } else {
+        if (diemmon_1 < 0 || diemmon_1 > 10) {
             alert("Điểm môn " + tenmon_1 + " phải từ 0 đến 10");
             $("#mon1").focus();
-        }   
-        else if(diemmon_2 < 0 || diemmon_2 > 10)
-        {
+        }
+        else if (diemmon_2 < 0 || diemmon_2 > 10) {
             alert("Điểm môn " + tenmon_2 + " phải từ 0 đến 10");
             $("#mon2").focus();
-        }          
-        else if (diemmon_3 < 0 || diemmon_3 > 10)
-        {
+        }
+        else if (diemmon_3 < 0 || diemmon_3 > 10) {
             alert("Điểm môn " + tenmon_3 + " phải từ 0 đến 10");
             $("#mon3").focus();
-        }           
+        }
         else {
             var tongdiem = parseFloat(diemmon_1) + parseFloat(diemmon_2) + parseFloat(diemmon_3);
             var tohop = $("#dropdownlist_chontohop option:selected").text();
             var nganh = $("#dropdownlist_chontennganh option:selected").val();
             $.ajax({
                 url: "submit_XetTuyen",
-                data: { tongdiem: tongdiem,tohop:tohop,nganh:nganh,mon1:parseFloat(diemmon_1),mon2:parseFloat(diemmon_2),mon3:parseFloat(diemmon_3),hoten:hoten,diachi:diachi,truong:truong,sdt:sdt,email:email },
+                data: { tongdiem: tongdiem, tohop: tohop, nganh: nganh, mon1: parseFloat(diemmon_1), mon2: parseFloat(diemmon_2), mon3: parseFloat(diemmon_3), hoten: hoten, diachi: diachi, truong: truong, sdt: sdt, email: email },
                 datatype: "json",
                 type: "POST",
                 success: function (response) {
-                    
-<<<<<<< HEAD:AppTS/Content/Admin/Scripts/XetTuyen.js
+
+
                 }
             });
-            if(tongdiem >= 18)
-            {
+
+
+            if (tongdiem >= 18) {
                 Swal.fire({
-                    title: 'Thông báo.',
-                    text:'Bạn đã trúng tuyển vào Trường Đại học Nguyễn Tất Thành với số điểm: '+tongdiem +'. Ngành học: '+$("#dropdownlist_chontennganh option:selected").text()+'',
-=======
-
-                    if(tongdiem >= 18)
-                    {
-                        Swal.fire({
-                            title: 'Thông báo.',
-                            text:'Bạn đã trúng tuyển vào Trường Đại học Nguyễn Tất Thành với số điểm: '+tongdiem +'. Ngành học: '+$("#dropdownlist_chontennganh option:selected").text()+'',
->>>>>>> f9e7e28fca4ae507ee698f84e3d7febb52166647:AppTS/Scripts/XetTuyen.js
-                           
-                            width: 600,
-                            padding: '3em',                            
-                            confirmButtonText: 'Tiếp tục',
-                              
-  
-                        }).then((result) => {
-                            Swal.fire({
-                                text:'Trường Đại học Nguyễn Tất Thành sẽ liên hệ bạn để hướng dãn làm thủ tục nhập học.',
-                                width: 600,
-                                padding: '3em',                            
-                                confirmButtonText: 'Đồng ý',
-
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                        location.reload();
-                    }
-                })
-                       
-        });
-                       
-} else {
+                    text: 'Bạn đã trúng tuyển vào Trường Đại học Nguyễn Tất Thành với số điểm: '+tongdiem +'. Ngành học: '+$("#dropdownlist_chontennganh option:selected").text()+'', 
+                    width: 600,
+                    padding: '3em',
+                    confirmButtonText:'Tiếp tục',
+                }).then( (result) =>{
                     Swal.fire({
-                        text:'Rất tiếc! Bạn không đạt yêu cầu.',
+                        text:'Trường Đại học Nguyễn Tất Thành sẽ liên hệ bạn để hướng dãn làm thủ tục nhập học.',
                         width: 600,
                         padding: '3em',                            
                         confirmButtonText: 'Đồng ý',
-
-                    }).then((result) => {
-                        if (result.isConfirmed) {
+                    }).then( (result) =>{
+                        if(result.isConfirmed)
+                        {
                             location.reload();
-}
-})
-}    
-}
+                        }
+                    })// end_Then_child
+
+                })//end_Then_chung
+
+            } else {
+                  Swal.fire({
+                    text:'Rất tiếc! Bạn không đạt yêu cầu.', 
+                    width: 600,
+                    padding: '3em',
+                    confirmButtonText:'Đồng ý',
+                    }).then( (result) => {
+                        if (result.isConfirmed) {
+                             location.reload();
+                        }
+                    })//end_then     
+
+
+            }
+        }
+    }
 });
+                   
 
-
-               
-}
-}
-})
 
 function IsEmail(email) {
     var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
