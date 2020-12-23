@@ -270,6 +270,13 @@
     <Content Include="Content\Admin\Scripts\khaosat.js" />
     <Content Include="Content\Admin\Scripts\ScriptChuyenNganh.js" />
     <Content Include="Content\Admin\Scripts\ScriptNganh.js" />
+    <Content Include="Content\img\bacsi.jpg" />
+    <Content Include="Content\img\elearning.jpg" />
+    <Content Include="Content\img\gym.jpg" />
+    <Content Include="Content\img\khutuhoc.jpg" />
+    <Content Include="Content\img\nganhang.jpg" />
+    <Content Include="Content\img\nhahang.jpg" />
+    <Content Include="Content\img\toaan.jpg" />
     <Content Include="Content\img\tuyensinh1.jpg" />
     <Content Include="Content\img\tuyensinh2.jpg" />
     <Content Include="Content\img\tuyensinh3.png" />
@@ -2252,6 +2259,8 @@
     <Content Include="Views\HocSinh\DangKyXetTuyen.cshtml" />
     <Content Include="Views\Home\CacNganhDaoTao.cshtml" />
     <Content Include="Views\Home\ChiTietCacNganh.cshtml" />
+    <Content Include="Views\Home\ChinhSachHocBong.cshtml" />
+    <Content Include="Views\Home\VongQuanhNTTU.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

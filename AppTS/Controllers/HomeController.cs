@@ -103,5 +103,13 @@ namespace AppTS.Controllers
             ViewData["tohop"] = from a in db.Table_ToHops select a;
             return View(model);
         }
+        public ActionResult ChinhSachHocBong()
+        {
+            return View();
+        }
+        public ActionResult VongQuanhNTTU()
+        {
+            return View();
+        }
     }
 }
