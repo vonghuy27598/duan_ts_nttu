@@ -10,19 +10,9 @@
         <ul>
             <li><a href="@Url.Action("Main", "Home")">Trang chủ</a></li>
             <li><a href="@Url.Action("Index", "Home")">Giới thiệu</a></li>
-            <li><a href="@Url.Action("ListNghienCuu", "All")">Nghiên cứu</a></li>
-            <li class="drop-down">
-                <a href="">Các ngành</a>
-                <ul>
-                    @foreach (var item in Model)
-                    {
-                        <li class="drop-down">
-                            <a href="@Url.Action("MoTaNganh", "Home", new { id = item.ID_NGANH })">@item.TENNGANH</a>
-                            @Html.Action("Menu", "Home", new { id = @item.ID_NGANH })
-                        </li>
-                    }
-                </ul>
-            </li>
+            <li><a href="@Url.Action("ChinhSachHocBong", "Home")">Chính sách học bổng</a></li>
+            <li><a href="@Url.Action("PhuongAnTS", "Home")">Phương án tuyển sinh</a></li>
+            <li><a href="@Url.Action("VongQuanhNTTU", "Home")">Vòng quanh NTTU</a></li>
             <li><a href="@Url.Action("LienHe", "Home")">Liên hệ</a></li>
             <li>@Html.Action("ttDangNhappart", "HocSinh")</li>
         </ul>
