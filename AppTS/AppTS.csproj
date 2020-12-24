@@ -271,12 +271,12 @@
     <Content Include="Content\Admin\Scripts\khaosat.js" />
     <Content Include="Content\Admin\Scripts\ScriptChuyenNganh.js" />
     <Content Include="Content\Admin\Scripts\ScriptNganh.js" />
-<<<<<<< HEAD
+
     <Content Include="Content\auto\jquery-ui.js" />
     <Content Include="Content\auto\jquery-ui.min.css" />
-=======
+
     <Content Include="Content\img\4sao.jpg" />
->>>>>>> 67b953a45f1c3061169c8212160df952cfc305c4
+
     <Content Include="Content\img\bacsi.jpg" />
     <Content Include="Content\img\clb.jpg" />
     <Content Include="Content\img\clb1.jpg" />
