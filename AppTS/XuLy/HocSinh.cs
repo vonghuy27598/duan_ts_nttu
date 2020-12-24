@@ -28,5 +28,14 @@ namespace AppTS.XuLy
                         };
             return model.ToList();
         }
+
+        public static List<string> ListName_Truong(string a)
+        {
+           Data_TruongPTTH data_truong  =  new Data_TruongPTTH();
+           string[] data = data_truong.data_thpt;
+           
+           return data.Where(x => x.ToLower().Contains(a.ToLower())).Select(x => x).Distinct().ToList();
+                
+        }
     }
 }

@@ -224,6 +224,7 @@
     <Compile Include="ViewModels\KhoiNghiepFull.cs" />
     <Compile Include="ViewModels\MenuView.cs" />
     <Compile Include="ViewModels\NghienCuuFull.cs" />
+    <Compile Include="ViewModels\THPT.cs" />
     <Compile Include="ViewModels\ToHop.cs" />
     <Compile Include="XuLy\CNganh.cs" />
     <Compile Include="XuLy\HocSinh.cs" />
@@ -270,6 +271,8 @@
     <Content Include="Content\Admin\Scripts\khaosat.js" />
     <Content Include="Content\Admin\Scripts\ScriptChuyenNganh.js" />
     <Content Include="Content\Admin\Scripts\ScriptNganh.js" />
+    <Content Include="Content\auto\jquery-ui.js" />
+    <Content Include="Content\auto\jquery-ui.min.css" />
     <Content Include="Content\img\bacsi.jpg" />
     <Content Include="Content\img\elearning.jpg" />
     <Content Include="Content\img\gym.jpg" />
@@ -281,6 +284,9 @@
     <Content Include="Content\img\tuyensinh2.jpg" />
     <Content Include="Content\img\tuyensinh3.png" />
     <Content Include="Content\img\tuyensinh4.jpg" />
+    <Content Include="Scripts\auto_complete_Truong.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\XetTuyen.js" />
     <Content Include="Content\Admin\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="Content\Admin\vendor\bootstrap\js\bootstrap.bundle.min.js" />
@@ -2261,6 +2267,7 @@
     <Content Include="Views\Home\ChiTietCacNganh.cshtml" />
     <Content Include="Views\Home\ChinhSachHocBong.cshtml" />
     <Content Include="Views\Home\VongQuanhNTTU.cshtml" />
+    <Content Include="Views\HocSinh\test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

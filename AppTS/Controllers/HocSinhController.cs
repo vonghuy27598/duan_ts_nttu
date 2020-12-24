@@ -198,6 +198,19 @@ namespace AppTS.Controllers
                 
             }, JsonRequestBehavior.AllowGet);
         }
-        
+        public ActionResult test()
+        {
+           
+            return View();
+        }
+        public JsonResult ListNameTruong(string a)
+        {
+            var data = HocSinh.ListName_Truong(a);
+            return Json(new
+            {
+                data = data,
+                status = true
+            }, JsonRequestBehavior.AllowGet);
+        }
     }
 }
