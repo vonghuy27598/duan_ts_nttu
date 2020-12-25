@@ -208,18 +208,33 @@
 
                         </td>
                         <td></td>
-
-                        <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/ChatView/Index'">
-                            <table border="0" class="table-item">
-                                <tr>
-                                    <td><img src="~/Content/css/main/images/icon_chatbot.png" /></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Tư vấn trực tuyến</p></td>
-                                </tr>
-                            </table>
-
-                        </td>
+                        @if (Session["User"] == null)
+                        {
+                            <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/HocSinh/DangNhap'">
+                                <table border="0" class="table-item">
+                                    <tr>
+                                        <td><img src="~/Content/css/main/images/icon_login.png" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Đăng nhập</p></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        }
+                        else
+                        {
+                            <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/HocSinh/DangXuat'">
+                                <table border="0" class="table-item">
+                                    <tr>
+                                        <td><img src="~/Content/css/main/images/icon_logout.png" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Đăng xuất</p></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        }
+                        
                     </tr>
                     <tr>
                         <td>
@@ -244,33 +259,18 @@
                             </table>
 
                         </td>
-                        @if(Session["User"] == null)
-                        {
-                            <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/HocSinh/DangNhap'">
+                        
+                        <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/ChatView/Index'">
                             <table border="0" class="table-item">
                                 <tr>
-                                    <td><img src="~/Content/css/main/images/icon_login.png" /></td>
+                                    <td><img src="~/Content/css/main/images/icon_chatbot.png" /></td>
                                 </tr>
                                 <tr>
-                                    <td><p>Đăng nhập</p></td>
+                                    <td><p>Tư vấn trực tuyến</p></td>
                                 </tr>
                             </table>
-                        </td> 
-                        }
-                        else
-                        {
-                             <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/HocSinh/DangXuat'">
-                            <table border="0" class="table-item">
-                                <tr>
-                                    <td><img src="~/Content/css/main/images/icon_logout.png" /></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Đăng xuất</p></td>
-                                </tr>
-                            </table>
+
                         </td>
-                        }
-                       
                     </tr>
                 </table>
             </div>

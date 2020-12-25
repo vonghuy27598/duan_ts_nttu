@@ -271,13 +271,13 @@
     <Content Include="Content\Admin\Scripts\khaosat.js" />
     <Content Include="Content\Admin\Scripts\ScriptChuyenNganh.js" />
     <Content Include="Content\Admin\Scripts\ScriptNganh.js" />
-
     <Content Include="Content\auto\jquery-ui.js" />
     <Content Include="Content\auto\jquery-ui.min.css" />
-
     <Content Include="Content\img\4sao.jpg" />
-
+    <Content Include="Content\img\aun2.jpg" />
     <Content Include="Content\img\bacsi.jpg" />
+    <Content Include="Content\img\building.jpg" />
+    <Content Include="Content\img\cea2.jpg" />
     <Content Include="Content\img\clb.jpg" />
     <Content Include="Content\img\clb1.jpg" />
     <Content Include="Content\img\clb2.jpg" />
@@ -291,16 +291,22 @@
     <Content Include="Content\img\khoahocsuckhoe.jpg" />
     <Content Include="Content\img\khutuhoc.jpg" />
     <Content Include="Content\img\kythuat.jpg" />
+    <Content Include="Content\img\ma_truong.png" />
     <Content Include="Content\img\nganhang.jpg" />
     <Content Include="Content\img\nhahang.jpg" />
     <Content Include="Content\img\phattrien.jpg" />
+    <Content Include="Content\img\qr.jpg" />
     <Content Include="Content\img\qtkt.jpg" />
+    <Content Include="Content\img\stars.jpg" />
+    <Content Include="Content\img\stars2.jpg" />
+    <Content Include="Content\img\ten_truong.png" />
     <Content Include="Content\img\toaan.jpg" />
     <Content Include="Content\img\tuyendung.jpg" />
     <Content Include="Content\img\tuyensinh1.jpg" />
     <Content Include="Content\img\tuyensinh2.jpg" />
     <Content Include="Content\img\tuyensinh3.png" />
     <Content Include="Content\img\tuyensinh4.jpg" />
+    <Content Include="Content\img\upm2.jpg" />
     <Content Include="Scripts\auto_complete_Truong.js" />
     <Content Include="Scripts\jquery-1.11.3.min.js" />
     <Content Include="Scripts\jquery-ui.min.js" />

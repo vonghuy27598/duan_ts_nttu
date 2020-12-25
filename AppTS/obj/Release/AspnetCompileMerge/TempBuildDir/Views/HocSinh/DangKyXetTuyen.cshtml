@@ -38,9 +38,11 @@
     #admission:focus{
         color: #fff!important;
     }
+    
 </style>
 <link href="~/Content/css/dangnhap.css" rel="stylesheet" />
-
+<link href="~/Content/auto/jquery-ui.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.11.3.min.js"></script>
 
 <div class="primari-box registered-account dn">
     <form class="new-account-box" id="accountLogin" method="post" action="#">
@@ -84,27 +86,28 @@
                 {
                       <div class="form-group primary-form-group">
                     <label for="HOTENHS">Họ tên</label>
-                    @Html.TextBoxFor(m => m.HOTENHS, null , new { title = "Vui lòng nhập thông tin", id = "hoten", required = "required", @class = " input-feild line-animation" })
+                    @Html.TextBoxFor(m => m.HOTENHS, null , new { title = "Vui lòng nhập thông tin", id = "hoten", required = "required", @class = " input-feild line-animation",placeholder="Nhập họ tên" })
                     <div class="line"></div>
                      </div>
                     <div class="form-group primary-form-group">
                         <label for="DIACHI">Địa chỉ</label>
-                        @Html.TextBoxFor(m => m.DIACHI, null, new { required = "required", id = "diachi", @class = " input-feild line-animation" })
+                        @Html.TextBoxFor(m => m.DIACHI, null, new { required = "required", id = "diachi", @class = " input-feild line-animation", placeholder = "Nhập địa chỉ" })
                         <div class="line"></div>
                     </div>
                     <div class="form-group primary-form-group">
                         <label for="TRUONGCAP3">Trường(THPT)</label>
-                        @Html.TextBoxFor(m => m.TRUONGCAP3, null, new { title = "Vui lòng nhập thông tin", id = "truong", required = "required", @class = " input-feild line-animation" })
+                        <input type="text" title="Vui lòng nhập thông tin" id="truong" class=" input-feild line-animation search-form" name="TRUONGCAP3" placeholder="Chỉ cần nhập tên trường gợi ý sẽ hiện lên" />
+                        @*@Html.TextBoxFor(m => m.TRUONGCAP3, null, new { title = "Vui lòng nhập thông tin", id = "truong", required = "required", @class = " input-feild line-animation" })*@
                         <div class="line"></div>
                     </div>
                     <div class="form-group primary-form-group">
                         <label for="SDT">Số điện thoại</label>
-                        @Html.TextBoxFor(m => m.SDT, null, new { required = "required", id = "sdt", @class = " input-feild line-animation allownumericwithdecimal", type = "number", onkeypress = "if(this.value.length==10) return false; ", pattern = "[0-9]{10}" })
+                        @Html.TextBoxFor(m => m.SDT, null, new { required = "required", id = "sdt", @class = " input-feild line-animation allownumericwithdecimal", type = "number", onkeypress = "if(this.value.length==10) return false; ", pattern = "[0-9]{10}", placeholder = "Nhập số điện thoại" })
                         <div class="line"></div>
                     </div>
                      <div class="form-group primary-form-group">
                     <label for="EMAIL">Email</label>
-                    @Html.TextBoxFor(m => m.EMAIL, null, new { required = "required", id = "email", @class = " input-feild line-animation ", type = "email" })
+                    @Html.TextBoxFor(m => m.EMAIL, null, new { required = "required", id = "email", @class = " input-feild line-animation ", type = "email", placeholder = "Nhập email" })
                     <div class="line"></div>
                 </div> 
                 }
@@ -162,6 +165,7 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script src="~/Scripts/XetTuyen.js"></script>
+
 
 
 
