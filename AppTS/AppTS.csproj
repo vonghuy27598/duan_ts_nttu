@@ -282,6 +282,7 @@
     <Content Include="Content\img\clb1.jpg" />
     <Content Include="Content\img\clb2.jpg" />
     <Content Include="Content\img\clb3.jpg" />
+    <Content Include="Content\img\cntt3.jpg" />
     <Content Include="Content\img\doanhnghiep.jpg" />
     <Content Include="Content\img\duhoc.jpg" />
     <Content Include="Content\img\elearning.jpg" />
@@ -304,6 +305,7 @@
     <Content Include="Content\img\tuyendung.jpg" />
     <Content Include="Content\img\tuyensinh1.jpg" />
     <Content Include="Content\img\tuyensinh2.jpg" />
+    <Content Include="Content\img\tuyensinh3.jpg" />
     <Content Include="Content\img\tuyensinh3.png" />
     <Content Include="Content\img\tuyensinh4.jpg" />
     <Content Include="Content\img\upm2.jpg" />
@@ -1948,7 +1950,6 @@
     <Content Include="Content\img\baove.jpg" />
     <Content Include="Content\img\cntt.png" />
     <Content Include="Content\img\cntt1.png" />
-    <Content Include="Content\img\cntt3.png" />
     <Content Include="Content\img\cong_nghe.png" />
     <Content Include="Content\img\danhsach_nganh.jpg" />
     <Content Include="Content\img\kinhte.png" />
