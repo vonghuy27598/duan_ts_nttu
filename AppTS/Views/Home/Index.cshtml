@@ -15,6 +15,29 @@
     .tag_logo{
         display:block!important
     }
+    #about{
+        padding:0
+    }
+    .content_gioithieu h5 {
+        font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+        font-weight:bold
+    }
+    .content_gioithieu h6 {
+        font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1600 - 300)));
+        margin-top: 5px;
+        margin-bottom:10px;
+        color: #cf3e3e;
+    }
+    .content_gioithieu p{
+        text-align:justify;
+        margin-top:5px;
+    }
+    #about .about-container .icon-box ul li {
+        margin-left: 120px;
+        line-height: 24px;
+        font-size: 12px;
+        list-style:circle
+    }
 </style>
 <!--==========================
       About Us Section
@@ -75,17 +98,29 @@
             </div>
             <img src="/Content/img/building.jpg" style="width:100%;height:auto" class="wow fadeInUpBig"/>
         </div>
-        <header class="section-header">
-            @*<h3>Giới thiệu về Trường Đại học Nguyễn Tất Thành</h3>*@
-            <p>NTTU - Trường Đại học Nguyễn Tất Thành là trường đại học được định vị là trường ứng dụng thực hành, đáp ứng nhu cầu giáo dục đại học đại chúng thông qua việc tạo lập một môi trường học tập tích cực và trải nghiệm thực tiễn cho mọi sinh viên trang bị cho người học năng lực tự học tinh thần sáng tạo khởi nghiệp có trách nhiệm với cộng đồng hội nhập với khu vực và toàn cầu</p>
-        </header>
 
-        <div class="row about-container">
-
+        <div class="row about-container content_gioithieu">
+            <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
+                <h5>ĐẠI HỌC NGUYỄN TẤT THÀNH</h5>
+                <h6>“Đoàn kết - Hội nhập - Năng Động - Trí tuệ - Trách nhiệm”</h6>
+                <img src="~/Content/img/caooc_gioithieu.jpg" class="img-fluid" alt="">                
+                <p>NTTU - Trường Đại học Nguyễn Tất Thành là trường đại học được định vị là trường ứng dụng thực hành, đáp ứng nhu cầu giáo dục đại học đại chúng thông qua việc tạo lập một môi trường học tập tích cực và trải nghiệm thực tiễn cho mọi sinh viên trang bị cho người học năng lực tự học tinh thần sáng tạo khởi nghiệp có trách nhiệm với cộng đồng hội nhập với khu vực và toàn cầu.</p>
+                <img src="~/Content/img/doingu_gioithieu.jpg" class="img-fluid" alt="">    
+             </div>
             <div class="col-lg-6 content order-lg-1 order-2">
-                <p id="text">
-                    Trường ĐH Nguyễn Tất Thành có quy mô đào tạo khoảng 20.000 sinh viên với 15 khoa, 48 chương trình đào tạo bậc đại học thuộc 5 khối ngành: Sức khỏe, Công nghệ - Kĩ thuật, Kinh tế, Xã hội - Nhân văn, Mỹ thuật. Trải qua hơn 20 năm hình thành và phát triển, Nhà trường đã được Bộ Giáo dục và Đào tạo công nhận đạt chuẩn kiểm định chất lượng và được tổ chức QS (QS Quacquarelli Symonds Ltd) chính thức công nhận đạt chuẩn chất lượng 4 sao
-                </p>
+                <div class="icon-box wow fadeInUp">
+                    <div class="icon"><i class="fa fa-balance-scale"></i></div>
+                    <h4 class="title">QUY MÔ ĐÀO TẠO</h4>
+                    <p id="mg" class="description">- 5 khối ngành:</p>
+                    <ul>
+                        <li>Sức khỏe</li>
+                        <li>Công nghệ - Kĩ thuật</li>
+                        <li>Kinh tế</li>
+                        <li>Xã hội - Nhân văn</li>
+                        <li>Mỹ thuật</li>
+                    </ul>
+                    <p id="mg" class="description">- Hơn 20.000 sinh viên  </p>
+                </div>
 
                 <div class="icon-box wow fadeInUp">
                     <div class="icon"><i class="fa fa-shopping-bag"></i></div>
@@ -93,6 +128,8 @@
                     <p id="mg" class="description">- 924 giảng viên</p>
                     <p id="mg" class="description">- 90% có bằng TS, ThS  </p>
                 </div>
+
+             
 
                 <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
                     <div class="icon"><i class="fa fa-photo"></i></div>
@@ -113,113 +150,33 @@
                     <p id="mg" class="description">- Đạt chuẩn kiểm định chất lượng CTĐT ngành Công nghệ Kỹ thuật Điện, Điện tử trình độ đại học</p>
                 </div>
 
+                <div class="icon-box wow fadeInUp">
+                    <div class="icon"><i class="fa fa-industry"></i></div>
+                    <h4 class="title">KHOA</h4>
+                    <p id="mg" class="description">- Y</p>
+                    <p id="mg" class="description">- Dược</p>
+                    <p id="mg" class="description">- Điều dưỡng</p>
+                    <p id="mg" class="description">- Kỹ thuật xét nghiệm y học</p>
+                    <p id="mg" class="description">- Quản trị Kinh doanh</p>
+                    <p id="mg" class="description">- Luật</p>
+                    <p id="mg" class="description">- Tài chính - Kế toán</p>
+                    <p id="mg" class="description">- Cơ khí - Điện - Điện tử - Ô tô</p>
+                    <p id="mg" class="description">- Kỹ thuật Thực phẩm và Môi trường </p>
+                    <p id="mg" class="description">- Công nghệ Sinh học </p>
+                    <p id="mg" class="description">- Công nghệ Thông tin</p>
+                    <p id="mg" class="description">- Âm nhạc</p>
+                    <p id="mg" class="description">- Kiến trúc - Xây dựng - Mỹ thuật ứng dụng</p>
+                    <p id="mg" class="description">- Ngoại ngữ</p>
+                    <p id="mg" class="description">- Du lịch và Việt Nam học</p>
+                    <p id="mg" class="description">- Giáo dục Quốc phòng - An ninh và Giáo dục Thể chất</p>
+                </div>
+
             </div>
 
-            <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                <img src="~/Content/img/APD.jpg" class="img-fluid" alt="">
-            </div>
+           
         </div>
     </div>
 </section>
-<p style="text-align: center">---------------------------------------------</p><!-- #about -->
-<!--==========================
-      About Us Section
-    ============================-->
-<section id="about">
-    <div class="container">
+<p style="text-align: center">---------------------------------------------</p>
 
-        <header class="section-header">
-            <h4>10 lý do chọn Đại học Nguyễn Tất Thành để xây dựng cho tương lai</h4>
-        </header>
 
-        <div class="row about-container">
-
-            <div class="col-lg-6 content order-lg-1 order-2">
-                <h4 id="text">1. ĐẠI HỌC ĐẠT CHUẨN CẤP QUỐC GIA VÀ KHU VỰC</h4>
-                <p id="text">
-                    Đại học Nguyễn Tất Thành là trường đại học thứ 2 tại Việt Nam được xếp hạng 4 sao theo chuẩn QS Stars (Anh Quốc) và hệ thống đối sánh chất lượng giáo dục đại học khu vực Đông Nam Á - UPM. Hầu hết các chương trình đào tạo được xây dựng theo khung của Bộ GD-ĐT theo định hướng CDIO và hướng tới kiểm định AUN-QA. Các học phần luôn ưu tiên đến tính ứng dụng, thực hành và bám sát chuẩn đầu ra.
-                </p>
-                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/4sao.jpg" class="img-fluid" alt="">
-                </div>
-                <h4 id="text">2. CƠ SỞ VẬT CHẤT VÀ DỊCH VỤ HỌC TẬP CỰC TỐT</h4>
-                <p id="text">
-                    Với 1.000 tỷ đồng được dùng để đầu tư hệ thống cơ sở vật chất, thiết bị dạy và học. Có hơn 500 phòng học lý thuyết, khu Thí nghiệm - Thực hành, phòng mô phỏng được trang bị đầy đủ máy lạnh, âm thanh, máy chiếu, sóng wifì phủ khắp tại các cơ sở. Bên cạnh đó, các dịch vụ hỗ trợ học tập và sinh hoạt tại thư viện, khu tự học, khu vui chơi giải trí, căn-tin... được đầu tư bài bản đem đến cho sinh viên môi trường thân thiện, phát huy tối đa tính sáng tạo, phát triển tư duy và khả năng thích ứng cao.
-                </p>
-                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/thuvien.jpg" class="img-fluid" alt="">
-                </div>
-                <h4 id="text">3. HỆ THỐNG GIÁO DỤC ĐA NGÀNH NGHỀ</h4>
-                <p id="text">
-                    Trường Đại học Nguyễn Tất Thành có hệ thống giáo dục đa ngành, đa bậc học đáp ứng theo nhu cầu nhân lực của xã hội từ Sức khỏe, Kinh tế, Kỹ thuật - Công nghệ, Xã hội - Nhân văn cho đến Nghệ thuật - Mỹ thuật. Chương trình đào tạo được cập nhật thường xuyên, mang tính ứng dụng thực tiễn cao. 100% đào tạo theo hệ thống tín chỉ, giúp sinh viên chủ động về thời gian học tập.
-                </p>
-                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/qkt.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/khoahocsuckhoe.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/kythuat.jpg" class="img-fluid" alt="">
-                </div>
-                <h4 id="text">4. LỰC LƯỢNG CHUYÊN MÔN GIỎI, CÓ TÂM HUYẾT VỚI NGHỀ</h4>
-                <p id="text">
-                    Nhà trường hiện có 2.000 giảng viên, trong đó có 11 Giáo sư, 31 Phó giáo sư, hơn 175 Tiến sỹ Khoa học và Tiến sĩ, hơn 700 thạc sĩ cùng với lực lượng Giảng viên doanh nhân, Giảng viên trẻ năng động nhiệt huyết, có trình độ chuyên môn cao sẽ đem đến cho sinh viên những kiến thức, kỹ năng thuần thục đế các em tự tin trước khi bước vào con đường lập nghiệp.
-                </p>
-                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/giangvien.jpg" class="img-fluid" alt="">
-                </div>
-                <h4 id="text">5. CHẤT LƯỢNG ĐÀO TẠO HÀI LÒNG NHA TUYỂN DỤNG</h4>
-                <p id="text">
-                    "Thực học - Thực hành - Thực danh - Thực nghiệp" là triết lý đào tạo của Đại học Nguyễn Tất Thành trong việc dạy và học nhằm hướng đến nâng cao giá trị bản thân người học đối với gia đình, cộng đồng và xã hội. 100% sinh viên Đại học Nguyễn Tất Thành được giới thiệu việc làm ngay sau khi ra trường và được các nhà tuyển dụng đánh giá cao không chỉ ở hiệu quả công việc mà còn ở thái độ cầu tiến, ham học hỏi, chịu dấn thân và không ngại thử thách.
-                </p>
-                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/tuyendung.jpg" class="img-fluid" alt="">
-                </div> <h4 id="text">6. KẾT NỐI DOANH NGHIỆP</h4>
-                <p id="text">
-                    Câu lạc bộ doanh nghiệp có hơn 2.000 doanh nghiệp thành viên hoạt động đa lĩnh vực đảm bảo cho sinh viên ở bất cứ ngành học nào đều có cơ hội tiếp cận để tích lũy kinh nghiệm, tạo dựng mối quan hệ trong ngành trước khi ra trường. Đại diện phía doanh nghiệp sẽ đóng vai trò là cố vấn, kết nối thường xuyên với các khoa để tham gia xây dựng chương trình đào tạo sao cho phù hợp với nhu cầu nhà tuyển dụng.
-                </p><div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/doanhnghiep.jpg" class="img-fluid" alt="">
-                </div>
-              
-                <h4 id="text">7. NHIỀU CƠ HỘI THỰC TẬP VÀ TRẢI NGHIỆM "DU HỌC" NGẮN NGÀY</h4>
-                <p id="text">
-                    Sinh viên sẽ được trải nghiệm thực tiễn khi tham gia các kỳ thực tập tại các quốc gia hàng đầu như Nhật Bản, Hàn Quốc, Đài Loan, Malaysia, Israel, Đức... Ngoài ra, sinh viên Đại học Nguyễn Tất Thành còn có cơ hội tiếp xúc và học tập cùng sinh viên ngoại quốc tại các chương trình trao đổi sinh viên và các chương trình hợp tác quốc tế với Nhà trường.
-                </p>
-                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/duhoc.jpg" class="img-fluid" alt="">
-                </div>
-                <h4 id="text">8. NHIỀU HỌC BỔNG CÓ GIÁ TRỊ</h4>
-                <p id="text">
-                    Mỗi năm Trường ĐH Nguyễn Tất Thành trích ngân sách hàng chục tỷ đồng thành lập quỹ học bổng cho các em học sinh sinh viên có hoàn cảnh khó khăn, đạt thành tích cao trong học tập; trao học bống cho tân sinh viên là thủ khoa đầu vào của Trường; thủ khoa của các Khoa; học bổng cho thủ khoa tốt nghiệp; sinh viên trúng tuyển với số điểm cao cũng như đồng hành cùng các dự án học bổng khác.
-                </p>
-                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/hocbong.jpg" class="img-fluid" alt="">
-                </div>
-                <h4 id="text">9. ĐA DẠNG LOẠI HÌNH SINH HOẠT CẦU LẠC BỘ</h4>
-                <p id="text">
-                    Có đến hơn 50 CLB dành cho sinh viên sinh hoạt và thỏa mãn đam mê của mình từ loại hình học thuật, thể thao đến kỹ năng, giải trí, nghệ thuật. Đặc biệt hơn, ở mỗi năm học nhiều hoạt động và sự kiện đặc sắc, thú vị được diễn ra, tạo nên những dấu ấn đặc biệt.
-                </p>
-                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/clb.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/clb1.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/clb2.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/clb3.jpg" class="img-fluid" alt="">
-                </div>
-                <h4 id="text">10. PHÁT TRIỂN TOÀN DIỆN BẢN THÂN</h4>
-                <p id="text">
-                    Là một sinh viên tại Đại học Nguyễn Tất Thành các bạn sẽ được sớm tiếp cận tư duy và ý tưởng khởi nghiệp, hướng nghiệp ngay từ năm thứ nhất thông qua các môn học cũng như các sự kiện thường xuyên tổ chức. Các chương trình thực tế, chuyến tham quan học thuật và thực tập hướng nghiệp giúp sinh viên củng cố kiến thức và kĩ năng, giúp định hướng nghề nghiệp tương lai rõ ràng.
-                </p>
-                <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-                    <img src="~/Content/img/phattrien.jpg" class="img-fluid" alt="">
-                </div>
-            </div> 
-        </div>
-    </div>
-</section><!-- #about -->

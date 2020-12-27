@@ -26,17 +26,29 @@
             padding: 10px;
             border-bottom: 1px solid #dfdfdf;
             background-origin: content-box;
-            padding-left: 15px;
+            background-size: 10%;
+            padding-left: 5px;
+            position: relative;
         }
 
             .column p {
                
-                background-image: url('/Content/img/arrow_right.png');
-                background-position: center right;
-                background-repeat: no-repeat;
-                background-size: contain;
-                font-size: calc(15px + (20 - 15) * ((100vw - 300px) / (1600 - 300)));
+                font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+                padding-left: 15%;
+                padding-right:25px
             }
+        .icon_arrow_right {
+            background-image: url(/Content/img/arrow_right.png);
+            background-position: center right;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            right: 15px;
+        }
         /* Clear floats after the columns */
         .row:after {
             content: "";
@@ -52,29 +64,59 @@
         </div>
         <img src="/Content/img/danhsach_nganh.jpg" style="width:100%;height:auto" />
         <div class="row">
-            <div class="column"  onclick="window.location='/Home/ChiTietCacNganh?id_nganh=1'">
-                <p style="">ĐÀO TẠO <b>BẬC ĐẠI HỌC</b> </p>
+            <div class="column"  onclick="window.location='/Home/ChiTietCacNganh?id_nganh=1'" style="background-image:url('/Content/img/cong_nghe.png');background-repeat:no-repeat;background-position:center left">
+                <p style=""> CHƯƠNG TRÌNH ĐÀO TẠO <b>BẬC ĐẠI HỌC</b> </p>
+                <div class="icon_arrow_right">
+
+                </div>
             </div>
-            <div class="column"  onclick="window.location='/Home/ChiTietCacNganh?id_nganh=1'">
-                <p style="">ĐÀO TẠO <b>BẬC THẠC SĨ</b> </p>
+            <div class="column" onclick="window.location='/Home/ChiTietCacNganh?id_nganh=2'" style="background-image:url('/Content/img/icon_thacsi.png');background-repeat:no-repeat;background-position:center left">
+                <p style="">CHƯƠNG TRÌNH ĐÀO TẠO <b>BẬC THẠC SĨ</b> </p>
+                <div class="icon_arrow_right">
+
+                </div>
             </div>
-            <div class="column"  onclick="window.location='/Home/ChiTietCacNganh?id_nganh=1'">
-                <p style="">ĐÀO TẠO <b>LIÊN THÔNG ĐẠI HỌC</b> </p>
+            <div class="column" onclick="window.location='/Home/ChiTietCacNganh?id_nganh=3'" style="background-image:url('/Content/img/icon_lienthong.png');background-repeat:no-repeat;background-position:center left">
+                <p style="">CHƯƠNG TRÌNH ĐÀO TẠO <b>LIÊN THÔNG</b> </p>
+                <div class="icon_arrow_right">
+
+                </div>
             </div>
-            <div class="column"  onclick="window.location='/Home/ChiTietCacNganh?id_nganh=2'">
+            <div class="column" onclick="window.location='/Home/ChiTietCacNganh?id_nganh=4'" style="background-image:url('/Content/img/icon_liennganh.png');background-repeat:no-repeat;background-position:center left">
                 <p style="">ĐÀO TẠO <b>LIÊN / XUYÊN NGÀNH</b></p>
+                <div class="icon_arrow_right">
+
+                </div>
             </div>
-            <div class="column"  onclick="window.location='/Home/ChiTietCacNganh?id_nganh=3'">
+            <div class="column" onclick="window.location='/Home/ChiTietCacNganh?id_nganh=5'" style="background-image: url('/Content/img/kinhte.png'); background-repeat: no-repeat; background-position: center left">
                 <p style="">ĐÀO TẠO <b>SONG NGÀNH</b></p>
+                <div class="icon_arrow_right">
+
+                </div>
             </div>
-            <div class="column"  onclick="window.location='/Home/ChiTietCacNganh?id_nganh=4'">
+            <div class="column" onclick="window.location='/Home/ChiTietCacNganh?id_nganh=6'" style="background-image:url('/Content/img/icon_vanbang.jpg');background-repeat:no-repeat;background-position:center left">
                 <p style="">ĐÀO TẠO <b>VĂN BẰNG 2</b></p>
+                <div class="icon_arrow_right">
+
+                </div>
             </div>
-            <div class="column"  onclick="window.location='/Home/ChiTietCacNganh?id_nganh=5'">
+            <div class="column" onclick="window.location='/Home/ChiTietCacNganh?id_nganh=7'" style="background-image:url('/Content/img/icon_tuxa.png');background-repeat:no-repeat;background-position:center left">
                 <p style="">ĐÀO TẠO <b>ĐẠI HỌC TỪ XA</b></p>
+                <div class="icon_arrow_right">
+
+                </div>
             </div>
-            <div class="column"  onclick="window.location='/Home/ChiTietCacNganh?id_nganh=5'">
+            <div class="column" onclick="window.location='/Home/ChiTietCacNganh?id_nganh=8'" style="background-image:url('/Content/img/icon_trungcap.png');background-repeat:no-repeat;background-position:center left">
                 <p style="">ĐÀO TẠO <b>TRUNG CẤP</b></p>
+                <div class="icon_arrow_right">
+
+                </div>
+            </div>
+            <div class="column" onclick="window.location='/Home/ChiTietCacNganh?id_nganh=9'" style="background-image:url('/Content/img/icon_quocte.png');background-repeat:no-repeat;background-position:center left">
+                <p style="">CHƯƠNG TRÌNH LIÊN KẾT <b>QUỐC TẾ</b></p>
+                <div class="icon_arrow_right">
+
+                </div>
             </div>
         </div>
 
