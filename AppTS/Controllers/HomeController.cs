@@ -127,7 +127,14 @@ namespace AppTS.Controllers
         {
             return PartialView();
         }
-       
+        public PartialViewResult part_SongNganh()
+        {
+            return PartialView();
+        }
+        public PartialViewResult part_LienXuyen()
+        {
+            return PartialView();
+        }
         public ActionResult VongQuanhNTTU()
         {
             return View();

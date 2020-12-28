@@ -285,6 +285,8 @@
     <Content Include="Content\img\clb2.jpg" />
     <Content Include="Content\img\clb3.jpg" />
     <Content Include="Content\img\cntt3.jpg" />
+    <Content Include="Content\img\ct_lienxuyen.jpg" />
+    <Content Include="Content\img\ct_songnganh.jpg" />
     <Content Include="Content\img\doanhnghiep.jpg" />
     <Content Include="Content\img\doingu_gioithieu.jpg" />
     <Content Include="Content\img\duhoc.jpg" />
@@ -323,6 +325,10 @@
     <Content Include="Content\img\stars2.jpg" />
     <Content Include="Content\img\ten_truong.png" />
     <Content Include="Content\img\toaan.jpg" />
+    <Content Include="Content\img\ts1.jpg" />
+    <Content Include="Content\img\ts2.jpg" />
+    <Content Include="Content\img\ts3.jpg" />
+    <Content Include="Content\img\ts4.jpg" />
     <Content Include="Content\img\ts_luachon.png" />
     <Content Include="Content\img\ts_thongke.jpg" />
     <Content Include="Content\img\tuyendung.jpg" />
@@ -2314,6 +2320,8 @@
     <Content Include="Views\Home\VongQuanhNTTU.cshtml" />
     <Content Include="Views\HocSinh\test.cshtml" />
     <Content Include="Views\Home\part_Thacsi.cshtml" />
+    <Content Include="Views\Home\part_SongNganh.cshtml" />
+    <Content Include="Views\Home\part_LienXuyen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
