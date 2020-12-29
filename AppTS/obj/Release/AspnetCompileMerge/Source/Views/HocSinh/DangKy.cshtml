@@ -47,7 +47,7 @@
                 <h4>Thông tin cá nhân</h4>
                 <div class="form-group primary-form-group">
                     <label for="HOTENHS">Họ tên</label>
-                    @Html.TextBoxFor(m => m.HOTENHS, null, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", @class = " input-feild line-animation" })
+                    @Html.TextBoxFor(m => m.HOTENHS, null, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", @class = " input-feild line-animation", placeholder = "Nhập họ tên" })
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group">
@@ -65,25 +65,25 @@
                 <div class="form-group primary-form-group">
                     <br />
                     <label for="TRUONGCAP3">Trường cấp 3</label>
-                    @Html.TextBoxFor(m => m.TRUONGCAP3, null, new { type = "text", required = "required", @class = " input-feild line-animation" })
+                    @Html.TextBoxFor(m => m.TRUONGCAP3, null, new { type = "text", id = "truong", required = "required", @class = " input-feild line-animation", placeholder = "Chỉ cần nhập tên trường gợi ý sẽ hiện lên" })
                     <div class="line"></div>
                 </div>
                 <h4 style="margin-top:35px">Thông tin liên hệ</h4>
 
                 <div class="form-group primary-form-group">
                     <label for="SDT">Số điện thoại</label>
-                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}" })
+                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}", placeholder = "Nhập số điện thoại" })
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group">
 
                     <label for="DIACHI" style="width:100%">Địa chỉ</label>
-                    @Html.TextBoxFor(m => m.DIACHI, null, new { required = "required", @class = "input-feild line-animation" })
+                    @Html.TextBoxFor(m => m.DIACHI, null, new { required = "required", @class = "input-feild line-animation", placeholder = "Nhập địa chỉ" })
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group">
                     <label for="EMAIL">Email</label>
-                    @Html.TextBoxFor(m => m.EMAIL, null, new { type = "email", required = "required", @class = " input-feild line-animation" })
+                    @Html.TextBoxFor(m => m.EMAIL, null, new { type = "email", required = "required", @class = " input-feild line-animation", placeholder = "Nhập email" })
                     <div class="line"></div>
                 </div>
 

@@ -1,0 +1,68 @@
+﻿@model IEnumerable<AppTS.Models.Table_CTCN>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <style>
+        .content_Nganh {
+            text-align: justify;
+            padding: 10px;
+            font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300))) !important;
+        }
+
+            .content_Nganh h5 {
+                margin-bottom: 5px;
+                font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (1600 - 300))) !important;
+            }
+
+        .content_Nganh__mota {
+            margin-top: 30px;
+        }
+
+        .child_content {
+            margin-bottom: 20px;
+        }
+        content_Nganh__all p
+        {
+           
+        }
+         .content_Nganh__all p:before {
+            content: " * ";
+            margin-right:10px
+        }
+    </style>
+</head>
+<body>
+    <div class="content_Nganh">
+        @foreach (var item in Model)
+        {   
+            
+            <div class="content_Nganh__mota child_content">
+                @Html.Raw(@item.MOTA)
+            </div>
+            <div class="content_Nganh__all child_content">
+                <h5>Mục tiêu đào tạo</h5>
+                @Html.Raw(@item.MUCTIEU)
+            </div>
+            <div class="content_Nganh__all child_content">
+                <h5>Điểm nổi bật của ngành</h5>
+                @Html.Raw(@item.DIEMNOIBAT)
+            </div>
+            <div class="content_Nganh__all child_content">
+                <h5>Cơ hội nghề nghiệp</h5>
+                @Html.Raw(@item.COHOI)
+            </div>
+
+
+
+
+        }
+    </div>
+</body>
+</html>

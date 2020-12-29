@@ -78,38 +78,84 @@ namespace AppTS.Controllers
             if(nganh.Equals("1"))
             {
                 Session["ct_nganh"] = "1";
-                model = from a in db.Table_ChuyenNganhs where a.ID_NGANH == 1 select a;
+                model = from a in db.Table_ChuyenNganhs.OrderBy(m=>m.TENCHUYENNGANH) select a;
             }
             else if (nganh.Equals("2"))
             {
                 Session["ct_nganh"] = "2";
-                model = from a in db.Table_ChuyenNganhs where a.ID_NGANH == 2 select a;
+               
             }
             else if (nganh.Equals("3"))
             {
                 Session["ct_nganh"] = "3";
-                model = from a in db.Table_ChuyenNganhs where a.ID_NGANH == 3 select a;
+               
             }
             else if (nganh.Equals("4"))
             {
                 Session["ct_nganh"] = "4";
-                model = from a in db.Table_ChuyenNganhs where a.ID_NGANH == 1002 select a;
+              
             }
             else if (nganh.Equals("5"))
             {
                 Session["ct_nganh"] = "5";
-                model = from a in db.Table_ChuyenNganhs where a.ID_NGANH == 1003 select a;
+               
+            }
+            else if (nganh.Equals("6"))
+            {
+                Session["ct_nganh"] = "6";
+
+            }
+            else if (nganh.Equals("7"))
+            {
+                Session["ct_nganh"] = "7";
+
+            }
+            else if (nganh.Equals("8"))
+            {
+                Session["ct_nganh"] = "8";
+
+            }
+            else if (nganh.Equals("9"))
+            {
+                Session["ct_nganh"] = "9";
+
             }
             ViewData["tohop"] = from a in db.Table_ToHops select a;
             return View(model);
         }
-        public ActionResult ChinhSachHocBong()
+
+        public ActionResult ChiTietRiengCacNganh(int id)
         {
-            return View();
+            var model = from a in db.Table_CTCNs where a.ID_CHUYENNGANH == id select a;       
+            return View(model);
         }
+
+        public PartialViewResult part_Thacsi()
+        {
+            return PartialView();
+        }
+        public PartialViewResult part_SongNganh()
+        {
+            return PartialView();
+        }
+        public PartialViewResult part_LienXuyen()
+        {
+            return PartialView();
+        }
+        public PartialViewResult part_TrungCap()
+        {
+            return PartialView();
+        }
+        public PartialViewResult part_QuocTe()
+        {
+            return PartialView();
+        }
+
         public ActionResult VongQuanhNTTU()
         {
             return View();
         }
+       
+        
     }
 }

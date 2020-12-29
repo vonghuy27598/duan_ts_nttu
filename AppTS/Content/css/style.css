@@ -461,7 +461,7 @@ h6 {
 }
 
 .section-header h4 {
-    font-size: 32px;
+    font-size: calc(22px + (24 - 22) * ((100vw - 300px) / (1600 - 300)));
     color: #283d50;
     text-align: center;
     font-weight: 700;
@@ -469,12 +469,13 @@ h6 {
 }
 
 .section-header p {
-    text-align: center;
+    text-align: justify;
     margin: auto;
     font-size: 20px;
     padding-bottom: 60px;
     color: #556877;
     width: 50%;
+    margin-top:10px
 }
 
 /* Section with background
@@ -1414,4 +1415,73 @@ h6 {
     #intro {
         padding: 0px 0 20px 0;
     }
+}
+
+.logo .float-left{
+    position:relative;
+}
+
+
+.area-show_info .logo_qr{
+    margin-bottom:15px
+}
+.area-show_info .log_qr__column_left{
+    width:50%;
+    margin:auto;
+}
+.area-show_info .log_qr__column_right{
+    width:50%;
+    margin:auto;
+}
+.area-show_info .log_qr__column_right img {
+    width:60%
+}
+.area-show_info .logo_qr .row{
+    margin-left:0px;
+    margin-right:0px;
+}
+.area-show_info .khung__info{
+    margin:auto;
+    text-align:center;
+    padding:10px 20px;
+    border:2px solid #24a4c2;
+    border-radius:20px
+}
+.area-show_info .khung__info h4{
+    font-size: calc(22px + (24 - 22) * ((100vw - 300px) / (1600 - 300)));
+    font-weight:bold;
+    padding-bottom:10px;
+    color:#ed2024;
+    
+}
+
+.area-show_info .khung__info h5{
+    font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
+    padding-bottom:20px;
+     color:#ed2024;
+}
+
+
+.area-show_info .column_logo img{
+    width:80%;
+    margin:auto
+}
+
+.area-show_info .column_logo .content_logo{
+    padding:5px;
+    font-size:calc(11px + (13 - 11) * ((100vw - 300px) / (1600 - 300)));
+    color:#477ab1;
+    font-weight:bold;
+}
+
+@media (max-width: 770px) {
+       .area-show_info .column_logo{
+        width:50%
+       }
+}
+
+@media (min-width: 771px) {
+       .area-show_info .column_logo{
+        width:25%
+       }
 }

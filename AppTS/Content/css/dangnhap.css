@@ -8,7 +8,9 @@
     margin-top: 50px !important;
     background-color:#fff!important
 }
-
+#ui-id-1 {
+        font-size: calc(12px + 2 * ((100vw - 300px) / 1300));
+    }
 #message {
     display: none;
     background: #f1f1f1;
