@@ -135,6 +135,15 @@ namespace AppTS.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult part_TrungCap()
+        {
+            return PartialView();
+        }
+        public PartialViewResult part_QuocTe()
+        {
+            return PartialView();
+        }
+
         public ActionResult VongQuanhNTTU()
         {
             return View();

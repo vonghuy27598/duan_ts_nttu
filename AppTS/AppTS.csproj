@@ -276,6 +276,8 @@
     <Content Include="Content\img\4sao.jpg" />
     <Content Include="Content\img\aun2.jpg" />
     <Content Include="Content\img\bacsi.jpg" />
+    <Content Include="Content\img\banner_quocte.jpg" />
+    <Content Include="Content\img\bg_trungcap.jpg" />
     <Content Include="Content\img\building.jpg" />
     <Content Include="Content\img\caooc_gioithieu.jpg" />
     <Content Include="Content\img\cea2.jpg" />
@@ -286,10 +288,13 @@
     <Content Include="Content\img\clb3.jpg" />
     <Content Include="Content\img\cntt3.jpg" />
     <Content Include="Content\img\ct_lienxuyen.jpg" />
+    <Content Include="Content\img\ct_quocte_1.jpg" />
+    <Content Include="Content\img\ct_quocte_2.jpg" />
     <Content Include="Content\img\ct_songnganh.jpg" />
     <Content Include="Content\img\doanhnghiep.jpg" />
     <Content Include="Content\img\doingu_gioithieu.jpg" />
     <Content Include="Content\img\duhoc.jpg" />
+    <Content Include="Content\img\duongcheo.png" />
     <Content Include="Content\img\elearning.jpg" />
     <Content Include="Content\img\giangvien.jpg" />
     <Content Include="Content\img\gym.jpg" />
@@ -301,6 +306,7 @@
     <Content Include="Content\img\hocbong_5.png" />
     <Content Include="Content\img\icon_liennganh.png" />
     <Content Include="Content\img\icon_lienthong.png" />
+    <Content Include="Content\img\icon_oldphone_footer.png" />
     <Content Include="Content\img\icon_quocte.png" />
     <Content Include="Content\img\icon_thacsi.png" />
     <Content Include="Content\img\icon_thacsi2.png" />
@@ -312,6 +318,10 @@
     <Content Include="Content\img\icon_tuxa.png" />
     <Content Include="Content\img\icon_vanbang.jpg" />
     <Content Include="Content\img\icon_vanbang.png" />
+    <Content Include="Content\img\ic_email_footer.png" />
+    <Content Include="Content\img\ic_location_footer.png" />
+    <Content Include="Content\img\ic_phone_footer.png" />
+    <Content Include="Content\img\ic_website_footer.png" />
     <Content Include="Content\img\khoahocsuckhoe.jpg" />
     <Content Include="Content\img\khutuhoc.jpg" />
     <Content Include="Content\img\kythuat.jpg" />
@@ -321,6 +331,11 @@
     <Content Include="Content\img\phattrien.jpg" />
     <Content Include="Content\img\qr.jpg" />
     <Content Include="Content\img\qtkt.jpg" />
+    <Content Include="Content\img\qt_icon_1.png" />
+    <Content Include="Content\img\qt_icon_2.png" />
+    <Content Include="Content\img\qt_icon_3.png" />
+    <Content Include="Content\img\qt_icon_4.png" />
+    <Content Include="Content\img\qt_icon_5.png" />
     <Content Include="Content\img\stars.jpg" />
     <Content Include="Content\img\stars2.jpg" />
     <Content Include="Content\img\ten_truong.png" />
@@ -2322,6 +2337,8 @@
     <Content Include="Views\Home\part_Thacsi.cshtml" />
     <Content Include="Views\Home\part_SongNganh.cshtml" />
     <Content Include="Views\Home\part_LienXuyen.cshtml" />
+    <Content Include="Views\Home\part_QuocTe.cshtml" />
+    <Content Include="Views\Home\part_TrungCap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

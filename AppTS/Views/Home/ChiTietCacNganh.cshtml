@@ -34,29 +34,29 @@
             margin: 0;
         }
 
-        thead, tr, th {
+        .show__nganh thead, .show__nganh thead tr, .show__nganh thead th {
             border-top: none;
         }
 
-        thead {
+        .show__nganh thead {
             color: #fff;
         }
 
-        td, th {
-            border-left: none;
-            border-right: none;
-        }
+            .show__nganh td, .show__nganh thead th {
+                border-left: none;
+                border-right: none;
+            }
 
-        th {
+        .show__nganh th {
             font-size: calc(15px + (18 - 15) * ((100vw - 300px) / (1600 - 300)));
         }
 
-        td {
+        .show__nganh td {
             border-bottom: 1px solid #b6b1b1;
             font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1600 - 300)));
         }
 
-        table caption {
+        .show__nganh caption {
             text-align: left;
             padding: 20px 10px;
             font-weight: bold;
@@ -90,14 +90,12 @@
             font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1600 - 300))) !important;
             padding:5px
         }
-        table td:first-child{
-            text-align:center
+        .show__nganh table td:first-child {
+            text-align: center;
         }
-        table th:nth-child(2){
-            text-align:left
-        }
-        
-        
+        .show__nganh table th:nth-child(2) {
+            text-align: left;
+        }               
          .lien_xuyennganh_tr td {
             font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1600 - 300))) !important;
             padding: 5px;
@@ -140,7 +138,7 @@
 
         <div style="margin-top: 60px;">
 
-            <div style="margin-bottom:30px">
+            <div style="margin-bottom:30px" class="content_auto">
                 @if (Session["ct_nganh"].Equals("1"))
                 {
                    
@@ -176,17 +174,16 @@
                 }
                 else if (Session["ct_nganh"].Equals("8"))
                 {
-                    
+                    <img src="/Content/img/bg_trungcap.jpg" width="100%" height="auto"/>
 
                 }
                 else if (Session["ct_nganh"].Equals("9"))
-                {
-                   
-
+                {                   
+                    @Html.Action("part_QuocTe","Home")
                 }
             </div>
 
-            <table width="100%" border="0" cellpadding="10" cellspacing="0" style="background-color: #f0f0f0;">
+            <table width="100%" border="0" cellpadding="10" cellspacing="0" style="background-color: #f0f0f0;" class="show__nganh">
                 @if (Session["ct_nganh"].Equals("1"))
                 {
                     <caption style="color: #2da1de;">CHƯƠNG TRÌNH ĐÀO TẠO BẬC ĐẠI HỌC</caption>
@@ -317,21 +314,7 @@
                 }
                 else if (Session["ct_nganh"].Equals("9"))
                 {
-                    <caption style="color: #ce535b">CHƯƠNG TRÌNH LIÊN KẾT QUỐC TẾ</caption>
-                    <thead style="background-color: #ce535b; ">
-                        <tr>
-                            <th width="5%">STT</th>
-                            <th width="45%">
-                                Tên ngành
-                            </th>
-                            <th width="25%">
-                                Thời gian đào tạo
-                            </th>
-                            <th width="25%">
-                                Tổ hợp xét tuyển
-                            </th>
-                        </tr>
-                    </thead>
+                   
                 }
                 <tbody>
                     @if (Session["ct_nganh"].Equals("1"))
@@ -686,12 +669,7 @@
                     else if (Session["ct_nganh"].Equals("9"))
                     {
 
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
+                       
                     }
 
 
@@ -702,7 +680,7 @@
             @if (Session["ct_nganh"].Equals("1") || Session["ct_nganh"].Equals("4") || Session["ct_nganh"].Equals("5"))
             {
                 <div class="tohop">
-                    <table width="100%" border="0" cellpadding="10" cellspacing="0" style="background-color: #fcecd6;">
+                    <table width="100%" border="0" cellpadding="10" cellspacing="0" style="background-color: #fcecd6;" class="show__nganh">
                         <caption style="color: #cb1313;">Tổ hợp xét tuyển</caption>
                         @foreach (var item in ViewData["tohop"] as IEnumerable<AppTS.Models.Table_ToHop>)
                         {
@@ -775,6 +753,9 @@
 
                     </div>
                 </div>
+            }else if(Session["ct_nganh"].Equals("8"))
+            {
+                @Html.Action("part_TrungCap","Home")
             }
         </div>
     <script src="~/Content/css/main/js/jquery-2.2.4.min.js"></script>
