@@ -2339,6 +2339,7 @@
     <Content Include="Views\Home\part_LienXuyen.cshtml" />
     <Content Include="Views\Home\part_QuocTe.cshtml" />
     <Content Include="Views\Home\part_TrungCap.cshtml" />
+    <Content Include="Views\Home\ChiTietRiengCacNganh.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

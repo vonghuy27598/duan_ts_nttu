@@ -123,6 +123,13 @@ namespace AppTS.Controllers
             ViewData["tohop"] = from a in db.Table_ToHops select a;
             return View(model);
         }
+
+        public ActionResult ChiTietRiengCacNganh(int id)
+        {
+            var model = from a in db.Table_CTCNs where a.ID_CHUYENNGANH == id select a;       
+            return View(model);
+        }
+
         public PartialViewResult part_Thacsi()
         {
             return PartialView();

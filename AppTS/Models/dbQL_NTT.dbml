@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_NTT" Class="dbQL_NTTDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-12J6D6C;Initial Catalog=QL_NTT;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QL_NTTConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-9INOVM4;Initial Catalog=QL_NTT;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QL_NTTConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Table_Admin" Member="Table_Admins">
     <Type Name="Table_Admin">
       <Column Name="ID_ADMIN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -61,8 +61,11 @@
   <Table Name="dbo.Table_CTCN" Member="Table_CTCNs">
     <Type Name="Table_CTCN">
       <Column Name="ID_CTCN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="MOTA" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="MOTA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="HINHANH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MUCTIEU" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DIEMNOIBAT" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="COHOI" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="ID_CHUYENNGANH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Table_ChuyenNganh_Table_CTCN" Member="Table_ChuyenNganh" ThisKey="ID_CHUYENNGANH" OtherKey="ID_CHUYENNGANH" Type="Table_ChuyenNganh" IsForeignKey="true" />
     </Type>

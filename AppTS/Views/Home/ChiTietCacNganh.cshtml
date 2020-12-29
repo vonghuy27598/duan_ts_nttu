@@ -317,12 +317,12 @@
                    
                 }
                 <tbody>
-                    @if (Session["ct_nganh"].Equals("1"))
+                                        @if (Session["ct_nganh"].Equals("1"))
                     {
                         int i = 1;
                         foreach (var item in Model)
                         {
-                            <tr>
+                            <tr onclick="window.location='/Home/ChiTietRiengCacNganh?id='+@item.ID_CHUYENNGANH">
                                 <td>@i</td>
                                 <td>@item.TENCHUYENNGANH</td>
                                 <td>@item.MANGANH</td>

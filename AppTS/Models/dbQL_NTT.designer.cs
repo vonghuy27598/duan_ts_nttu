@@ -1518,6 +1518,12 @@ namespace AppTS.Models
 		
 		private string _HINHANH;
 		
+		private string _MUCTIEU;
+		
+		private string _DIEMNOIBAT;
+		
+		private string _COHOI;
+		
 		private int _ID_CHUYENNGANH;
 		
 		private EntityRef<Table_ChuyenNganh> _Table_ChuyenNganh;
@@ -1532,6 +1538,12 @@ namespace AppTS.Models
     partial void OnMOTAChanged();
     partial void OnHINHANHChanging(string value);
     partial void OnHINHANHChanged();
+    partial void OnMUCTIEUChanging(string value);
+    partial void OnMUCTIEUChanged();
+    partial void OnDIEMNOIBATChanging(string value);
+    partial void OnDIEMNOIBATChanged();
+    partial void OnCOHOIChanging(string value);
+    partial void OnCOHOIChanged();
     partial void OnID_CHUYENNGANHChanging(int value);
     partial void OnID_CHUYENNGANHChanged();
     #endregion
@@ -1562,7 +1574,7 @@ namespace AppTS.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MOTA", DbType="NVarChar(4000)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MOTA", DbType="NVarChar(MAX)")]
 		public string MOTA
 		{
 			get
@@ -1598,6 +1610,66 @@ namespace AppTS.Models
 					this._HINHANH = value;
 					this.SendPropertyChanged("HINHANH");
 					this.OnHINHANHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MUCTIEU", DbType="NVarChar(MAX)")]
+		public string MUCTIEU
+		{
+			get
+			{
+				return this._MUCTIEU;
+			}
+			set
+			{
+				if ((this._MUCTIEU != value))
+				{
+					this.OnMUCTIEUChanging(value);
+					this.SendPropertyChanging();
+					this._MUCTIEU = value;
+					this.SendPropertyChanged("MUCTIEU");
+					this.OnMUCTIEUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DIEMNOIBAT", DbType="NVarChar(MAX)")]
+		public string DIEMNOIBAT
+		{
+			get
+			{
+				return this._DIEMNOIBAT;
+			}
+			set
+			{
+				if ((this._DIEMNOIBAT != value))
+				{
+					this.OnDIEMNOIBATChanging(value);
+					this.SendPropertyChanging();
+					this._DIEMNOIBAT = value;
+					this.SendPropertyChanged("DIEMNOIBAT");
+					this.OnDIEMNOIBATChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COHOI", DbType="NVarChar(MAX)")]
+		public string COHOI
+		{
+			get
+			{
+				return this._COHOI;
+			}
+			set
+			{
+				if ((this._COHOI != value))
+				{
+					this.OnCOHOIChanging(value);
+					this.SendPropertyChanging();
+					this._COHOI = value;
+					this.SendPropertyChanged("COHOI");
+					this.OnCOHOIChanged();
 				}
 			}
 		}
