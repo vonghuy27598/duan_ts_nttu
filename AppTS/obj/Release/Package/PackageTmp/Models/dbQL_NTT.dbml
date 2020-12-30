@@ -61,8 +61,11 @@
   <Table Name="dbo.Table_CTCN" Member="Table_CTCNs">
     <Type Name="Table_CTCN">
       <Column Name="ID_CTCN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="MOTA" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="MOTA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="HINHANH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MUCTIEU" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DIEMNOIBAT" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="COHOI" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="ID_CHUYENNGANH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Table_ChuyenNganh_Table_CTCN" Member="Table_ChuyenNganh" ThisKey="ID_CHUYENNGANH" OtherKey="ID_CHUYENNGANH" Type="Table_ChuyenNganh" IsForeignKey="true" />
     </Type>
@@ -186,6 +189,7 @@
     <Type Name="Table_Nganh">
       <Column Name="ID_NGANH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TENNGANH" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="HINHANH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="Table_Nganh_Table_ChuyenNganh" Member="Table_ChuyenNganhs" ThisKey="ID_NGANH" OtherKey="ID_NGANH" Type="Table_ChuyenNganh" />
       <Association Name="Table_Nganh_Table_CTN" Member="Table_CTNs" ThisKey="ID_NGANH" OtherKey="ID_NGANH" Type="Table_CTN" />
       <Association Name="Table_Nganh_Table_GiangVienDN" Member="Table_GiangVienDNs" ThisKey="ID_NGANH" OtherKey="ID_NGANH" Type="Table_GiangVienDN" />

@@ -122,6 +122,7 @@ namespace AppTS.Controllers
 
         public ActionResult DangKyXetTuyen()
         {
+
             setDDlistNganh();
             if(Session["User"] != null)
             {

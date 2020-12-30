@@ -18,5 +18,6 @@ namespace AppTS.ViewModels
         public int? SOLUONGSV { get; set; }
         public int? MANGANH { get; set; }
         public string TOHOP { get; set; }
+        public string MON { get; set; }
     }
 }

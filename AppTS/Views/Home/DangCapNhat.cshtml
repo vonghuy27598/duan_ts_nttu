@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DangCapNhat</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        #header {
+            height: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+
+            #header a:active {
+                outline: none;
+            }
+
+            #header img:active {
+                background-color: transparent;
+            }
+        h4 {
+            font-size: calc(20px + (22 - 20) * ((100vw - 300px) / (1600 - 300)));
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <div class="header-logo" style="padding-left:10px">
+            <a href="@Url.Action("Main", "Home")"><img src="~/Content/img/arrow_left.png" alt="" class="go_back" style="width:30px"></a>
+        </div>
+    </section>
+    <div style="text-align:center;margin-top:150px">
+        <h4>HỆ THỐNG ĐANG CẬP NHẬT </h4>
+    </div>
+</body>
+</html>

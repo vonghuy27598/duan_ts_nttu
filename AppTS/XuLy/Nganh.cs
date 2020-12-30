@@ -90,7 +90,8 @@ namespace AppTS.XuLy
                             ID_CHUYENNGANH = b.ID_CHUYENNGANH,
                             TENCHUYENNGANH = b.TENCHUYENNGANH,
                             MANGANH = b.MANGANH,
-                            TOHOP = b.TOHOP
+                            TOHOP = b.TOHOP,
+                           
 
                         };
             return model.OrderBy(m => m.TENCHUYENNGANH).ToList();
@@ -111,6 +112,29 @@ namespace AppTS.XuLy
                            MON3 = a.MON3,
                         };
             return model.OrderBy(m => m.IDTOHOP).ToList();
+        }
+
+        //get Chi tiết ngành
+        public static List<ChiTietNganh> getChiTietNganh(int ID_CHUYENNGANH)
+        {
+            dbQL_NTTDataContext data = new dbQL_NTTDataContext();
+            var model = from a in data.Table_ChuyenNganhs
+                        join b in data.Table_Nganhs  on a.ID_NGANH equals b.ID_NGANH                       
+                        join c in data.Table_CTCNs on a.ID_CHUYENNGANH equals c.ID_CHUYENNGANH
+                        where a.ID_CHUYENNGANH == ID_CHUYENNGANH
+                        select new ChiTietNganh()
+                        {
+                            ID_CHUYENNGANH = a.ID_CHUYENNGANH,
+                            ID_NGANH = b.ID_NGANH,
+                            HINHANH_NGANH = b.HINHANH,
+                            HINHANH_CHUYENNGANH = c.HINHANH,
+                            COHOI = c.COHOI,
+                            DIEMNOIBAT = c.DIEMNOIBAT,
+                            MOTA = c.MOTA,
+                            MUCTIEU = c.MUCTIEU,
+                            TENCHUYENNGANH = a.TENCHUYENNGANH
+                        };
+            return model.ToList();
         }
         
     }

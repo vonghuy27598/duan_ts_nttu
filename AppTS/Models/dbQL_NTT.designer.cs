@@ -4050,6 +4050,8 @@ namespace AppTS.Models
 		
 		private string _TENNGANH;
 		
+		private string _HINHANH;
+		
 		private EntitySet<Table_ChuyenNganh> _Table_ChuyenNganhs;
 		
 		private EntitySet<Table_CTN> _Table_CTNs;
@@ -4064,6 +4066,8 @@ namespace AppTS.Models
     partial void OnID_NGANHChanged();
     partial void OnTENNGANHChanging(string value);
     partial void OnTENNGANHChanged();
+    partial void OnHINHANHChanging(string value);
+    partial void OnHINHANHChanged();
     #endregion
 		
 		public Table_Nganh()
@@ -4110,6 +4114,26 @@ namespace AppTS.Models
 					this._TENNGANH = value;
 					this.SendPropertyChanged("TENNGANH");
 					this.OnTENNGANHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HINHANH", DbType="VarChar(50)")]
+		public string HINHANH
+		{
+			get
+			{
+				return this._HINHANH;
+			}
+			set
+			{
+				if ((this._HINHANH != value))
+				{
+					this.OnHINHANHChanging(value);
+					this.SendPropertyChanging();
+					this._HINHANH = value;
+					this.SendPropertyChanged("HINHANH");
+					this.OnHINHANHChanged();
 				}
 			}
 		}

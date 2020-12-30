@@ -225,15 +225,15 @@ $("#admission").click(function () {
             });
 
 
-            if (tongdiem >= 18) {
+           
                 Swal.fire({
-                    text: 'Bạn đã trúng tuyển vào Trường Đại học Nguyễn Tất Thành với số điểm: '+tongdiem +'. Ngành học: '+$("#dropdownlist_chontennganh option:selected").text()+'', 
+                    text: 'Bạn đã đăng ký xét tuyển ngành '+$("#dropdownlist_chontennganh option:selected").text()+' với số điểm: '+tongdiem +'', 
                     width: 600,
                     padding: '3em',
                     confirmButtonText:'Tiếp tục',
                 }).then( (result) =>{
                     Swal.fire({
-                        text:'Trường Đại học Nguyễn Tất Thành sẽ liên hệ bạn để hướng dãn làm thủ tục nhập học.',
+                        text:'Trường Đại học Nguyễn Tất Thành gửi kết quả xét tuyển sớm nhất cho bạn.',
                         width: 600,
                         padding: '3em',                            
                         confirmButtonText: 'Đồng ý',
@@ -246,20 +246,7 @@ $("#admission").click(function () {
 
                 })//end_Then_chung
 
-            } else {
-                  Swal.fire({
-                    text:'Rất tiếc! Bạn không đạt yêu cầu.', 
-                    width: 600,
-                    padding: '3em',
-                    confirmButtonText:'Đồng ý',
-                    }).then( (result) => {
-                        if (result.isConfirmed) {
-                             location.reload();
-                        }
-                    })//end_then     
-
-
-            }
+            
         }
     }
 });

@@ -126,8 +126,14 @@ namespace AppTS.Controllers
 
         public ActionResult ChiTietRiengCacNganh(int id)
         {
-            var model = from a in db.Table_CTCNs where a.ID_CHUYENNGANH == id select a;       
+            var model = Nganh.getChiTietNganh(id);       
             return View(model);
+        }
+
+        public ActionResult DangCapNhat()
+        {
+          
+            return View();
         }
 
         public PartialViewResult part_Thacsi()
