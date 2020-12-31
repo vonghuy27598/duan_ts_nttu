@@ -1,5 +1,11 @@
-﻿using AppTS.XuLy;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.Mvc;
+using AppTS.Models;
+using AppTS.ViewModels;
+using AppTS.XuLy;
 
 namespace AppTS.Controllers
 {
@@ -7,6 +13,7 @@ namespace AppTS.Controllers
     {
         //
         // GET: /TuVan/
+        dbQL_NTTDataContext db = new dbQL_NTTDataContext();
         public ActionResult DuDoan()
         {
             if (Session["User"] == null)
@@ -52,11 +59,37 @@ namespace AppTS.Controllers
             getList.set_Diem(toan,ly,hoa,van,su,dia,sinh,anh);
            
             string[] list_nganh = getList.get_list_Nganh();
-            var result = list_nganh;
-            return Json(new
+                  
+            if(list_nganh !=null )
             {
-                status = result
-            }, JsonRequestBehavior.AllowGet);
+                int count = list_nganh.Length;
+                List<ChuyenNganh> list_linkidnganh = new List<ChuyenNganh>();
+                //list_linkidnganh = Nganh.getID_CHUYENNGANH_BYTENCHUYENNGANH(list_nganh);              
+                foreach (var item in list_nganh)
+                {
+                    var model = db.Table_ChuyenNganhs.Where(m=>m.TENCHUYENNGANH == item).Select(m=>m.ID_CHUYENNGANH);
+                    list_linkidnganh.Add(new ChuyenNganh{ID_CHUYENNGANH = int.Parse(model.ToString())});                    
+                }                 
+                var result = list_nganh;
+               
+                return Json(new
+                {
+                    status = result,
+                    list_id = list_linkidnganh
+                }, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                var result = list_nganh;
+                return Json(new
+                {
+                    status = result
+                  
+                }, JsonRequestBehavior.AllowGet);
+            }
+           
+           
+           
         }
     }
 }

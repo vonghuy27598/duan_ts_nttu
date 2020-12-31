@@ -19,21 +19,20 @@
                     @Html.TextBox("TenDN", null, new { required = "required", @class = " input-feild line-animation" })
                     <div class="line"></div>
                 </div>
-                <div class="form-group primary-form-group">
+                <div class="form-group primary-form-group" style="margin-bottom:0px">
                     <label for="password">Mật khẩu</label>
                     @*<input type="password" value="" name="password" id="password" class="form-control input-feild">*@
                     @Html.Password("MatKhau", null, new { required = "required", @class = "input-feild line-animation" })
                     <div class="line"></div>
                 </div>
-                <div class="forget-password">
-                    <a href="@Url.Action("DangKy","HocSinh")">Chưa có tài khoản? Đăng ký</a>
-                </div>
-
                 <div class="submit-button">
 
-                    <input type="submit" value="Đăng nhập" id="signinCreate" class="btn main-btn" />
+                    <input type="submit" value="Đăng nhập" id="signinCreate" class="btn main-btn" style="width:100%"/>
 
                 </div>
+                <div class="forget-password" style="margin-top:20px">
+                    <a href="@Url.Action("DangKy","HocSinh")">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
+                </div>             
                 <div class="mess">@ViewBag.ThongBao</div>
             </div>
         }

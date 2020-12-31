@@ -27,7 +27,12 @@ namespace AppTS.Controllers
         [HttpPost]
         public ActionResult DangNhap(FormCollection collection)
         {
-            var link = Request.QueryString["link"];
+
+            var link = "";
+            if(Request.QueryString["link"] != null)
+            {
+                link = Request.QueryString["link"];
+            }
             var tendn = collection["TenDN"];
             string tdn = tendn;
             var matkhau = collection["MatKhau"];
@@ -61,7 +66,7 @@ namespace AppTS.Controllers
                         {
                             return RedirectToAction("DuDoan", "TuVan");
                         }
-                        else
+                        else if(link.Equals(""))
                         {
                             return RedirectToAction("Main", "Home");
                         }
@@ -87,6 +92,11 @@ namespace AppTS.Controllers
         [HttpPost]
         public ActionResult DangKy(HocSinh_TK hs_tk)
         {
+            var link = "";
+            if (Request.QueryString["link"] != null)
+            {
+                link = Request.QueryString["link"];
+            }
             bool tontaitk = db.Table_TaiKhoans.Any(m => hs_tk.USERNAME == m.USERNAME);
             if (tontaitk)
             {
@@ -112,7 +122,7 @@ namespace AppTS.Controllers
                 db.Table_HocSinhs.InsertOnSubmit(hs);
                 db.SubmitChanges();
 
-                return RedirectToAction("DangNhap");
+                return RedirectToAction("DangNhap", new {link = link });
             }
 
             return this.DangKy();

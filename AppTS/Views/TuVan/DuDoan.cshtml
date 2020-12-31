@@ -64,8 +64,7 @@
 
                 </tbody>
             </table>
-            <a class="btn-dudoan" id="send_dudoan" href="#result">Dự đoán</a>
-           
+            <a class="btn-dudoan" id="send_dudoan" href="#result">Định hướng</a>           
         </div>
         <div class="result-form" id="result">
             <h4 style="font-weight:bold">Bạn có thể theo học các ngành sau:</h4>
@@ -157,9 +156,10 @@
                         type: "POST",
                         success: function (response) {
                             $('.result-tb').empty();
-                            if (response.status != null)
+                            if (response.status != null && response.list_id != null)
                             {
                                 $.each(response.status, function () {
+                                    
                                     $('.result-tb').append("<li>" + this + "</li>");
                                 })
                             } else {

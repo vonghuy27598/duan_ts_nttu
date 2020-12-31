@@ -136,6 +136,21 @@ namespace AppTS.XuLy
                         };
             return model.ToList();
         }
+
+        //get ID_CHUYENNGANH by TENCHUYENNGANH
+        public static List<String> getID_CHUYENNGANH_BYTENCHUYENNGANH(string[] TENCHUYENNGANH)
+        {
+            dbQL_NTTDataContext data = new dbQL_NTTDataContext();
+            List<string> list = new List<string>(); 
+            foreach(var item in TENCHUYENNGANH)
+            {
+                var model = from a in data.Table_ChuyenNganhs
+                            where a.TENCHUYENNGANH.Contains(item)
+                            select a.ID_CHUYENNGANH.ToString();
+                list.Add(model.ToString());
+            }
+            return list;
+        }
         
     }
 }
