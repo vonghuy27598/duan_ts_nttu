@@ -1,16 +1,16 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "DuDoan";
     Layout = "~/Views/Shared/_Layout_TuVan.cshtml";
 }
 <link href="~/Content/css/form_dudoan.css" rel="stylesheet" />
 <div class="dudoan" style="margin-top:100px">
-    <h2>DỰ ĐOÁN ĐIỂM THI TỐT NGHIỆP</h2>
+    <h2>ĐỊNH HƯỚNG NGÀNH NGHỀ</h2>
     <div class="form-advisory">
         <div class="select-form">
             <select>
-                <option value="1">Cuối năm 11</option>
-                <option value="2">Cuối năm 12</option>
+                <option value="1">Cuối năm lớp 11</option>
+                <option value="2">Học kỳ 1 lớp 12</option>
+                <option value="3">Cuối năm lớp 12</option>
             </select>
         </div>
         <div class="content-form">
@@ -56,76 +56,23 @@
                         <td>Anh văn</td>
                         <td><input type="number" id="txtAnh" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
                     </tr>
-                    <tr>
-                        <td>Giáo dục công dân</td>
-                        <td><input type="number" id="txtGD" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
-                    </tr>
-                    <tr>
-                        <td>Tin học</td>
-                        <td><input type="number" id="txtTin" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
-                    </tr>
+
                 </tbody>
             </table>
             <a class="btn-dudoan" id="send_dudoan" href="#result">Dự đoán</a>
+           
         </div>
         <div class="result-form" id="result">
-            <h3 style="font-weight:bold">KẾT QUẢ</h3>
+            <h4 style="font-weight:bold">Bạn có thể theo học các ngành sau:</h4>
 
-            <table border="1" cellpadding="10">
-                <thead>
-                    <tr>
-                        <th>Tên môn học</th>
-                        <th>Kết quả</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Toán</td>
-                        <td class="result-toan"></td>
-                    </tr>
-                    <tr>
-                        <td>Vật lý</td>
-                        <td class="result-ly"></td>
-                    </tr>
-                    <tr>
-                        <td>Hóa học</td>
-                        <td class="result-hoa"></td>
-                    </tr>
-                    <tr>
-                        <td>Ngữ văn</td>
-                        <td class="result-van"></td>
-                    </tr>
-                    <tr>
-                        <td>Lịch sử</td>
-                        <td class="result-su"></td>
-                    </tr>
-                    <tr>
-                        <td>Địa lý</td>
-                        <td class="result-dia"></td>
-                    </tr>
-                    <tr>
-                        <td>Sinh học</td>
-                        <td class="result-sinh"></td>
-                    </tr>
-                    <tr>
-                        <td>Anh văn</td>
-                        <td class="result-anh"></td>
-                    </tr>
-                    <tr>
-                        <td>Giáo dục công dân</td>
-                        <td class="result-gd"></td>
-                    </tr>
-                    <tr>
-                        <td>Tin học</td>
-                        <td class="result-tin"></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <span class="result-tb"></span>
+           
+           
+            <ul class="result-tb" style="color: #a90f0f;font-weight: bold;text-align: left;padding-left: 15px;line-height:2"></ul>
+            
         </div>
     </div>
 </div>
+
 
 
 
@@ -162,12 +109,7 @@
             var anh = $('#txtAnh').val();
             var nanh = parseInt(toan);
             $(".result-anh").text(toan);
-            var gd = $('#txtGD').val();
-            var ngd = parseInt(toan);
-            $(".result-gd").text(toan);
-            var tin = $('#txtTin').val();
-            var ntin = parseInt(toan);
-            $(".result-tin").text(toan);
+
             if (toan.length == 0)
                 alert('Vui lòng nhập điểm môn Toán');
             else if (ly.length == 0)
@@ -184,10 +126,7 @@
                 alert('Vui lòng nhập điểm môn Sinh học');
             else if (anh.length == 0)
                 alert('Vui lòng nhập điểm môn Anh văn');
-            else if (gd.length == 0)
-                alert('Vui lòng nhập điểm môn Giáo dục công dân');
-            else if (tin.length == 0)
-                alert('Vui lòng nhập điểm môn Tin học');
+
             else
                 if (toan < 0 || toan > 10)
                     alert('Điểm toán khoảng từ 0 đến 10');
@@ -205,31 +144,31 @@
                     alert('Điểm sinh khoảng từ 0 đến 10');
                 else if (anh < 0 || anh > 10)
                     alert('Điểm anh khoảng từ 0 đến 10');
-                else if (gd < 0 || gd > 10)
-                    alert('Điểm giáo dục công dân khoảng từ 0 đến 10');
-                else if (tin < 0 || tin > 10)
-                    alert('Điểm tin khoảng từ 0 đến 10');
+
                 else {
                     $('.result-form').css('display', 'block');
-                    var tongtb = (ntoan + nly + nhoa + nsinh + nsu + ndia + nvan + ntin + ngd + nanh) / 10;
-                    var phantram = "";
-                    if (tongtb == 0)
-                        phantram = "0%";
-                    else if (tongtb > 0 && tongtb < 2)
-                        phantram = "15%";
-                    else if (tongtb >= 2 && tongtb < 4)
-                        phantram = "30%";
-                    else if (tongtb >= 4 && tongtb <= 5)
-                        phantram = "40%";
-                    else if (tongtb > 5 && tongtb < 7)
-                        phantram = "65%";
-                    else if (tongtb >= 7 && tongtb < 8)
-                        phantram = "80%";
-                    else if (tongtb >= 8 && tongtb <= 9)
-                        phantram = "90%";
-                    else if (tongtb >= 10 && tongtb <= 10)
-                        phantram = "100%";
-                    $('.result-tb').text("Khả năng đậu " + phantram);
+                    $.ajax({
+                        url: "getNganh_TheoDiem",
+                        data: { toan: toan, ly: ly, hoa: hoa, van: van, su: su, dia: dia, sinh: sinh, anh: anh },
+                        datatype: "json",
+                        type: "POST",
+                        success: function (response) {
+                            $('.result-tb').empty();
+                            if (response.status != null)
+                            {
+                                $.each(response.status, function () {
+                                    $('.result-tb').append("<li>" + this + "</li>");
+                                })
+                            } else {
+                                $('.result-tb').append("<li>Không có ngành phù hợp</li>");
+                            }
+                           
+                           
+                        }
+                    });
+
+                
+                    
 
                     // Make sure this.hash has a value before overriding default behavior
                     // Prevent default anchor click behavior
@@ -251,6 +190,8 @@
                 }
 
         });
-    });
 
+    });
+  
+    
 </script>

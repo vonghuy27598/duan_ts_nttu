@@ -478,6 +478,66 @@ h6 {
     margin-top:10px
 }
 
+.logo .float-left{
+    position:relative;
+}
+
+
+.area-show_info .logo_qr{
+    margin-bottom:15px
+}
+.area-show_info .log_qr__column_left{
+    width:50%;
+    margin:auto;
+}
+.area-show_info .log_qr__column_right{
+    width:50%;
+    margin:auto;
+}
+.area-show_info .log_qr__column_right img {
+    width:60%
+}
+.area-show_info .logo_qr .row{
+    margin-left:0px;
+    margin-right:0px;
+}
+.area-show_info .khung__info{
+    margin:auto;
+    text-align:center;
+    padding:10px 20px;
+    border:2px solid #24a4c2;
+    border-radius:20px
+}
+.area-show_info .khung__info h4{
+    font-size: calc(22px + (24 - 22) * ((100vw - 300px) / (1600 - 300)));
+    font-weight:bold;
+    padding-bottom:10px;
+    color:#ed2024;
+    
+}
+
+.area-show_info .khung__info h5{
+    font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+    padding-bottom:20px;
+    color:#ed2024;
+}
+
+
+.area-show_info .column_logo img{
+    width:80%;
+    margin:auto
+}
+
+.area-show_info .column_logo .content_logo{
+    padding:5px;
+    font-size:calc(11px + (13 - 11) * ((100vw - 300px) / (1600 - 300)));
+    color:#477ab1;
+    font-weight:bold;
+}
+
+
+
+
 /* Section with background
 --------------------------------*/
 
@@ -1334,17 +1394,53 @@ h6 {
                 color: #f1f7ff;
             }
 
+
+.tab__scrollpy{
+    padding:10px;
+    background-color:#34b1f3;
+   
+}
+.left__title{
+    width:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right__title{
+    width:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item_left__content{
+    width:40%;   
+    margin-left:auto;
+    margin-right:10%;
+   
+    
+}
+
+
+.item_right__content{
+    width:40%;
+    margin-right:auto;
+  
+}
+.item__line{
+    margin-bottom:10px
+}
+
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
 
-@media (min-width: 992px) {
+@media all and (min-width: 992px) {
     #testimonials .testimonial-item p {
         width: 80%;
     }
 }
 
-@media (max-width: 991px) {
+@media all and (max-width: 991px) {
     #header {
         height: 60px;
         padding: 0
@@ -1375,13 +1471,13 @@ h6 {
     }
 }
 
-@media (max-width: 768px) {
+@media all and (max-width: 768px) {
     .back-to-top {
         bottom: 15px;
     }
 }
 
-@media (max-width: 767px) {
+@media all and (max-width: 767px) {
     #intro .intro-info {
         width: 100%;
     }
@@ -1411,77 +1507,22 @@ h6 {
         }
 }
 
-@media (max-width: 574px) {
+@media all and (max-width: 574px) {
     #intro {
         padding: 0px 0 20px 0;
     }
 }
 
-.logo .float-left{
-    position:relative;
-}
 
 
-.area-show_info .logo_qr{
-    margin-bottom:15px
-}
-.area-show_info .log_qr__column_left{
-    width:50%;
-    margin:auto;
-}
-.area-show_info .log_qr__column_right{
-    width:50%;
-    margin:auto;
-}
-.area-show_info .log_qr__column_right img {
-    width:60%
-}
-.area-show_info .logo_qr .row{
-    margin-left:0px;
-    margin-right:0px;
-}
-.area-show_info .khung__info{
-    margin:auto;
-    text-align:center;
-    padding:10px 20px;
-    border:2px solid #24a4c2;
-    border-radius:20px
-}
-.area-show_info .khung__info h4{
-    font-size: calc(22px + (24 - 22) * ((100vw - 300px) / (1600 - 300)));
-    font-weight:bold;
-    padding-bottom:10px;
-    color:#ed2024;
-    
-}
-
-.area-show_info .khung__info h5{
-    font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
-    padding-bottom:20px;
-     color:#ed2024;
-}
-
-
-.area-show_info .column_logo img{
-    width:80%;
-    margin:auto
-}
-
-.area-show_info .column_logo .content_logo{
-    padding:5px;
-    font-size:calc(11px + (13 - 11) * ((100vw - 300px) / (1600 - 300)));
-    color:#477ab1;
-    font-weight:bold;
-}
-
-@media (max-width: 770px) {
+@media all and  (max-width: 770px) {
        .area-show_info .column_logo{
-        width:50%
+         width:50%
        }
 }
 
-@media (min-width: 771px) {
+@media all and (min-width: 771px) {
        .area-show_info .column_logo{
-        width:25%
+         width:25%
        }
 }

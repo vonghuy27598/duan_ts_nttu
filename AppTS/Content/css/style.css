@@ -1394,6 +1394,42 @@ h6 {
                 color: #f1f7ff;
             }
 
+
+.tab__scrollpy{
+    padding:10px;
+    background-color:#34b1f3;
+   
+}
+.left__title{
+    width:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right__title{
+    width:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item_left__content{
+    width:40%;   
+    margin-left:auto;
+    margin-right:10%;
+   
+    
+}
+
+
+.item_right__content{
+    width:40%;
+    margin-right:auto;
+  
+}
+.item__line{
+    margin-bottom:10px
+}
+
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/

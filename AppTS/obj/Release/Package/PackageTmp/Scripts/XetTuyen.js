@@ -43,12 +43,52 @@ function getTenNganh(id_khoinganh) {
                     var ten_nganh = this.TENCHUYENNGANH;
                     var id_chuyennganh = this.ID_CHUYENNGANH
                     var ma_nganh = this.MANGANH;
-
+                    
                     if ($("#dropdownlist_chontennganh option").length <= 0) {
                         var to_hop = this.TOHOP;
                         var array_tohop = to_hop.split(',');
+                        var mon_tohop="";
                         $.each(array_tohop, function (index, item) {
-                            $("#dropdownlist_chontohop").append("<option value='" + item + "'>" + item + "</option>");
+                            var tohop = item.trim();
+                            if(tohop == "A00")
+                                mon_tohop = "Toán, Vật lý, Hóa học";
+                            if(tohop == "A01")
+                                mon_tohop = "Toán, Vật lý, Tiếng Anh";
+                            if(tohop == "A02")
+                                mon_tohop = "Toán, Vật lý, Sinh học";
+                            if(tohop == "B00")
+                                mon_tohop = "Toán, Hóa học, Sinh học";
+                            if(tohop == "C00")
+                                mon_tohop = "Ngữ văn, Lịch sử, Địa lý";
+                            if(tohop == "D01")
+                                mon_tohop = "Toán, Ngữ văn, Tiếng Anh";
+                            if(tohop == "D04")
+                                mon_tohop = "Toán, Ngữ văn, Tiếng Trung";
+                            if(tohop == "D07")
+                                mon_tohop = "Toán, Hóa học, Tiếng Anh";
+                            if(tohop == "D08")
+                                mon_tohop = "Toán, Sinh học, Tiếng Anh";
+                            if(tohop == "D14")
+                                mon_tohop = "Ngữ văn, Lịch sử, Tiếng Anh";
+                            if(tohop == "D15")
+                                mon_tohop = "Ngữ văn, Địa lý, Tiếng Anh";
+                            if(tohop == "H00")
+                                mon_tohop = "Văn, Vẽ tĩnh vật chì, Vẽ trang trí màu";
+                            if(tohop == "H07")
+                                mon_tohop = "Toán, Vẽ tĩnh vật chì, Vẽ trang trí màu";
+                            if(tohop == "V02")
+                                mon_tohop = "Toán, Tiếng Anh, Vẽ tĩnh vật chì";
+                            if(tohop == "V01")
+                                mon_tohop = "Toán, Ngữ văn, Vẽ tĩnh vật chì";
+                            if(tohop == "N00")
+                                mon_tohop = "Ngữ văn, Năng khiếu (piano), Kiến thức tổng hợp về âm nhạc";
+                            if(tohop == "N01")
+                                mon_tohop = "Ngữ văn, Năng khiếu (hát), Kiến thức tổng hợp về âm nhạc";
+                            if(tohop == "N05")
+                                mon_tohop = "Ngữ văn, Xem phim và viết bài bình luận, Kiến thức chuyên ngành (vấn đáp)";
+                           
+                            
+                            $("#dropdownlist_chontohop").append("<option value='"+item+"'>" + item + " ("+mon_tohop+")" + "</option>");
 
                         })
                     }
@@ -74,8 +114,49 @@ function getToHop(id_chuyennganh) {
                 $.each(response.status, function () {
                     var to_hop = this.TOHOP;
                     var array_tohop = to_hop.split(',');
+                    var mon_tohop="";
                     $.each(array_tohop, function (index, item) {
-                        $("#dropdownlist_chontohop").append("<option value='"+item+"'>" + item + "</option>");
+                        var tohop = item.trim();
+                        if(tohop == "A00")
+                            mon_tohop = "Toán, Vật lý, Hóa học";
+                        if(tohop == "A01")
+                            mon_tohop = "Toán, Vật lý, Tiếng Anh";
+                        if(tohop == "A02")
+                            mon_tohop = "Toán, Vật lý, Sinh học";
+                        if(tohop == "B00")
+                            mon_tohop = "Toán, Hóa học, Sinh học";
+                        if(tohop == "C00")
+                            mon_tohop = "Ngữ văn, Lịch sử, Địa lý";
+                        if(tohop == "D01")
+                            mon_tohop = "Toán, Ngữ văn, Tiếng Anh";
+                        if(tohop == "D04")
+                            mon_tohop = "Toán, Ngữ văn, Tiếng Trung";
+                        if(tohop == "D07")
+                            mon_tohop = "Toán, Hóa học, Tiếng Anh";
+                        if(tohop == "D08")
+                            mon_tohop = "Toán, Sinh học, Tiếng Anh";
+                        if(tohop == "D14")
+                            mon_tohop = "Ngữ văn, Lịch sử, Tiếng Anh";
+                        if(tohop == "D15")
+                            mon_tohop = "Ngữ văn, Địa lý, Tiếng Anh";
+                        if(tohop == "H00")
+                            mon_tohop = "Văn, Vẽ tĩnh vật chì, Vẽ trang trí màu";
+                        if(tohop == "H07")
+                            mon_tohop = "Toán, Vẽ tĩnh vật chì, Vẽ trang trí màu";
+                        if(tohop == "V02")
+                            mon_tohop = "Toán, Tiếng Anh, Vẽ tĩnh vật chì";
+                        if(tohop == "V01")
+                            mon_tohop = "Toán, Ngữ văn, Vẽ tĩnh vật chì";
+                        if(tohop == "N00")
+                            mon_tohop = "Ngữ văn, Năng khiếu (piano), Kiến thức tổng hợp về âm nhạc";
+                        if(tohop == "N01")
+                            mon_tohop = "Ngữ văn, Năng khiếu (hát), Kiến thức tổng hợp về âm nhạc";
+                        if(tohop == "N05")
+                            mon_tohop = "Ngữ văn, Xem phim và viết bài bình luận, Kiến thức chuyên ngành (vấn đáp)";
+                           
+                            
+                           
+                        $("#dropdownlist_chontohop").append("<option value='"+item+"'>" + item + " ("+mon_tohop+")" + "</option>");
 
                     })
                 });
