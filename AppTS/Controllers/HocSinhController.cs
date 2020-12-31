@@ -27,6 +27,7 @@ namespace AppTS.Controllers
         [HttpPost]
         public ActionResult DangNhap(FormCollection collection)
         {
+            var link = Request.QueryString["link"];
             var tendn = collection["TenDN"];
             string tdn = tendn;
             var matkhau = collection["MatKhau"];
@@ -48,7 +49,23 @@ namespace AppTS.Controllers
                         ViewBag.Mess = "Đăng nhập thành công";
 
                         Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
-                        return RedirectToAction("Index", "Home");
+                        if(link.Equals("dinhhuong"))
+                        {
+                            return RedirectToAction("DinhHuong", "TuVan");
+                        }
+                        else if (link.Equals("xettuyen"))
+                        {
+                            return RedirectToAction("DangKyXetTuyen", "HocSinh");
+                        }
+                        else if (link.Equals("dudoan"))
+                        {
+                            return RedirectToAction("DuDoan", "TuVan");
+                        }
+                        else
+                        {
+                            return RedirectToAction("Main", "Home");
+                        }
+                       
                     }
                     else
                     {
@@ -124,12 +141,17 @@ namespace AppTS.Controllers
         {
 
             setDDlistNganh();
+
             if(Session["User"] != null)
             {
                 HocSinh_TK tk = (HocSinh_TK)Session["User"];
                 return View(tk);
             }
-            return View();
+            else
+            {               
+                 return RedirectToAction("DangNhap", "HocSinh", new { link = "xettuyen" });              
+            }
+          
         }
 
         //dropdown ngành

@@ -3,6 +3,11 @@
     Layout = "~/Views/Shared/_Layout_TuVan.cshtml";
 }
 <link href="~/Content/css/form_dudoan.css" rel="stylesheet" />
+<style>
+    .d-lg-none{
+        display:none
+    }
+</style>
 <div class="dudoan" style="margin-top:100px">
     <h2>ĐỊNH HƯỚNG NGÀNH NGHỀ</h2>
     <div class="form-advisory">
@@ -86,48 +91,47 @@
         $("#send_dudoan").on('click', function (event) {
 
             var toan = $('#txtToan').val();
-            var ntoan = parseInt(toan);
+            var ntoan = parseFloat(toan);
             $(".result-toan").text(toan);
             var ly = $('#txtLy').val();
-            var nly = parseInt(toan);
-            $(".result-ly").text(toan);
+            var nly = parseFloat(ly);
+            $(".result-ly").text(ly);
             var hoa = $('#txtHoa').val();
-            var nhoa = parseInt(toan);
-            $(".result-hoa").text(toan);
+            var nhoa = parseFloat(hoa);
+            $(".result-hoa").text(hoa);
             var sinh = $('#txtSinh').val();
-            var nsinh = parseInt(toan);
-            $(".result-sinh").text(toan);
+            var nsinh = parseFloat(sinh);
+            $(".result-sinh").text(sinh);
             var van = $('#txtVan').val();
-            var nvan = parseInt(toan);
-            $(".result-van").text(toan);
+            var nvan = parseFloat(van);
+            $(".result-van").text(van);
             var su = $('#txtSu').val();
-            var nsu = parseInt(toan);
-            $(".result-su").text(toan);
+            var nsu = parseFloat(su);
+            $(".result-su").text(su);
             var dia = $('#txtDia').val();
-            var ndia = parseInt(toan);
-            $(".result-dia").text(toan);
+            var ndia = parseFloat(dia);
+            $(".result-dia").text(dia);
             var anh = $('#txtAnh').val();
-            var nanh = parseInt(toan);
-            $(".result-anh").text(toan);
+            var nanh = parseFloat(anh);
+            $(".result-anh").text(anh);
 
             if (toan.length == 0)
-                alert('Vui lòng nhập điểm môn Toán');
+                ntoan = 0;
             else if (ly.length == 0)
-                alert('Vui lòng nhập điểm môn Vật lý');
+                nly = 0;
             else if (hoa.length == 0)
-                alert('Vui lòng nhập điểm môn Hóa học');
+                nhoa = 0;
             else if (van.length == 0)
-                alert('Vui lòng nhập điểm môn Ngữ văn');
+                nvan = 0;
             else if (su.length == 0)
-                alert('Vui lòng nhập điểm môn Lịch sử');
+                nsu = 0;
             else if (dia.length == 0)
-                alert('Vui lòng nhập điểm môn Địa lý');
+                ndia = 0;
             else if (sinh.length == 0)
-                alert('Vui lòng nhập điểm môn Sinh học');
+                nsinh = 0;
             else if (anh.length == 0)
-                alert('Vui lòng nhập điểm môn Anh văn');
-
-            else
+                nanh = 0;
+          
                 if (toan < 0 || toan > 10)
                     alert('Điểm toán khoảng từ 0 đến 10');
                 else if (ly < 0 || ly > 10)
@@ -144,12 +148,11 @@
                     alert('Điểm sinh khoảng từ 0 đến 10');
                 else if (anh < 0 || anh > 10)
                     alert('Điểm anh khoảng từ 0 đến 10');
-
                 else {
                     $('.result-form').css('display', 'block');
                     $.ajax({
                         url: "getNganh_TheoDiem",
-                        data: { toan: toan, ly: ly, hoa: hoa, van: van, su: su, dia: dia, sinh: sinh, anh: anh },
+                        data: { toan: ntoan, ly: nly, hoa: nhoa, van: nvan, su: nsu, dia: ndia, sinh: nsinh, anh: nanh },
                         datatype: "json",
                         type: "POST",
                         success: function (response) {

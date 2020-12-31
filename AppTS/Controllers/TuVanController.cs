@@ -9,6 +9,10 @@ namespace AppTS.Controllers
         // GET: /TuVan/
         public ActionResult DuDoan()
         {
+            if (Session["User"] == null)
+            {
+                return RedirectToAction("DangNhap", "HocSinh", new { link = "dudoan" });
+            }
             return View();
         }
         public ActionResult TuVanChonNganh()
@@ -27,7 +31,7 @@ namespace AppTS.Controllers
         {
             if (Session["User"] == null)
             {
-                return RedirectToAction("DangNhap", "HocSinh");
+                return RedirectToAction("DangNhap", "HocSinh", new {link="dinhhuong" });
             }
             return View();
         }
