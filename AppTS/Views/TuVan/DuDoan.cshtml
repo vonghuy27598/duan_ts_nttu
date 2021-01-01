@@ -156,11 +156,11 @@
                         type: "POST",
                         success: function (response) {
                             $('.result-tb').empty();
-                            if (response.status != null && response.list_id != null)
+                            if (response.status != null)
                             {
                                 $.each(response.status, function () {
                                     
-                                    $('.result-tb').append("<li>" + this + "</li>");
+                                    $('.result-tb').append("<li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id="+this.ID_CHUYENNGANH+"\'\">" + this.TENCHUYENNGANH + "</li>");
                                 })
                             } else {
                                 $('.result-tb').append("<li>Không có ngành phù hợp</li>");

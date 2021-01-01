@@ -121,8 +121,9 @@ namespace AppTS.Controllers
                 hs.DIACHI = hs_tk.DIACHI;
                 db.Table_HocSinhs.InsertOnSubmit(hs);
                 db.SubmitChanges();
-
-                return RedirectToAction("DangNhap", new {link = link });
+                ViewBag.Message = "Bạn đã đăng ký thành công.";
+                return RedirectToAction("DangKy", new { link = link });
+                //return View("");
             }
 
             return this.DangKy();

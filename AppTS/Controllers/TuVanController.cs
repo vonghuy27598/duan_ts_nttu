@@ -63,19 +63,20 @@ namespace AppTS.Controllers
             if(list_nganh !=null )
             {
                 int count = list_nganh.Length;
-                List<ChuyenNganh> list_linkidnganh = new List<ChuyenNganh>();
+                List<object> list_linkidnganh = new List<object>();
                 //list_linkidnganh = Nganh.getID_CHUYENNGANH_BYTENCHUYENNGANH(list_nganh);              
                 foreach (var item in list_nganh)
                 {
-                    var model = db.Table_ChuyenNganhs.Where(m=>m.TENCHUYENNGANH == item).Select(m=>m.ID_CHUYENNGANH);
-                    list_linkidnganh.Add(new ChuyenNganh{ID_CHUYENNGANH = int.Parse(model.ToString())});                    
+                    var model = db.Table_ChuyenNganhs.Where(m => m.TENCHUYENNGANH.ToLower() == item.ToLower()).Select(m => m.ID_CHUYENNGANH);
+
+                    list_linkidnganh.Add(new { ID_CHUYENNGANH = model, TENCHUYENNGANH = item });            
                 }                 
-                var result = list_nganh;
+                var result = list_linkidnganh;
                
                 return Json(new
                 {
                     status = result,
-                    list_id = list_linkidnganh
+                   
                 }, JsonRequestBehavior.AllowGet);
             }
             else
