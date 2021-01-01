@@ -135,7 +135,39 @@ namespace AppTS.Controllers
           
             return View();
         }
+        public ActionResult TienIchHocTap()
+        {
+            return View();
+        }
+        public ActionResult ChiTietTienIch()
+        {
+            var nganh = Request.QueryString["id_tienich"];
+            if (nganh.Equals("1"))
+            {
+                Session["ct_tienich"] = "1";
+            }
+            else if (nganh.Equals("2"))
+            {
+                Session["ct_tienich"] = "2";
 
+            }
+            else if (nganh.Equals("3"))
+            {
+                Session["ct_tienich"] = "3";
+
+            }
+            else if (nganh.Equals("4"))
+            {
+                Session["ct_tienich"] = "4";
+
+            }
+            else if (nganh.Equals("5"))
+            {
+                Session["ct_tienich"] = "5";
+
+            }
+            return View();
+        }
         public PartialViewResult part_Thacsi()
         {
             return PartialView();
@@ -156,7 +188,26 @@ namespace AppTS.Controllers
         {
             return PartialView();
         }
-
+        public PartialViewResult part_Anh()
+        {
+            return PartialView();
+        }
+        public PartialViewResult part_Sinh()
+        {
+            return PartialView();
+        }
+        public PartialViewResult part_Ly()
+        {
+            return PartialView();
+        }
+        public PartialViewResult part_Hoa()
+        {
+            return PartialView();
+        }
+        public PartialViewResult part_Toan()
+        {
+            return PartialView();
+        }
         public ActionResult VongQuanhNTTU()
         {
             return View();
