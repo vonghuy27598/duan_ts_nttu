@@ -9,11 +9,13 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title></title>
+    <link href="~/Content/css/style.css" rel="stylesheet" />
     <style>
         .content_Nganh {
             text-align: justify;
             padding: 10px;
             font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300))) !important;
+            margin-top: 65px;
         }
 
             .content_Nganh h5 {
@@ -36,9 +38,23 @@
             content: " * ";
             margin-right:10px
         }
+        #header {
+            height: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
     </style>
 </head>
 <body>
+    <section id="header">
+        <div class="header-logo" style="padding-left:10px">
+            <a href="@Url.Action("CacNganhDaoTao", "Home")"><img src="~/Content/img/arrow_left.png" alt="" class="go_back" style="width:30px"></a>
+        </div>
+    </section>
     <div class="content_Nganh">
         @foreach (var item in Model)
         {   <img src="@item.HINHANH_NGANH" width="100%" height="auto" />

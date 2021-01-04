@@ -122,8 +122,8 @@ namespace AppTS.Controllers
                 db.Table_HocSinhs.InsertOnSubmit(hs);
                 db.SubmitChanges();
                 ViewBag.Message = "Bạn đã đăng ký thành công.";
-                return RedirectToAction("DangKy", new { link = link });
-                //return View("");
+
+                return View("");
             }
 
             return this.DangKy();

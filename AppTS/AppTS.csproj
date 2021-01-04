@@ -275,6 +275,10 @@
     <Content Include="Content\Admin\Scripts\ScriptNganh.js" />
     <Content Include="Content\auto\jquery-ui.js" />
     <Content Include="Content\auto\jquery-ui.min.css" />
+    <Content Include="Content\css\main\images\icon_dinhhuong_nganh.png" />
+    <Content Include="Content\css\main\images\icon_tienich.png" />
+    <Content Include="Content\css\main\images\icon_tracnghiem_nganh.png" />
+    <Content Include="Content\css\main\images\icon_tuvan.png" />
     <Content Include="Content\img\4sao.jpg" />
     <Content Include="Content\img\anh.jpg" />
     <Content Include="Content\img\anh1.jpg" />

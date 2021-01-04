@@ -89,46 +89,46 @@
         // Add smooth scrolling to all links
         $("#send_dudoan").on('click', function (event) {
 
-            var toan = $('#txtToan').val();
+            var toan = ($('#txtToan').val()).trim();
             var ntoan = parseFloat(toan);
-            $(".result-toan").text(toan);
-            var ly = $('#txtLy').val();
+            
+            var ly = ($('#txtLy').val()).trim();
             var nly = parseFloat(ly);
-            $(".result-ly").text(ly);
-            var hoa = $('#txtHoa').val();
+           
+            var hoa = ($('#txtHoa').val()).trim();
             var nhoa = parseFloat(hoa);
-            $(".result-hoa").text(hoa);
-            var sinh = $('#txtSinh').val();
+          
+            var sinh = ($('#txtSinh').val()).trim();
             var nsinh = parseFloat(sinh);
-            $(".result-sinh").text(sinh);
-            var van = $('#txtVan').val();
+            
+            var van = ($('#txtVan').val()).trim();
             var nvan = parseFloat(van);
-            $(".result-van").text(van);
-            var su = $('#txtSu').val();
+           
+            var su = ($('#txtSu').val()).trim();
             var nsu = parseFloat(su);
-            $(".result-su").text(su);
-            var dia = $('#txtDia').val();
+       
+            var dia = ($('#txtDia').val()).trim();
             var ndia = parseFloat(dia);
-            $(".result-dia").text(dia);
-            var anh = $('#txtAnh').val();
+          
+            var anh = ($('#txtAnh').val()).trim();
             var nanh = parseFloat(anh);
-            $(".result-anh").text(anh);
+        
 
             if (toan.length == 0)
                 ntoan = 0;
-            else if (ly.length == 0)
+            if (ly.length == 0)
                 nly = 0;
-            else if (hoa.length == 0)
+            if (hoa.length == 0)
                 nhoa = 0;
-            else if (van.length == 0)
+            if (van.length == 0)
                 nvan = 0;
-            else if (su.length == 0)
+            if (su.length == 0)
                 nsu = 0;
-            else if (dia.length == 0)
+            if (dia.length == 0)
                 ndia = 0;
-            else if (sinh.length == 0)
+            if (sinh.length == 0)
                 nsinh = 0;
-            else if (anh.length == 0)
+            if (anh.length == 0)
                 nanh = 0;
           
                 if (toan < 0 || toan > 10)

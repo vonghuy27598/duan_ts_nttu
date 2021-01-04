@@ -78,39 +78,64 @@ namespace AppTS.XuLy
         public List<int> check_Diem()
         {
             List<int> list_ = new List<int>();
-            if (toan + vatly + hoahoc >= 18)
+            double[] list_diemTB = new double[13];
+            list_diemTB[0] = (toan + vatly + hoahoc) / 3.0;
+            list_diemTB[1] = (toan + vatly + anhvan) / 3.0;
+            list_diemTB[2] = (toan + vatly + sinhhoc) / 3.0;
+            list_diemTB[3] = (toan + hoahoc + sinhhoc) / 3.0;
+            list_diemTB[4] = (nguvan + lichsu + dialy) / 3.0;
+            list_diemTB[5] = (toan + nguvan + anhvan) / 3.0;
+            list_diemTB[6] = (toan + hoahoc + anhvan) / 3.0;
+            list_diemTB[7] = (toan + sinhhoc + anhvan) / 3.0;
+            list_diemTB[8] = (nguvan + lichsu + anhvan) / 3.0;
+            list_diemTB[9] = (nguvan + dialy + anhvan) / 3.0;
+            list_diemTB[10] = nguvan;
+            list_diemTB[11] = (toan + nguvan) / 2.0;
+            list_diemTB[12] = (toan + vatly) / 2.0;
+            double max_diemTB = list_diemTB[0];
+            int postion_max = 0;
+            for (int i = 1; i <= 12; i++)
+            {
+                if (max_diemTB < list_diemTB[i])
+                {
+                    max_diemTB = list_diemTB[i];
+                    postion_max = i;
+                }
+            }
+
+            if (postion_max == 0)
                 add_Nganh_ID(list_, A00);
-            if (toan + vatly + anhvan >= 18)
+            if (postion_max == 1)
                 add_Nganh_ID(list_, A01);
-            if (toan + vatly + sinhhoc >= 18)
+            if (postion_max == 2)
                 add_Nganh_ID(list_, A02);
-            if (toan + hoahoc + sinhhoc >= 18)
+            if (postion_max == 3)
                 add_Nganh_ID(list_, B00);
-            if (nguvan + lichsu + dialy >= 18)
+            if (postion_max == 4)
                 add_Nganh_ID(list_, C00);
-            if (toan + nguvan + anhvan >= 18)
+            if (postion_max == 5)
                 add_Nganh_ID(list_, D01);
-            if (toan + hoahoc + anhvan >= 18)
+            if (postion_max == 6)
                 add_Nganh_ID(list_, D07);
-            if (toan + sinhhoc + anhvan >= 18)
+            if (postion_max == 7)
                 add_Nganh_ID(list_, D08);
-            if (nguvan + lichsu + anhvan >= 18)
+            if (postion_max == 8)
                 add_Nganh_ID(list_, D14);
-            if (nguvan + dialy + anhvan >= 18)
+            if (postion_max == 9)
                 add_Nganh_ID(list_, D15);
-            if (nguvan >= 6)
+            if (postion_max == 10)
             {
                 add_Nganh_ID(list_, H00);
                 add_Nganh_ID(list_, N00);
                 add_Nganh_ID(list_, N01);
                 add_Nganh_ID(list_, N05);
             }
-            if (toan + nguvan >= 12)
+            if (postion_max == 11)
             {
                 add_Nganh_ID(list_, H01);
                 add_Nganh_ID(list_, V01);
             }
-            if (toan + vatly >= 12)
+            if (postion_max == 12)
                 add_Nganh_ID(list_, V00);
             return list_;
         }

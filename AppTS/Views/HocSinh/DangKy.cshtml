@@ -127,30 +127,24 @@
 {
     <script type="text/javascript">
         window.onload = function () {
-            var link = getParameterByName('link');
+            const urlParams = new URLSearchParams(window.location.search);
+            const link = urlParams.get('link');
             Swal.fire({
-                text: @Html.Raw(ViewBag.Message),
+                text:"Bạn đã đăng ký thành công",
                 width: 600,
                 padding: '3em',
-                confirmButtonText:'',
+                confirmButtonText:'OK',
             }).then( (result) =>{
                 if(result.isConfirmed)
                     {
                         window.location="/HocSinh/DangNhap?link="+link;
                     }
-        })// end_Then_child
-
-        })//end_Then_chung
-
-
-
-
-
-
-        alert("");
+                 })// end_Then_child   
         };
     </script>
 }
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @*<script>
             var myInput = document.getElementById("password");
             var letter = document.getElementById("letter");

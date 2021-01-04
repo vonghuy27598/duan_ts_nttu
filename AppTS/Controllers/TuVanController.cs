@@ -53,7 +53,7 @@ namespace AppTS.Controllers
 
         //getNganh_TheoDiem
         [HttpPost]
-        public JsonResult getNganh_TheoDiem(double toan,double ly,double hoa,double van,double su, double dia, double sinh, double anh)
+        public JsonResult getNganh_TheoDiem(double toan, double ly, double hoa, double van, double su, double dia, double sinh, double anh)
         {
             DHNN getList = new DHNN();
             getList.set_Diem(toan,ly,hoa,van,su,dia,sinh,anh);
