@@ -29,7 +29,7 @@ namespace AppTS.Controllers
         {
 
             var link = "";
-            if(Request.QueryString["link"] != null)
+            if (Request.QueryString["link"] != null)
             {
                 link = Request.QueryString["link"];
             }
@@ -54,7 +54,7 @@ namespace AppTS.Controllers
                         ViewBag.Mess = "Đăng nhập thành công";
 
                         Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
-                        if(link.Equals("dinhhuong"))
+                        if (link.Equals("dinhhuong"))
                         {
                             return RedirectToAction("DinhHuong", "TuVan");
                         }
@@ -66,17 +66,63 @@ namespace AppTS.Controllers
                         {
                             return RedirectToAction("DuDoan", "TuVan");
                         }
-                        else if(link.Equals(""))
+                        else if (link.Equals(""))
                         {
                             return RedirectToAction("Main", "Home");
                         }
-                       
+
                     }
                     else
                     {
                         ViewBag.ThongBao = "Tên đăng nhập hoặc mật khẩu không đúng";
                     }
 
+                }
+                else
+                {
+                    ViewBag.ThongBao = "Tên đăng nhập hoặc mật khẩu không đúng";
+                }
+            }
+            return View();
+        }
+        public ActionResult DangNhapSDT(FormCollection collection)
+        {
+
+            var link = "";
+            if (Request.QueryString["link"] != null)
+            {
+                link = Request.QueryString["link"];
+            }
+            var sdt = collection["SDT"];
+            string tdn = sdt;
+            if (String.IsNullOrEmpty(sdt))
+            {
+                ViewBag.Mess = string.Format("Tên đăng nhập không được rỗng");
+            }
+            else
+            {
+                AppTS.Models.Table_HocSinh tk = db.Table_HocSinhs.SingleOrDefault(m => m.SDT == sdt);
+                if (tk != null)
+                {
+                    ViewBag.Mess = "Đăng nhập thành công";
+
+                    Session["User"] = (HocSinh.GetInfoHS_bySDT(tk.SDT)).SingleOrDefault();
+                    if (link.Equals("dinhhuong"))
+                    {
+                        return RedirectToAction("DinhHuong", "TuVan");
+                    }
+                    else if (link.Equals("xettuyen"))
+                    {
+                        return RedirectToAction("DangKyXetTuyen", "HocSinh");
+                    }
+                    else if (link.Equals("dudoan"))
+                    {
+                        return RedirectToAction("DuDoan", "TuVan");
+                    }
+                    else if (link.Equals(""))
+                    {
+                        return RedirectToAction("Main", "Home");
+                    }
                 }
                 else
                 {
@@ -97,33 +143,41 @@ namespace AppTS.Controllers
             {
                 link = Request.QueryString["link"];
             }
+            bool tontaisdt = db.Table_HocSinhs.Any(m => hs_tk.SDT == m.SDT);
             bool tontaitk = db.Table_TaiKhoans.Any(m => hs_tk.USERNAME == m.USERNAME);
-            if (tontaitk)
+            if (tontaisdt)
             {
-                ViewData["LoiUS"] = "Tài khoản đã được sử dụng";
+                ViewData["LoiSDT"] = "Số điện thoại đã được sử dụng";
             }
             else
             {
-                Table_TaiKhoan tk = new Table_TaiKhoan();
-                tk.USERNAME = hs_tk.USERNAME;
-                tk.PASSWORD = Str_Encoder(hs_tk.PASSWORD);
-                tk.ADMIN = false;
-                db.Table_TaiKhoans.InsertOnSubmit(tk);
-                db.SubmitChanges();
-                Table_HocSinh hs = new Table_HocSinh();
-                hs.ID_TK = tk.ID_TK;
-                hs.HOTENHS = hs_tk.HOTENHS;
-                hs.TRUONGCAP3 = hs_tk.TRUONGCAP3;
-                hs.GIOITINH = hs_tk.GIOITINH;
-                hs.EMAIL = hs_tk.EMAIL;
-                hs.NGAYSINH = hs_tk.NGAYSINH;
-                hs.SDT = hs_tk.SDT;
-                hs.DIACHI = hs_tk.DIACHI;
-                db.Table_HocSinhs.InsertOnSubmit(hs);
-                db.SubmitChanges();
-                ViewBag.Message = "Bạn đã đăng ký thành công.";
+                if (tontaitk)
+                {
+                    ViewData["LoiUS"] = "Tài khoản đã được sử dụng";
+                }
+                else
+                {
+                    Table_TaiKhoan tk = new Table_TaiKhoan();
+                    tk.USERNAME = hs_tk.USERNAME;
+                    tk.PASSWORD = Str_Encoder(hs_tk.PASSWORD);
+                    tk.ADMIN = false;
+                    db.Table_TaiKhoans.InsertOnSubmit(tk);
+                    db.SubmitChanges();
+                    Table_HocSinh hs = new Table_HocSinh();
+                    hs.ID_TK = tk.ID_TK;
+                    hs.HOTENHS = hs_tk.HOTENHS;
+                    hs.TRUONGCAP3 = hs_tk.TRUONGCAP3;
+                    hs.GIOITINH = hs_tk.GIOITINH;
+                    hs.EMAIL = hs_tk.EMAIL;
+                    hs.NGAYSINH = hs_tk.NGAYSINH;
+                    hs.SDT = hs_tk.SDT;
+                    hs.DIACHI = hs_tk.DIACHI;
+                    db.Table_HocSinhs.InsertOnSubmit(hs);
+                    db.SubmitChanges();
+                    ViewBag.Message = "Bạn đã đăng ký thành công.";
 
-                return View("");
+                    return View("");
+                }
             }
 
             return this.DangKy();
@@ -153,16 +207,16 @@ namespace AppTS.Controllers
 
             setDDlistNganh();
 
-            if(Session["User"] != null)
+            if (Session["User"] != null)
             {
                 HocSinh_TK tk = (HocSinh_TK)Session["User"];
                 return View(tk);
             }
             else
-            {               
-                 return RedirectToAction("DangNhap", "HocSinh", new { link = "xettuyen" });              
+            {
+                return RedirectToAction("DangNhapSDT", "HocSinh", new { link = "xettuyen" });
             }
-          
+
         }
 
         //dropdown ngành
@@ -203,10 +257,10 @@ namespace AppTS.Controllers
                 status = result
             }, JsonRequestBehavior.AllowGet);
         }
-       
+
         //submit xét tuyển
         [HttpPost]
-        public JsonResult submit_XetTuyen(float tongdiem,string tohop,int nganh,float mon1,float mon2, float mon3,string hoten,string diachi, string truong, string sdt, string email)
+        public JsonResult submit_XetTuyen(float tongdiem, string tohop, int nganh, float mon1, float mon2, float mon3, string hoten, string diachi, string truong, string sdt, string email)
         {
             Table_TrungTuyen trungtuyen = new Table_TrungTuyen();
             trungtuyen.HOTEN = hoten;
@@ -219,8 +273,8 @@ namespace AppTS.Controllers
             trungtuyen.MON2 = mon2;
             trungtuyen.MON3 = mon3;
             trungtuyen.ID_CHUYENNGANH = nganh;
-            bool trung = true;         
-            if(tongdiem<18)
+            bool trung = true;
+            if (tongdiem < 18)
             {
                 trung = false;
             }
@@ -229,12 +283,12 @@ namespace AppTS.Controllers
             db.SubmitChanges();
             return Json(new
             {
-                
+
             }, JsonRequestBehavior.AllowGet);
         }
         public ActionResult test()
         {
-           
+
             return View();
         }
         public JsonResult ListNameTruong(string a)

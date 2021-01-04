@@ -24,7 +24,10 @@
         document.getElementById('tn').style.color = 'red';
         document.getElementById('tn').innerHTML = 'Tài khoản đã được sử dụng';
     }
-
+    var sdt = function () {
+        document.getElementById('sdt').style.color = 'red';
+        document.getElementById('sdt').innerHTML = 'Số điện thoại đã được sử dụng';
+    }
     var input = document.getElementById('thongbao');
     input.oninvalid = function (event) {
         event.target.setCustomValidity('Vui lòng nhập thông tin');
@@ -72,9 +75,10 @@
 
                 <div class="form-group primary-form-group">
                     <label for="SDT">Số điện thoại</label>
-                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}", placeholder = "Nhập số điện thoại" })
+                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried",@id="mobile", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}", placeholder = "Nhập số điện thoại" })
                     <div class="line"></div>
                 </div>
+                <div style="color:red">@Html.ViewData["LoiSDT"]</div><div id='sdt'><br /></div>
                 <div class="form-group primary-form-group">
 
                     <label for="DIACHI" style="width:100%">Địa chỉ liên hệ</label>
@@ -117,7 +121,7 @@
 
 
                 <div class="submit-button">
-                    <input type="submit" value="Đăng ký" id="signinCreate" class="btn main-btn" style="width:100%" />
+                    <input type="submit" value="Đăng ký" id="signinCreate" class="btn main-btn checkmobile" style="width:100%" />
                 </div>
             </div>
         }
@@ -130,94 +134,106 @@
             const urlParams = new URLSearchParams(window.location.search);
             const link = urlParams.get('link');
             Swal.fire({
-                text:"Bạn đã đăng ký thành công",
+                text: "Bạn đã đăng ký thành công",
                 width: 600,
                 padding: '3em',
-                confirmButtonText:'OK',
-            }).then( (result) =>{
-                if(result.isConfirmed)
-                    {
-                        window.location="/HocSinh/DangNhap?link="+link;
-                    }
-                 })// end_Then_child   
+                confirmButtonText: 'OK',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location = "/HocSinh/DangNhap?link=" + link;
+                }
+            })// end_Then_child
         };
     </script>
 }
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    @*<script>
-            var myInput = document.getElementById("password");
-            var letter = document.getElementById("letter");
-            var capital = document.getElementById("capital");
-            var number = document.getElementById("number");
-            var length = document.getElementById("length");
-            var bool_letter = Boolean(false);
-            var bool_capital = Boolean(false);
-            var bool_number = Boolean(false);
-            var bool_length = Boolean(false);
-            // When the user clicks on the password field, show the message box
-            myInput.onfocus = function () {
-                document.getElementById("message").style.display = "block";
+@*<script>
+        var myInput = document.getElementById("password");
+        var letter = document.getElementById("letter");
+        var capital = document.getElementById("capital");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+        var bool_letter = Boolean(false);
+        var bool_capital = Boolean(false);
+        var bool_number = Boolean(false);
+        var bool_length = Boolean(false);
+        // When the user clicks on the password field, show the message box
+        myInput.onfocus = function () {
+            document.getElementById("message").style.display = "block";
+        }
+
+        // When the user clicks outside of the password field, hide the message box
+        myInput.onblur = function () {
+            document.getElementById("message").style.display = "none";
+        }
+
+        // When the user starts to type something inside the password field
+        myInput.onkeyup = function () {
+            // Validate lowercase letters
+            var lowerCaseLetters = /[a-z]/g;
+            if (myInput.value.match(lowerCaseLetters)) {
+                letter.classList.remove("invalid");
+                letter.classList.add("valid");
+                document.getElementById('password').setCustomValidity("");
+                bool_letter = true;
+            } else {
+                letter.classList.remove("valid");
+                letter.classList.add("invalid");
+                bool_letter = false;
             }
 
-            // When the user clicks outside of the password field, hide the message box
-            myInput.onblur = function () {
-                document.getElementById("message").style.display = "none";
+            // Validate capital letters
+            var upperCaseLetters = /[A-Z]/g;
+            if (myInput.value.match(upperCaseLetters)) {
+                capital.classList.remove("invalid");
+                capital.classList.add("valid");
+                bool_capital = true;
+            } else {
+                capital.classList.remove("valid");
+                capital.classList.add("invalid");
+                bool_capital = false;
             }
 
-            // When the user starts to type something inside the password field
-            myInput.onkeyup = function () {
-                // Validate lowercase letters
-                var lowerCaseLetters = /[a-z]/g;
-                if (myInput.value.match(lowerCaseLetters)) {
-                    letter.classList.remove("invalid");
-                    letter.classList.add("valid");
-                    document.getElementById('password').setCustomValidity("");
-                    bool_letter = true;
-                } else {
-                    letter.classList.remove("valid");
-                    letter.classList.add("invalid");
-                    bool_letter = false;
-                }
+            // Validate numbers
+            var numbers = /[0-9]/g;
+            if (myInput.value.match(numbers)) {
+                number.classList.remove("invalid");
+                number.classList.add("valid");
+                bool_number = true;
+            } else {
+                number.classList.remove("valid");
+                number.classList.add("invalid");
+                bool_number = false;
+            }
 
-                // Validate capital letters
-                var upperCaseLetters = /[A-Z]/g;
-                if (myInput.value.match(upperCaseLetters)) {
-                    capital.classList.remove("invalid");
-                    capital.classList.add("valid");
-                    bool_capital = true;
-                } else {
-                    capital.classList.remove("valid");
-                    capital.classList.add("invalid");
-                    bool_capital = false;
-                }
+            // Validate length
+            if (myInput.value.length >= 8) {
+                length.classList.remove("invalid");
+                length.classList.add("valid");
+                bool_length = true;
+            } else {
+                length.classList.remove("valid");
+                length.classList.add("invalid");
+                bool_length = false;
+            }
 
-                // Validate numbers
-                var numbers = /[0-9]/g;
-                if (myInput.value.match(numbers)) {
-                    number.classList.remove("invalid");
-                    number.classList.add("valid");
-                    bool_number = true;
-                } else {
-                    number.classList.remove("valid");
-                    number.classList.add("invalid");
-                    bool_number = false;
-                }
-
-                // Validate length
-                if (myInput.value.length >= 8) {
-                    length.classList.remove("invalid");
-                    length.classList.add("valid");
-                    bool_length = true;
-                } else {
-                    length.classList.remove("valid");
-                    length.classList.add("invalid");
-                    bool_length = false;
-                }
-
-                if (!bool_letter || !bool_capital || !bool_length || !bool_number) {
-                    document.getElementById('password').setCustomValidity("Vui lòng nhập đúng định dạng yêu cầu");
+            if (!bool_letter || !bool_capital || !bool_length || !bool_number) {
+                document.getElementById('password').setCustomValidity("Vui lòng nhập đúng định dạng yêu cầu");
+            }
+        }
+    </script>*@
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('body').on('click', '.checkmobile', function () {
+            var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+            var mobile = $('#mobile').val();
+            if (mobile !== '') {
+                if (vnf_regex.test(mobile) == false) {
+                    alert('Số điện thoại của bạn không đúng định dạng!');
+                    return false;
                 }
             }
-        </script>*@
-
+        });
+    });
+</script>

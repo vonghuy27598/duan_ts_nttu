@@ -29,6 +29,25 @@ namespace AppTS.XuLy
             return model.ToList();
         }
 
+        public static List<HocSinh_TK> GetInfoHS_bySDT(string SDT)
+        {
+            dbQL_NTTDataContext db = new dbQL_NTTDataContext();
+            var model = from a in db.Table_HocSinhs
+                        where a.SDT == SDT
+                        select new HocSinh_TK()
+                        {
+                            ID_HS = a.ID_HS,
+                            ID_TK = a.ID_TK,
+                            HOTENHS = a.HOTENHS,
+                            DIACHI = a.DIACHI,
+                            TRUONGCAP3 = a.TRUONGCAP3,
+                            SDT = a.SDT,
+                            EMAIL = a.EMAIL,
+                            ID_CHUYENNGANH = a.ID_CHUYENNGANH
+                        };
+            return model.ToList();
+        }
+
         public static List<string> ListName_Truong(string a)
         {
            

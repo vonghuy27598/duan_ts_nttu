@@ -2505,6 +2505,7 @@
     <Content Include="Views\Home\part_Ly.cshtml" />
     <Content Include="Views\Home\part_Hoa.cshtml" />
     <Content Include="Views\Home\part_Toan.cshtml" />
+    <Content Include="Views\HocSinh\DangNhapSDT.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
