@@ -304,8 +304,6 @@ $("#admission").click(function () {
 
                 }
             });
-
-
            
                 Swal.fire({
                     text: 'Bạn đã đăng ký xét tuyển ngành '+$("#dropdownlist_chontennganh option:selected").text()+' với số điểm: '+tongdiem +'', 
@@ -318,11 +316,20 @@ $("#admission").click(function () {
                         width: 600,
                         padding: '3em',                            
                         confirmButtonText: 'Đồng ý',
-                    }).then( (result) =>{
-                        if(result.isConfirmed)
-                        {
-                            location.reload();
-                        }
+                    }).then((result) => {
+                        Swal.fire({
+                            text: 'Bạn có muốn tiếp tục',
+                            width: 600,
+                            padding: '3em',
+                            cancelButtonText: 'Không',
+                            confirmButtonText: 'Đồng ý',
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                location.reload();
+                            }
+                            else {
+                                window.location = "http://localhost:50332/Home/Main";
+                            }
                     })// end_Then_child
 
                 })//end_Then_chung

@@ -1040,7 +1040,6 @@ D:\Work\duan_ts_nttu\AppTS\bin\Microsoft.Owin.Security.OAuth.xml
 D:\Work\duan_ts_nttu\AppTS\bin\Microsoft.Owin.Security.Google.xml
 D:\Work\duan_ts_nttu\AppTS\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Work\duan_ts_nttu\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.csprojAssemblyReference.cache
 D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.csproj.CoreCompileInputs.cache
 D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.csproj.CopyComplete
 D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.dll
