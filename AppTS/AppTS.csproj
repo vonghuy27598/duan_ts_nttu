@@ -223,6 +223,7 @@
     <Compile Include="ViewModels\HocSinh_TK.cs" />
     <Compile Include="ViewModels\KhaoSat.cs" />
     <Compile Include="ViewModels\KhoiNghiepFull.cs" />
+    <Compile Include="ViewModels\LichSuXetTuyen.cs" />
     <Compile Include="ViewModels\MenuView.cs" />
     <Compile Include="ViewModels\NghienCuuFull.cs" />
     <Compile Include="ViewModels\THPT.cs" />
@@ -326,6 +327,7 @@
     <Content Include="Content\img\giangvien.jpg" />
     <Content Include="Content\img\gym.jpg" />
     <Content Include="Content\img\hethongcongnghiep.jpg" />
+    <Content Include="Content\img\history_icon.png" />
     <Content Include="Content\img\hoa1.png" />
     <Content Include="Content\img\hoa2.png" />
     <Content Include="Content\img\hoa3.png" />
@@ -2505,6 +2507,7 @@
     <Content Include="Views\Home\part_Ly.cshtml" />
     <Content Include="Views\Home\part_Hoa.cshtml" />
     <Content Include="Views\Home\part_Toan.cshtml" />
+    <Content Include="Views\HocSinh\DangNhapSDT.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

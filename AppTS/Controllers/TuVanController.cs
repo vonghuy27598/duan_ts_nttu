@@ -18,7 +18,7 @@ namespace AppTS.Controllers
         {
             if (Session["User"] == null)
             {
-                return RedirectToAction("DangNhap", "HocSinh", new { link = "dudoan" });
+                return RedirectToAction("DangNhapSDT", "HocSinh", new { link = "dudoan" });
             }
             return View();
         }
@@ -38,7 +38,7 @@ namespace AppTS.Controllers
         {
             if (Session["User"] == null)
             {
-                return RedirectToAction("DangNhap", "HocSinh", new {link="dinhhuong" });
+                return RedirectToAction("DangNhapSDT", "HocSinh", new {link="dinhhuong" });
             }
             return View();
         }

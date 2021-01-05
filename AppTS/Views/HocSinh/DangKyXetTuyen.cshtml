@@ -13,32 +13,53 @@
         text-transform: uppercase;
         font-weight: bold;
     }
+
     .dn select {
         padding: 5px 0;
         font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
         border-top: none;
         border-left: none;
         border-right: none;
-        max-width:100%;
+        max-width: 100%;
         width: 100%;
-        margin-top:10px;
-
-        
+        margin-top: 10px;
     }
+
     .dn option {
         font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1600 - 300)));
     }
-    
-     .dn option[value=""] {
-        background: #dddddd;
+
+        .dn option[value=""] {
+            background: #dddddd;
+        }
+
+    .d-lg-none {
+        display: none;
     }
-    .d-lg-none{
-        display:none
+
+    #admission:focus {
+        color: #fff !important;
     }
-    #admission:focus{
-        color: #fff!important;
+
+    #intro {
+        padding: 0;
     }
-    
+
+    .tag_lichsu {
+        display: block !important;
+    }
+
+    .table__history th {
+        font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+        text-align: center;
+        padding: 10px;
+    }
+
+    .table__history td {
+        font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1600 - 300)));
+        text-align: center;
+        padding: 10px;
+    }
 </style>
 <link href="~/Content/css/dangnhap.css" rel="stylesheet" />
 <link href="~/Content/auto/jquery-ui.min.css" rel="stylesheet" />
@@ -53,42 +74,42 @@
             @Html.ValidationSummary(true)
             <div class="form-content">
                 <h5>Thông tin học sinh</h5>
-                @if(Session["User"] != null)
-                {                   
-                     <div class="form-group primary-form-group">
-                    <label for="HOTENHS">Họ tên</label>
-                    @Html.TextBoxFor(m => m.HOTENHS, Model.HOTENHS, new { title = "Vui lòng nhập thông tin", id = "hoten", required = "required", disabled = "disabled", @class = " input-feild line-animation", @Style = "color: #777777;" })
-                    <div class="line"></div>
-                </div>
-                <div class="form-group primary-form-group">
-                    <label for="DIACHI">Địa chỉ liên hệ</label>
-                    @Html.TextBoxFor(m => m.DIACHI, Model.DIACHI, new { required = "required", id = "diachi", disabled = "disabled", @class = " input-feild line-animation", @Style = "color: #777777;" })
-                    <div class="line"></div>
-                </div>
-                <div class="form-group primary-form-group">
-                    <label for="TRUONGCAP3">Trường(THPT)</label>
-                    @Html.TextBoxFor(m => m.TRUONGCAP3, Model.TRUONGCAP3, new { title = "Vui lòng nhập thông tin", id = "truong", required = "required", disabled = "disabled", @class = " input-feild line-animation", @Style = "color: #777777;" })
-                    <div class="line"></div>
-                </div>
-                <div class="form-group primary-form-group">
-                    <label for="SDT">Số điện thoại</label>
-                    @Html.TextBoxFor(m => m.SDT, Model.SDT, new { required = "required", id = "sdt", disabled = "disabled", @class = " input-feild line-animation allownumericwithdecimal", type = "number", onkeypress = "if(this.value.length==10) return false; ", pattern = "[0-9]{10}", @Style = "color: #777777;" })
-                    <div class="line"></div>
-                </div>
-                <div class="form-group primary-form-group">
-                    <label for="EMAIL">Email</label>
-                    @Html.TextBoxFor(m => m.EMAIL, Model.EMAIL, new { required = "required", id = "email", @class = " input-feild line-animation ", type = "email", @Style = "color: #777777;" })
-                    <div class="line"></div>
-                </div>   
-                   
+                @if (Session["User"] != null)
+                {
+                    <div class="form-group primary-form-group">
+                        <label for="HOTENHS">Họ tên</label>
+                        @Html.TextBoxFor(m => m.HOTENHS, Model.HOTENHS, new { title = "Vui lòng nhập thông tin", id = "hoten", required = "required", disabled = "disabled", @class = " input-feild line-animation", @Style = "color: #777777;" })
+                        <div class="line"></div>
+                    </div>
+                    <div class="form-group primary-form-group">
+                        <label for="DIACHI">Địa chỉ liên hệ</label>
+                        @Html.TextBoxFor(m => m.DIACHI, Model.DIACHI, new { required = "required", id = "diachi", disabled = "disabled", @class = " input-feild line-animation", @Style = "color: #777777;" })
+                        <div class="line"></div>
+                    </div>
+                    <div class="form-group primary-form-group">
+                        <label for="TRUONGCAP3">Trường(THPT)</label>
+                        @Html.TextBoxFor(m => m.TRUONGCAP3, Model.TRUONGCAP3, new { title = "Vui lòng nhập thông tin", id = "truong", required = "required", disabled = "disabled", @class = " input-feild line-animation", @Style = "color: #777777;" })
+                        <div class="line"></div>
+                    </div>
+                    <div class="form-group primary-form-group">
+                        <label for="SDT">Số điện thoại</label>
+                        @Html.TextBoxFor(m => m.SDT, Model.SDT, new { required = "required", id = "sdt", disabled = "disabled", @class = " input-feild line-animation allownumericwithdecimal", type = "number", onkeypress = "if(this.value.length==10) return false; ", pattern = "[0-9]{10}", @Style = "color: #777777;" })
+                        <div class="line"></div>
+                    </div>
+                    <div class="form-group primary-form-group">
+                        <label for="EMAIL">Email</label>
+                        @Html.TextBoxFor(m => m.EMAIL, Model.EMAIL, new { required = "required", id = "email", @class = " input-feild line-animation ", type = "email", @Style = "color: #777777;" })
+                        <div class="line"></div>
+                    </div>
+
                 }
                 else
                 {
-                      <div class="form-group primary-form-group">
-                    <label for="HOTENHS">Họ tên</label>
-                    @Html.TextBoxFor(m => m.HOTENHS, null , new { title = "Vui lòng nhập thông tin", id = "hoten", required = "required", @class = " input-feild line-animation",placeholder="Nhập họ tên" })
-                    <div class="line"></div>
-                     </div>
+                    <div class="form-group primary-form-group">
+                        <label for="HOTENHS">Họ tên</label>
+                        @Html.TextBoxFor(m => m.HOTENHS, null, new { title = "Vui lòng nhập thông tin", id = "hoten", required = "required", @class = " input-feild line-animation", placeholder = "Nhập họ tên" })
+                        <div class="line"></div>
+                    </div>
                     <div class="form-group primary-form-group">
                         <label for="DIACHI">Địa chỉ liên hệ</label>
                         @Html.TextBoxFor(m => m.DIACHI, null, new { required = "required", id = "diachi", @class = " input-feild line-animation", placeholder = "Nhập địa chỉ" })
@@ -105,25 +126,25 @@
                         @Html.TextBoxFor(m => m.SDT, null, new { required = "required", id = "sdt", @class = " input-feild line-animation allownumericwithdecimal", type = "number", onkeypress = "if(this.value.length==10) return false; ", pattern = "[0-9]{10}", placeholder = "Nhập số điện thoại" })
                         <div class="line"></div>
                     </div>
-                     <div class="form-group primary-form-group">
-                    <label for="EMAIL">Email</label>
-                    @Html.TextBoxFor(m => m.EMAIL, null, new { required = "required", id = "email", @class = " input-feild line-animation ", type = "email", placeholder = "Nhập email" })
-                    <div class="line"></div>
-                </div> 
+                    <div class="form-group primary-form-group">
+                        <label for="EMAIL">Email</label>
+                        @Html.TextBoxFor(m => m.EMAIL, null, new { required = "required", id = "email", @class = " input-feild line-animation ", type = "email", placeholder = "Nhập email" })
+                        <div class="line"></div>
+                    </div>
                 }
-               
+
                 <h5 style="margin-top:15px">Đăng ký ngành học</h5>
                 <div class="form-group primary-form-group">
                     <label for="CKN">Chọn khối ngành</label>
                     <!--dropdown-->
-                    @Html.DropDownList("dropdownlist_chon", (IEnumerable<SelectListItem>)ViewBag.Nganh, "Chọn khối ngành" , new { @id = "dropdownlist_chonkhoinganh" })
+                    @Html.DropDownList("dropdownlist_chon", (IEnumerable<SelectListItem>)ViewBag.Nganh, "Chọn khối ngành", new { @id = "dropdownlist_chonkhoinganh" })
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group">
                     <label for="CN">Tên ngành</label>
                     <!--dropdown-->
-                    <select id="dropdownlist_chontennganh" disabled>                       
-                            <option>Chọn tên ngành - Mã ngành</option>                                                
+                    <select id="dropdownlist_chontennganh" disabled>
+                        <option>Chọn tên ngành - Mã ngành</option>
                     </select>
                     <div class="line"></div>
                 </div>
@@ -132,13 +153,13 @@
                     <!--dropdown-->
                     <select id="dropdownlist_chontohop" disabled>
                         <option>Chọn tổ hợp môn</option>
-                    </select>    
+                    </select>
 
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group dv_mon1">
                     <label for="M1">Điểm môn <span id="th_1">1</span></label>
-                    @Html.TextBox("mon1", null, new { required = "required", title = "", @class = " input-feild line-animation allownumericwithdecimal", type = "number", pattern = "[0-9]", onkeypress = "if(this.value.length==2) return false; ",disabled="disabled"})
+                    @Html.TextBox("mon1", null, new { required = "required", title = "", @class = " input-feild line-animation allownumericwithdecimal", type = "number", pattern = "[0-9]", onkeypress = "if(this.value.length==2) return false; ", disabled = "disabled" })
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group dv_mon2">
@@ -159,6 +180,56 @@
         }
     </form>
 
+</div>
+
+<div id="myModal_lichsu" class="modal fade" role="dialog" style="z-index: 100000; overflow-y: initial !important;">
+    <div class="modal-dialog" style="padding: 0; position: absolute; top: 0; left: 0; right: 0;">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" style="font-size:30px">&times;</button>
+            </div>
+            <div class="modal-body" style="overflow-x: hidden; overflow: scroll;height: 85vh;">
+                <section id="about">
+                    <h3 style="text-align:center;text-transform:uppercase;font-weight:bold;margin-bottom:10px;color:#f00">Lịch sử đăng ký</h3>
+                    <table width="100%" border="1" class="table__history">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên ngành</th>
+                                <th>Mã ngành</th>
+                                <th>Ngày đăng ký</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            @{
+                                int i = 1;
+                            }
+                            @foreach (var item in ViewData["getLichSu"] as IEnumerable<AppTS.ViewModels.LichSuXetTuyen>)
+                            {
+                                <tr>
+                                    <td>@i</td>
+                                    <td>@item.TENCHUYENNGANH</td>
+                                    <td>@item.MANGANH</td>
+                                    <td>@item.NGAYDANGKY.ToShortDateString()</td>
+                                </tr>
+                                i++;
+                            }
+
+
+                        </tbody>
+                    </table>
+                </section>
+
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>

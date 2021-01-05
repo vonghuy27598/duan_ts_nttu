@@ -20,7 +20,8 @@
       <Column Name="TRUONG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
       <Column Name="EMAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="TENTOHOP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NGAYDANGKY" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TENTOHOP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="ID_CHUYENNGANH" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MON1" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="MON2" Type="System.Double" DbType="Float" CanBeNull="true" />

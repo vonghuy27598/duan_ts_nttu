@@ -589,6 +589,8 @@ namespace AppTS.Models
 		
 		private string _EMAIL;
 		
+		private System.Nullable<System.DateTime> _NGAYDANGKY;
+		
 		private string _TENTOHOP;
 		
 		private System.Nullable<int> _ID_CHUYENNGANH;
@@ -617,6 +619,8 @@ namespace AppTS.Models
     partial void OnSDTChanged();
     partial void OnEMAILChanging(string value);
     partial void OnEMAILChanged();
+    partial void OnNGAYDANGKYChanging(System.Nullable<System.DateTime> value);
+    partial void OnNGAYDANGKYChanged();
     partial void OnTENTOHOPChanging(string value);
     partial void OnTENTOHOPChanged();
     partial void OnID_CHUYENNGANHChanging(System.Nullable<int> value);
@@ -756,7 +760,27 @@ namespace AppTS.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTOHOP", DbType="VarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYDANGKY", DbType="Date")]
+		public System.Nullable<System.DateTime> NGAYDANGKY
+		{
+			get
+			{
+				return this._NGAYDANGKY;
+			}
+			set
+			{
+				if ((this._NGAYDANGKY != value))
+				{
+					this.OnNGAYDANGKYChanging(value);
+					this.SendPropertyChanging();
+					this._NGAYDANGKY = value;
+					this.SendPropertyChanged("NGAYDANGKY");
+					this.OnNGAYDANGKYChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTOHOP", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
 		public string TENTOHOP
 		{
 			get
