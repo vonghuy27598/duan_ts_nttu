@@ -288,6 +288,7 @@ $("#admission").click(function () {
         else {
             var tongdiem = parseFloat(diemmon_1) + parseFloat(diemmon_2) + parseFloat(diemmon_3);
             var tohop = $("#dropdownlist_chontohop option:selected").text();
+          
             var nganh = $("#dropdownlist_chontennganh option:selected").val();
             $.ajax({
                 url: "submit_XetTuyen",
@@ -295,41 +296,41 @@ $("#admission").click(function () {
                 datatype: "json",
                 type: "POST",
                 success: function (response) {
-
-
+                    Swal.fire({
+                        text: 'Bạn đã đăng ký xét tuyển ngành ' + $("#dropdownlist_chontennganh option:selected").text() + ' với số điểm: ' + tongdiem + '',
+                        width: 600,
+                        padding: '3em',
+                        confirmButtonText: 'Tiếp tục',
+                    }).then((result) => {
+                        Swal.fire({
+                            title: 'Trường Đại học Nguyễn Tất Thành gửi kết quả xét tuyển sớm nhất cho bạn.',
+                            text: 'Bạn có muốn tiếp tục đăng ký nguyện vọng khác ?',
+                            width: 600,
+                            padding: '3em',
+                            reverseButtons: true,
+                            confirmButtonText: 'Đồng ý',
+                            cancelButtonText: 'Kết thúc',
+                            showCancelButton: true,
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                location.reload();
                 }
-            });
-
-
-            Swal.fire({
-                text: 'Bạn đã đăng ký xét tuyển ngành ' + $("#dropdownlist_chontennganh option:selected").text() + ' với số điểm: ' + tongdiem + '',
-                width: 600,
-                padding: '3em',
-                confirmButtonText: 'Tiếp tục',
-            }).then((result) => {
-                Swal.fire({
-                    title: 'Trường Đại học Nguyễn Tất Thành gửi kết quả xét tuyển sớm nhất cho bạn.',
-                    text: 'Bạn có muốn tiếp tục đăng ký nguyện vọng khác ?',
-                    width: 600,
-                    padding: '3em',
-                    reverseButtons: true,
-                    confirmButtonText: 'Đồng ý',
-                    cancelButtonText: 'Kết thúc',
-                    showCancelButton: true,
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        location.reload();
-                    }
-                    else {
-                        window.location = "http://tvhn.ntt.edu.vn:7979/Home/Main";
-                    }
-                })// end_Then_child
+            else {
+                        window.location = "/Home/Main";
+        }
+    })// end_Then_child
 
             })//end_Then_chung
 
+}
+});
 
-        }
-    }
+
+      
+
+
+}
+}
 });
 
 
