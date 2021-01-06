@@ -70,13 +70,11 @@ namespace AppTS.Controllers
                         {
                             return RedirectToAction("Main", "Home");
                         }
-
                     }
                     else
                     {
                         ViewBag.ThongBao = "Tên đăng nhập hoặc mật khẩu không đúng";
                     }
-
                 }
                 else
                 {
@@ -106,7 +104,11 @@ namespace AppTS.Controllers
                 if (matkhau.Length == 0)
                 {
                     tk = db.Table_TaiKhoans.SingleOrDefault(m => m.USERNAME == sdt);
+<<<<<<< HEAD
                     if(tk != null)
+=======
+                    if (tk.PASSWORD != null)
+>>>>>>> fe13f3cb84f7a110feec1d7ef7b061e56de41626
                     {
                         if (tk.PASSWORD != null)
                         {
@@ -115,8 +117,8 @@ namespace AppTS.Controllers
                     }
                    
                 }
-               
-              
+
+
                 if (tk != null)
                 {
                     ViewBag.Mess = "Đăng nhập thành công";
@@ -174,7 +176,7 @@ namespace AppTS.Controllers
                 {
                     Table_TaiKhoan tk = new Table_TaiKhoan();
                     tk.USERNAME = hs_tk.SDT;
-                    if (hs_tk.PASSWORD!=null)
+                    if (hs_tk.PASSWORD != null)
                     {
                         tk.PASSWORD = Str_Encoder(hs_tk.PASSWORD);
                     }
@@ -182,7 +184,7 @@ namespace AppTS.Controllers
                     {
                         tk.PASSWORD = null;
                     }
-                    
+
                     tk.ADMIN = false;
                     db.Table_TaiKhoans.InsertOnSubmit(tk);
                     db.SubmitChanges();
