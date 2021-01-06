@@ -2407,6 +2407,7 @@
     <Content Include="Areas\Admin\Views\Nganh\Nganh.cshtml" />
     <Content Include="Areas\Admin\Views\GiangVien\GiangVienKhoa.cshtml" />
     <Content Include="Areas\Admin\Views\GiangVien\GiangVienDoanhNghiep.cshtml" />
+    <Content Include="PrecompiledApp.config" />
     <None Include="Properties\PublishProfiles\AppTS.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\chatbot.js" />

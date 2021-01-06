@@ -52,8 +52,13 @@
 <body>
     <section id="header">
         <div class="header-logo" style="padding-left:10px">
-            <a href="@Url.Action("CacNganhDaoTao", "Home")"><img src="~/Content/img/arrow_left.png" alt="" class="go_back" style="width:30px"></a>
+            <a onclick="goBack()"><img src="~/Content/img/arrow_left.png" alt="" class="go_back" style="width:30px"></a>
         </div>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
     </section>
     <div class="content_Nganh">
         @foreach (var item in Model)
