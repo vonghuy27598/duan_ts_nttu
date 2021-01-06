@@ -148,11 +148,11 @@ DOMstrings.stepsBar.addEventListener('click', e => {
   //check if click target is a step button
   const eventTarget = e.target;
 
-  if (!eventTarget.classList.contains(`${DOMstrings.stepsBtnClass}`)) {
-    return;
-  }
+if (!eventTarget.classList.contains(`${DOMstrings.stepsBtnClass}`)) {
+  return;
+}
 
-
+    
       //jump step
       //get active button step number
       const activeStep = getActiveStep(eventTarget);

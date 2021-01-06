@@ -106,10 +106,14 @@ namespace AppTS.Controllers
                 if (matkhau.Length == 0)
                 {
                     tk = db.Table_TaiKhoans.SingleOrDefault(m => m.USERNAME == sdt);
-                    if(tk.PASSWORD != null)
+                    if(tk != null)
                     {
-                        tk = null;
+                        if (tk.PASSWORD != null)
+                        {
+                            tk = null;
+                        }
                     }
+                   
                 }
                
               

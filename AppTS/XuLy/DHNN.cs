@@ -102,7 +102,8 @@ namespace AppTS.XuLy
                     postion_max = i;
                 }
             }
-
+            if (max_diemTB < 6)
+                return list_;
             if (postion_max == 0)
                 add_Nganh_ID(list_, A00);
             if (postion_max == 1)
