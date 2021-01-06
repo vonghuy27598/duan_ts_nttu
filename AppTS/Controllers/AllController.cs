@@ -9,7 +9,7 @@ using AppTS.XuLy;
 
 namespace AppTS.Controllers
 {
-    public class AllController : Controller
+    public class AllController : BaseController
     {
         //
         // GET: /NghienCuu/

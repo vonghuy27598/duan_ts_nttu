@@ -1,7 +1,7 @@
-//DOM elements
+﻿//DOM elements
 const DOMstrings = {
   stepsBtnClass: 'multisteps-form__progress-btn',
-  stepsBtns: document.querySelectorAll(`.multisteps-form__progress-btn`),
+  stepsBtns: document.querySelectorAll('.multisteps-form__progress-btn'),
   stepsBar: document.querySelector('.multisteps-form__progress'),
   stepsForm: document.querySelector('.multisteps-form__form'),
   stepsFormTextareas: document.querySelectorAll('.multisteps-form__textarea'),
@@ -108,8 +108,41 @@ const setFormHeight = () => {
 
   formHeight(activePanel);
 };
-
+  var jump_step;
 //STEPS BAR CLICK FUNCTION
+
+  $('.multisteps-form__progress-btn').click(function (e) {
+      const eventTarget = e.target;
+      var button = document.querySelectorAll('.multisteps-form__progress-btn');
+      const activeStep = Array.from(button).indexOf(eventTarget);
+        
+      //var i;
+      $.each($(".multisteps-form__panel"), function (index)
+      {
+          if(activeStep>0)
+          {
+              if (index == activeStep-1)
+              {
+                  jump_step = true;
+                  var getTable = $(this).find("tr").find(".question");
+                  $.each(getTable, function () {
+                      var point = parseInt($(this).find("input[type='radio']:checked").val()) + 1;
+                      if(isNaN(point))
+                      {
+                          jump_step = false;
+                      }
+                  
+                  })
+              }
+          }else
+          {
+              jump_step = true;
+          }
+                           
+      })       
+  });
+
+
 DOMstrings.stepsBar.addEventListener('click', e => {
 
   //check if click target is a step button
@@ -118,17 +151,44 @@ DOMstrings.stepsBar.addEventListener('click', e => {
   if (!eventTarget.classList.contains(`${DOMstrings.stepsBtnClass}`)) {
     return;
   }
-    //jump step
-  //get active button step number
-  const activeStep = getActiveStep(eventTarget);
 
-  //set all steps before clicked (and clicked too) to active
-  setActiveStep(activeStep);
 
-  //open active panel
-  setActivePanel(activeStep);
+      //jump step
+      //get active button step number
+      const activeStep = getActiveStep(eventTarget);
+      if(jump_step){
+          //set all steps before clicked (and clicked too) to active
+          setActiveStep(activeStep);
+
+          //open active panel
+          setActivePanel(activeStep);
+          $("html, body").scrollTop(0);
+      }else if(!jump_step || isNaN(jump_step))
+          alert("Vui lòng trả lời đầy đủ các câu hỏi phía trước");
+   
+        
+  
 });
-
+  var next = true;
+$(".js-btn-next").click(function(){
+    var getTable = $(this).parent().parent().children("table").find("tr").find(".question");
+    
+    next = true;
+    $.each(getTable,function()
+    {
+        var point = parseInt($(this).find("input[type='radio']:checked").val()) +1;
+            
+        if (isNaN(point)) {
+            next = false;
+        }
+                
+    })
+   
+    //if(sum == 0)
+    //{
+    //    alert("Vui lòng trả lời đầy đủ các câu hỏi");
+    //}
+})
 //PREV/NEXT BTNS CLICK
 DOMstrings.stepsForm.addEventListener('click', e => {
 
@@ -150,8 +210,18 @@ DOMstrings.stepsForm.addEventListener('click', e => {
     activePanelNum--;
 
   } else {
+      //check trả lời đủ câu hỏi
+    
+     
+        if(!next)
+        {
+            alert("Vui lòng trả lời đầy đủ các câu hỏi");
+        }else{
 
-    activePanelNum++;
+            activePanelNum++;
+            $("html, body").scrollTop(0);
+        }
+    
 
   }
 

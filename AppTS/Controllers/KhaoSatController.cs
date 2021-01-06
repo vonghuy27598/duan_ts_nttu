@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using AppTS.Models;
 namespace AppTS.Controllers
 {
-    public class KhaoSatController : Controller
+    public class KhaoSatController : BaseController
     {
         //
         // GET: /KhaoSat/

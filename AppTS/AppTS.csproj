@@ -198,6 +198,7 @@
     <Compile Include="Areas\Admin\Models\ViewModel\TaiKhoan.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ChatViewController.cs" />
     <Compile Include="Controllers\DangKyCNController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -2508,10 +2509,13 @@
     <Content Include="Views\Home\part_Hoa.cshtml" />
     <Content Include="Views\Home\part_Toan.cshtml" />
     <Content Include="Views\HocSinh\DangNhapSDT.cshtml" />
+    <Content Include="Views\TuVan\BatDauDinhHuong.cshtml" />
+    <Content Include="Views\Home\Error404.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Base\" />
+    <Folder Include="Views\Base\" />
     <Folder Include="Views\Default1\" />
     <Folder Include="Views\Nganh\" />
   </ItemGroup>

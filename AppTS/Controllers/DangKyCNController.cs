@@ -11,7 +11,7 @@ using AppTS.ViewModels;
 
 namespace AppTS.Controllers
 {
-    public class DangKyCNController : Controller
+    public class DangKyCNController : BaseController
     {
         //
         // GET: /DangKyCN/

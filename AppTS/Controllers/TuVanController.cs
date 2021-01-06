@@ -9,7 +9,7 @@ using AppTS.XuLy;
 
 namespace AppTS.Controllers
 {
-    public class TuVanController : Controller
+    public class TuVanController : BaseController
     {
         //
         // GET: /TuVan/
@@ -38,7 +38,15 @@ namespace AppTS.Controllers
         {
             if (Session["User"] == null)
             {
-                return RedirectToAction("DangNhapSDT", "HocSinh", new {link="dinhhuong" });
+                return RedirectToAction("DangNhapSDT", "HocSinh", new { link = "dinhhuong" });
+            }
+            return View();
+        }
+        public ActionResult BatDauDinhHuong()
+        {
+            if (Session["User"] == null)
+            {
+                return RedirectToAction("DangNhapSDT", "HocSinh", new { link = "dinhhuong" });
             }
             return View();
         }

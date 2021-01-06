@@ -9,10 +9,26 @@ using AppTS.XuLy;
 
 namespace AppTS.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         dbQL_NTTDataContext db = new dbQL_NTTDataContext();
         public ActionResult Index()
+        {
+            if (Request.Browser.IsMobileDevice)
+            {
+                string userAgent = Request.UserAgent;
+                if(!userAgent.Contains("BlackBerry") || !userAgent.Contains("iPhone") || !userAgent.Contains("Android"))
+                {
+
+                }
+                else
+                {
+                    Session["Check"] = true;
+                }
+            }
+            return View();
+        }
+        public ActionResult Error404()
         {
             return View();
         }

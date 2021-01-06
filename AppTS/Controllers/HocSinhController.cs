@@ -11,7 +11,7 @@ using AppTS.ViewModels;
 
 namespace AppTS.Controllers
 {
-    public class HocSinhController : Controller
+    public class HocSinhController : BaseController
     {
         //
         // GET: /Login/
@@ -56,7 +56,7 @@ namespace AppTS.Controllers
                         Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
                         if (link.Equals("dinhhuong"))
                         {
-                            return RedirectToAction("DinhHuong", "TuVan");
+                            return RedirectToAction("BatDauDinhHuong", "TuVan");
                         }
                         else if (link.Equals("xettuyen"))
                         {
@@ -94,22 +94,33 @@ namespace AppTS.Controllers
                 link = Request.QueryString["link"];
             }
             var sdt = collection["SDT"];
+            var matkhau = collection["MatKhau"];
             string tdn = sdt;
             if (String.IsNullOrEmpty(sdt))
             {
-                ViewBag.Mess = string.Format("Tên đăng nhập không được rỗng");
+                ViewBag.Mess = string.Format("Số điện thoại không được rỗng");
             }
             else
             {
-                AppTS.Models.Table_HocSinh tk = db.Table_HocSinhs.SingleOrDefault(m => m.SDT == sdt);
+                AppTS.Models.Table_TaiKhoan tk = db.Table_TaiKhoans.SingleOrDefault(m => m.USERNAME == sdt && m.PASSWORD == Str_Encoder(matkhau));
+                if (matkhau.Length == 0)
+                {
+                    tk = db.Table_TaiKhoans.SingleOrDefault(m => m.USERNAME == sdt);
+                    if(tk.PASSWORD != null)
+                    {
+                        tk = null;
+                    }
+                }
+               
+              
                 if (tk != null)
                 {
                     ViewBag.Mess = "Đăng nhập thành công";
 
-                    Session["User"] = (HocSinh.GetInfoHS_bySDT(tk.SDT)).SingleOrDefault();
+                    Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
                     if (link.Equals("dinhhuong"))
                     {
-                        return RedirectToAction("DinhHuong", "TuVan");
+                        return RedirectToAction("BatDauDinhHuong", "TuVan");
                     }
                     else if (link.Equals("xettuyen"))
                     {
@@ -119,14 +130,14 @@ namespace AppTS.Controllers
                     {
                         return RedirectToAction("DuDoan", "TuVan");
                     }
-                    else if (link.Equals(""))
+                    else if (link.Equals("") || link.Equals("null"))
                     {
                         return RedirectToAction("Main", "Home");
                     }
                 }
                 else
                 {
-                    ViewBag.ThongBao = "Tên đăng nhập hoặc mật khẩu không đúng";
+                    ViewBag.ThongBao = "Số điện thoại hoặc mật khẩu không đúng";
                 }
             }
             return View();
@@ -158,8 +169,16 @@ namespace AppTS.Controllers
                 else
                 {
                     Table_TaiKhoan tk = new Table_TaiKhoan();
-                    tk.USERNAME = hs_tk.USERNAME;
-                    tk.PASSWORD = Str_Encoder(hs_tk.PASSWORD);
+                    tk.USERNAME = hs_tk.SDT;
+                    if (hs_tk.PASSWORD!=null)
+                    {
+                        tk.PASSWORD = Str_Encoder(hs_tk.PASSWORD);
+                    }
+                    else
+                    {
+                        tk.PASSWORD = null;
+                    }
+                    
                     tk.ADMIN = false;
                     db.Table_TaiKhoans.InsertOnSubmit(tk);
                     db.SubmitChanges();
@@ -176,7 +195,7 @@ namespace AppTS.Controllers
                     db.SubmitChanges();
                     ViewBag.Message = "Bạn đã đăng ký thành công.";
 
-                    return View("");
+                    return View();
                 }
             }
 

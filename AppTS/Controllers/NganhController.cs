@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace AppTS.Controllers
 {
-    public class NganhController : Controller
+    public class NganhController : BaseController
     {
         //
         // GET: /Nganh/

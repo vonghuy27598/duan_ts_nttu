@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace AppTS.Controllers
 {
-    public class ChatViewController : Controller
+    public class ChatViewController : BaseController
     {
         //
         // GET: /ChatView/

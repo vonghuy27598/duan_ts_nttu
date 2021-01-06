@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "BatDauDinhHuong";
+    Layout = "~/Views/Shared/_Layout_TuVan.cshtml";
+}
+<link href="~/Content/css/style_DinhHuong.css" rel="stylesheet" />
+<style>
+    .area__batdaudinhhuong{
+        text-align:justify
+    }
+    .area__batdaudinhhuong ul{
+        padding-left:20px;
+        font-size:14px;
+        margin-bottom:10px
+    }
+    .button__dinhhuong button {
+        background-color: #007bff;
+        color: #fff;
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight:bold
+    }
+</style>
+<section id="about" style="padding:0">
+    <div class="">
+        <!--PEN HEADER-->
+        <header class="header">
+            <h3 class="header__title">TRẮC NGHIỆM  NGHỀ NGHIỆP </h3>
+        </header>
+        <!--PEN CONTENT     -->
+        <div class="content">
+            <!--content inner-->
+            <div class="area__batdaudinhhuong">
+                <p>Bạn hãy trả lời đầy đủ các đề mục trong 6 trang bên dưới, đánh dấu vào các mức độ 1, 2, 3, 4, 5 tương ứng với mức độ phù hợp đối với bản thân. Theo đó:</p>
+                <ul>
+                    <li><b>Mức độ 1</b>: Rất thấp</li>
+                    <li><b>Mức độ 2</b>: Thấp</li>
+                    <li><b>Mức độ 3</b>: Vừa</li>
+                    <li><b>Mức độ 4</b>: Cao</li>
+                    <li><b>Mức độ 5</b>: Rất cao</li>
+                </ul>
+                <p>Hãy cân nhắc thật kỹ và trả lời trung thực từng câu hỏi bằng cách chọn một câu trả lời duy nhất mô tả đúng nhất về bạn. Hãy trả lời như chính con người thật của bạn chứ đừng bao giờ chọn câu trả lời vì bạn muốn mình phải như vậy.</p>
+                <p>Chính việc trả lời trung thực sẽ đem lại kết quả chính xác, giúp bạn tìm ra đúng thiên hướng sở thích, nghề nghiệp của mình, từ đó chọn được nghề phù hợp nhất.</p>
+                <div class="button__dinhhuong">
+                   
+                    <button onclick="window.location='/TuVan/Dinhhuong'">Bắt đầu trắc nghiệm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
