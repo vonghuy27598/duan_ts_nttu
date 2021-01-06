@@ -87,6 +87,10 @@ namespace AppTS.Controllers
         {
             return View();
         }
-        
+        public ActionResult QuanLyXetTuyen()
+        {
+            var model = ListTrungTuyen.getDanhSach();
+            return View(model);
+        }
     }
 }

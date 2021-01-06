@@ -179,6 +179,7 @@
     <Compile Include="Areas\Admin\Controllers\ThanhVienController.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Areas\Admin\Controllers\XetTuyenController.cs" />
     <Compile Include="Areas\Admin\Models\DAO\GiangVienDAO.cs" />
     <Compile Include="Areas\Admin\Models\DAO\NganhDAO.cs">
       <SubType>Code</SubType>
@@ -2407,6 +2408,7 @@
     <Content Include="Areas\Admin\Views\GiangVien\GiangVienKhoa.cshtml" />
     <Content Include="Areas\Admin\Views\GiangVien\GiangVienDoanhNghiep.cshtml" />
     <Content Include="PrecompiledApp.config" />
+    <Content Include="Areas\Admin\Views\XetTuyen\Index.cshtml" />
     <None Include="Properties\PublishProfiles\AppTS.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\chatbot.js" />
@@ -2511,6 +2513,7 @@
     <Content Include="Views\HocSinh\DangNhapSDT.cshtml" />
     <Content Include="Views\TuVan\BatDauDinhHuong.cshtml" />
     <Content Include="Views\Home\Error404.cshtml" />
+    <Content Include="Views\DangKyCN\QuanLyXetTuyen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
