@@ -8,8 +8,7 @@ using System.Text;
 using System.Security.Cryptography;
 using AppTS.XuLy;
 using AppTS.ViewModels;
-using MongoDB.Driver;
-using MongoDB.Bson;
+
 
 namespace AppTS.Controllers
 {
