@@ -31,7 +31,22 @@
 
                 </div>
                 <div class="forget-password" style="margin-top:20px">
-                    <a href="@Url.Action("DangKy","HocSinh")">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
+                    @{
+                        var link_qs = "";
+                        if (Request.QueryString["link"] != null)
+                        {
+                            link_qs = Request.QueryString["link"];
+                        }
+                        if(link_qs.Equals(""))
+                        {
+                            <a href="@Url.Action("DangKy","HocSinh")">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
+                        }else
+                        {
+                            <a href="@Url.Action("DangKy", "HocSinh", new { link=link_qs })">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
+                        }
+                    }
+                    
+                    
                 </div>             
                 <div class="mess">@ViewBag.ThongBao</div>
             </div>

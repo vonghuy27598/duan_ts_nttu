@@ -24,7 +24,8 @@ namespace AppTS.XuLy
                             TRUONGCAP3 = a.TRUONGCAP3,
                             SDT = a.SDT,
                             EMAIL = a.EMAIL,
-                            ID_CHUYENNGANH = a.ID_CHUYENNGANH
+                            ID_CHUYENNGANH = a.ID_CHUYENNGANH,
+                            ADMIN = b.ADMIN
                         };
             return model.ToList();
         }

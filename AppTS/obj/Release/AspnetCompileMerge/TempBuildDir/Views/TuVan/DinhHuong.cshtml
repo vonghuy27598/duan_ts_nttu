@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "DinhHuong";
     Layout = "~/Views/Shared/_Layout_TuVan.cshtml";
 }
@@ -9,7 +8,7 @@
 <link href="~/Content/css/style_DinhHuong.css" rel="stylesheet" />
 <style>
     .back-to-top {
-        display: none !important
+        display: none !important;
     }
 
     table td {
@@ -20,7 +19,7 @@
 
     table th {
         font-size: calc(17px + (17 - 15) * ((100vw - 300px) / (1600 - 300))) !important;
-        padding: 5px
+        padding: 5px;
     }
 
         table td:first-child, table th:first-child {
@@ -36,19 +35,19 @@
     }
 
     .result_survey {
-        display: none
+        display: none;
     }
 
     .only_one ul li:first-child {
-        margin-bottom: 10px
+        margin-bottom: 10px;
     }
 
     .result-dinhhuong p {
-        font-size: 18px
+        font-size: 18px;
     }
 
     .result-dinhhuong > li > ul > li {
-        margin-left: 10px
+        margin-left: 10px;
     }
 
     input[type="radio"] {
@@ -81,11 +80,12 @@
         justify-content: center;
     }
 </style>
+
 <section id="about" style="padding:0">
     <div class="">
         <!--PEN HEADER-->
         <header class="header">
-            <h1 class="header__title">ĐỊNH HƯỚNG NGHỀ NGHIỆP </h1>
+            <h3 class="header__title">TRẮC NGHIỆM  NGHỀ NGHIỆP </h3>
         </header>
         <!--PEN CONTENT     -->
         <div class="content">
@@ -99,12 +99,12 @@
                         <div class="row">
                             <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
                                 <div class="multisteps-form__progress">
-                                    <button class="multisteps-form__progress-btn js-active" type="button" title="Bảng R">Bảng R</button>
-                                    <button class="multisteps-form__progress-btn" type="button" title="Bảng I">Bảng I</button>
-                                    <button class="multisteps-form__progress-btn" type="button" title="Bảng A">Bảng A</button>
-                                    <button class="multisteps-form__progress-btn" type="button" title="Bảng S">Bảng S</button>
-                                    <button class="multisteps-form__progress-btn" type="button" title="Bảng E">Bảng E</button>
-                                    <button class="multisteps-form__progress-btn" type="button" title="Bảng C">Bảng C</button>
+                                    <button class="multisteps-form__progress-btn js-active" type="button" title="Bảng R">Trang 1</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Bảng I">Trang 2</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Bảng A">Trang 3</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Bảng S">Trang 4</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Bảng E">Trang 5</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Bảng C">Trang 6</button>
                                     <button class="multisteps-form__progress-btn" type="button" title="Kết quả">Kết quả</button>
                                 </div>
                             </div>
@@ -115,7 +115,7 @@
                                 <form class="multisteps-form__form">
                                     <!--single form panel-->
                                     <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
-                                        <h3 class="multisteps-form__title">Bảng R (R: Realistic - Người thực tế)</h3>
+                                        @*<h3 class="multisteps-form__title">Bảng R (R: Realistic - Người thực tế)</h3>*@
                                         <div class="multisteps-form__content">
                                             <table style="text-align:center;width:100%" border="1" cellpadding="10" id="tableA">
                                                 <thead>
@@ -131,7 +131,7 @@
                                                         <td>Tôi có tính tự lập</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs1" id="a0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs1" id="a0" value="0" class="no_check" />
                                                                 <label for="a0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs1" id="a1" value="1">
                                                                 <label for="a1">1</label>
@@ -149,7 +149,7 @@
                                                         <td>Tôi suy nghĩ thực tế</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs2" id="aa0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs2" id="aa0" value="0" class="no_check" />
                                                                 <label for="aa0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs2" id="aa1" value="1">
                                                                 <label for="aa1">1</label>
@@ -167,7 +167,7 @@
                                                         <td>Tôi là người thích nghi với môi trường mới</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs3" id="ab0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs3" id="ab0" value="0" class="no_check" />
                                                                 <label for="ab0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs3" id="ab1" value="1">
                                                                 <label for="ab1">1</label>
@@ -185,7 +185,7 @@
                                                         <td>Tôi có thể vận hành, điều khiển các máy móc thiết bị</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs4" id="ac0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs4" id="ac0" value="0" class="no_check" />
                                                                 <label for="ac0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs4" id="ac1" value="1">
                                                                 <label for="ac1">1</label>
@@ -203,7 +203,7 @@
                                                         <td>Tôi làm các công việc thủ công như gấp giấy, đan, móc</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs5" id="ad0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs5" id="ad0" value="0" class="no_check" />
                                                                 <label for="ad0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs5" id="ad1" value="1">
                                                                 <label for="ad1">1</label>
@@ -221,7 +221,7 @@
                                                         <td>Tôi thích tiếp xúc với thiên nhiên, động vật, cây cỏ</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs6" id="ae0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs6" id="ae0" value="0" class="no_check" />
                                                                 <label for="ae0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs6" id="ae1" value="1">
                                                                 <label for="ae1">1</label>
@@ -239,7 +239,7 @@
                                                         <td>Tôi thích những công việc sử dụng tay chân hơn là trí óc</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs7" id="aq0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs7" id="aq0" value="0" class="no_check" />
                                                                 <label for="aq0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs7" id="aq1" value="1">
                                                                 <label for="aq1">1</label>
@@ -257,7 +257,7 @@
                                                         <td>Tôi thích những công việc thấy ngay kết quả</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs8" id="as0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs8" id="as0" value="0" class="no_check" />
                                                                 <label for="as0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs8" id="as1" value="1">
                                                                 <label for="as1">1</label>
@@ -275,7 +275,7 @@
                                                         <td>Tôi thích làm việc ngoài trời hơn là trong phòng học, văn phòng</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs9" id="aw0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs9" id="aw0" value="0" class="no_check" />
                                                                 <label for="aw0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs9" id="aw1" value="1">
                                                                 <label for="aw1">1</label>
@@ -302,7 +302,7 @@
                                     </div>
                                     <!--single form panel-->
                                     <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                                        <h3 class="multisteps-form__title">Bảng I (I: Investigative - Người thích nghiên cứu)</h3>
+                                        @*<h3 class="multisteps-form__title">Bảng I (I: Investigative - Người thích nghiên cứu)</h3>*@
                                         <div class="multisteps-form__content">
                                             <table style="text-align:center;width:100%" border="1" cellpadding="10" id="tableB">
                                                 <thead>
@@ -318,7 +318,7 @@
                                                         <td>Tôi có tìm hiểu khám phá nhiều vấn đề mới</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs10" id="a10" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs10" id="a10" value="0" class="no_check" />
                                                                 <label for="a10" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs10" id="a11" value="1">
                                                                 <label for="a11">1</label>
@@ -336,7 +336,7 @@
                                                         <td>Tôi có khả năng phân tích vấn đề</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs11" id="aaa0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs11" id="aaa0" value="0" class="no_check" />
                                                                 <label for="aaa0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs11" id="aaa1" value="1">
                                                                 <label for="aaa1">1</label>
@@ -354,7 +354,7 @@
                                                         <td>Tôi biết suy nghĩ một cách mạch lạc, chặt chẽ</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs12" id="aab0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs12" id="aab0" value="0" class="no_check" />
                                                                 <label for="aab0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs12" id="aab1" value="1">
                                                                 <label for="aab1">1</label>
@@ -372,7 +372,7 @@
                                                         <td>Tôi thích thực hiện các thí nghiệm hoặc nghiên cứu</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs13" id="aac0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs13" id="aac0" value="0" class="no_check" />
                                                                 <label for="aac0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs13" id="aac1" value="1">
                                                                 <label for="aac1">1</label>
@@ -390,7 +390,7 @@
                                                         <td>Tôi có khả năng tổng hợp, khái quát, suy đoán những vấn đề</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs14" id="a0ad" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs14" id="aad0" value="0" class="no_check" />
                                                                 <label for="aad0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs14" id="aad1" value="1">
                                                                 <label for="aad1">1</label>
@@ -408,7 +408,7 @@
                                                         <td>Tôi thích những hoạt động điều tra, phân loại, kiểm tra, đánh giá</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs15" id="aae0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs15" id="aae0" value="0" class="no_check" />
                                                                 <label for="aae0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs15" id="aae1" value="1">
                                                                 <label for="aae1">1</label>
@@ -426,7 +426,7 @@
                                                         <td>Tôi tự tổ chức công việc mình phải làm</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs16" id="aaq0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs16" id="aaq0" value="0" class="no_check" />
                                                                 <label for="aaq0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs16" id="aaq1" value="1">
                                                                 <label for="aaq1">1</label>
@@ -444,7 +444,7 @@
                                                         <td>Tôi thích suy nghĩ về những vấn đề phức tạp, làm những công việc phức tạp</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs17" id="aas0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs17" id="aas0" value="0" class="no_check" />
                                                                 <label for="aas0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs17" id="aas1" value="1">
                                                                 <label for="aas1">1</label>
@@ -462,7 +462,7 @@
                                                         <td>Tôi có khả năng giải quyết các vấn đề</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs18" id="aaw0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs18" id="aaw0" value="0" class="no_check" />
                                                                 <label for="aaw0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs18" id="aaw1" value="1">
                                                                 <label for="aaw1">1</label>
@@ -490,7 +490,7 @@
                                     </div>
                                     <!--single form panel-->
                                     <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                                        <h3 class="multisteps-form__title">Bảng A (A : Artistic - Người có tính nghệ sĩ )</h3>
+                                        @*<h3 class="multisteps-form__title">Bảng A (A : Artistic - Người có tính nghệ sĩ )</h3>*@
                                         <div class="multisteps-form__content">
                                             <table style="text-align:center;width:100%" border="1" cellpadding="10" id="tableC">
                                                 <thead>
@@ -506,7 +506,7 @@
                                                         <td>Tôi là người dễ xúc động</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs19" id="a20" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs19" id="a20" value="0" class="no_check" />
                                                                 <label for="a20" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs19" id="a21" value="1">
                                                                 <label for="a21">1</label>
@@ -524,7 +524,7 @@
                                                         <td>Tôi có óc tưởng tượng phong phú</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs20" id="aba0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs20" id="aba0" value="0" class="no_check" />
                                                                 <label for="aba0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs20" id="aba1" value="1">
                                                                 <label for="aba1">1</label>
@@ -542,7 +542,7 @@
                                                         <td>Tôi thích sự tự do, không theo những quy định , quy tắc</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs21" id="abb0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs21" id="abb0" value="0" class="no_check" />
                                                                 <label for="abb0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs21" id="abb1" value="1">
                                                                 <label for="abb1">1</label>
@@ -560,7 +560,7 @@
                                                         <td>Tôi có khả năng thuyết trình, diễn xuất</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs22" id="abc0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs22" id="abc0" value="0" class="no_check" />
                                                                 <label for="abc0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs22" id="abc1" value="1">
                                                                 <label for="abc1">1</label>
@@ -578,7 +578,7 @@
                                                         <td>Tôi có thể chụp hình hoặc vẽ tranh, trang trí, điêu khắc</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs23" id="abd0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs23" id="abd0" value="0" class="no_check" />
                                                                 <label for="abd0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs23" id="abd1" value="1">
                                                                 <label for="abd1">1</label>
@@ -596,7 +596,7 @@
                                                         <td>Tôi có năng khiếu âm nhạc</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs24" id="abe0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs24" id="abe0" value="0" class="no_check" />
                                                                 <label for="abe0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs24" id="abe1" value="1">
                                                                 <label for="abe1">1</label>
@@ -614,7 +614,7 @@
                                                         <td>Tôi có khả năng viết, trình bày những ý tưởng của mình</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs25" id="abq0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs25" id="abq0" value="0" class="no_check" />
                                                                 <label for="abq0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs25" id="abq1" value="1">
                                                                 <label for="abq1">1</label>
@@ -632,7 +632,7 @@
                                                         <td>Tôi thích làm những công việc mới, những công việc đòi hỏi sự sáng tạo</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs26" id="abs0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs26" id="abs0" value="0" class="no_check" />
                                                                 <label for="abs0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs26" id="abs1" value="1">
                                                                 <label for="abs1">1</label>
@@ -650,7 +650,7 @@
                                                         <td>Tôi thoải mái bộc lộ những ý thích</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs27" id="abw0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs27" id="abw0" value="0" class="no_check" />
                                                                 <label for="abw0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs27" id="abw1" value="1">
                                                                 <label for="abw1">1</label>
@@ -671,7 +671,7 @@
                                                 </tbody>
                                             </table>
 
-                                            <div class="button-row d-flex mt-4 col-12">
+                                            <div class="button-row d-flex mt-4 col-12" style="padding:0">
                                                 <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
                                                 <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
                                             </div>
@@ -680,7 +680,7 @@
                                     </div>
                                     <!--single form panel-->
                                     <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                                        <h3 class="multisteps-form__title">Bảng S ( S: Social - người có Tính xã hội )</h3>
+                                        @*<h3 class="multisteps-form__title">Bảng S ( S: Social - người có Tính xã hội )</h3>*@
                                         <div class="multisteps-form__content">
                                             <table style="text-align:center;width:100%" border="1" cellpadding="10" id="tableD">
                                                 <thead>
@@ -696,7 +696,7 @@
                                                         <td>Tôi là người thân thiện, hay giúp đỡ người khác</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs28" id="a80" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs28" id="a80" value="0" class="no_check" />
                                                                 <label for="a80" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs28" id="a81" value="1">
                                                                 <label for="a81">1</label>
@@ -714,7 +714,7 @@
                                                         <td>Tôi thích gặp gỡ, làm việc với con người</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs29" id="aca0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs29" id="aca0" value="0" class="no_check" />
                                                                 <label for="aca0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs29" id="aca1" value="1">
                                                                 <label for="aca1">1</label>
@@ -732,7 +732,7 @@
                                                         <td>Tôi là người lịch sự, tử tế</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs30" id="acb0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs30" id="acb0" value="0" class="no_check" />
                                                                 <label for="acb0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs30" id="acb1" value="1">
                                                                 <label for="acb1">1</label>
@@ -750,7 +750,7 @@
                                                         <td>Tôi thích khuyên bảo, huấn luyện hay giảng giải cho người khác</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs31" id="acc0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs31" id="acc0" value="0" class="no_check" />
                                                                 <label for="acc0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs31" id="acc1" value="1">
                                                                 <label for="acc1">1</label>
@@ -768,7 +768,7 @@
                                                         <td>Tôi là người biết lắng nghe</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs32" id="acd0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs32" id="acd0" value="0" class="no_check" />
                                                                 <label for="acd0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs32" id="acd1" value="1">
                                                                 <label for="acd1">1</label>
@@ -786,7 +786,7 @@
                                                         <td>Tôi thích các hoạt động chăm sóc sức khỏe của bản thân và người khác</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs33" id="ace0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs33" id="ace0" value="0" class="no_check" />
                                                                 <label for="ace0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs33" id="ace1" value="1">
                                                                 <label for="ace1">1</label>
@@ -804,7 +804,7 @@
                                                         <td>Tôi thích các hoạt độngvì mục tiêu chung của công đồng, xã hội</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs34" id="acq0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs34" id="acq0" value="0" class="no_check" />
                                                                 <label for="acq0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs34" id="acq1" value="1">
                                                                 <label for="acq1">1</label>
@@ -822,7 +822,7 @@
                                                         <td>Tôi mong muốn mình có thể đóng góp để xã hội tốt đẹp hơn</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs35" id="acs0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs35" id="acs0" value="0" class="no_check" />
                                                                 <label for="acs0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs35" id="acs1" value="1">
                                                                 <label for="acs1">1</label>
@@ -840,7 +840,7 @@
                                                         <td>Tôi mong muốn mình có thể đóng góp để xã hội tốt đẹp hơn</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs36" id="acw0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs36" id="acw0" value="0" class="no_check" />
                                                                 <label for="acw0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs36" id="acw1" value="1">
                                                                 <label for="acw1">1</label>
@@ -867,7 +867,7 @@
                                         </div>
                                     </div>
                                     <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                                        <h3 class="multisteps-form__title">Bảng E ( E: Enterprising - Người dám nghĩ dám làm)</h3>
+                                        @*<h3 class="multisteps-form__title">Bảng E ( E: Enterprising - Người dám nghĩ dám làm)</h3>*@
                                         <div class="multisteps-form__content">
                                             <table style="text-align:center;width:100%" border="1" cellpadding="10" id="tableE">
                                                 <thead>
@@ -883,7 +883,7 @@
                                                         <td>Tôi là người có tính phiêu lưu, mạo hiểm</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs37" id="ah0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs37" id="ah0" value="0" class="no_check" />
                                                                 <label for="ah0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs37" id="ah1" value="1">
                                                                 <label for="ah1">1</label>
@@ -901,7 +901,7 @@
                                                         <td>Tôi có tính quyết đoán</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs38" id="aqa0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs38" id="aqa0" value="0" class="no_check" />
                                                                 <label for="aqa0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs38" id="aqa1" value="1">
                                                                 <label for="aqa1">1</label>
@@ -919,7 +919,7 @@
                                                         <td>Tôi là người năng động</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs39" id="aqb0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs39" id="aqb0" value="0" class="no_check" />
                                                                 <label for="aqb0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs39" id="aqb1" value="1">
                                                                 <label for="aqb1">1</label>
@@ -937,7 +937,7 @@
                                                         <td>Tôi có khả năng diễn đạt, tranh luận, và thuyết phục người khác</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs40" id="aqc0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs40" id="aqc0" value="0" class="no_check" />
                                                                 <label for="aqc0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs40" id="aqc1" value="1">
                                                                 <label for="aqc1">1</label>
@@ -955,7 +955,7 @@
                                                         <td>Tôi thích các việc quản lý, đánh giá</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs41" id="aqd0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs41" id="aqd0" value="0" class="no_check" />
                                                                 <label for="aqd0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs41" id="aqd1" value="1">
                                                                 <label for="aqd1">1</label>
@@ -973,7 +973,7 @@
                                                         <td>Tôi thường đặt ra các mục tiêu, kế hoạch trong cuộc sống</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs42" id="aqe0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs42" id="aqe0" value="0" class="no_check" />
                                                                 <label for="aqe0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs42" id="aqe1" value="1">
                                                                 <label for="aqe1">1</label>
@@ -991,7 +991,7 @@
                                                         <td>Tôi thích gây ảnh hưởng đến người khác</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs43" id="aqq0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs43" id="aqq0" value="0" class="no_check" />
                                                                 <label for="aqq0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs43" id="aqq1" value="1">
                                                                 <label for="aqq1">1</label>
@@ -1009,7 +1009,7 @@
                                                         <td>Tôi là người thích cạnh tranh, và muốn mình giói hơn người khác</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs44" id="aqs0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs44" id="aqs0" value="0" class="no_check" />
                                                                 <label for="aqs0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs44" id="aqs1" value="1">
                                                                 <label for="aqs1">1</label>
@@ -1027,7 +1027,7 @@
                                                         <td>Tôi muốn người khác  phải kính trọng, nể phục tôi</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs45" id="aqw0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs45" id="aqw0" value="0" class="no_check" />
                                                                 <label for="aqw0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs45" id="aqw1" value="1">
                                                                 <label for="aqw1">1</label>
@@ -1054,7 +1054,7 @@
                                         </div>
                                     </div>
                                     <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                                        <h3 class="multisteps-form__title">Bảng C ( C : Conventional - người công chức )</h3>
+                                        @*<h3 class="multisteps-form__title">Bảng C ( C : Conventional - người công chức )</h3>*@
                                         <div class="multisteps-form__content">
                                             <table style="text-align:center;width:100%" border="1" cellpadding="10" id="tableF">
                                                 <thead>
@@ -1070,7 +1070,7 @@
                                                         <td>Tôi là người có đầu óc sắp xếp, tổ chức</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs46" id="ash0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs46" id="ash0" value="0" class="no_check" />
                                                                 <label for="ash0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs46" id="ash1" value="1">
                                                                 <label for="ash1">1</label>
@@ -1088,7 +1088,7 @@
                                                         <td>Tôi có tính cẩn thận</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs47" id="azqa0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs47" id="azqa0" value="0" class="no_check" />
                                                                 <label for="azqa0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs47" id="azqa1" value="1">
                                                                 <label for="azqa1">1</label>
@@ -1106,7 +1106,7 @@
                                                         <td>Tôi là người chu đáo, chính xác và đáng tin cậy</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs48" id="azqb0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs48" id="azqb0" value="0" class="no_check" />
                                                                 <label for="azqb0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs48" id="azqb1" value="1">
                                                                 <label for="azqb1">1</label>
@@ -1124,7 +1124,7 @@
                                                         <td>Tôi thích công việc tính toán sổ sách, ghi chép số liệu</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs49" id="azqc0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs49" id="azqc0" value="0" class="no_check" />
                                                                 <label for="azqc0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs49" id="azqc1" value="1">
                                                                 <label for="azqc1">1</label>
@@ -1142,7 +1142,7 @@
                                                         <td>Tôi thích các công việc lưu trữ, phân loại, cập nhật thông tin</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs50" id="azqd0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs50" id="azqd0" value="0" class="no_check" />
                                                                 <label for="azqd0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs50" id="azqd1" value="1">
                                                                 <label for="azqd1">1</label>
@@ -1160,7 +1160,7 @@
                                                         <td>Tôi thường đặt ra những mục tiêu, kế hoạch trong cuộc sống</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs51" id="azqe0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs51" id="azqe0" value="0" class="no_check" />
                                                                 <label for="azqe0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs51" id="azqe1" value="1">
                                                                 <label for="azqe1">1</label>
@@ -1178,7 +1178,7 @@
                                                         <td>Tôi thích dự kiến các khoản thu chi</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs52" id="azqq0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs52" id="azqq0" value="0" class="no_check" />
                                                                 <label for="azqq0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs52" id="azqq1" value="1">
                                                                 <label for="azqq1">1</label>
@@ -1196,7 +1196,7 @@
                                                         <td>Tôi thích lập thời khóa biểu, sắp xếp lịch làm việc</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs53" id="azqs0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs53" id="azqs0" value="0" class="no_check" />
                                                                 <label for="azqs0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs53" id="azqs1" value="1">
                                                                 <label for="azqs1">1</label>
@@ -1214,7 +1214,7 @@
                                                         <td>Tôi thích làm việc với các con số, làm việc theo hướng dẫn, quy trình</td>
                                                         <td style="padding:0px!important">
                                                             <div class="question" id="q1">
-                                                                <input type="radio" name="needs54" id="azqw0" value="0" class="no_check" checked />
+                                                                <input type="radio" name="needs54" id="azqw0" value="0" class="no_check" />
                                                                 <label for="azqw0" class="no_check">0</label>
                                                                 <input type="radio" class="rd_rate" name="needs54" id="azqw1" value="1">
                                                                 <label for="azqw1">1</label>
@@ -1241,41 +1241,41 @@
                                         </div>
                                     </div>
                                     <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                                        <h3 class="multisteps-form__title">Kết quả trắc nghiệm</h3>
+                                        @*<h3 class="multisteps-form__title">Kết quả trắc nghiệm</h3>*@
                                         <div class="multisteps-form__content">
-                                            <table border="1" style="text-align:center;width:100%" cellpadding="10">
-                                                <tr>
-                                                    <th style="width:20%!important">Bảng R</th>
-                                                    <td><span id="result_A">0 điểm</span></td>
+                                            @*<table border="1" style="text-align:center;width:100%" cellpadding="10">
+                                                    <tr>
+                                                        <th style="width:20%!important">Bảng R</th>
+                                                        <td><span id="result_A">0 điểm</span></td>
 
-                                                </tr>
-                                                <tr>
-                                                    <th style="width:20%!important">Bảng I</th>
-                                                    <td><span id="result_B">0 điểm</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="width:20%!important">Bảng I</th>
+                                                        <td><span id="result_B">0 điểm</span></td>
 
-                                                </tr>
-                                                <tr>
-                                                    <th style="width:20%!important">Bảng A</th>
-                                                    <td><span id="result_C">0 điểm</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="width:20%!important">Bảng A</th>
+                                                        <td><span id="result_C">0 điểm</span></td>
 
-                                                </tr>
-                                                <tr>
-                                                    <th style="width:20%!important">Bảng S</th>
-                                                    <td><span id="result_D">0 điểm</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="width:20%!important">Bảng S</th>
+                                                        <td><span id="result_D">0 điểm</span></td>
 
-                                                </tr>
-                                                <tr>
-                                                    <th style="width:20%!important">Bảng E</th>
-                                                    <td><span id="result_E">0 điểm</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="width:20%!important">Bảng E</th>
+                                                        <td><span id="result_E">0 điểm</span></td>
 
-                                                </tr>
-                                                <tr>
-                                                    <th style="width:20%!important">Bảng C</th>
-                                                    <td><span id="result_F">0 điểm</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="width:20%!important">Bảng C</th>
+                                                        <td><span id="result_F">0 điểm</span></td>
 
-                                                </tr>
+                                                    </tr>
 
-                                            </table>
+                                                </table>*@
                                             <div class="button-row d-flex mt-4">
                                                 <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
                                                 <span class="btn btn-success ml-auto" title="Send" id="resultForm" style="font-size: 20px;">Xem kết quả</span>
@@ -1304,6 +1304,7 @@
         </div>
     </div>
 </section>
+
 <script>
     $('input[type="radio"]').click(function () {
         var theNumber = $(this).attr('id').slice(-1);
@@ -1341,19 +1342,40 @@
         var result_F = "#sum_F";
         var final_F = "#result_F";
         autoSum(nametable_A, result_A, final_A);
+        loadPoint(nametable_A, result_A, final_A);
         autoSum(nametable_B, result_B, final_B);
+        loadPoint(nametable_B, result_B, final_B);
         autoSum(nametable_C, result_C, final_C);
+        loadPoint(nametable_C, result_C, final_C);
         autoSum(nametable_D, result_D, final_D);
+        loadPoint(nametable_D, result_D, final_D);
         autoSum(nametable_E, result_E, final_E);
+        loadPoint(nametable_E, result_E, final_E);
         autoSum(nametable_F, result_F, final_F);
-
+        loadPoint(nametable_F, result_F, final_F);
+        $.each($('label'), function () {
+            var so = parseInt($(this).text()) + 1;
+            $(this).text(so);
+        });
 
     })
+   function loadPoint(table_name, result_name, final_name)
+    {
+        var sum = parseInt("0");
+        $(table_name + " tr").each(function (index) {
+            var point = parseInt($(this).find("input[type='radio']:checked").val()) + 1;
+            if (!isNaN(point)) {
+                sum += point;
+            }
+        })
+        $(result_name).text(sum);
+        $(final_name).text(sum + " điểm");
+    }
     function autoSum(table_name, result_name, final_name) {
         $(table_name + " tr input[type='radio']").change(function () {
             var sum = parseInt("0");
             $(table_name + " tr").each(function (index) {
-                var point = parseInt($(this).find("input[type='radio']:checked").val());
+                var point = parseInt($(this).find("input[type='radio']:checked").val()) + 1;
                 if (!isNaN(point)) {
                     sum += point;
                 }
@@ -1363,10 +1385,10 @@
         })
     }
 
-    $("button").click(function () {
-        $("html, body").scrollTop(0);
+    //$("button").click(function () {
+    //    $("html, body").scrollTop(0);
 
-    })
+    //})
     $("#resultForm").click(function () {
         var point_A = parseInt($("#sum_A").text());
         var point_B = parseInt($("#sum_B").text());
@@ -1385,34 +1407,34 @@
         if (result == 0) {
             content = "<ul><li>Có khả năng về quan sát, khám phá, phân tích đánh giá và giải quyết các vấn đề.</li><li>Nghề phù hợp với nhóm này bao gồm: Các ngành thuộc lĩnh vực khoa học tự nhiên (toán, lý, hóa, sinh, địa lý, địa chất, thống kê...); khoa học xã hội (nhân học, tâm lý, địa lý...); kỹ thuật y tế, kỹ thuật phòng thí nghiệm, nha sĩ; khoa học công nghệ (công nghệ thông tin, môi trường, điện, vật lý kỹ thuật, xây dựng...); nông lâm (nông học, thú y...).</li></ul>";
             $(".kind_of_people").text("I (Investigative - Nghiên cứu): ");
-            result_dinhhuong = "<li><p >Khối ngành Sức khỏe</p><ul><li>Dược học</li><li>Kỹ thuật xét nghiệm Y học</li><li>Y khoa (Bác sỹ Đa khoa)</li><li>Y học dự phòng</li></ul></li><li><p>Khối ngành Kỹ thuật – Công nghệ</p><ul><li>Kỹ thuật Y sinh</li><li>Vật lý Y khoa</li><li>Công nghệ Sinh học</li><li>Công nghệ Thực phẩm</li><li>Công nghệ Kỹ thuật Hóa học</li><li>Quản lý Tài nguyên và Môi trường</li><li>Công nghệ Kỹ thuật Ô-tô</li><li>Công nghệ Kỹ thuật Cơ điện tử</li><li>Công nghệ Kỹ thuật Điện – Điện tử</li><li>Công nghệ thông tin</li><li>Kỹ thuật Hệ thống Công nghiệp</li><li>Kỹ thuật Xây dựng</li><li>Kiến trúc</li><li>Thiết kế nội thất</li><li>Mạng máy tính – Truyền thông dữ liệu</li><li>Kỹ thuật phần mềm</li></ul></li><li><p>Khối ngành Xã hội Nhân văn</p> <ul><li>Ngôn ngữ Trung Quốc</li><li>Ngôn ngữ Anh</li><li>Đông phương học</li><li>Việt Nam học</li><li>Du lịch</li><li>Quan hệ công chúng</li><li>Tâm lý học</li><li>Tiếng Việt và Văn hóa Việt Nam</li><li>Quản trị Nhà hàng và Dịch vụ ăn uống</li><li>Quản trị Khách sạn</li><li>Quan hệ Quốc tế</li></ul></li>";
+            result_dinhhuong = "<li> <p>Khối ngành Sức khỏe</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=2\'\">Dược học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=4\'\">Kỹ thuật xét nghiệm Y học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=5\'\">Y khoa (Bác sỹ Đa khoa)</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=6\'\">Y học dự phòng</li> </ul> </li> <li> <p>Khối ngành Kỹ thuật – Công nghệ</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=7\'\">Kỹ thuật Y sinh</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=11\'\">Vật lý Y khoa</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=12\'\">Công nghệ Sinh học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=13\'\">Công nghệ Thực phẩm</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1002\'\">Công nghệ Kỹ thuật Hóa học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1003\'\">Quản lý Tài nguyên và Môi trường</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1004\'\">Công nghệ Kỹ thuật Ô-tô</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1005\'\">Công nghệ Kỹ thuật Cơ điện tử</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1006\'\">Công nghệ Kỹ thuật Điện – Điện tử</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1007\'\">Công nghệ thông tin</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1008\'\">Kỹ thuật Hệ thống Công nghiệp</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1009\'\">Kỹ thuật Xây dựng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1010\'\">Kiến trúc</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1013\'\">Thiết kế nội thất</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1015\'\">Mạng máy tính – Truyền thông dữ liệu</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1016\'\">Kỹ thuật phần mềm</li> </ul> </li> <li> <p>Khối ngành Xã hội Nhân văn</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1029\'\">Ngôn ngữ Trung Quốc</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1030\'\">Ngôn ngữ Anh</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1031\'\">Đông phương học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1032\'\">Việt Nam học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1033\'\">Du lịch</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1034\'\">Quan hệ công chúng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1036\'\">Tâm lý học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1037\'\">Tiếng Việt và Văn hóa Việt Nam</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1038\'\">Quản trị Nhà hàng và Dịch vụ ăn uống</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1039\'\">Quản trị Khách sạn</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1040\'\">Quan hệ Quốc tế</li> </ul> </li>";
 
         }
         else if (result == 1) {
             content = "<ul><li>Có khả năng về ngôn ngữ, giảng giải, thích làm những việc như giảng giải, cung cấp thông tin, sự chăm sóc, giúp đỡ, hoặc huấn luyện cho người khác.</li><li>Nghề phù hợp với nhóm này bao gồm: sư phạm; giảng viên; huấn luyện viên điền kinh; tư vấn - hướng nghiệp; dịch vụ khách hàng, công tác xã hội, cán bộ Hội LHPN, thư viện, các nghề trong ngành y (điều dưỡng, y tá, bác sĩ), sức khỏe cộng đồng. </li></ul>";
             $(".kind_of_people").text("S (Social - Xã hội): ");
-            result_dinhhuong = "<li><p>Khối ngành Sức khỏe</p><ul><li>Dược học</li><li>Điều dưỡng</li><li>Kỹ thuật xét nghiệm Y học</li><li>Y khoa (Bác sỹ Đa khoa)</li><li>Y học dự phòng</li></ul></li><li><p>Khối ngành Xã hội Nhân văn</p><ul><li>Ngôn ngữ Trung Quốc</li><li>Ngôn ngữ Anh</li><li>Đông phương học</li><li>Việt Nam học</li><li>Du lịch</li><li>Quan hệ công chúng</li><li>Tâm lý học</li><li>Tiếng Việt và Văn hóa Việt Nam</li><li>Quản trị Nhà hàng và Dịch vụ ăn uống</li><li>Quản trị Khách sạn</li><li>Quan hệ Quốc tế</li></ul></li><li><p>Khối ngành Kỹ thuật – Công nghệ</p> <ul><li>Công nghệ thông tin</li><li>Thiết kế nội thất</li></ul></li>";
+            result_dinhhuong = "<li> <p>Khối ngành Sức khỏe</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=2\'\">Dược học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=3\'\">Điều dưỡng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=4\'\">Kỹ thuật xét nghiệm Y học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=5\'\">Y khoa (Bác sỹ Đa khoa)</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=6\'\">Y học dự phòng</li> </ul> </li> <li> <p>Khối ngành Xã hội Nhân văn</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1029\'\">Ngôn ngữ Trung Quốc</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1030\'\">Ngôn ngữ Anh</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1031\'\">Đông phương học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1032\'\">Việt Nam học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1033\'\">Du lịch</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1034\'\">Quan hệ công chúng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1036\'\">Tâm lý học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1037\'\">Tiếng Việt và Văn hóa Việt Nam</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1038\'\">Quản trị Nhà hàng và Dịch vụ ăn uống</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1039\'\">Quản trị Khách sạn</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1040\'\">Quan hệ Quốc tế</li> </ul> </li> <li> <p>Khối ngành Kỹ thuật – Công nghệ</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1007\'\">Công nghệ thông tin</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1013\'\">Thiết kế nội thất</li> </ul> </li>";
         }
         else if (result == 2) {
             content = "<ul><li>Có khả năng về nghệ thuật, khả năng về trực giác, khả năng tưởng tượng cao, thích làm việc trong các môi trường mang tính ngẫu hứng, không khuôn mẫu.</li><li>Nghề phù hợp với nhóm này bao gồm: Các ngành về văn chương; báo chí (bình luận viên, dẫn chương trình...); điện ảnh, sân khấu, mỹ thuật, ca nhạc, múa, kiến trúc, thời trang, hội họa, giáo viên dạy sử/Anh văn, bảo tàng, bảo tồn...</li></ul>";
             $(".kind_of_people").text("A (Artistic - Nghệ thuật): ");
-            result_dinhhuong = "<li><p>Khối ngành Mỹ thuật – Nghệ thuật</p><ul><li>Thiết kế Đồ họa</li><li>Đạo diễn Điện ảnh – Truyền hình</li><li>Thanh nhạc</li><li>Piano</li><li>Diễn viên kịch – Điện ảnh – Truyền hình</li><li>Quay phim</li><li>Truyền thông đa phương tiện</li></ul></li><li><p>Khối ngành Kỹ thuật – Công nghệ</p><ul><li>Công nghệ Kỹ thuật Ô-tô</li><li>Công nghệ Kỹ thuật Cơ điện tử</li><li>Công nghệ Kỹ thuật Điện – Điện tử</li><li>Công nghệ thông tin</li><li>Kỹ thuật Hệ thống Công nghiệp</li><li>Kỹ thuật Xây dựng</li><li>Kiến trúc</li><li>Thiết kế nội thất</li><li>Mạng máy tính – Truyền thông dữ liệu</li><li>Kỹ thuật phần mềm</li></ul></li><li><p>Khối ngành Xã hội Nhân văn</p> <ul><li>Ngôn ngữ Trung Quốc</li><li>Ngôn ngữ Anh</li><li>Đông phương học</li><li>Việt Nam học</li><li>Du lịch</li><li>Quan hệ công chúng</li><li>Tâm lý học</li><li>Tiếng Việt và Văn hóa Việt Nam</li><li>Quan hệ Quốc tế</li></ul></li>";
+            result_dinhhuong = "<li> <p>Khối ngành Mỹ thuật – Nghệ thuật</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1041\'\">Thiết kế Đồ họa</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1042\'\">Đạo diễn Điện ảnh – Truyền hình</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1043\'\">Thanh nhạc</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1044\'\">Piano</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1045\'\">Diễn viên kịch – Điện ảnh – Truyền hình</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1047\'\">Quay phim</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1048\'\">Truyền thông đa phương tiện</li> </ul> </li> <li> <p>Khối ngành Kỹ thuật – Công nghệ</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1004\'\">Công nghệ Kỹ thuật Ô-tô</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1005\'\">Công nghệ Kỹ thuật Cơ điện tử</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1006\'\">Công nghệ Kỹ thuật Điện – Điện tử</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1007\'\">Công nghệ thông tin</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1008\'\">Kỹ thuật Hệ thống Công nghiệp</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1009\'\">Kỹ thuật Xây dựng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1010\'\">Kiến trúc</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1013\'\">Thiết kế nội thất</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1015\'\">Mạng máy tính – Truyền thông dữ liệu</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1016\'\">Kỹ thuật phần mềm</li> </ul> </li> <li> <p>Khối ngành Xã hội Nhân văn</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1029\'\">Ngôn ngữ Trung Quốc</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1030\'\">Ngôn ngữ Anh</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1031\'\">Đông phương học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1032\'\">Việt Nam học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1033\'\">Du lịch</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1034\'\">Quan hệ công chúng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1036\'\">Tâm lý học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1037\'\">Tiếng Việt và Văn hóa Việt Nam</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1040\'\">Quan hệ Quốc tế</li> </ul> </li>";
         }
         else if (result == 3) {
             content = "<ul><li>Có khả năng về số học, thích thực hiện những công việc chi tiết, thích làm việc với những số liệu, thích tuân thủ quy định theo chỉ dẫn của người khác hoặc các công việc văn phòng, kỹ lưỡng chặt chẽ.</li><li>Nghề phù hợp với nhóm này bao gồm: Các ngành nghề về hành chính, thư ký, lưu trữ hồ sơ, chuyên viên thuế, thủ quỹ, tiếp tân, thống kê, thanh tra ngành, người giữ trẻ, điện thoại viên, biên tập viên, nhân viên làm việc trong các lĩnh vực: Bưu điện, ngân hàng, kế toán, bảo hiểm, phân tích tính dụng.</li></ul>";
             $(".kind_of_people").text("C (Conventional – Nghiệp vụ): ");
-            result_dinhhuong = "<li><p>Khối ngành Kỹ thuật – Công nghệ</p><ul><li>Kỹ thuật Y sinh</li><li>Vật lý Y khoa</li><li>Công nghệ Sinh học</li><li>Công nghệ Thực phẩm</li><li>Công nghệ Kỹ thuật Hóa học</li><li>Quản lý Tài nguyên và Môi trường</li><li>Công nghệ thông tin</li><li>Kỹ thuật Hệ thống Công nghiệp</li><li>Thiết kế nội thất</li><li>Mạng máy tính – Truyền thông dữ liệu</li><li>Kỹ thuật phần mềm</li></ul></li><li><p>Khối ngành Kinh tế</p><ul><li>Kế toán</li><li>Tài chính – Ngân hàng</li><li>Luật Kinh tế</li><li>Logistics và Quản lý chuỗi cung ứng</li><li>Marketing</li><li>Thương mại Điện tử</li></ul></li><li><p>Khối ngành Xã hội Nhân văn</p> <ul><li>Ngôn ngữ Trung Quốc</li><li>Ngôn ngữ Anh</li><li>Đông phương học</li><li>Việt Nam học</li><li>Quan hệ công chúng</li></ul></li><li><p>Khối ngành Mỹ thuật – Nghệ thuật</p> <ul><li>Thiết kế Đồ họa</li><li>Truyền thông đa phương tiện</li></ul></li><li><p>Khối ngành Sức khỏe</p> <ul><li>Dược học</li><li>Điều dưỡng</li><li>Y học dự phòng</li></ul></li>";
+            result_dinhhuong = "<li> <p>Khối ngành Kỹ thuật – Công nghệ</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=7\'\">Kỹ thuật Y sinh</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=11\'\">Vật lý Y khoa</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=12\'\">Công nghệ Sinh học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=13\'\">Công nghệ Thực phẩm</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1002\'\">Công nghệ Kỹ thuật Hóa học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1003\'\">Quản lý Tài nguyên và Môi trường</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1004\'\">Công nghệ thông tin</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1008\'\">Kỹ thuật Hệ thống Công nghiệp</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1013\'\">Thiết kế nội thất</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1015\'\">Mạng máy tính – Truyền thông dữ liệu</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1016\'\">Kỹ thuật phần mềm</li> </ul> </li> <li> <p>Khối ngành Kinh tế</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1017\'\">Kế toán</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1018\'\">Tài chính – Ngân hàng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1021\'\">Luật Kinh tế</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1022\'\">Logistics và Quản lý chuỗi cung ứng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1023\'\">Marketing</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1024\'\">Thương mại Điện tử</li> </ul> </li> <li> <p>Khối ngành Xã hội Nhân văn</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1029\'\">Ngôn ngữ Trung Quốc</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1030\'\">Ngôn ngữ Anh</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1031\'\">Đông phương học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1032\'\">Việt Nam học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1034\'\">Quan hệ công chúng</li> </ul> </li> <li> <p>Khối ngành Mỹ thuật – Nghệ thuật</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1041\'\">Thiết kế Đồ họa</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1048\'\">Truyền thông đa phương tiện</li> </ul> </li> <li> <p>Khối ngành Sức khỏe</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=2\'\">Dược học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=3\'\">Điều dưỡng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=6\'\">Y học dự phòng</li> </ul> </li>";
         }
         else if (result == 4) {
             content = "<ul><li>Có khả năng về kinh doanh, mạnh bạo, dám nghĩ dám làm, có thể gây ảnh hưởng, thuyết phục người khác, có khả năng quản lý.</li><li>Nghề phù hợp với nhóm này bao gồm: Công an, quân đội, các ngành về quản trị kinh doanh (quản lý khách sạn, quản trị nhân sự...), quản lý hệ thống thông tin, mạng, chủ doanh nghiệp, chủ đại lý, thương mại, marketing, luật sư, chuyên viên PR, tiếp thị, CEO, chủ thầu,… </li></ul>";
             $(".kind_of_people").text("E (Enterprise – Quản lý): ");
-            result_dinhhuong = "<li><p>Khối ngành Kinh tế</p><ul><li>Kế toán</li><li>Tài chính – Ngân hàng</li><li>Quản trị nhân lực</li><li>Quản trị Kinh doanh</li><li>Luật Kinh tế</li><li>Logistics và Quản lý chuỗi cung ứng</li><li>Marketing</li><li>Thương mại Điện tử</li><li>Thương mại Điện tử</li><li>Kinh doanh Quốc tế</li></ul></li><li ><p>Khối ngành Kỹ thuật – Công nghệ</p><ul><li>Công nghệ thông tin</li><li>Kỹ thuật Hệ thống Công nghiệp</li><li>Kỹ thuật Xây dựng</li><li>Kiến trúc</li><li>Thiết kế nội thất</li><li>Mạng máy tính – Truyền thông dữ liệu</li><li>Kỹ thuật phần mềm</li></ul></li ><li><p>Khối ngành Xã hội Nhân văn</p> <ul><li>Du lịch</li><li>Quan hệ công chúng</li><li>Tâm lý học</li><li>Tiếng Việt và Văn hóa Việt Nam</li><li>Quản trị Nhà hàng và Dịch vụ ăn uống</li><li>Quản trị Khách sạn</li><li>Quan hệ Quốc tế</li></ul></li><li><p>Khối ngành Mỹ thuật – Nghệ thuật</p> <ul><li>Đạo diễn Điện ảnh – Truyền hình</li><li>Diễn viên kịch – Điện ảnh – Truyền hình</li><li>Quay phim</li><li>Truyền thông đa phương tiện</li></ul></li>";
+            result_dinhhuong = "<li> <p>Khối ngành Kinh tế</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1017\'\">Kế toán</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1018\'\">Tài chính – Ngân hàng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1019\'\">Quản trị nhân lực</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1020\'\">Quản trị Kinh doanh</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1021\'\">Luật Kinh tế</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1022\'\">Logistics và Quản lý chuỗi cung ứng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1023\'\">Marketing</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1024\'\">Thương mại Điện tử</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1025\'\">Kinh doanh Quốc tế</li> </ul> </li> <li> <p>Khối ngành Kỹ thuật – Công nghệ</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1007\'\">Công nghệ thông tin</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1008\'\">Kỹ thuật Hệ thống Công nghiệp</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1009\'\">Kỹ thuật Xây dựng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1010\'\">Kiến trúc</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1013\'\">Thiết kế nội thất</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1015\'\">Mạng máy tính – Truyền thông dữ liệu</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1016\'\">Kỹ thuật phần mềm</li> </ul> </li> <li> <p>Khối ngành Xã hội Nhân văn</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1033\'\">Du lịch</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1034\'\">Quan hệ công chúng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1036\'\">Tâm lý học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1037\'\">Tiếng Việt và Văn hóa Việt Nam</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1038\'\">Quản trị Nhà hàng và Dịch vụ ăn uống</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1039\'\">Quản trị Khách sạn</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1040\'\">Quan hệ Quốc tế</li> </ul> </li> <li> <p>Khối ngành Mỹ thuật – Nghệ thuật</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1042\'\">Đạo diễn Điện ảnh – Truyền hình</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1045\'\">Diễn viên kịch – Điện ảnh – Truyền hình</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1047\'\">Quay phim</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1048\'\">Truyền thông đa phương tiện</li> </ul> </li>";
 
         }
         else if (result == 5) {
             content = "<ul><li>Người thuộc nhóm sở thích nghề nghiệp này thường có khả năng về kỹ thuật, công nghệ, hệ thống; ưa thích làm việc với đồ vật, máy móc, động thực vật; thích làm các công việc ngoài trời.</li><li>Nghề phù hợp với nhóm này bao gồm những nghề về kiến trúc, an toàn lao động, nghề mộc, xây dựng, thủy sản, kỹ thuật, máy tàu thủy, lái xe, huấn luyện viên, nông - lâm nghiệp (quản lý trang trại, nhân giống cá, lâm nghiệp...), cơ khí (chế tạo máy, bảo trì và sửa chữa thiết bị, luyện kim, cơ khí ứng dụng, tự động...), điện - điện tử, địa lý - địa chất (đo đạc, vẽ bản đồ địa chính), dầu khí, hải dương học, quản lý công nghiệp...</li></ul>";
             $(".kind_of_people").text("R (Realistic – Kỹ thuật): ");
-            result_dinhhuong = "<li><p > Khối ngành Sức khỏe</p ><ul><li>Dược học</li><li>Điều dưỡng</li><li>Kỹ thuật xét nghiệm y học</li><li>Y khoa(Bác sĩ Đa khoa)</li><li>Y học dự phòng</li></ul></li ><li><p>Khối ngành Kỹ thuật – Công nghệ</p><ul><li>Kỹ thuật Y sinh</li><li>Vật lý Y khoa</li><li>Công nghệ Sinh học</li><li>Công nghệ Thực phẩm</li><li>Công nghệ Kỹ thuật Hóa học</li><li>Quản lý Tài nguyên và Môi trường</li><li>Công nghệ Kỹ thuật Ô-tô</li><li>Công nghệ Kỹ thuật Cơ điện tử</li><li>Công nghệ Kỹ thuật Điện – Điện tử</li><li>Công nghệ thông tin</li><li>Kỹ thuật Hệ thống Công nghiệp</li><li>Kỹ thuật Xây dựng</li><li>Kiến trúc</li><li>Thiết kế nội thất</li><li>Mạng máy tính – Truyền thông dữ liệu</li><li>Kỹ thuật phần mềm</li></ul></li>";
+            result_dinhhuong = "<li> <p> Khối ngành Sức khỏe</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=2\'\">Dược học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=3\'\">Điều dưỡng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=4\'\">Kỹ thuật xét nghiệm y học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=5\'\">Y khoa(Bác sĩ Đa khoa)</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=6\'\">Y học dự phòng</li> </ul> </li> <li> <p>Khối ngành Kỹ thuật – Công nghệ</p> <ul> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=7\'\">Kỹ thuật Y sinh</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=11\'\">Vật lý Y khoa</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=12\'\">Công nghệ Sinh học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=13\'\">Công nghệ Thực phẩm</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1002\'\">Công nghệ Kỹ thuật Hóa học</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1003\'\">Quản lý Tài nguyên và Môi trường</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1004\'\">Công nghệ Kỹ thuật Ô-tô</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1005\'\">Công nghệ Kỹ thuật Cơ điện tử</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1006\'\">Công nghệ Kỹ thuật Điện – Điện tử</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1007\'\">Công nghệ thông tin</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1008\'\">Kỹ thuật Hệ thống Công nghiệp</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1009\'\">Kỹ thuật Xây dựng</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1010\'\">Kiến trúc</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1013\'\">Thiết kế nội thất</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1015\'\">Mạng máy tính – Truyền thông dữ liệu</li> <li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id=1016\'\">Kỹ thuật phần mềm</li> </ul> </li>";
         }
         $(".only_one").empty();
         $(".result-dinhhuong").empty();
@@ -1443,6 +1465,27 @@
     }
 </script>
 
+<script>
+    $('.multisteps-form__progress-btn').click(function (e) {
+        const eventTarget = e.target;
+        var button = document.querySelectorAll('.multisteps-form__progress-btn');
+        const activeStep = Array.from(button).indexOf(eventTarget);
 
+        //var i;
+        $.each($(".multisteps-form__panel"), function (index) {
+            if (index == activeStep) {
+                var jump = true;
+                var getTable = $(this).find("tr").find(".question");
+                $.each(getTable, function () {
+                    var point = parseInt($(this).find("input[type='radio']:checked").val()) + 1;
+                    if (isNaN(point)) {
+                        jump = false;
+                    }
+
+                })
+            }
+        })
+    });
+</script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
 <script src="~/Scripts/script_DinhHuong.js"></script>

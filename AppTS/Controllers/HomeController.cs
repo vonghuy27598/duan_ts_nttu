@@ -34,7 +34,11 @@ namespace AppTS.Controllers
         }
         public ActionResult Main()
         {
-            return View();
+            
+                return View();
+            
+           
+          
         }
         public ActionResult DangKyXetTuyen()
         {

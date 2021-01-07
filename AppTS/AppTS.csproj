@@ -2438,7 +2438,6 @@
     <Content Include="Areas\Admin\Views\Nganh\Nganh.cshtml" />
     <Content Include="Areas\Admin\Views\GiangVien\GiangVienKhoa.cshtml" />
     <Content Include="Areas\Admin\Views\GiangVien\GiangVienDoanhNghiep.cshtml" />
-    <Content Include="PrecompiledApp.config" />
     <Content Include="Areas\Admin\Views\XetTuyen\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ThanhVien\SinhVien.cshtml" />
     <None Include="Properties\PublishProfiles\AppTS.pubxml" />
