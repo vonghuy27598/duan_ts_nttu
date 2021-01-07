@@ -230,6 +230,7 @@
     <Compile Include="ViewModels\NghienCuuFull.cs" />
     <Compile Include="ViewModels\THPT.cs" />
     <Compile Include="ViewModels\ToHop.cs" />
+    <Compile Include="ViewModels\TrungTuyen.cs" />
     <Compile Include="XuLy\CNganh.cs" />
     <Compile Include="XuLy\DHNN.cs" />
     <Compile Include="XuLy\HocSinh.cs" />
@@ -237,6 +238,7 @@
     <Compile Include="XuLy\KhoiNghiep.cs" />
     <Compile Include="XuLy\Nganh.cs" />
     <Compile Include="XuLy\NghienCuu.cs" />
+    <Compile Include="XuLy\ListTrungTuyen.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\Admin\HeaderAdmin.cshtml" />
