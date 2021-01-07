@@ -15,17 +15,10 @@
                     <tr>
                         <th>Mã SV</th>
                         <th>Họ Tên</th>
-                        <th>Địa chỉ</th>
-                        <th>Trường cấp 3</th>
-                        <th>Ngày đăng ký</th>
                         <th>SĐT</th>
-                        <th>Email</th>
-                        <th>Tên tổ hợp</th>
-                        <th>Mã chuyên ngành</th>
-                        <th>Môn 1</th>
-                        <th>Môn 2</th>
-                        <th>Môn 3</th>
-                        <th>Trúng tuyển</th>
+                        <th>Tên ngành</th>
+                        <th>Tên khối</th>
+                        <th>Ngày đăng ký</th>
                     </tr>
                 </thead>
                 <tbody class="table_change" id="myTable">
@@ -34,29 +27,17 @@
                         <tr id="row_@item.ID">
                             <td>@item.ID</td>
                             <td>@item.HOTEN</td>
-                            <td>@item.DIACHI</td>
-                            <td>@item.TRUONG</td>
-                            <td>@String.Format("{0:dd/MM/yyyy}", @item.NGAYDANGKY)</td>
                             <td>@item.SDT</td>
-                            <td>@item.EMAIL</td>
+                            <td>@item.TENCHUYENNGANH</td>
                             <td>@item.TENTOHOP</td>
-                            <td>@item.ID_CHUYENGANH</td>
-                            <td>@item.MON1</td>
-                            <td>@item.MON2</td>
-                            <td>@item.MON3</td>
-                            @if(@item.TRUNGTUYEN == true)
-                            {
-                            <td>Đạt</td>
-                            }
-                            else
-                            {
-                            <td>Không Đạt</td>
-                            }
+                            <td>@String.Format("{0:dd/MM/yyyy}", @item.NGAYDANGKY)</td>
                         </tr>
                     }
-
                 </tbody>
             </table>
+            <div>
+                
+            </div>
         </div>
     </div>
 </div>

@@ -16,6 +16,7 @@ namespace AppTS.ViewModels
         public DateTime? NGAYDANGKY { get; set; }
         public string TENTOHOP { get; set; }
         public int? ID_CHUYENGANH { get; set; }
+        public string TENCHUYENNGANH { get; set; }
         public double? MON1 { get; set; }
         public double? MON2 { get; set; }
         public double? MON3 { get; set; }

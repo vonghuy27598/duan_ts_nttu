@@ -14,6 +14,7 @@ namespace AppTS.XuLy
         public static List<TrungTuyen> getDanhSach()
         {
             var model = from a in db.Table_TrungTuyens
+                        join b in db.Table_ChuyenNganhs on a.ID_CHUYENNGANH equals b.ID_CHUYENNGANH
                         select new TrungTuyen()
                         {
                             ID = a.ID,
@@ -25,6 +26,7 @@ namespace AppTS.XuLy
                             NGAYDANGKY = a.NGAYDANGKY,
                             TENTOHOP = a.TENTOHOP,
                             ID_CHUYENGANH = a.ID_CHUYENNGANH,
+                            TENCHUYENNGANH = b.TENCHUYENNGANH,
                             MON1 = a.MON1,
                             MON2 = a.MON2,
                             MON3 = a.MON3,
