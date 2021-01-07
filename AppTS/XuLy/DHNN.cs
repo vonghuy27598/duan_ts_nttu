@@ -90,8 +90,15 @@ namespace AppTS.XuLy
 
         public void add_Nganh_ID(List<int> _list, int[] ds)
         {
+            bool call_break = false;
+            if (_list.Count > 0)
+                call_break = true;
             for (int i = 0; i < ds.Length; i++)
             {
+                if (call_break)
+                {
+                    if (_list.Count > 15) break;
+                }
                 if (_list.Count == 0)
                     _list.Add(ds[i]);
                 else
@@ -148,7 +155,7 @@ namespace AppTS.XuLy
             list_diemTB[12] = new DIM_2(12, (toan + vatly) / 2.0);
             sort_DiemTB(list_diemTB);
             int p_index = 0;
-            while ((list_.Count < 15) && (list_diemTB[p_index].MyValue >= 6))
+            while ((list_.Count < 15) && (list_diemTB[p_index].MyValue >= 6) && p_index < 13)
             {
                 int postion_max = list_diemTB[p_index].MyIndex;
                 if (postion_max == 0)
