@@ -5,6 +5,32 @@ using System.Web;
 
 namespace AppTS.XuLy
 {
+    public class DIM_2
+    {
+        private int index_;
+        private double value_;
+        public DIM_2()
+        {
+            index_ = -1;
+            value_ = 0;
+        }
+        public DIM_2(int i, double v)
+        {
+            index_ = i;
+            value_ = v;
+        }
+        public int MyIndex
+        {
+            get { return index_; }
+            set { index_ = value; }
+        }
+
+        public double MyValue
+        {
+            get { return value_; }
+            set { value_ = value; }
+        }
+    }
     public class DHNN
     {
         double toan, vatly, hoahoc, nguvan, lichsu, dialy, sinhhoc, anhvan;
@@ -31,6 +57,7 @@ namespace AppTS.XuLy
         {
             toan = vatly = hoahoc = nguvan = lichsu = dialy = sinhhoc = anhvan = 0.0;
             list_nganh = new string[] { "Y khoa (Bác sỹ Đa khoa)", "Y học dự phòng (Bác sỹ Y học dự phòng)", "Dược học", "Điều dưỡng", "Kỹ thuật y sinh", "Vật lý y khoa", "Kỹ thuật xét nghiệm y học", "Công nghệ sinh học", "Công nghệ thực phẩm", "Công nghệ kỹ thuật hóa học", "Quản lý tài nguyên và môi trường", "Công nghệ kỹ thuật Ô-tô", "Công nghệ kỹ thuật cơ điện tử", "Công nghệ Kỹ thuật Điện – Điện tử", "Kỹ thuật Hệ thống Công nghiệp", "Công nghệ thông tin", "Mạng máy tính – Truyền thông dữ liệu", "Kỹ thuật phần mềm", "Kỹ thuật xây dựng", "Kiến trúc", "Thiết kế nội thất", "Kế toán", "Tài chính – Ngân hàng", "Quản trị kinh doanh", "Quản trị nhân lực", "Luật kinh tế", "Logistics và Quản lý chuỗi cung ứng", "Marketing", "Thương mại điện tử", "Kinh doanh quốc tế", "Quan hệ quốc tế", "Tâm lý học", "Quan hệ công chúng", "Quản trị khách sạn", "Quản trị nhà hàng và dịch vụ ăn uống", "Du lịch", "Việt Nam học", "Đông phương học", "Tiếng Việt và văn hóa Việt Nam", "Ngôn ngữ Anh", "Ngôn ngữ Trung Quốc", "Truyền thông đa phương tiện", "Thiết kế đồ họa", "Thanh nhạc", "Piano", "Đạo diễn Điện ảnh – Truyền hình", "Diễn viên kịch – Điện ảnh – Truyền hình", "Quay phim" };
+
             A00 = new int[] { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28, 29, 33, 34 };
             A01 = new int[] { 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 34 };
             A02 = new int[] { 4, 5 };
@@ -75,69 +102,91 @@ namespace AppTS.XuLy
             }
         }
 
+        public bool comparase_DiemTB(DIM_2 d1, DIM_2 d2)
+        {
+            return d1.MyValue > d2.MyValue;
+        }
+
+        public void sort_DiemTB(DIM_2[] list_d)
+        {
+            int n = list_d.Length;
+            int temp_i = 0;
+            double temp_v = 0.0;
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = i + 1; j < n; j++)
+                {
+                    if (comparase_DiemTB(list_d[j], list_d[i]))
+                    {
+                        temp_i = list_d[j].MyIndex;
+                        temp_v = list_d[j].MyValue;
+                        list_d[j].MyIndex = list_d[i].MyIndex;
+                        list_d[j].MyValue = list_d[i].MyValue;
+                        list_d[i].MyIndex = temp_i;
+                        list_d[i].MyValue = temp_v;
+                    }
+                }
+            }
+        }
+
         public List<int> check_Diem()
         {
             List<int> list_ = new List<int>();
-            double[] list_diemTB = new double[13];
-            list_diemTB[0] = (toan + vatly + hoahoc) / 3.0;
-            list_diemTB[1] = (toan + vatly + anhvan) / 3.0;
-            list_diemTB[2] = (toan + vatly + sinhhoc) / 3.0;
-            list_diemTB[3] = (toan + hoahoc + sinhhoc) / 3.0;
-            list_diemTB[4] = (nguvan + lichsu + dialy) / 3.0;
-            list_diemTB[5] = (toan + nguvan + anhvan) / 3.0;
-            list_diemTB[6] = (toan + hoahoc + anhvan) / 3.0;
-            list_diemTB[7] = (toan + sinhhoc + anhvan) / 3.0;
-            list_diemTB[8] = (nguvan + lichsu + anhvan) / 3.0;
-            list_diemTB[9] = (nguvan + dialy + anhvan) / 3.0;
-            list_diemTB[10] = nguvan;
-            list_diemTB[11] = (toan + nguvan) / 2.0;
-            list_diemTB[12] = (toan + vatly) / 2.0;
-            double max_diemTB = list_diemTB[0];
-            int postion_max = 0;
-            for (int i = 1; i <= 12; i++)
+            DIM_2[] list_diemTB = new DIM_2[13];
+            list_diemTB[0] = new DIM_2(0, (toan + vatly + hoahoc) / 3.0);
+            list_diemTB[1] = new DIM_2(1, (toan + vatly + anhvan) / 3.0);
+            list_diemTB[2] = new DIM_2(2, (toan + vatly + sinhhoc) / 3.0);
+            list_diemTB[3] = new DIM_2(3, (toan + hoahoc + sinhhoc) / 3.0);
+            list_diemTB[4] = new DIM_2(4, (nguvan + lichsu + dialy) / 3.0);
+            list_diemTB[5] = new DIM_2(5, (toan + nguvan + anhvan) / 3.0);
+            list_diemTB[6] = new DIM_2(6, (toan + hoahoc + anhvan) / 3.0);
+            list_diemTB[7] = new DIM_2(7, (toan + sinhhoc + anhvan) / 3.0);
+            list_diemTB[8] = new DIM_2(8, (nguvan + lichsu + anhvan) / 3.0);
+            list_diemTB[9] = new DIM_2(9, (nguvan + dialy + anhvan) / 3.0);
+            list_diemTB[10] = new DIM_2(10, nguvan);
+            list_diemTB[11] = new DIM_2(11, (toan + nguvan) / 2.0);
+            list_diemTB[12] = new DIM_2(12, (toan + vatly) / 2.0);
+            sort_DiemTB(list_diemTB);
+            int p_index = 0;
+            while ((list_.Count < 15) && (list_diemTB[p_index].MyValue >= 6))
             {
-                if (max_diemTB < list_diemTB[i])
+                int postion_max = list_diemTB[p_index].MyIndex;
+                if (postion_max == 0)
+                    add_Nganh_ID(list_, A00);
+                if (postion_max == 1)
+                    add_Nganh_ID(list_, A01);
+                if (postion_max == 2)
+                    add_Nganh_ID(list_, A02);
+                if (postion_max == 3)
+                    add_Nganh_ID(list_, B00);
+                if (postion_max == 4)
+                    add_Nganh_ID(list_, C00);
+                if (postion_max == 5)
+                    add_Nganh_ID(list_, D01);
+                if (postion_max == 6)
+                    add_Nganh_ID(list_, D07);
+                if (postion_max == 7)
+                    add_Nganh_ID(list_, D08);
+                if (postion_max == 8)
+                    add_Nganh_ID(list_, D14);
+                if (postion_max == 9)
+                    add_Nganh_ID(list_, D15);
+                if (postion_max == 10)
                 {
-                    max_diemTB = list_diemTB[i];
-                    postion_max = i;
+                    add_Nganh_ID(list_, H00);
+                    add_Nganh_ID(list_, N00);
+                    add_Nganh_ID(list_, N01);
+                    add_Nganh_ID(list_, N05);
                 }
+                if (postion_max == 11)
+                {
+                    add_Nganh_ID(list_, H01);
+                    add_Nganh_ID(list_, V01);
+                }
+                if (postion_max == 12)
+                    add_Nganh_ID(list_, V00);
+                p_index++;
             }
-            if (max_diemTB < 6)
-                return list_;
-            if (postion_max == 0)
-                add_Nganh_ID(list_, A00);
-            if (postion_max == 1)
-                add_Nganh_ID(list_, A01);
-            if (postion_max == 2)
-                add_Nganh_ID(list_, A02);
-            if (postion_max == 3)
-                add_Nganh_ID(list_, B00);
-            if (postion_max == 4)
-                add_Nganh_ID(list_, C00);
-            if (postion_max == 5)
-                add_Nganh_ID(list_, D01);
-            if (postion_max == 6)
-                add_Nganh_ID(list_, D07);
-            if (postion_max == 7)
-                add_Nganh_ID(list_, D08);
-            if (postion_max == 8)
-                add_Nganh_ID(list_, D14);
-            if (postion_max == 9)
-                add_Nganh_ID(list_, D15);
-            if (postion_max == 10)
-            {
-                add_Nganh_ID(list_, H00);
-                add_Nganh_ID(list_, N00);
-                add_Nganh_ID(list_, N01);
-                add_Nganh_ID(list_, N05);
-            }
-            if (postion_max == 11)
-            {
-                add_Nganh_ID(list_, H01);
-                add_Nganh_ID(list_, V01);
-            }
-            if (postion_max == 12)
-                add_Nganh_ID(list_, V00);
             return list_;
         }
 

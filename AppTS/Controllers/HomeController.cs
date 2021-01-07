@@ -146,6 +146,13 @@ namespace AppTS.Controllers
             return View(model);
         }
 
+        public ActionResult ChiTietRiengSong_LienNganh(int id)
+        {
+
+            ViewBag.Mess = id;
+            return View();
+        }
+
         public ActionResult DangCapNhat()
         {
           
