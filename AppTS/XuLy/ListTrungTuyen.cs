@@ -19,18 +19,10 @@ namespace AppTS.XuLy
                         {
                             ID = a.ID,
                             HOTEN = a.HOTEN,
-                            DIACHI = a.DIACHI,
-                            TRUONG = a.TRUONG,
                             SDT = a.SDT,
-                            EMAIL = a.EMAIL,
-                            NGAYDANGKY = a.NGAYDANGKY,
-                            TENTOHOP = a.TENTOHOP,
-                            ID_CHUYENGANH = a.ID_CHUYENNGANH,
                             TENCHUYENNGANH = b.TENCHUYENNGANH,
-                            MON1 = a.MON1,
-                            MON2 = a.MON2,
-                            MON3 = a.MON3,
-                            TRUNGTUYEN = a.TRUNGTUYEN
+                            TENTOHOP = a.TENTOHOP,
+                            NGAYDANGKY = a.NGAYDANGKY
                         };
             return model.OrderBy(m => m.ID).ToList();
         }
