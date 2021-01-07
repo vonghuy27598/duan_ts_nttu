@@ -64,8 +64,7 @@ namespace AppTS.Controllers
         public JsonResult getNganh_TheoDiem(double toan, double ly, double hoa, double van, double su, double dia, double sinh, double anh)
         {
             DHNN getList = new DHNN();
-            getList.set_Diem(toan,ly,hoa,van,su,dia,sinh,anh);
-           
+            getList.set_Diem(toan,ly,hoa,van,su,dia,sinh,anh);          
             string[] list_nganh = getList.get_list_Nganh();
                   
             if(list_nganh !=null )

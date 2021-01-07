@@ -236,6 +236,7 @@
     <Compile Include="XuLy\HocSinh.cs" />
     <Compile Include="XuLy\KhaoSatHS.cs" />
     <Compile Include="XuLy\KhoiNghiep.cs" />
+    <Compile Include="XuLy\ListTrungTuyen.cs" />
     <Compile Include="XuLy\Nganh.cs" />
     <Compile Include="XuLy\NghienCuu.cs" />
     <Compile Include="XuLy\ListTrungTuyen.cs" />
@@ -2516,6 +2517,7 @@
     <Content Include="Views\TuVan\BatDauDinhHuong.cshtml" />
     <Content Include="Views\Home\Error404.cshtml" />
     <Content Include="Views\DangKyCN\QuanLyXetTuyen.cshtml" />
+    <Content Include="Views\Home\ChiTietRiengSong_LienNganh.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
