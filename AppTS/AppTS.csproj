@@ -248,7 +248,6 @@
     <Compile Include="XuLy\HocSinh.cs" />
     <Compile Include="XuLy\KhaoSatHS.cs" />
     <Compile Include="XuLy\KhoiNghiep.cs" />
-    <Compile Include="XuLy\ListTrungTuyen.cs" />
     <Compile Include="XuLy\Nganh.cs" />
     <Compile Include="XuLy\NghienCuu.cs" />
     <Compile Include="XuLy\ListTrungTuyen.cs" />
@@ -323,12 +322,14 @@
     <Content Include="Content\img\cntt3.jpg" />
     <Content Include="Content\img\codientu.jpg" />
     <Content Include="Content\img\congchung.jpg" />
+    <Content Include="Content\img\congnghetaichinh.jpg" />
     <Content Include="Content\img\congnghethucpham.jpg" />
     <Content Include="Content\img\cong_nghe.jpg" />
     <Content Include="Content\img\ct_lienxuyen.jpg" />
     <Content Include="Content\img\ct_quocte_1.jpg" />
     <Content Include="Content\img\ct_quocte_2.jpg" />
     <Content Include="Content\img\ct_songnganh.jpg" />
+    <Content Include="Content\img\ct_songnganh_tieude.jpg" />
     <Content Include="Content\img\cungung.jpg" />
     <Content Include="Content\img\daodien.jpg" />
     <Content Include="Content\img\daphuongtien.jpg" />
@@ -342,6 +343,7 @@
     <Content Include="Content\img\dongphuong.jpg" />
     <Content Include="Content\img\duhoc.jpg" />
     <Content Include="Content\img\dulich.jpg" />
+    <Content Include="Content\img\dulichso.jpg" />
     <Content Include="Content\img\duochoc.jpg" />
     <Content Include="Content\img\duongcheo.png" />
     <Content Include="Content\img\elearning.jpg" />
@@ -396,12 +398,14 @@
     <Content Include="Content\img\khutuhoc.jpg" />
     <Content Include="Content\img\kientruc.jpg" />
     <Content Include="Content\img\kinhdoanhquocte.jpg" />
+    <Content Include="Content\img\kinhteso.jpg" />
     <Content Include="Content\img\kn_kinhte.jpg" />
     <Content Include="Content\img\kn_kythuat.jpg" />
     <Content Include="Content\img\kn_mythuat.jpg" />
     <Content Include="Content\img\kn_nhanvan.jpg" />
     <Content Include="Content\img\kn_suckhoe.jpg" />
     <Content Include="Content\img\kythuat.jpg" />
+    <Content Include="Content\img\kythuathethong.jpg" />
     <Content Include="Content\img\lienhe.jpg" />
     <Content Include="Content\img\luatkinhte.jpg" />
     <Content Include="Content\img\ly1.jpg" />
@@ -436,6 +440,7 @@
     <Content Include="Content\img\qt_icon_3.png" />
     <Content Include="Content\img\qt_icon_4.png" />
     <Content Include="Content\img\qt_icon_5.png" />
+    <Content Include="Content\img\quantricongnghesinhhoc.jpg" />
     <Content Include="Content\img\quantrikinhdoanh.jpg" />
     <Content Include="Content\img\quantrinhanluc.jpg" />
     <Content Include="Content\img\quayphim.jpg" />
@@ -499,6 +504,7 @@
     <Content Include="Content\img\thuongmaidientu.jpg" />
     <Content Include="Content\img\tiengviet.jpg" />
     <Content Include="Content\img\tienich.jpg" />
+    <Content Include="Content\img\tinsinhhoc.jpg" />
     <Content Include="Content\img\toaan.jpg" />
     <Content Include="Content\img\toan1.png" />
     <Content Include="Content\img\toan10.png" />
@@ -529,6 +535,7 @@
     <Content Include="Content\img\tuyensinh4.jpg" />
     <Content Include="Content\img\upm2.jpg" />
     <Content Include="Content\img\vatlyykhoa.jpg" />
+    <Content Include="Content\img\vatlyykhoa_kythuatysinh.jpg" />
     <Content Include="Content\img\vietnam.jpg" />
     <Content Include="Content\img\xaydung.jpg" />
     <Content Include="Content\img\xetnghiem.jpg" />
