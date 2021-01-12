@@ -7,15 +7,18 @@
     .d-lg-none{
         display:none
     }
+    .title_dudoan {
+        font-size: calc(20px + (22 - 22) * ((100vw - 300px) / (1600 - 300)));
+    }
 </style>
 <div class="dudoan" style="margin-top:100px">
-    <h2>ĐỊNH HƯỚNG NGÀNH NGHỀ</h2>
+    <h2 class="title_dudoan">ĐỊNH HƯỚNG NGÀNH NGHỀ</h2>
     <div class="form-advisory">
         <div class="select-form">
             <select>
-                <option value="1">Cuối năm lớp 11</option>
-                <option value="2">Học kỳ 1 lớp 12</option>
-                <option value="3">Cuối năm lớp 12</option>
+                <option value="1">Lớp 10</option>
+                <option value="2">Lớp 11</option>
+                <option value="3">Lớp 12</option>
             </select>
         </div>
         <div class="content-form">
@@ -64,8 +67,7 @@
 
                 </tbody>
             </table>
-            <a class="btn-dudoan" id="send_dudoan" href="#result">Dự đoán</a>
-           
+            <a class="btn-dudoan" id="send_dudoan" href="#result">Định hướng</a>           
         </div>
         <div class="result-form" id="result">
             <h4 style="font-weight:bold">Bạn có thể theo học các ngành sau:</h4>
@@ -90,46 +92,46 @@
         // Add smooth scrolling to all links
         $("#send_dudoan").on('click', function (event) {
 
-            var toan = $('#txtToan').val();
+            var toan = ($('#txtToan').val()).trim();
             var ntoan = parseFloat(toan);
-            $(".result-toan").text(toan);
-            var ly = $('#txtLy').val();
+            
+            var ly = ($('#txtLy').val()).trim();
             var nly = parseFloat(ly);
-            $(".result-ly").text(ly);
-            var hoa = $('#txtHoa').val();
+           
+            var hoa = ($('#txtHoa').val()).trim();
             var nhoa = parseFloat(hoa);
-            $(".result-hoa").text(hoa);
-            var sinh = $('#txtSinh').val();
+          
+            var sinh = ($('#txtSinh').val()).trim();
             var nsinh = parseFloat(sinh);
-            $(".result-sinh").text(sinh);
-            var van = $('#txtVan').val();
+            
+            var van = ($('#txtVan').val()).trim();
             var nvan = parseFloat(van);
-            $(".result-van").text(van);
-            var su = $('#txtSu').val();
+           
+            var su = ($('#txtSu').val()).trim();
             var nsu = parseFloat(su);
-            $(".result-su").text(su);
-            var dia = $('#txtDia').val();
+       
+            var dia = ($('#txtDia').val()).trim();
             var ndia = parseFloat(dia);
-            $(".result-dia").text(dia);
-            var anh = $('#txtAnh').val();
+          
+            var anh = ($('#txtAnh').val()).trim();
             var nanh = parseFloat(anh);
-            $(".result-anh").text(anh);
+        
 
             if (toan.length == 0)
                 ntoan = 0;
-            else if (ly.length == 0)
+            if (ly.length == 0)
                 nly = 0;
-            else if (hoa.length == 0)
+            if (hoa.length == 0)
                 nhoa = 0;
-            else if (van.length == 0)
+            if (van.length == 0)
                 nvan = 0;
-            else if (su.length == 0)
+            if (su.length == 0)
                 nsu = 0;
-            else if (dia.length == 0)
+            if (dia.length == 0)
                 ndia = 0;
-            else if (sinh.length == 0)
+            if (sinh.length == 0)
                 nsinh = 0;
-            else if (anh.length == 0)
+            if (anh.length == 0)
                 nanh = 0;
           
                 if (toan < 0 || toan > 10)
@@ -160,9 +162,11 @@
                             if (response.status != null)
                             {
                                 $.each(response.status, function () {
-                                    $('.result-tb').append("<li>" + this + "</li>");
+                                    
+                                    $('.result-tb').append("<li onclick=\"window.location=\'/Home/ChiTietRiengCacNganh?id="+this.ID_CHUYENNGANH+"\'\">" + this.TENCHUYENNGANH + "</li>");
                                 })
                             } else {
+                                alert("Bạn cần cố gắng thêm. Với số điểm này chưa đạt để đăng ký xét tuyển vào các ngành học của Trường ĐH Nguyễn Tất Thành");
                                 $('.result-tb').append("<li>Không có ngành phù hợp</li>");
                             }
                            

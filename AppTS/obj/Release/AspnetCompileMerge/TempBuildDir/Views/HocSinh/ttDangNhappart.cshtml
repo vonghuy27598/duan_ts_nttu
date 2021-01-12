@@ -2,7 +2,7 @@
 
 @if (Session["User"] == null || Session["User"].ToString() == "")
 {
-    <li><a href="@Url.Action("DangNhap","HocSinh")">Đăng nhập</a></li>
+    <li><a href="@Url.Action("DangNhapSDT","HocSinh")">Đăng nhập</a></li>
     <li><a href="@Url.Action("DangKy","HocSinh")">Đăng ký</a></li>
 }
 else

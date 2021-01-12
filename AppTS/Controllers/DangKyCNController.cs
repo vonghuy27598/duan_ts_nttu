@@ -8,7 +8,9 @@ using System.Text;
 using System.Security.Cryptography;
 using AppTS.XuLy;
 using AppTS.ViewModels;
-
+using System.Web.UI.WebControls;
+using System.IO;
+using System.Web.UI;
 
 namespace AppTS.Controllers
 {
@@ -92,6 +94,26 @@ namespace AppTS.Controllers
         {
             var model = ListTrungTuyen.getDanhSach();
             return View(model);
+        }
+
+        public ActionResult ExportToExcel()
+        {
+            var gv = new GridView();
+            gv.DataSource = ListTrungTuyen.getDanhSach();
+            gv.DataBind();
+            Response.ClearContent();
+            Response.Buffer = true;
+            Response.AddHeader("content-disposition", "attachment; filename=DanhSachXetTuyen.xls");
+            Response.ContentType = "application/ms-excel"; 
+            Response.ContentEncoding = System.Text.Encoding.Unicode;
+            Response.BinaryWrite(System.Text.Encoding.Unicode.GetPreamble());
+            StringWriter objStringWriter = new StringWriter();
+            HtmlTextWriter objHtmlTextWriter = new HtmlTextWriter(objStringWriter);
+            gv.RenderControl(objHtmlTextWriter);
+            Response.Output.Write(objStringWriter.ToString());
+            Response.Flush();
+            Response.End();
+            return View("Index");
         }
     }
 }

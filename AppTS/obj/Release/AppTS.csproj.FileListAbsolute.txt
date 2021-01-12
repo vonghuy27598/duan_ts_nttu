@@ -497,3 +497,15 @@ D:\Work\duan_ts_nttu\AppTS\obj\Release\AppTS.csproj.CoreCompileInputs.cache
 D:\Work\duan_ts_nttu\AppTS\obj\Release\AppTS.csproj.CopyComplete
 D:\Work\duan_ts_nttu\AppTS\obj\Release\AppTS.dll
 D:\Work\duan_ts_nttu\AppTS\obj\Release\AppTS.pdb
+C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\ClosedXML.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\DocumentFormat.OpenXml.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\ExcelNumberFormat.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\LinqToExcel.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\Remotion.Data.Linq.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\Remotion.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\Remotion.Interfaces.dll
+C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\ClosedXML.pdb
+C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\ClosedXML.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\DocumentFormat.OpenXml.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\ExcelNumberFormat.xml
+C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\LinqToExcel.xml

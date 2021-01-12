@@ -52,7 +52,7 @@ namespace AppTS.Controllers
                     if (!(bool)tk.ADMIN)
                     {
                         ViewBag.Mess = "Đăng nhập thành công";
-
+                        
                         Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
                         if (link.Equals("dinhhuong"))
                         {
@@ -121,22 +121,34 @@ namespace AppTS.Controllers
                     ViewBag.Mess = "Đăng nhập thành công";
 
                     Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
-                    if (link.Equals("dinhhuong"))
-                    {
-                        return RedirectToAction("BatDauDinhHuong", "TuVan");
-                    }
-                    else if (link.Equals("xettuyen"))
-                    {
-                        return RedirectToAction("DangKyXetTuyen", "HocSinh");
-                    }
-                    else if (link.Equals("dudoan"))
-                    {
-                        return RedirectToAction("DuDoan", "TuVan");
-                    }
-                    else if (link.Equals("") || link.Equals("null"))
-                    {
-                        return RedirectToAction("Main", "Home");
-                    }
+                    
+                    
+                        if (link.Equals("dinhhuong"))
+                        {
+                            return RedirectToAction("BatDauDinhHuong", "TuVan");
+                        }
+                        else if (link.Equals("xettuyen"))
+                        {
+                            if (tk.ADMIN == true)
+                            {
+                                return RedirectToAction("QuanLyXetTuyen", "DangKyCN");
+                            }
+                            else
+                            {
+                                return RedirectToAction("DangKyXetTuyen", "HocSinh");
+                            }
+                          
+                        }
+                        else if (link.Equals("dudoan"))
+                        {
+                            return RedirectToAction("DuDoan", "TuVan");
+                        }
+                        else if (link.Equals("") || link.Equals("null"))
+                        {
+                            return RedirectToAction("Main", "Home");
+                        }
+                    
+                  
                 }
                 else
                 {
