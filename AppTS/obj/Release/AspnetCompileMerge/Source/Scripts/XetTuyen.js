@@ -288,7 +288,7 @@ $("#admission").click(function () {
         else {
             var tongdiem = parseFloat(diemmon_1) + parseFloat(diemmon_2) + parseFloat(diemmon_3);
             var tohop = $("#dropdownlist_chontohop option:selected").text();
-          
+            alert(tohop);
             var nganh = $("#dropdownlist_chontennganh option:selected").val();
             $.ajax({
                 url: "submit_XetTuyen",
@@ -315,9 +315,9 @@ $("#admission").click(function () {
                             if (result.isConfirmed) {
                                 location.reload();
                 }
-            else {
+                        else {
                         window.location = "/Home/Main";
-        }
+                     }
     })// end_Then_child
 
             })//end_Then_chung

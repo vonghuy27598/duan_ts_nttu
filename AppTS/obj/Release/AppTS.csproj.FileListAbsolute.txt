@@ -509,3 +509,15 @@ C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\ClosedXML.xml
 C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\DocumentFormat.OpenXml.xml
 C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\ExcelNumberFormat.xml
 C:\Users\DELL\Desktop\duan_NTTU\duan_ts_nttu\AppTS\bin\LinqToExcel.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\ClosedXML.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\DocumentFormat.OpenXml.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\ExcelNumberFormat.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\LinqToExcel.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\Remotion.Data.Linq.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\Remotion.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\Remotion.Interfaces.dll
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\ClosedXML.pdb
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\ClosedXML.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\DocumentFormat.OpenXml.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\ExcelNumberFormat.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\LinqToExcel.xml
