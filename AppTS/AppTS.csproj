@@ -553,6 +553,7 @@
     <Content Include="Content\img\ykhoa.jpg" />
     <Content Include="Content\img\ysinh.jpg" />
     <Content Include="Scripts\auto_complete_Truong.js" />
+    <Content Include="Scripts\date.format.js" />
     <Content Include="Scripts\jquery-1.11.3.min.js" />
     <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\XetTuyen.js" />

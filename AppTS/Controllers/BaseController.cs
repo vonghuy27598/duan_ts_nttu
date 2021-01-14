@@ -27,7 +27,7 @@ namespace AppTS.Controllers
             }
             if (!string.IsNullOrEmpty(device_info))
             {
-               
+
             }
             else
             {

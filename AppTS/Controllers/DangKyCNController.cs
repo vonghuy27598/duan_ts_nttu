@@ -32,7 +32,7 @@ namespace AppTS.Controllers
             var tendn = collection["TenDN"];
             string tdn = tendn;
             var matkhau = collection["MatKhau"];
-           
+
             if (String.IsNullOrEmpty(tendn))
             {
                 ViewBag.Mess = string.Format("Tên đăng nhập không được rỗng");
@@ -97,12 +97,36 @@ namespace AppTS.Controllers
             var model = ListTrungTuyen.getDanhSach();
             return View(model);
         }
-
-        public ActionResult ExportToExcel()
+        [HttpPost]
+        public JsonResult sortByDate(int value)
         {
-           
+            var result = ListTrungTuyen.getDanhSach();
+            if (value == 0)
+            {
+                result = ListTrungTuyen.getDanhSach_toDay();
+            }
 
-           
+
+            return Json(new
+            {
+                status = result
+            }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public JsonResult sortByDate_cus(DateTime date)
+        {
+
+            var result = ListTrungTuyen.getDanhSach_byDate(date);
+            return Json(new
+            {
+                status = result
+            }, JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        public ActionResult ExportToExcel(string select, FormCollection form)
+        {
+
             DataTable dt = new DataTable("Grid");
             dt.Columns.AddRange(new DataColumn[6]{ new DataColumn("STT"),
                                             new DataColumn("Họ tên"),
@@ -112,10 +136,25 @@ namespace AppTS.Controllers
                                             new DataColumn("Ngày đăng ký") });
 
             var danhsach = ListTrungTuyen.getDanhSach();
+            var select_sort = form["select_sort"];
+
+
+            if (select_sort.Equals("0"))
+            {
+                danhsach = ListTrungTuyen.getDanhSach_toDay();
+               
+            }
+            else if (select_sort.Equals("1"))
+            {
+                DateTime date = DateTime.Parse(form["ip_date"]);
+                danhsach = ListTrungTuyen.getDanhSach_byDate(date);
+               
+            }
+
 
             foreach (var item in danhsach)
             {
-                dt.Rows.Add(item.ID,item.HOTEN,item.SDT,item.TENCHUYENNGANH,item.TENTOHOP,DateTime.Parse(item.NGAYDANGKY.ToString()).ToShortDateString());
+                dt.Rows.Add(item.ID, item.HOTEN, item.SDT, item.TENCHUYENNGANH, item.TENTOHOP, DateTime.Parse(item.NGAYDANGKY.ToString()).ToShortDateString());
             }
 
             using (XLWorkbook wb = new XLWorkbook())
@@ -128,7 +167,7 @@ namespace AppTS.Controllers
                 }
             }
 
-           
+
         }
     }
 }
