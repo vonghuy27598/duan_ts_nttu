@@ -16,7 +16,13 @@
                 <div class="form-group primary-form-group">
                     <label for="loginemail">Số điện thoại</label>
                     @*<input type="text" value="" name="email" id="loginemail" class="">*@
-                    @Html.TextBox("SDT", null, new { required = "required", @id = "mobile", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}", })
+                    @Html.TextBox("SDT", null, new { required = "required", @id = "mobile", @class = " input-feild line-animation", type = "text" })
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group" style="margin-bottom:0px">
+                    <label for="password">Mật khẩu</label>
+                    @*<input type="password" value="" name="password" id="password" class="form-control input-feild">*@
+                    @Html.Password("MatKhau", null, new {@class = "input-feild line-animation" })
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group" style="margin-bottom:0px">
@@ -56,16 +62,16 @@
 
 </div>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('body').on('click', '.checkmobile', function () {
-            var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
-            var mobile = $('#mobile').val();
-            if (mobile !== '') {
-                if (vnf_regex.test(mobile) == false) {
-                    alert('Số điện thoại của bạn không đúng định dạng!');
-                    return false;
-                } 
-            } 
-        });
-    });
+    //$(document).ready(function () {
+    //    $('body').on('click', '.checkmobile', function () {
+    //        var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+    //        var mobile = $('#mobile').val();
+    //        if (mobile !== '') {
+    //            if (vnf_regex.test(mobile) == false) {
+    //                alert('Số điện thoại của bạn không đúng định dạng!');
+    //                return false;
+    //            } 
+    //        } 
+    //    });
+    //});
 </script>

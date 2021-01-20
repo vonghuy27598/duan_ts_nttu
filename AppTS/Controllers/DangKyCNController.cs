@@ -11,6 +11,8 @@ using AppTS.ViewModels;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Web.UI;
+using ClosedXML.Excel;
+using System.Data;
 
 namespace AppTS.Controllers
 {
@@ -30,7 +32,7 @@ namespace AppTS.Controllers
             var tendn = collection["TenDN"];
             string tdn = tendn;
             var matkhau = collection["MatKhau"];
-           
+
             if (String.IsNullOrEmpty(tendn))
             {
                 ViewBag.Mess = string.Format("Tên đăng nhập không được rỗng");
@@ -95,25 +97,77 @@ namespace AppTS.Controllers
             var model = ListTrungTuyen.getDanhSach();
             return View(model);
         }
-
-        public ActionResult ExportToExcel()
+        [HttpPost]
+        public JsonResult sortByDate(int value)
         {
-            var gv = new GridView();
-            gv.DataSource = ListTrungTuyen.getDanhSach();
-            gv.DataBind();
-            Response.ClearContent();
-            Response.Buffer = true;
-            Response.AddHeader("content-disposition", "attachment; filename=DemoExcel.xls");
-            Response.ContentType = "application/ms-excel"; 
-            Response.ContentEncoding = System.Text.Encoding.Unicode;
-            Response.BinaryWrite(System.Text.Encoding.Unicode.GetPreamble());
-            StringWriter objStringWriter = new StringWriter();
-            HtmlTextWriter objHtmlTextWriter = new HtmlTextWriter(objStringWriter);
-            gv.RenderControl(objHtmlTextWriter);
-            Response.Output.Write(objStringWriter.ToString());
-            Response.Flush();
-            Response.End();
-            return View("Index");
+            var result = ListTrungTuyen.getDanhSach();
+            if (value == 0)
+            {
+                result = ListTrungTuyen.getDanhSach_toDay();
+            }
+
+
+            return Json(new
+            {
+                status = result
+            }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public JsonResult sortByDate_cus(DateTime date)
+        {
+
+            var result = ListTrungTuyen.getDanhSach_byDate(date);
+            return Json(new
+            {
+                status = result
+            }, JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        public ActionResult ExportToExcel(string select, FormCollection form)
+        {
+
+            DataTable dt = new DataTable("Grid");
+            dt.Columns.AddRange(new DataColumn[6]{ new DataColumn("STT"),
+                                            new DataColumn("Họ tên"),
+                                            new DataColumn("Số ĐT"),
+                                            new DataColumn("Chuyên ngành"),
+                                            new DataColumn("Tổ hợp"),
+                                            new DataColumn("Ngày đăng ký") });
+
+            var danhsach = ListTrungTuyen.getDanhSach();
+            var select_sort = form["select_sort"];
+
+
+            if (select_sort.Equals("0"))
+            {
+                danhsach = ListTrungTuyen.getDanhSach_toDay();
+               
+            }
+            else if (select_sort.Equals("1"))
+            {
+                DateTime date = DateTime.Parse(form["ip_date"]);
+                danhsach = ListTrungTuyen.getDanhSach_byDate(date);
+               
+            }
+
+
+            foreach (var item in danhsach)
+            {
+                dt.Rows.Add(item.ID, item.HOTEN, item.SDT, item.TENCHUYENNGANH, item.TENTOHOP, DateTime.Parse(item.NGAYDANGKY.ToString()).ToShortDateString());
+            }
+
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                wb.Worksheets.Add(dt);
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    wb.SaveAs(stream);
+                    return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "DanhSachDangKyXetTuyen.xlsx");
+                }
+            }
+
+
         }
     }
 }

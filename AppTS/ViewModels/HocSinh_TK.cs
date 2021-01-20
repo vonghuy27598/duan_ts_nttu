@@ -20,6 +20,7 @@ namespace AppTS.ViewModels
         public int? ID_TK { get; set; }
         public string USERNAME { get; set; }
         public string PASSWORD { get; set; }
+        public bool? ADMIN { get; set; }
         
     }
 }
