@@ -11,6 +11,8 @@
     <title>ChiTietCacNganh</title>
     <link rel="stylesheet" href="~/Content/css/main/css/owl.carousel.min.css">
     <link rel="stylesheet" href="~/Content/css/main/css/owl.theme.default.min.css">
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" type="text/css" rel="stylesheet">
     <link href="~/Content/css/style.css" rel="stylesheet" />
     <style>
         .owl-stage-outer {
@@ -338,7 +340,7 @@
                         {
                             <tr onclick="window.location='/Home/ChiTietRiengCacNganh?id='+@item.ID_CHUYENNGANH">
                                 <td>@i</td>
-                                <td>@item.TENCHUYENNGANH</td>
+                                <td>@item.TENCHUYENNGANH  <i class="fa fa-book-open"></i></td>
                                 <td>@item.MANGANH</td>
                                 <td>@item.TOHOP</td>
                             </tr>

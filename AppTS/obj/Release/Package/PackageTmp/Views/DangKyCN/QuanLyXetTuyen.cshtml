@@ -1,0 +1,46 @@
+﻿@model IEnumerable<AppTS.ViewModels.TrungTuyen>
+@{
+    ViewBag.Title = "QuanLyXetTuyen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("ExportToExcel", "DangKyCN", FormMethod.Post))
+{
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h5>DANH SÁCH ĐĂNG KÝ XÉT TUYỂN</h5>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Mã SV</th>
+                            <th>Họ Tên</th>
+                            <th>SĐT</th>
+                            <th>Tên ngành</th>
+                            <th>Tên khối</th>
+                            <th>Ngày đăng ký</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table_change" id="myTable">
+                        @foreach (var item in Model)
+                        {
+                            <tr id="row_@item.ID">
+                                <td>@item.ID</td>
+                                <td>@item.HOTEN</td>
+                                <td>@item.SDT</td>
+                                <td>@item.TENCHUYENNGANH</td>
+                                <td>@item.TENTOHOP</td>
+                                <td>@String.Format("{0:dd/MM/yyyy}", @item.NGAYDANGKY)</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <div>
+                    <input type="submit" value="Export to Excel" class="button" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

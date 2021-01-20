@@ -11,7 +11,8 @@
     <title></title>
     <link rel="stylesheet" href="~/Content/css/main/css/owl.carousel.min.css">
     <link rel="stylesheet" href="~/Content/css/main/css/owl.theme.default.min.css">
-   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+
     <style>
         body {
             padding: 0;
@@ -45,7 +46,7 @@
             padding-top: 30px;
             padding-bottom: 5px;
         }
-        
+
 
         .table_main .active_td {
             background-color: black;
@@ -57,10 +58,10 @@
             background-color: black;
         }
 
-       
+
 
         .table_main td img {
-            width: 50%;
+            width: 40%;
             height: auto;
         }
 
@@ -72,11 +73,9 @@
         }
 
         .table-item td {
-            padding: 0px 10px;
             border: none;
-            padding-top:0;
-            padding-bottom:0
-           
+            padding-top: 0;
+            padding-bottom: 0
         }
 
         .table-item {
@@ -107,8 +106,8 @@
         }
 
             .main-home .bg-img {
-                background-origin:content-box;
-                padding-top:75px;
+                background-origin: content-box;
+                padding-top: 75px;
                 opacity: 0.45;
                 width: 100%;
                 height: 100%;
@@ -127,7 +126,7 @@
 
         .bg-main-black {
             padding: 10px;
-            padding-top: 40px;
+            padding-top: 20px;
         }
 
         .header-logo {
@@ -138,6 +137,18 @@
         .owl-carousel img {
             height: auto;
         }
+
+        .table-item td p {
+            font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1600 - 300)));
+            font-weight: bold;
+            font-family: Arial;
+        }
+        .p__icon img{
+            width:40px;
+            height:auto;
+            margin-right:20px;
+            margin-top:10px
+        }
     </style>
 </head>
 <body>
@@ -145,13 +156,14 @@
         <div class="header-logo">
             <img src="~/Content/css/main/images/logo.jpg" style="width:80%;height:auto" />
         </div>
-        <div class="owl-carousel owl-theme">
+        <div class="owl-carousel owl-theme" style="box-shadow: 0px 10px 6px -2px #808080;">
             <div class="item"><img src="~/Content/css/main/images/banner-main-1.jpg" /></div>
             <div class="item"><img src="~/Content/css/main/images/banner-main-2.jpg" /></div>
             <div class="item"><img src="~/Content/css/main/images/banner-main-3.jpg" /></div>
             <div class="item"><img src="~/Content/css/main/images/banner-main-4.jpg" /></div>
-            <div class="item"><img src="~/Content/css/main/images/banner-main-5.jpg" /></div>
-            <div class="item"><img src="~/Content/css/main/images/banner-main-6.jpg" /></div>
+            <div class="item"><img src="~/Content/css/main/images/banner_2021_1.jpg" /></div>
+            <div class="item"><img src="~/Content/css/main/images/banner_2021_2.jpg" /></div>
+            <div class="item"><img src="~/Content/css/main/images/banner_2021_3.jpg" /></div>
         </div>
         <div class="main-home">
             <!--<img src="images/AI.jpeg" class="bg-img"/>-->
@@ -167,18 +179,18 @@
                                     <td><img src="~/Content/css/main/images/icon_gioithieu.png" /></td>
                                 </tr>
                                 <tr>
-                                    <td><p>Giới thiệu về trường</p></td>
+                                    <td><p>Giới thiệu<br /> về trường</p></td>
                                 </tr>
                             </table>
                         </td>
-                        <td onclick="window.location='/Home/LienHe'">
+                        <td onclick="window.location = '/Home/TienIchHocTap'">
 
                             <table border="0" class="table-item">
                                 <tr>
-                                    <td><img src="~/Content/css/main/images/icon_lienhe.png" /></td>
+                                    <td><img src="~/Content/css/main/images/icon_tienich.png" /></td>
                                 </tr>
                                 <tr>
-                                    <td><p>Thông tin tuyển sinh Bộ/Trường</p></td>
+                                    <td><p>Tiện ích <br /> học tập</p></td>
                                 </tr>
                             </table>
 
@@ -189,20 +201,20 @@
                                     <td><img src="~/Content/css/main/images/icon_daotao.png" /></td>
                                 </tr>
                                 <tr>
-                                    <td><p>Các ngành đào tạo</p></td>
+                                    <td><p>Các ngành <br /> đào tạo</p></td>
                                 </tr>
                             </table>
 
                         </td>
                     </tr>
                     <tr>
-                        <td onclick="window.location='/TuVan/DinhHuong'">
+                        <td onclick="window.location='/TuVan/BatDauDinhHuong'">
                             <table border="0" class="table-item">
                                 <tr>
-                                    <td><img src="~/Content/css/main/images/icon_dinhhuong.png" /></td>
+                                    <td><img src="~/Content/css/main/images/icon_tracnghiem_nganh.png" /></td>
                                 </tr>
                                 <tr>
-                                    <td><p>Trắc nghiệm chọn ngành</p></td>
+                                    <td><p>Trắc nghiệm <br /> nghề nghiệp</p></td>
                                 </tr>
                             </table>
 
@@ -212,10 +224,10 @@
                             <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/TuVan/DuDoan'">
                                 <table border="0" class="table-item">
                                     <tr>
-                                        <td><img src="~/Content/css/main/images/icon_login.png" /></td>
+                                        <td><img src="~/Content/css/main/images/icon_dinhhuong_nganh.png" /></td>
                                     </tr>
                                     <tr>
-                                        <td><p>Định hướng ngành nghề</p></td>
+                                        <td><p>Định hướng <br /> ngành nghề</p></td>
                                     </tr>
                                 </table>
                             </td>
@@ -239,10 +251,10 @@
                         <td>
                             <table border="0" class="table-item" onclick="window.location='/Home/PhuongAnTS'">
                                 <tr>
-                                    <td><img src="~/Content/css/main/images/icon_phuongan.png" /></td>
+                                    <td><img src="~/Content/css/main/images/icon_phuongthuc.png" /></td>
                                 </tr>
                                 <tr>
-                                    <td><p>Phương án tuyển sinh</p></td>
+                                    <td><p>Phương thức <br /> tuyển sinh</p></td>
                                 </tr>
                             </table>
 
@@ -253,7 +265,7 @@
                                     <td><img src="~/Content/css/main/images/icon_xettuyen.png" /></td>
                                 </tr>
                                 <tr>
-                                    <td><p>Đăng ký xét tuyển</p></td>
+                                    <td><p>Đăng ký <br /> xét tuyển</p></td>
                                 </tr>
                             </table>
 
@@ -262,28 +274,24 @@
                         <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/ChatView/Index'">
                             <table border="0" class="table-item">
                                 <tr>
-                                    <td><img src="~/Content/css/main/images/icon_chatbot.png" /></td>
+                                    <td><img src="~/Content/css/main/images/icon_tuvan.png" /></td>
                                 </tr>
                                 <tr>
-                                    <td><p>Tư vấn trực tuyến</p></td>
+                                    <td><p>Tư vấn <br /> trực tuyến</p></td>
                                 </tr>
                             </table>
-
                         </td>
                     </tr>
                 </table>
             </div>
         </div>
+        @*<p style="text-align: center; margin:0px" class="p__icon"><img src="~/Content/img/icon_fb.png" /> <img src="~/Content/img/icon_zalo.png" /> <img src="~/Content/img/icon_hotline.png" /> </p>*@
     </div>
   
     <script>
        
     </script>
-
-
-
-    <script src="~/Content/css/main/js/jquery-2.2.4.min.js"></script>
-   
+    <script src="~/Content/css/main/js/jquery-2.2.4.min.js"></script>   
     <script src="~/Content/css/main/js/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function () {

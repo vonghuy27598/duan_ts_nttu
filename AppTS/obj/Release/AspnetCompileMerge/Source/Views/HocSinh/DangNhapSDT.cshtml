@@ -19,6 +19,12 @@
                     @Html.TextBox("SDT", null, new { required = "required", @id = "mobile", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}", })
                     <div class="line"></div>
                 </div>
+                <div class="form-group primary-form-group" style="margin-bottom:0px">
+                    <label for="password">Mật khẩu</label>
+                    @*<input type="password" value="" name="password" id="password" class="form-control input-feild">*@
+                    @Html.Password("MatKhau", null, new {@class = "input-feild line-animation" })
+                    <div class="line"></div>
+                </div>
                 <div class="submit-button">
 
                     <input type="submit" value="Đăng nhập" id="signinCreate" class="btn main-btn checkmobile" style="width:100%" />

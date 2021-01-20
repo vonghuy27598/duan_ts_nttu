@@ -497,3 +497,15 @@ D:\Work\duan_ts_nttu\AppTS\obj\Release\AppTS.csproj.CoreCompileInputs.cache
 D:\Work\duan_ts_nttu\AppTS\obj\Release\AppTS.csproj.CopyComplete
 D:\Work\duan_ts_nttu\AppTS\obj\Release\AppTS.dll
 D:\Work\duan_ts_nttu\AppTS\obj\Release\AppTS.pdb
+D:\Work\duan_ts_nttu\AppTS\bin\ClosedXML.dll
+D:\Work\duan_ts_nttu\AppTS\bin\DocumentFormat.OpenXml.dll
+D:\Work\duan_ts_nttu\AppTS\bin\ExcelNumberFormat.dll
+D:\Work\duan_ts_nttu\AppTS\bin\LinqToExcel.dll
+D:\Work\duan_ts_nttu\AppTS\bin\Remotion.Data.Linq.dll
+D:\Work\duan_ts_nttu\AppTS\bin\Remotion.dll
+D:\Work\duan_ts_nttu\AppTS\bin\Remotion.Interfaces.dll
+D:\Work\duan_ts_nttu\AppTS\bin\ClosedXML.pdb
+D:\Work\duan_ts_nttu\AppTS\bin\ClosedXML.xml
+D:\Work\duan_ts_nttu\AppTS\bin\DocumentFormat.OpenXml.xml
+D:\Work\duan_ts_nttu\AppTS\bin\ExcelNumberFormat.xml
+D:\Work\duan_ts_nttu\AppTS\bin\LinqToExcel.xml

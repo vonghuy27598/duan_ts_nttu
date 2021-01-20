@@ -9,16 +9,28 @@ function getBotResponse() {
 		block : 'start',
 		behavior : 'smooth'
 	});
-	$.get("/get", {
-		msg : rawText
-	}).done(function(data) {
-	    var botHtml = '<p class="text-left"><img src="/Content/static/chatbot.jpg" height="31" width="27">&nbsp;&nbsp;<span class="bg-info text-white rounded p-1" style=" ">' + data + '</span></p>';
-		$("#chatbox").append(botHtml);
-		document.getElementById('formInput').scrollIntoView({
-			block : 'start',
-			behavior : 'smooth'
-		});
+	$.ajax({
+	    url: "ChatBotResponse",
+	    data: { text: rawText },
+	    datatype: "json",
+	    type: "POST",
+	    success: function (response) {
+	        if (response.status != null)
+	        {
+	            var botHtml = '<p class="text-left"><img src="/Content/static/chatbot.jpg" height="31" width="27">&nbsp;&nbsp;<span class="bg-info text-white rounded p-1" style=" ">' + response.status + '</span></p>';
+	            $("#chatbox").append(botHtml);
+	            document.getElementById('formInput').scrollIntoView({
+	                block: 'start',
+	                behavior: 'smooth'
+	            });
+	            var elem = document.getElementById('chatbox');
+	            elem.scrollTop = elem.scrollHeight;
+	        }
+	       
+	    }
 	});
+	
+	
 }
     
 
@@ -27,7 +39,7 @@ $(document).ready(function () {
     $("input:submit").click(function () {
         if ($("input:text").val().trim() != "") {
             getBotResponse();
-            $("#chatbox").append('<p class="text-left"><img src="/Content/static/chatbot.jpg" height="31" width="27">&nbsp;&nbsp;<span class="bg-info text-white rounded p-1" style=" ">Trường Đại Học Nguyễn Tất Thành</span></p>');
+            
             var elem = document.getElementById('chatbox');
             elem.scrollTop = elem.scrollHeight;           
         }
@@ -36,14 +48,12 @@ $(document).ready(function () {
     $("input:text").keypress(function (e) {
         if (e.which == 13 && $("input:text").val().trim() != "") {
             getBotResponse();
-            $("#chatbox").append('<p class="text-left"><img src="/Content/static/chatbot.jpg" height="31" width="27">&nbsp;&nbsp;<span class="bg-info text-white rounded p-1" style=" ">Trường Đại Học Nguyễn Tất Thành</span></p>');
+           
             var elem = document.getElementById('chatbox');
             elem.scrollTop = elem.scrollHeight;
         }
     });
-    $("input:text").click(function (e) {
-       
-            
+    $("input:text").click(function (e) {             
             var elem = document.getElementById('chatbox');
             elem.scrollTop = elem.scrollHeight;
         
