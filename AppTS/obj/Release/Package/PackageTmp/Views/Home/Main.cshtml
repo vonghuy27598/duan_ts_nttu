@@ -75,7 +75,7 @@
         .table-item td {
             border: none;
             padding-top: 0;
-            padding-bottom: 0
+            padding-bottom: 0;
         }
 
         .table-item {
@@ -143,11 +143,12 @@
             font-weight: bold;
             font-family: Arial;
         }
-        .p__icon img{
-            width:40px;
-            height:auto;
-            margin-right:20px;
-            margin-top:10px
+
+        .p__icon img {
+            width: 40px;
+            height: auto;
+            margin-right: 20px;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -220,32 +221,32 @@
 
                         </td>
                         <td></td>
-                        
-                            <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/TuVan/DuDoan'">
-                                <table border="0" class="table-item">
-                                    <tr>
-                                        <td><img src="~/Content/css/main/images/icon_dinhhuong_nganh.png" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Định hướng <br /> ngành nghề</p></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        
+
+                        <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/TuVan/DuDoan'">
+                            <table border="0" class="table-item">
+                                <tr>
+                                    <td><img src="~/Content/css/main/images/icon_dinhhuong_nganh.png" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Định hướng <br /> ngành nghề</p></td>
+                                </tr>
+                            </table>
+                        </td>
+
                         @*else
-                        {
-                            <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/HocSinh/DangXuat'">
-                                <table border="0" class="table-item">
-                                    <tr>
-                                        <td><img src="~/Content/css/main/images/icon_logout.png" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>Đăng xuất</p></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        }*@
-                        
+                            {
+                                <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/HocSinh/DangXuat'">
+                                    <table border="0" class="table-item">
+                                        <tr>
+                                            <td><img src="~/Content/css/main/images/icon_logout.png" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p>Đăng xuất</p></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            }*@
+
                     </tr>
                     <tr>
                         <td>
@@ -260,17 +261,76 @@
 
                         </td>
                         <td>
-                            <table border="0" class="table-item" onclick="window.location='/HocSinh/DangKyXetTuyen'">
-                                <tr>
-                                    <td><img src="~/Content/css/main/images/icon_xettuyen.png" /></td>
-                                </tr>
-                                <tr>
-                                    <td><p>Đăng ký <br /> xét tuyển</p></td>
-                                </tr>
-                            </table>
+                            @if (Session["User"] != null)
+                            {
+                                @*foreach (var item in Model)
+                                {
+                                    if (item.ADMIN == true)
+                                    {
+                                        <table border="0" class="table-item" onclick="window.location='/HocSinh/DangKyXetTuyen'">
+                                            <tr>
+                                                <td><img src="~/Content/css/main/images/icon_xettuyen.png" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>quản lý <br /> xét tuyển</p></td>
+                                            </tr>
+                                        </table>
+                                    }
+                                    else
+                                    {
+                                        <table border="0" class="table-item" onclick="window.location='/HocSinh/DangKyXetTuyen'">
+                                            <tr>
+                                                <td><img src="~/Content/css/main/images/icon_xettuyen.png" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>Đăng ký <br /> xét tuyển</p></td>
+                                            </tr>
+                                        </table>
+                                    }
+                                }*@
+                                var session = (AppTS.ViewModels.HocSinh_TK)Session["User"];
+                                if(session.ADMIN == true)
+                                {
+                                     <table border="0" class="table-item" onclick="window.location='/DangKyCN/QuanLyXetTuyen'">
+                                            <tr>
+                                                <td><img src="~/Content/css/main/images/icon_xettuyen.png" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>Quản lý <br /> xét tuyển</p></td>
+                                            </tr>
+                                        </table>
+                                }
+                                else
+                                {
+                                     <table border="0" class="table-item" onclick="window.location='/HocSinh/DangKyXetTuyen'">
+                                            <tr>
+                                                <td><img src="~/Content/css/main/images/icon_xettuyen.png" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>Đăng ký <br /> xét tuyển</p></td>
+                                            </tr>
+                                        </table>
+                                }
+                               
+                                
+                            }
+                            else
+                            {
+                                <table border="0" class="table-item" onclick="window.location='/HocSinh/DangKyXetTuyen'">
+                                            <tr>
+                                                <td><img src="~/Content/css/main/images/icon_xettuyen.png" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>Đăng ký <br /> xét tuyển</p></td>
+                                            </tr>
+                                        </table>
+                            }
+
+
+
 
                         </td>
-                        
+
                         <td style="border-right: 0.2px solid #eeeeee;" onclick="window.location='/ChatView/Index'">
                             <table border="0" class="table-item">
                                 <tr>
@@ -287,11 +347,11 @@
         </div>
         @*<p style="text-align: center; margin:0px" class="p__icon"><img src="~/Content/img/icon_fb.png" /> <img src="~/Content/img/icon_zalo.png" /> <img src="~/Content/img/icon_hotline.png" /> </p>*@
     </div>
-  
+
     <script>
-       
+
     </script>
-    <script src="~/Content/css/main/js/jquery-2.2.4.min.js"></script>   
+    <script src="~/Content/css/main/js/jquery-2.2.4.min.js"></script>
     <script src="~/Content/css/main/js/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -306,10 +366,10 @@
                 autoplayHoverPause: true,
 
             });
-           
+
         });
     </script>
-    
+
 </body>
 
 </html>

@@ -1,0 +1,137 @@
+﻿.d-none {
+    display: none !important;
+}
+
+.mobile-nav-toggle {
+    display: none !important;
+}
+
+#formInput {
+    padding: 5px 10px;
+    /*background-color:white*/
+}
+
+    #formInput input[type=text] {
+        max-width: 80%;
+        display: inline-block
+    }
+
+#buttonInput {
+    max-width: 15%;
+    float: right
+}
+
+#chatbox {
+    max-height: 100vh;
+    overflow-y: auto;
+    /*min-height: -moz-available; /* WebKit-based browsers will ignore this. */
+    /*min-height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    /*min-height: fill-available;*/ */
+}
+
+
+
+.area-chat .header-chat {
+    border-bottom: 1px solid;
+    padding: 15px;
+    background-color: #00509d;
+}
+
+    .area-chat .header-chat h4 {
+        font-weight: bold;
+        color: white
+    }
+
+.menu-top {
+    height: 60px;
+    padding: 10px 0;
+    z-index: 997;
+    transition: all 0.5s;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+}
+
+    .menu-top img {
+        padding: 0;
+        margin: 7px 0;
+        max-height: 36px;
+        margin-left: 15px
+    }
+
+.footer-chat {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    left: 0;
+}
+
+.body-chat {
+    background-color: #f4fafd;
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 5px
+}
+
+#formInput {
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+}
+
+@media all and (max-height:300px) {
+    #chatbox {
+        height: 55vh;
+    }
+}
+
+@media all and (min-height:300px) {
+    #chatbox {
+        height: 60vh;
+    }
+}
+
+@media all and (min-height:370px) {
+    #chatbox {
+        height: 70vh;
+    }
+}
+
+@media all and (min-height:460px) {
+    #chatbox {
+        height: 75vh;
+    }
+}
+
+@media all and (min-height:510px) {
+    #chatbox {
+        height: 78vh;
+    }
+}
+
+@media all and (min-height:565px) {
+    #chatbox {
+        height: 80vh;
+    }
+}
+
+@media all and (min-height:612px) {
+    #chatbox {
+        height: 81vh;
+    }
+}
+
+@media all and (min-height:700px) {
+    #chatbox {
+        height: 85vh;
+    }
+}
+
+@media all and (min-height:800px) {
+    #chatbox {
+        height: 87vh;
+    }

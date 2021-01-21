@@ -1,0 +1,53 @@
+﻿@model AppTS.Areas.Admin.Models.ViewModel.TaiKhoan
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/layout_login_ADMIN.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-xl-10 col-lg-12 col-md-9">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                            </div>
+
+                    @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @class = "user" }))
+                  {
+
+                           
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.USERNAME, new { @class = "form-control form-control-user", id = "exampleInputDiaChiEmail", placeholder = "Tài khoản đăng nhập ", required = "required"})                                    
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.PASSWORD, new { @class = "form-control form-control-user", id = "exampleInputDiaChiEmail", placeholder = "Mật khẩu ", required = "required",type="password" })
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-primary btn-user btn-block" value="Đăng nhập" />
+                                </div>
+                                
+                               
+                           
+                    }
+                            <div class="text-center">
+                                <h4 style="color:red;font-weight:bold;text-align:center;margin-top:30px;font-size:15px">@ViewBag.ThongBao</h4>
+                            </div>
+                            <div class="text-center">
+                                <a class="small" href="forgot-password.html">Forgot Password?</a>
+                            </div>
+                            <div class="text-center">
+                                <a class="small" href="@Url.Action("Signup","Login")">Create an Account!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

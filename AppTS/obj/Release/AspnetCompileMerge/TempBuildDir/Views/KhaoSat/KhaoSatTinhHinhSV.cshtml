@@ -1,0 +1,336 @@
+﻿
+@{
+    ViewBag.Title = "KhaoSatTinhHinhSV";
+    Layout = "~/Views/Shared/_Layout_KhaoSat.cshtml";
+}
+<style>
+    .yes-no:focus {
+        border-bottom: 1px solid !important;
+    }
+
+    .yes-no {
+        max-width: 30% !important;
+        margin-bottom: 15px;
+    }
+</style>
+@*<div class="content">
+        <h2 style="font-weight:bold">KHẢO SÁT MỨC ĐỘ HÀI LÒNG VỚI NGÀNH HỌC HIỆN TẠI</h2>
+        <div style="margin-right:10px" class="content-form">
+
+            <div class="group-tv">
+                <label>1.Họ và tên:</label>
+                <input type="text" id="quymo" class="line-animation" /><div class="line"></div>
+            </div>
+
+            <div class="group-tv">
+                <label>2.Trường đang học:</label>
+                <input type="text" id="linhvuc1" class="line-animation" /><div class="line"></div>
+            </div>
+
+            <div class="group-tv">
+
+                <label>3.Chuyên ngành đào tạo:</label>
+                <input type="text" id="linhvuc2" class="line-animation" /><div class="line"></div>
+            </div>
+
+
+            <div class="group-tv">
+
+                <label>4. Ngành học:</label>
+                <input type="text" id="linhvuc3" class="line-animation" /><div class="line"></div>
+            </div>
+
+            <div class="group-tv">
+
+                        <label>5. Bạn đang học đúng với sở thích không?: </label>
+                    <input type="text" placeholder="(có/không)" class="yes-no" />
+
+                <label>Nếu không, ngành học yêu thích của bạn là gì? </label>
+                <input type="text" id="linhvuc4" class="line-animation" placeholder=""/><div class="line"></div>
+            </div>
+
+            <div class="group-tv">
+
+                <label>6. Bạn đang là sinh viên năm thứ (1, 2, 3, 4):</label>
+                <input type="text" id="linhvuc5" class="line-animation" placeholder="" /><div class="line"></div>
+            </div>
+
+            <div class="group-tv">
+
+                <label>7. Điểm trung bình tích lũy qua các học kỳ (Đại học):</label>
+                <table border="1" cellpadding="10">
+                    <thead>
+                        <tr>
+                            <th>Học kỳ</th>
+                            <th>Điểm trung bình</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="number" id="txtToan" onkeypress="if(this.value.length==2) return false; " class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="number" id="txtLy" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="number" id="txtHoa" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="number" id="txtVan" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><input type="number" id="txtSu" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><input type="number" id="txtDia" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><input type="number" id="txtSinh" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><input type="number" id="txtAnh" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><input type="number" id="txtGD" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><input type="number" id="txtTin" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="group-tv">
+                <label>8. Điểm trung bình tích lũy đến thời điểm hiện tại (Đại học):</label>
+                <input type="text" id="linhvuc6" class="line-animation" placeholder="" /><div class="line"></div>
+            </div>
+            <div class="group-tv">
+                <label>9. Bạn đã từng chuyển ngành chưa:</label>
+                <input type="text" id="linhvuc7" class="yes-no" placeholder="(có/không)"/>
+                <div class="child-group">
+                    <label>9.1. Nếu có, ngành học trước đây của bạn là gì: <input type="text" id="txtMuc71" class="line-animation" /><div class="line"></div></label>
+
+                    <label>9.2. Nếu không, bạn có xu hướng muốn chuyển ngành không?: </label>
+                    <div class="child-group">
+                        <label><input type="radio" name="check_chuyennganh" style="max-width:5%;width:auto;display:inline-block;margin-right:10px"/>Có, ngành bạn muốn chuyển: <input type="text" id="txtMuc71" class="line-animation" /><div class="line"></div></label>
+
+                        <label><input type="radio" name="check_chuyennganh" style="max-width: 5%; width: auto; display: inline-block; margin-right: 10px; " />Không </label>
+                        <label><input type="radio" name="check_chuyennganh" style="max-width: 5%; width: auto; display: inline-block; margin-right: 10px; " />Đang phân vân ngành bạn muốn chuyển <input type="text" id="txtMuc71" class="line-animation" /><div class="line"></div></label>
+                     </div>
+               </div>
+            </div>
+            <div class="group-tv">
+                <label>10. Bạn đã từng học ở trường Đại học/Cao đẳng nào chưa?</label>
+                <input type="text" id="linhvuc8" class="yes-no" placeholder="(có/không)" />
+                <div class="child-group">
+                    <label>Nếu có vui lòng cho biết</label>
+                    <label>10.1 Tên trường Đại học/Cao đẳng mà bạn đã từng học: <input type="text" id="txtMuc71" class="line-animation" /><div class="line"></div></label>
+                    <label>10.2 Lý do bạn chuyểnn trường: </label>
+                    <textarea rows="5" id="txtMuc5"></textarea>
+
+                </div>
+
+            </div>
+            <div class="group-tv">
+                <label>11. Bạn có xu hướng muốn chuyển trường đang học sang một trường Đại học/Cao đẳng nào khác không?</label>
+                <input type="text" id="linhvuc9" class="yes-no" placeholder="(có/không/nghỉ học)" />
+                <div class="child-group">
+                    <label>11.1 Nếu có</label>
+                    <div class="child-group">
+                        <label>- Lý do:</label>
+                        <textarea rows="5" id="txtMuc6"></textarea>
+                        <label>- Tên trường mà bạn muốn chuyển đến:</label>
+                        <input type="text" id="linhvuc10" class="line-animation" placeholder="" /><div class="line"></div>
+                    </div>
+                    <label>11.2 Nếu không</label>
+
+                    <div class="child-group">
+                        <label><input type="radio" name="check_lydo" style="max-width:5%;width:auto;display:inline-block;margin-right:10px" />Hài lòng với trường, ngành học hiện tại</label>
+
+                        <label><input type="radio" name="check_lydo" style="max-width: 5%; width: auto; display: inline-block; margin-right: 10px; " />Điều kiện không cho phép </label>
+                        <label><input type="radio" name="check_lydo" style="max-width: 5%; width: auto; display: inline-block; margin-right: 10px; " />Ý kiến khác</label>
+                        <textarea rows="5" id="txtMuc7"></textarea>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <div style="margin-bottom:30px; text-align:center" class="group-tv">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>*@
+
+<div class="dudoan" style="margin-top:50px">
+    <h2>KHẢO SÁT MỨC ĐỘ HÀI LÒNG VỚI NGÀNH HỌC HIỆN TẠI</h2>
+    <div class="form-advisory">
+        <div class="content-form">
+            <div class="group-tv">
+                <label>1.Họ và tên:</label>
+                <input type="text" id="quymo" class="line-animation" /><div class="line"></div>
+            </div>
+
+            <div class="group-tv">
+                <label>2.Trường đang học:</label>
+                <input type="text" id="linhvuc1" class="line-animation" /><div class="line"></div>
+            </div>
+
+            <div class="group-tv">
+
+                <label>3.Chuyên ngành đào tạo:</label>
+                <input type="text" id="linhvuc2" class="line-animation" /><div class="line"></div>
+            </div>
+
+
+            <div class="group-tv">
+
+                <label>4. Ngành học:</label>
+                <input type="text" id="linhvuc3" class="line-animation" /><div class="line"></div>
+            </div>
+
+            <div class="group-tv">
+
+                <label>5. Bạn đang học đúng với sở thích không?: </label>
+                <input type="text" placeholder="(có/không)" class="yes-no" />
+
+                <label>Nếu không, ngành học yêu thích của bạn là gì? </label>
+                <input type="text" id="linhvuc4" class="line-animation" placeholder="" /><div class="line"></div>
+            </div>
+
+            <div class="group-tv">
+
+                <label>6. Bạn đang là sinh viên năm thứ (1, 2, 3, 4):</label>
+                <input type="text" id="linhvuc5" class="line-animation" placeholder="" /><div class="line"></div>
+            </div>
+            <div class="group-tv">
+
+                <label>7. Điểm trung bình tích lũy qua các học kỳ (Đại học):</label>
+                <table border="1" cellpadding="10">
+                    <thead>
+                        <tr>
+                            <th>Học kỳ</th>
+                            <th>Điểm trung bình</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="number" id="txtToan" onkeypress="if(this.value.length==2) return false; " class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="number" id="txtLy" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="number" id="txtHoa" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="number" id="txtVan" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><input type="number" id="txtSu" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><input type="number" id="txtDia" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><input type="number" id="txtSinh" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><input type="number" id="txtAnh" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><input type="number" id="txtGD" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><input type="number" id="txtTin" onkeypress="if(this.value.length==2) return false;" class="line-animation" /><div class="line"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="group-tv">
+                <label>8. Điểm trung bình tích lũy đến thời điểm hiện tại (Đại học):</label>
+                <input type="text" id="linhvuc6" class="line-animation" placeholder="" /><div class="line"></div>
+            </div>
+            <div class="group-tv">
+                <label>9. Bạn đã từng chuyển ngành chưa:</label>
+                <input type="text" id="linhvuc7" class="yes-no" placeholder="(có/không)" />
+                <div class="child-group">
+                    <label>9.1. Nếu có, ngành học trước đây của bạn là gì: <input type="text" id="txtMuc91" class="line-animation" /><div class="line"></div></label>
+
+                    <label>9.2. Nếu không, bạn có xu hướng muốn chuyển ngành không?: </label>
+                    <div class="child-group">
+                        <label><input type="radio" name="check_chuyennganh" style="max-width:5%;width:auto;display:inline-block;margin-right:10px" />Có, ngành bạn muốn chuyển: <input type="text" id="txtMuc921" class="line-animation" /><div class="line"></div></label>
+
+                        <label><input type="radio" name="check_chuyennganh" style="max-width: 5%; width: auto; display: inline-block; margin-right: 10px; " />Không </label>
+                        <label><input type="radio" name="check_chuyennganh" style="max-width: 5%; width: auto; display: inline-block; margin-right: 10px; " />Đang phân vân ngành bạn muốn chuyển <input type="text" id="txtMuc93" class="line-animation" /><div class="line"></div></label>
+                    </div>
+                </div>
+            </div>
+            <div class="group-tv">
+                <label>10. Bạn đã từng học ở trường Đại học/Cao đẳng nào chưa?</label>
+                <input type="text" id="linhvuc8" class="yes-no" placeholder="(có/không)" />
+                <div class="child-group">
+                    <label>Nếu có vui lòng cho biết</label>
+                    <label>10.1 Tên trường Đại học/Cao đẳng mà bạn đã từng học: <input type="text" id="txtMuc94" class="line-animation" /><div class="line"></div></label>
+                    <label>10.2 Lý do bạn chuyểnn trường: </label>
+                    <textarea rows="5" id="txtMuc5"></textarea>
+
+                </div>
+
+            </div>
+            <div class="group-tv">
+                <label>11. Bạn có xu hướng muốn chuyển trường đang học sang một trường Đại học/Cao đẳng nào khác không?</label>
+                <input type="text" id="linhvuc9" class="yes-no" placeholder="(có/không/nghỉ học)" />
+                <div class="child-group">
+                    <label>11.1 Nếu có</label>
+                    <div class="child-group">
+                        <label>- Lý do:</label>
+                        <textarea rows="5" id="txtMuc6"></textarea>
+                        <label>- Tên trường mà bạn muốn chuyển đến:</label>
+                        <input type="text" id="linhvuc10" class="line-animation" placeholder="" /><div class="line"></div>
+                    </div>
+                    <label>11.2 Nếu không</label>
+
+                    <div class="child-group">
+                        <label><input type="radio" name="check_lydo" style="max-width:5%;width:auto;display:inline-block;margin-right:10px" />Hài lòng với trường, ngành học hiện tại</label>
+
+                        <label><input type="radio" name="check_lydo" style="max-width: 5%; width: auto; display: inline-block; margin-right: 10px; " />Điều kiện không cho phép </label>
+                        <label><input type="radio" name="check_lydo" style="max-width: 5%; width: auto; display: inline-block; margin-right: 10px; " />Ý kiến khác</label>
+                        <textarea rows="5" id="txtMuc7"></textarea>
+                    </div>
+                </div>
+            </div>
+            <a class="btn-dudoan" id="send_khaosat" href="#result">Gửi khảo sát</a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".dropdown").removeClass("active");
+        $(".sv-drop").addClass("active");
+        $(".list_dropks").css("display", "none");
+        $(".list_sv").css("display", "block");
+        $(".sv_child").removeClass("active");
+        $(".sv_1").addClass("active");
+    });
+</script>

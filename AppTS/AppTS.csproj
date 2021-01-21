@@ -376,6 +376,8 @@
     <Content Include="Content\img\hocbong_3.png" />
     <Content Include="Content\img\hocbong_4.png" />
     <Content Include="Content\img\hocbong_5.png" />
+    <Content Include="Content\img\icon-open-book.png" />
+    <Content Include="Content\img\icon-open.png" />
     <Content Include="Content\img\icon_anh.png" />
     <Content Include="Content\img\icon_fb.png" />
     <Content Include="Content\img\icon_hoa.jpg" />

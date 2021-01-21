@@ -1,0 +1,425 @@
+﻿@{
+    ViewBag.Title = "PhuonAnTS";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #mg {
+        margin-bottom: 5px;
+    }
+
+    #text {
+        font-size: 20px;
+        margin-top: 10px;
+        text-align: justify;
+    }
+
+    h4 {
+        color: #2559b1;
+    }
+
+    ul li {
+        color: #6f6f6f;
+    }
+
+    .section-header {
+        border: 3px solid #2c8ac8;
+        position: relative;
+        color: #2c8ac8;
+        padding: 10px;
+    }
+
+        .section-header h3 {
+            color: #2c8ac8;
+            font-weight: normal;
+            font-size: calc(20px + (22 - 20) * ((100vw - 300px) / (1600 - 300)));
+        }
+
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-right: 16px solid;
+            border-top: 16px solid;
+            border-left: 16px solid;
+            border-bottom: 0px;
+            border-color: #FFFFFF transparent;
+            display: block;
+            width: 0;
+            z-index: 1;
+            margin-right: 15px;
+            bottom: -12px;
+            right: 0;
+        }
+
+        .section-header::before {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-right: 16px solid;
+            border-top: 16px solid;
+            border-left: 16px solid;
+            border-bottom: 0px;
+            border-color: #2c8ac8 transparent;
+            display: block;
+            width: 0;
+            z-index: 1;
+            margin-right: 15px;
+            bottom: -16px;
+            right: 0;
+        }
+
+    .section-header_hocbong {
+        border: 3px solid #00aeef;
+        position: relative;
+        color: #2c8ac8;
+        padding: 10px;
+        margin-top: 30px;
+    }
+
+        .section-header_hocbong h3 {
+            color: #00aeef;
+            font-weight: normal;
+            font-size: calc(20px + (22 - 20) * ((100vw - 300px) / (1600 - 300)));
+        }
+
+        .section-header_hocbong::after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-right: 16px solid;
+            border-top: 16px solid;
+            border-left: 16px solid;
+            border-bottom: 0px;
+            border-color: #FFFFFF transparent;
+            display: block;
+            width: 0;
+            z-index: 1;
+            margin-right: 15px;
+            bottom: -12px;
+            right: 0;
+        }
+
+        .section-header_hocbong::before {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-right: 16px solid;
+            border-top: 16px solid;
+            border-left: 16px solid;
+            border-bottom: 0px;
+            border-color: #00aeef transparent;
+            display: block;
+            width: 0;
+            z-index: 1;
+            margin-right: 15px;
+            bottom: -16px;
+            right: 0;
+        }
+
+    .content_PATS {
+        background-color: #0072bc;
+        color: #fff;
+        margin-top: 15px;
+        padding: 10px;
+        text-align: justify;
+    }
+
+        .content_PATS hr {
+            border: 1px solid #fff;
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        .content_PATS h4 {
+            color: #fff;
+            font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
+            font-weight: bold;
+        }
+
+    .content_PhuongThuc {
+        padding-left: 15px;
+    }
+
+        .content_PhuongThuc li {
+            font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+            .content_PhuongThuc li b {
+                color: #fff;
+                font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1600 - 300)));
+            }
+
+            .content_PhuongThuc li .content_PhuongThuc__ghichu {
+                color: #bebebe;
+                display: block;
+            }
+
+    .time_xetuyen__content {
+        margin-top: 20px;
+    }
+
+        .time_xetuyen__content h3 {
+            color: #f26421;
+            font-weight: normal;
+            font-size: calc(20px + (22 - 20) * ((100vw - 300px) / (1600 - 300)));
+        }
+
+    .table__time {
+        margin-top: 5px;
+        border-color: #f26421;
+        text-align: center;
+        border: 1px solid #f26421;
+    }
+
+
+        .table__time thead {
+            background-color: #f26421;
+            color: #fff;
+            font-size: calc(11px + (13 - 11) * ((100vw - 300px) / (1600 - 300)));
+        }
+
+        .table__time tbody {
+            font-size: calc(10px + (12 - 10) * ((100vw - 300px) / (1600 - 300)));
+        }
+
+    .content_hocbong {
+        margin-top: 15px;
+        
+        
+    }
+
+        .content_hocbong table {
+            color: #cdeaf6;
+            background-color: #00aeef;
+            font-size: calc(10px + (12 - 10) * ((100vw - 300px) / (1600 - 300)));
+            border-color: #44c3f3;
+        }
+
+            .content_hocbong table img {
+                width: 50%;
+            }
+
+            .content_hocbong table tr td:first-child {
+                width: 25%;
+                text-align: center;
+            }
+                .content_hocbong table tr td:last-child{
+                    text-align:justify
+                }
+                
+                
+                
+                
+                 .hocbong_money {
+                    background-image: url('/Content/img/check.png');
+                    background-repeat: no-repeat;
+                    background-position: center left;
+                    background-size: contain;
+                    padding-left: 20px;
+                }
+    .content_hocbong table tr td b{
+        color:#fff
+    }
+</style>
+<!--==========================
+      About Us Section
+    ============================-->
+<section id="about">
+    <div class="container">
+
+        <header class="section-header">
+            <h3>PHƯƠNG THỨC <b>TUYỂN SINH</b></h3>
+        </header>
+
+        <div class="row about-container content_PATS">
+            <h4>Năm 2021 Trường ĐH Nguyễn Tất Thành xét tuyển theo 04 phương thức (dự kiến)</h4>
+            <hr />
+            <ul class="content_PhuongThuc">
+                <li>
+                    <b>Phương thức 1: Xét kết quả kỳ thi THPT 2021</b>
+                    <span class="content_PhuongThuc__ghichu">Theo quy định của Bộ GD&ĐT</span>
+                </li>
+                <li>
+                    <b>Phương thức 2: Xét học bạ THPT </b><span style=" color: #bebebe;">theo 3 tiêu chí</span>
+                    <span class="content_PhuongThuc__ghichu">Tổng điếm trung bình 3 học kỳ lớp 10,11,12 > 18</span>
+                    <span class="content_PhuongThuc__ghichu">Tổ hợp môn xét tuyến lớp 12 >18</span>
+                    <span class="content_PhuongThuc__ghichu">Trung bình cả năm lớp 12 > 6.0</span>
+                </li>
+                <li>
+                    <b>Phương thức 3: Xét kết quả thi kiểm tra đánh giá năng lực của ĐH Quốc gia TP.HCM</b>
+
+                </li>
+                <li>
+                    <b>Phương thức 4: Thi tuyển đầu vào do trường ĐH Nguyễn Tất Thành tổ chức</b>
+                    <ol style="padding-left:10px">
+                        <li style="list-style: circle;">
+                            <b>Hồ sơ xét tuyển:</b> 
+                            <span class="content_PhuongThuc__ghichu"> - Phiếu đăng ký</span>
+                            <span class="content_PhuongThuc__ghichu"> - Bằng tốt nghiệp THPT hoặc giấy chứng nhận tốt nghiệp tạm thời</span>
+
+                            <span class="content_PhuongThuc__ghichu"> - Bản sao học bạ</span>
+                        </li>
+                        <li style="list-style: circle;">
+                            <b>Lưu ý:</b>
+                            <span class="content_PhuongThuc__ghichu" style="margin-bottom:10px"> - Đối với các bạn học sinh chưa có kết quả tốt nghiệp THPT, nộp trước phiếu đăng ký xét tuyển và bản sao học bạ đế được ưu tiên xét tuyến. Những hồ sơ còn thiếu có thế bổ sung sau.</span>
+                            <span class="content_PhuongThuc__ghichu"> - Đối với các ngành xét tuyến môn năng khiếu, thí sinh có thể tham gia kỳ thi năng khiếu do Trường ĐH Nguyên Tất Thành tổ chức hoặc có thể sử dụng kết quả thi từ trường khác đế xét tuyển.</span>
+
+
+                        </li>
+                    </ol>
+
+                </li>
+                <li>
+                    <b>Phương thức 5: Xét tuyển thẳng, ưu tiên xét tuyển các thí sinh đạt giải kỳ thi học sinh giỏi quốc gia, cuộc thi Khoa học kỹ thuật quốc gia, Kỳ thi tay nghề Asean và quốc tế; xét tuyển các thí sinh người nước ngoài đủ điều kiện học tập hoặc theo diện cử tuyển</b>
+                   
+
+                </li>
+            </ul>
+
+        </div>
+        <div class="time_xetuyen">
+            <div class="time_xetuyen__content">
+                <h3>THỜI GIAN <b style="display:block">XÉT TUYỂN HỌC BẠ (dự kiến)</b></h3>
+                <table border="1" cellpadding="5" class="table__time" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Đợt xét</th>
+                            <th>Thời gian nhận hồ sơ</th>
+                            <th>Đợt xét</th>
+                            <th>Thời gian nhận hồ sơ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                Ngày thông báo -02/05/2021
+                            </td>
+                            <td>
+                                6
+                            </td>
+                            <td>12/07 -18/07/2021</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>03/05 -30/05/2021</td>
+                            <td>7</td>
+                            <td>19/07 -25/07/2021</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>01/06 -27/06/2021</td>
+                            <td>8</td>
+                            <td>26/07 -01/08/2021</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>28/06 -04/07/2021</td>
+                            <td>9</td>
+                            <td>02/08 -15/08/2021</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>05/07 -11/07/2021</td>
+                            <td>10</td>
+                            <td>16/08 -29/08/2021</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="time_xetuyen__content">
+                <h3>LỊCH THI <b>NĂNG KHIẾU</b></h3>
+                <table border="1" cellpadding="5" class="table__time" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Đợt thi</th>
+                            <th>Thời gian nhận hồ sơ đăng ký dự thi</th>
+                            <th>Thời gian ôn thi</th>
+                            <th>Ngày thi tuyển</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ngày thông báo -22/05/2021</td>
+                            <td>17/05 -21/05/2021</td>
+                            <td>28/05/2021</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>23/05 -03/07/2021</td>
+                            <td>05/07 -08/07/2021</td>
+                            <td>09/07/2021</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>04/07 -24/07/2021</td>
+                            <td>26/07 -29/07/2021</td>
+                            <td>30/07/2021</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>25/07 -14/08/2021</td>
+                            <td>16/07 -19/07/2021</td>
+                            <td>20/08/2021</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <header class="section-header_hocbong">
+            <h3>CHÍNH SÁCH <b>HỌC BỔNG 2021</b></h3>
+        </header>
+
+        <div class="row about-container content_hocbong">
+            <table width="100%" border="1" cellpadding="5">
+                <tr>
+                    <td rowspan="3"><img src="/Content/img/hocbong_1.png" style="width:90%" /></td>
+                    <td style="width:35%"><span class="hocbong_money">Học bổng <b>3.000.000</b>đ</span></td>
+                    <td>Dành cho tất cả sinh viên trúng tuyến tại trường</td>
+                </tr>
+                <tr>
+
+                    <td style="text-align:left"><span class="hocbong_money">Học bổng <b>4.000.000</b>đ</span></td>
+                    <td>- Điếm thi tốt nghiệp THPT: Trên 24 điếm. <br /> - Điếm học bạ THPT: Trên 24 điếm.</td>
+                </tr>
+                <tr>
+
+                    <td style="text-align:left"><span class="hocbong_money">Học bổng <b>6.000.000</b>đ</span></td>
+                    <td>
+                        Dành cho tân sinh viên ngành Thanh nhạc, Piano, Kỹ thuật
+                        y sinh, Vật lý y khoa, Công nghệ sinh học.
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="/Content/img/hocbong_2.png" /></td>
+                    <td style="text-align:center"><b>Giảm 100% học phí năm học đâu tiên</b></td>
+                    <td>Dành cho thủ khoa đầu vào của Trường, thủ khoa các khoa</td>
+                </tr>
+                <tr>
+                    <td><img src="/Content/img/hocbong_3.png" /></td>
+                    <td style="text-align:center"><b>Giảm 50% học phí năm học đầu tiên</b></td>
+                    <td>- Sinh viên đạt giải cao các cuộc thi nghệ thuật quốc gia khi học ngành Thanh nhạc, Piano. <br /> - Sinh viên ngành Tiếng Việt và văn hóa Việt Nam.</td>
+                </tr>
+                <tr>
+                    <td><img src="/Content/img/hocbong_4.png" /></td>
+                    <td style="text-align:center"><b>Giảm 20% học phí năm học đầu tiên</b></td>
+                    <td>Dành cho sinh viên nữ học các ngành: Kỹ thuật hệ thống công nghiệp, Công nghệ kỹ thuật điện - điện tử, Công nghệ kỹ thuật cơ điện tử, Kỹ thuật xây dựng, Thiết kế nội thất, Kiến trúc.</td>
+                </tr>
+                <tr>
+                    <td style="border-right: none;"><img src="/Content/img/hocbong_5.png" style="width:90%" /></td>
+                    <td colspan="2" style="border-left: none;text-align:center">Tặng voucher khóa học ngoại ngữ trị giá <b>5.000.000đ</b> tại Trung tâm Ngoại ngữ - Trường Đại học Nguyễn Tất Thành nếu sinh viên nhập học đến hết ngày <b>31/08/2021</b>.</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+</section>
+
