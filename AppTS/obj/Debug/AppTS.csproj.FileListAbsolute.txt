@@ -1081,3 +1081,4 @@ C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\Microsoft.Owin.Security.
 C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\obj\Debug\AppTS.dll
 C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\obj\Debug\AppTS.pdb
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache

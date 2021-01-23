@@ -31,7 +31,7 @@ namespace AppTS.Controllers
             }
             else
             {
-                filterContext.Result = new RedirectResult("http://cntt.ntt.edu.vn/-ung-dung-tri-tue-nhan-tao-trong-tu-van-huong-nghiep-241/");
+                //filterContext.Result = new RedirectResult("http://cntt.ntt.edu.vn/-ung-dung-tri-tue-nhan-tao-trong-tu-van-huong-nghiep-241/");
             }
            
             base.OnActionExecuting(filterContext);
