@@ -88,6 +88,14 @@
     }
 </div>
 <script>
+    $("#ip_date_sort").change(function () {
+        var select = this.value;
+        var queryParams = new URLSearchParams(window.location.search);
+
+        // Set new or modify existing parameter value.
+        queryParams.set("date", select);
+        history.replaceState(null, null, "?" + queryParams.toString());
+    });
     $("#sort-bydate").change(function () {
         var select = this.value;
         var queryParams = new URLSearchParams(window.location.search);

@@ -105,6 +105,11 @@ namespace AppTS.Controllers
             if (value == 0)
             {
                 result = ListTrungTuyen.getDanhSach_toDay();
+                Session["download"] = "day";
+            }
+            else
+            {
+                Session["download"] = "all";
             }
 
 
@@ -119,6 +124,8 @@ namespace AppTS.Controllers
         {
 
             var result = ListTrungTuyen.getDanhSach_byDate(date);
+            Session["download"] = "cus";
+            Session["cus_date"] = date;
             return Json(new
             {
                 status = result
@@ -137,23 +144,25 @@ namespace AppTS.Controllers
                                             new DataColumn("Ngày đăng ký") });
 
             var danhsach = ListTrungTuyen.getDanhSach();
-            if(form["select_sort"] != null)
-            {
-                var select_sort = form["select_sort"];
-
-                if (select_sort.Equals("0"))
+            var session_download = Session["download"];
+            if (session_download != null)
+            {              
+                if (session_download.Equals("day"))
                 {
                     danhsach = ListTrungTuyen.getDanhSach_toDay();
 
                 }
-                else if (select_sort.Equals("1"))
+                else if (session_download.Equals("cus"))
                 {
-                    DateTime date = DateTime.Parse(form["ip_date"]);
+                    
+                    DateTime date = DateTime.Parse(Session["cus_date"].ToString());
                     danhsach = ListTrungTuyen.getDanhSach_byDate(date);
 
                 }
-
-
+                else if (session_download.Equals("all"))
+                {
+                    danhsach = ListTrungTuyen.getDanhSach();
+                }
                 foreach (var item in danhsach)
                 {
                     dt.Rows.Add(item.ID, item.HOTEN, item.SDT, item.TENCHUYENNGANH, item.TENTOHOP, DateTime.Parse(item.NGAYDANGKY.ToString()).ToShortDateString());
@@ -169,8 +178,10 @@ namespace AppTS.Controllers
                     }
                 }
             }
+
             else
             {
+                danhsach = ListTrungTuyen.getDanhSach();
                 foreach (var item in danhsach)
                 {
                     dt.Rows.Add(item.ID, item.HOTEN, item.SDT, item.TENCHUYENNGANH, item.TENTOHOP, DateTime.Parse(item.NGAYDANGKY.ToString()).ToShortDateString());
