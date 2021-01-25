@@ -52,8 +52,14 @@ namespace AppTS.Controllers
                     if (!(bool)tk.ADMIN)
                     {
                         ViewBag.Mess = "Đăng nhập thành công";
-                        
+                        //Tạo cookie
                         Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
+                        HttpCookie UserCookie = new HttpCookie("user", (tk.ID_TK).ToString());
+                        UserCookie.HttpOnly = true;
+                        //Đặt thời hạn cho cookie                   
+                        UserCookie.Expires = DateTime.Now.AddDays(365);
+                        //Lưu thông tin vào cookie                 
+                        HttpContext.Response.SetCookie(UserCookie);
                         if (link.Equals("dinhhuong"))
                         {
                             return RedirectToAction("BatDauDinhHuong", "TuVan");
@@ -121,7 +127,14 @@ namespace AppTS.Controllers
                     ViewBag.Mess = "Đăng nhập thành công";
 
                     Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
-                    
+                    //Tạo cookie
+                    Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
+                    HttpCookie UserCookie = new HttpCookie("user", (tk.ID_TK).ToString());
+                    UserCookie.HttpOnly = true;
+                    //Đặt thời hạn cho cookie                   
+                    UserCookie.Expires = DateTime.Now.AddDays(365);
+                    //Lưu thông tin vào cookie                 
+                    HttpContext.Response.SetCookie(UserCookie);
                     
                         if (link.Equals("dinhhuong"))
                         {
@@ -228,6 +241,15 @@ namespace AppTS.Controllers
         public ActionResult DangXuat()
         {
             Session["User"] = null;
+            if (Request.Cookies["user"] != null)
+            {
+                var user = new HttpCookie("user")
+                {
+                    Expires = DateTime.Now.AddDays(-1),
+                    Value = null
+                };
+                Response.SetCookie(user);
+            }
             return RedirectToAction("Main", "Home");
         }
         public ActionResult ttDangNhappart()

@@ -24,6 +24,7 @@
 #chatbox {
     max-height: 100vh;
     overflow-y: auto;
+    
     /*min-height: -moz-available; /* WebKit-based browsers will ignore this. */
     /*min-height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
     /*min-height: fill-available;*/ */
@@ -135,3 +136,4 @@
     #chatbox {
         height: 87vh;
     }
+}

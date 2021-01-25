@@ -16,7 +16,7 @@ using System.Data;
 
 namespace AppTS.Controllers
 {
-    public class DangKyCNController : BaseController
+    public class DangKyCNController : Controller
     {
         //
         // GET: /DangKyCN/
@@ -94,6 +94,7 @@ namespace AppTS.Controllers
         }
         public ActionResult QuanLyXetTuyen(TrungTuyen from)
         {
+            Session["check"] = "ok";
             var model = ListTrungTuyen.getDanhSach();
             return View(model);
         }
@@ -123,8 +124,8 @@ namespace AppTS.Controllers
                 status = result
             }, JsonRequestBehavior.AllowGet);
         }
-        [HttpPost]
-        public ActionResult ExportToExcel(string select, FormCollection form)
+        
+        public ActionResult ExportToExcel(FormCollection form)
         {
 
             DataTable dt = new DataTable("Grid");
@@ -136,38 +137,56 @@ namespace AppTS.Controllers
                                             new DataColumn("Ngày đăng ký") });
 
             var danhsach = ListTrungTuyen.getDanhSach();
-            var select_sort = form["select_sort"];
-
-
-            if (select_sort.Equals("0"))
+            if(form["select_sort"] != null)
             {
-                danhsach = ListTrungTuyen.getDanhSach_toDay();
-               
-            }
-            else if (select_sort.Equals("1"))
-            {
-                DateTime date = DateTime.Parse(form["ip_date"]);
-                danhsach = ListTrungTuyen.getDanhSach_byDate(date);
-               
-            }
+                var select_sort = form["select_sort"];
 
-
-            foreach (var item in danhsach)
-            {
-                dt.Rows.Add(item.ID, item.HOTEN, item.SDT, item.TENCHUYENNGANH, item.TENTOHOP, DateTime.Parse(item.NGAYDANGKY.ToString()).ToShortDateString());
-            }
-
-            using (XLWorkbook wb = new XLWorkbook())
-            {
-                wb.Worksheets.Add(dt);
-                using (MemoryStream stream = new MemoryStream())
+                if (select_sort.Equals("0"))
                 {
-                    wb.SaveAs(stream);
-                    return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "DanhSachDangKyXetTuyen.xlsx");
+                    danhsach = ListTrungTuyen.getDanhSach_toDay();
+
+                }
+                else if (select_sort.Equals("1"))
+                {
+                    DateTime date = DateTime.Parse(form["ip_date"]);
+                    danhsach = ListTrungTuyen.getDanhSach_byDate(date);
+
+                }
+
+
+                foreach (var item in danhsach)
+                {
+                    dt.Rows.Add(item.ID, item.HOTEN, item.SDT, item.TENCHUYENNGANH, item.TENTOHOP, DateTime.Parse(item.NGAYDANGKY.ToString()).ToShortDateString());
+                }
+
+                using (XLWorkbook wb = new XLWorkbook())
+                {
+                    wb.Worksheets.Add(dt);
+                    using (MemoryStream stream = new MemoryStream())
+                    {
+                        wb.SaveAs(stream);
+                        return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "DanhSachDangKyXetTuyen.xlsx");
+                    }
                 }
             }
+            else
+            {
+                foreach (var item in danhsach)
+                {
+                    dt.Rows.Add(item.ID, item.HOTEN, item.SDT, item.TENCHUYENNGANH, item.TENTOHOP, DateTime.Parse(item.NGAYDANGKY.ToString()).ToShortDateString());
+                }
 
-
+                using (XLWorkbook wb = new XLWorkbook())
+                {
+                    wb.Worksheets.Add(dt);
+                    using (MemoryStream stream = new MemoryStream())
+                    {
+                        wb.SaveAs(stream);
+                        return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "DanhSachDangKyXetTuyen.xlsx");
+                    }
+                }
+            }
+            
         }
     }
 }

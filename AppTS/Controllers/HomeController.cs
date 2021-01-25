@@ -12,6 +12,7 @@ namespace AppTS.Controllers
     public class HomeController : BaseController
     {
         dbQL_NTTDataContext db = new dbQL_NTTDataContext();
+        
         public ActionResult Index()
         {
             
@@ -23,11 +24,13 @@ namespace AppTS.Controllers
         }
         public ActionResult Main()
         {
-            
-                return View();
-            
-           
-          
+            //get Cookie          
+            HttpCookie User = Request.Cookies["user"];
+            if (User != null )
+            {                
+                Session["User"] = (HocSinh.GetInfoHS_byIDTK(int.Parse(User.Value))).SingleOrDefault();
+            }
+                return View();               
         }
         public ActionResult DangKyXetTuyen()
         {

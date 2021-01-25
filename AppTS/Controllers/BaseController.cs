@@ -27,14 +27,17 @@ namespace AppTS.Controllers
             }
             if (!string.IsNullOrEmpty(device_info))
             {
-
             }
             else
             {
-                //filterContext.Result = new RedirectResult("http://cntt.ntt.edu.vn/-ung-dung-tri-tue-nhan-tao-trong-tu-van-huong-nghiep-241/");
+                var session_check = Session["check"];
+                if (session_check == null)
+                {
+                    filterContext.Result = new RedirectResult("http://cntt.ntt.edu.vn/-ung-dung-tri-tue-nhan-tao-trong-tu-van-huong-nghiep-241/");
+                }              
             }
-           
+            
             base.OnActionExecuting(filterContext);
-        }
-	}
+        }     
+    }
 }
