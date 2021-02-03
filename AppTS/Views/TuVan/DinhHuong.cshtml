@@ -780,7 +780,7 @@
                                                                 <label for="acd4">4</label>
                                                             </div>
                                                         </td>
-                                                    </tr>
+                                                    </tr>   
                                                     <tr>
                                                         <td>6</td>
                                                         <td>Tôi thích các hoạt động chăm sóc sức khỏe của bản thân và người khác</td>
@@ -1310,53 +1310,48 @@
         <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" style="font-size:30px">&times;</button>
+                <button type="button" id="dong" class="close" data-dismiss="modal" style="font-size:30px">&times;</button>
             </div>
             <div class="modal-body" style="overflow-x: hidden; overflow: scroll;height: 85vh;">
                 <div class="primari-box registered-account dn">
-                    <form class="new-account-box" id="accountLogin" method="post" action="#">
-                        <h3 class="box-subheading">Đăng nhập</h3>
-                            <div class="form-content">
-                                <div class="form-group primary-form-group">
-                                    <p style="color:#000" for="loginemail">Số điện thoại</p>
-                                    @*<input type="text" value="" name="email" id="loginemail" class="">*@
-                                    @Html.TextBox("SDT", null, new { required = "required", @id = "sdt", @class = " input-feild line-animation", type = "text" })
-                                    <div class="line"></div>
-                                </div>
-                                <div class="form-group primary-form-group" style="margin-bottom:0px">
-                                    <p style="color:#000" for="password">Mật khẩu</p>
-                                    @*<input type="password" value="" name="password" id="password" class="form-control input-feild">*@
-                                    @Html.Password("MatKhau", null, new { @class = "input-feild line-animation", @id = "matkhau" })
-                                    <div class="line"></div>
-                                </div>
-                                <div class="submit-button">
+                    <h3 class="box-subheading">Đăng nhập</h3>
+                    <div class="form-content">
+                        <div class="form-group primary-form-group">
+                            <p style="color:#000" for="loginemail">Số điện thoại</p>
+                            @*<input type="text" value="" name="email" id="loginemail" class="">*@
+                            @Html.TextBox("SDT", null, new { required = "required", @id = "sdt", @class = " input-feild line-animation", type = "text" })
+                            <div class="line"></div>
+                        </div>
+                        <div class="form-group primary-form-group" style="margin-bottom:0px">
+                            <p style="color:#000" for="password">Mật khẩu</p>
+                            @*<input type="password" value="" name="password" id="password" class="form-control input-feild">*@
+                            @Html.Password("MatKhau", null, new { @class = "input-feild line-animation", @id = "matkhau" })
+                            <div class="line"></div>
+                        </div>
+                        <div class="submit-button">
 
-                                    <input type="submit" value="Đăng nhập" id="signinCreate" class="btn main-btn checkmobile" style="width:100%" />
+                            <input type="submit" value="Đăng nhập" id="signinCreate" class="btn main-btn checkmobile" style="width:100%" />
 
-                                </div>
-                                <div class="forget-password" style="margin-top:20px">
-                                    @{
-                                        var link_qs = "";
-                                        if (Request.QueryString["link"] != null)
-                                        {
-                                            link_qs = Request.QueryString["link"];
-                                        }
-                                        if (link_qs.Equals(""))
-                                        {
-                                            <a href="@Url.Action("DangKy","HocSinh")">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
-                                        }
-                                        else
-                                        {
-                                            <a href="@Url.Action("DangKy", "HocSinh", new { link=link_qs })">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
-                                        }
-                                    }
-
-
-                                </div>
-                                <div class="mess">@ViewBag.ThongBao</div>
-                            </div>
-                        }
-                    </form>
+                        </div>
+                        <div class="forget-password" style="margin-top:20px">
+                            @{
+                                var link_qs = "";
+                                if (Request.QueryString["link"] != null)
+                                {
+                                    link_qs = Request.QueryString["link"];
+                                }
+                                if (link_qs.Equals(""))
+                                {
+                                    <a href="@Url.Action("DangKy","HocSinh")">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action("DangKy", "HocSinh", new { link=link_qs })">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
+                                }
+                            }
+                        </div>
+                        <div class="mess">@ViewBag.ThongBao</div>
+                    </div>
                 </div>
             </div>
         </div>

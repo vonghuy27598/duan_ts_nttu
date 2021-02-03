@@ -36,9 +36,7 @@ function getTenNganh(id_khoinganh) {
         datatype: "json",
         type: "POST",
         success: function (response) {
-            if (response.status != null) {
-
-
+            if (response.status != null) { 
                 $.each(response.status, function () {
                     var ten_nganh = this.TENCHUYENNGANH;
                     var id_chuyennganh = this.ID_CHUYENNGANH
@@ -46,7 +44,7 @@ function getTenNganh(id_khoinganh) {
 
                     if ($("#dropdownlist_chontennganh option").length <= 0) {
                         var to_hop = this.TOHOP;
-                        var array_tohop = to_hop.split(',');
+                        var array_tohop = to_hop.split(','); 
                         var mon_tohop = "";
                         $.each(array_tohop, function (index, item) {
                             var tohop = item.trim();
@@ -87,9 +85,7 @@ function getTenNganh(id_khoinganh) {
                             if (tohop == "N05")
                                 mon_tohop = "Ngữ văn, Xem phim và viết bài bình luận, Kiến thức chuyên ngành (vấn đáp)";
 
-
                             $("#dropdownlist_chontohop").append("<option value='" + item + "'>" + item + " (" + mon_tohop + ")" + "</option>");
-
                         })
                     }
                     $("#dropdownlist_chontennganh").append("<option value='" + id_chuyennganh + "'>" + ten_nganh + " - " + ma_nganh + "</option>");
@@ -97,7 +93,6 @@ function getTenNganh(id_khoinganh) {
                         getMonTheoToHop($("#dropdownlist_chontohop").val());
                     }
                 });
-
             }
         }
     });

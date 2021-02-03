@@ -18,12 +18,12 @@
             datatype: "json",
             type: "POST",
             success: function (response) {
-                if (success == 1) {
-                    alert(message);
-                    $("#myModal").css("display", "none");
+                if (response.success == 1) {
+                    $(".close").click();
+                    //$("#resultForm").click();
                 }
                 else {
-                    alert(message);
+                    response.message;
                 }
             }
         });
