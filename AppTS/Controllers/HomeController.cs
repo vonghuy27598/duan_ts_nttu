@@ -30,7 +30,7 @@ namespace AppTS.Controllers
             {                
                 Session["User"] = (HocSinh.GetInfoHS_byIDTK(int.Parse(User.Value))).SingleOrDefault();
             }
-                return View();               
+                return View();
         }
         public ActionResult DangKyXetTuyen()
         {

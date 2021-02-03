@@ -60,11 +60,7 @@ namespace AppTS.Controllers
                         UserCookie.Expires = DateTime.Now.AddDays(365);
                         //Lưu thông tin vào cookie                 
                         HttpContext.Response.SetCookie(UserCookie);
-                        if (link.Equals("dinhhuong"))
-                        {
-                            return RedirectToAction("BatDauDinhHuong", "TuVan");
-                        }
-                        else if (link.Equals("xettuyen"))
+                        if (link.Equals("xettuyen"))
                         {
                             return RedirectToAction("DangKyXetTuyen", "HocSinh");
                         }
@@ -110,18 +106,16 @@ namespace AppTS.Controllers
                 if (matkhau.Length == 0)
                 {
                     tk = db.Table_TaiKhoans.SingleOrDefault(m => m.USERNAME == sdt);
-    
-                    if(tk != null)
+
+                    if (tk != null)
                     {
                         if (tk.PASSWORD != null)
                         {
                             tk = null;
                         }
                     }
-                   
+
                 }
-
-
                 if (tk != null)
                 {
                     ViewBag.Mess = "Đăng nhập thành công";
@@ -131,37 +125,30 @@ namespace AppTS.Controllers
                     Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
                     HttpCookie UserCookie = new HttpCookie("user", (tk.ID_TK).ToString());
                     UserCookie.HttpOnly = true;
-                    //Đặt thời hạn cho cookie                   
+                    //Đặt thời hạn cho cookie
                     UserCookie.Expires = DateTime.Now.AddDays(365);
-                    //Lưu thông tin vào cookie                 
+                    //Lưu thông tin vào cookie
                     HttpContext.Response.SetCookie(UserCookie);
-                    
-                        if (link.Equals("dinhhuong"))
+
+                    if (link.Equals("xettuyen"))
+                    {
+                        if (tk.ADMIN == true)
                         {
-                            return RedirectToAction("BatDauDinhHuong", "TuVan");
+                            return RedirectToAction("QuanLyXetTuyen", "DangKyCN");
                         }
-                        else if (link.Equals("xettuyen"))
+                        else
                         {
-                            if (tk.ADMIN == true)
-                            {
-                                return RedirectToAction("QuanLyXetTuyen", "DangKyCN");
-                            }
-                            else
-                            {
-                                return RedirectToAction("DangKyXetTuyen", "HocSinh");
-                            }
-                          
+                            return RedirectToAction("DangKyXetTuyen", "HocSinh");
                         }
-                        else if (link.Equals("dudoan"))
-                        {
-                            return RedirectToAction("DuDoan", "TuVan");
-                        }
-                        else if (link.Equals("") || link.Equals("null"))
-                        {
-                            return RedirectToAction("Main", "Home");
-                        }
-                    
-                  
+                    }
+                    else if (link.Equals("dudoan"))
+                    {
+                        return RedirectToAction("DuDoan", "TuVan");
+                    }
+                    else if (link.Equals("") || link.Equals("null"))
+                    {
+                        return RedirectToAction("Main", "Home");
+                    }
                 }
                 else
                 {

@@ -313,6 +313,7 @@
     <Content Include="Content\css\ringring_phone.css" />
     <Content Include="Content\img\4sao.jpg" />
     <Content Include="Content\img\anh.jpg" />
+    <Content Include="Content\img\anh0.jpg" />
     <Content Include="Content\img\anh1.jpg" />
     <Content Include="Content\img\anh10.jpg" />
     <Content Include="Content\img\anh11.jpg" />
@@ -767,6 +768,7 @@
     <Content Include="Content\img\ykhoa.jpg" />
     <Content Include="Content\img\ysinh.jpg" />
     <Content Include="Scripts\auto_complete_Truong.js" />
+    <Content Include="Scripts\DangNhap.js" />
     <Content Include="Scripts\date.format.js" />
     <Content Include="Scripts\jquery-1.11.3.min.js" />
     <Content Include="Scripts\jquery-ui.min.js" />

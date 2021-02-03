@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using AppTS.Models;
@@ -36,18 +38,10 @@ namespace AppTS.Controllers
         }
         public ActionResult DinhHuong()
         {
-            if (Session["User"] == null)
-            {
-                return RedirectToAction("DangNhapSDT", "HocSinh", new { link = "dinhhuong" });
-            }
             return View();
         }
         public ActionResult BatDauDinhHuong()
         {
-            if (Session["User"] == null)
-            {
-                return RedirectToAction("DangNhapSDT", "HocSinh", new { link = "dinhhuong" });
-            }
             return View();
         }
         public ActionResult TamLy()
@@ -98,6 +92,63 @@ namespace AppTS.Controllers
            
            
            
+        }
+
+        //submit dang nhap
+        [HttpPost]
+        public JsonResult submit_DangNhap(string sdt, string matkhau)
+        {
+            Table_TaiKhoan tk = db.Table_TaiKhoans.SingleOrDefault(m => m.USERNAME == sdt && m.PASSWORD == Str_Encoder(matkhau));
+            if (matkhau.Length == 0)
+            {
+                tk = db.Table_TaiKhoans.SingleOrDefault(m => m.USERNAME == sdt);
+
+                if (tk != null)
+                {
+                    if (tk.PASSWORD != null)
+                    {
+                        tk = null;
+                    }
+                }
+
+            }
+            if (tk != null)
+            {
+                ViewBag.Mess = "Đăng nhập thành công";
+
+                Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
+                //Tạo cookie
+                Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
+                HttpCookie UserCookie = new HttpCookie("user", (tk.ID_TK).ToString());
+                UserCookie.HttpOnly = true;
+                //Đặt thời hạn cho cookie
+                UserCookie.Expires = DateTime.Now.AddDays(365);
+                //Lưu thông tin vào cookie
+                HttpContext.Response.SetCookie(UserCookie);
+                return Json(new
+                {
+                    success = 1,
+                    message = "Đăng nhập thành công"
+                }, JsonRequestBehavior.AllowGet) ;
+            }
+            else
+            {
+                ViewBag.ThongBao = "Số điện thoại hoặc mật khẩu không đúng";
+                return Json(new
+                {
+                    success = 0,
+                    message = "Số điện thoại hoặc mật khẩu không đúng"
+                }, JsonRequestBehavior.AllowGet);
+            }
+        }
+        public string Str_Encoder(string str)
+        {
+            UnicodeEncoding encoding = new UnicodeEncoding();
+            Byte[] hashBytes = encoding.GetBytes(str);
+            // Compute the SHA-1 hash
+            SHA1CryptoServiceProvider sha1 = new SHA1CryptoServiceProvider();
+            Byte[] crypt_str = sha1.ComputeHash(hashBytes);
+            return BitConverter.ToString(crypt_str);
         }
     }
 }
