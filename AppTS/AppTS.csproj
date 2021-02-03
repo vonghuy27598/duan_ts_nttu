@@ -299,8 +299,8 @@
     <Content Include="Content\Admin\Scripts\khaosat.js" />
     <Content Include="Content\Admin\Scripts\ScriptChuyenNganh.js" />
     <Content Include="Content\Admin\Scripts\ScriptNganh.js" />
-    <Content Include="Content\auto\jquery-ui.js" />
-    <Content Include="Content\auto\jquery-ui.min.css" />
+    <Content Include="Content\Admin\auto\jquery-ui.js" />
+    <Content Include="Content\Admin\auto\jquery-ui.min.css" />
     <Content Include="Content\css\main\images\banner_2021_1.jpg" />
     <Content Include="Content\css\main\images\banner_2021_2.jpg" />
     <Content Include="Content\css\main\images\banner_2021_3.jpg" />
@@ -2657,7 +2657,6 @@
     <Content Include="Areas\Admin\Views\GiangVien\GiangVienDoanhNghiep.cshtml" />
     <Content Include="Areas\Admin\Views\XetTuyen\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ThanhVien\SinhVien.cshtml" />
-    <Content Include="PrecompiledApp.config" />
     <None Include="Properties\PublishProfiles\AppTS.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\chatbot.js" />

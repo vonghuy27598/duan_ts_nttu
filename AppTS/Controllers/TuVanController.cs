@@ -18,9 +18,14 @@ namespace AppTS.Controllers
         dbQL_NTTDataContext db = new dbQL_NTTDataContext();
         public ActionResult DuDoan()
         {
-            if (Session["User"] == null)
+
+            if (Session["User"] != null)
             {
-                return RedirectToAction("DangNhapSDT", "HocSinh", new { link = "dudoan" });
+                ViewData["login"] = "true";
+            }
+            else
+            {
+                ViewData["login"] = "false";
             }
             return View();
         }
@@ -38,6 +43,17 @@ namespace AppTS.Controllers
         }
         public ActionResult DinhHuong()
         {
+            
+            if(Session["User"] != null)
+            {
+                ViewData["login"] = "true";
+            }
+            else
+            {
+                ViewData["login"] = "false";
+            }
+           
+            
             return View();
         }
         public ActionResult BatDauDinhHuong()
@@ -116,7 +132,7 @@ namespace AppTS.Controllers
             {
                 ViewBag.Mess = "Đăng nhập thành công";
 
-                Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
+               
                 //Tạo cookie
                 Session["User"] = (HocSinh.GetInfoHS_byIDTK(tk.ID_TK)).SingleOrDefault();
                 HttpCookie UserCookie = new HttpCookie("user", (tk.ID_TK).ToString());
@@ -125,6 +141,10 @@ namespace AppTS.Controllers
                 UserCookie.Expires = DateTime.Now.AddDays(365);
                 //Lưu thông tin vào cookie
                 HttpContext.Response.SetCookie(UserCookie);
+                if (Session["User"] != null)
+                {
+                    ViewData["login"] = "true";
+                }
                 return Json(new
                 {
                     success = 1,

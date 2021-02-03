@@ -1,0 +1,180 @@
+﻿@model IEnumerable<AppTS.Areas.Admin.Models.ViewModel.SinhVien>
+@{
+    ViewBag.Title = "SinhVien";
+    Layout = "~/Areas/Admin/Views/Shared/layout_admin.cshtml";
+}
+
+<style>
+    
+</style>
+
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Quản lý sinh viên</h1>
+<p class="mb-4">Tất cả thông tin cá nhân của sinh viên đã đăng ký tài khoản thành viên sẽ hiển thị tại đây.</p>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+     Hiển thị theo ngành  @Html.DropDownList("dropdownlist_chon", (IEnumerable<SelectListItem>)ViewBag.Nganh,"Tất cả", new { @id = "dropdownlist_chon" })
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Mã SV</th>
+                        <th>Họ</th>
+                        <th>Tên</th>
+                        <th>Giới tính</th>
+                        <th>Ngày sinh</th>
+                        <th>ĐT</th>
+                        <th>Email</th>
+                        <th>Địa chỉ</th>
+                        <th>Chuyên ngành</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="table_change" id="myTable">
+                    @foreach (var item in Model)
+                    {
+                        <tr id="row_@item.ID_HS">
+                            <td>@item.ID_HS</td>
+                            <td>@item.HOHS</td>
+                            <td>@item.TENHS</td>
+                            <td>
+                                @if (item.GIOITINH)
+                                {
+                                    <span>Nam</span>
+                                }
+                                else
+                                {
+                                    <span>Nữ</span>
+                                }
+                            </td>
+                            <td>@String.Format("{0:dd/MM/yyyy}", @item.NGAYSINH)</td>
+                            <td>@item.SDT</td>
+                            <td>@item.EMAIL</td>
+                            <td>@item.DIACHI</td>
+                            <td>@item.TENCHUYENNGANH</td>
+                            <td width="4%"><img src="~/Content/Admin/img/icon_view.png" width="90%" onclick="clickView(@item.ID_HS)" /></td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn" hidden="hidden">Open Modal</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 style="color:white">THÔNG TIN SINH VIÊN</h4>
+                    <span class="close">&times;</span>
+                </div>
+                @using (Html.BeginForm())
+                {
+                    <div class="modal-body">
+                        <div class="info">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-5 in">
+                                        Họ
+                                    </div>
+                                    <div class="col-md-7 in">
+                                        @Html.TextBox("Ho", "", new { required = "required" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-5 in">
+                                        Tên
+                                    </div>
+                                    <div class="col-md-7 in">
+                                        @Html.TextBox("Ten", "", new { required = "required" })
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-5 in">
+                                        Giới tính
+                                    </div>
+                                    <div class="col-md-7 in">
+                                        @Html.RadioButton("gioitinh", "Nam", new { @id = "rNam", @class = "checkGioiTinh" }) Nam
+                                        @Html.RadioButton("gioitinh", "Nữ", new { @id = "rNu", @class = "checkGioiTinh" }) Nữ
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-5 in">
+                                        Ngày sinh
+                                    </div>
+                                    <div class="col-md-7 in">
+                                        @Html.TextBox("ngaysinh", "", new { type = "date", required = "required", placeholder="dd-mm-yyyy" })
+                                        <input type="text" id="hiddenDate" hidden="hidden" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-5 in">
+                                        Số điện thoại
+                                    </div>
+                                    <div class="col-md-7 in">
+                                        @Html.TextBox("sdt", "", new { type = "tel", required = "required", maxlength = "10", pattern = "[0-9]{10}" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-5 in">
+                                        Email
+                                    </div>
+                                    <div class="col-md-7 in">
+                                        @Html.TextBox("email", "", new { type = "email", required = "required" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-5 in">
+                                       Chuyên ngành
+                                    </div>
+                                    <div class="col-md-7 in">
+                                        @Html.DropDownList("dropdownlist", (IEnumerable<SelectListItem>)ViewBag.Nganh, new { @id = "dropdownlist" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-5 in">
+                                        Địa chỉ
+                                    </div>
+                                    <div class="col-md-7 in">
+                                        @Html.TextArea("diachi", "", new { required = "required" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-secondary xoasv" onclick="xoaNV()">Xóa</a>
+                        <input type="submit" class="btn btn-primary" id="capnhat" value="Cập nhật" />
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="~/Content/Admin/Scripts/information_SinhVien.js"></script>
+<script src="~/Content/Admin/Scripts/ddlNganh.js"></script>

@@ -1,0 +1,7 @@
+﻿@model IEnumerable<AppTS.ViewModels.ChuyenNganhFull>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li><a href="@Url.Action("MoTaChuyenNganh", "Home", new { id = item.ID_CHUYENNGANH })">@item.TENCHUYENNGANH</a></li>
+    }
+</ul>
