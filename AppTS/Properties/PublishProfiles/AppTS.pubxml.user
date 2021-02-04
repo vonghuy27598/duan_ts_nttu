@@ -58,19 +58,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/26/2021 09:28:47</publishTime>
     </File>
     <File Include="bin/AppTS.dll">
-      <publishTime>02/04/2021 00:25:57</publishTime>
+      <publishTime>02/04/2021 08:37:45</publishTime>
     </File>
     <File Include="bin/AppTS.pdb">
       <publishTime>01/26/2021 09:33:04</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>02/04/2021 00:26:10</publishTime>
+      <publishTime>02/04/2021 08:38:03</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>02/04/2021 00:26:10</publishTime>
+      <publishTime>02/04/2021 08:38:03</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>02/04/2021 00:26:10</publishTime>
+      <publishTime>02/04/2021 08:38:03</publishTime>
     </File>
     <File Include="bin/ClosedXML.dll">
       <publishTime>02/03/2021 22:36:48</publishTime>
@@ -176,6 +176,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="contactform/Readme.txt">
       <publishTime>02/03/2021 22:36:38</publishTime>
+    </File>
+    <File Include="Content/Admin/auto/jquery-ui.js">
+      <publishTime>02/03/2021 22:36:34</publishTime>
+    </File>
+    <File Include="Content/Admin/auto/jquery-ui.min.css">
+      <publishTime>02/03/2021 22:36:34</publishTime>
     </File>
     <File Include="Content/Admin/css/adminTable.css">
       <publishTime>02/03/2021 22:36:32</publishTime>
@@ -7534,7 +7540,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/03/2021 22:36:48</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>02/04/2021 00:26:03</publishTime>
+      <publishTime>02/04/2021 08:37:56</publishTime>
     </File>
     <File Include="Scripts/auto_complete_Truong.js">
       <publishTime>02/03/2021 22:36:37</publishTime>
@@ -7606,7 +7612,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/03/2021 22:36:37</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>02/03/2021 22:36:37</publishTime>
+      <publishTime>02/04/2021 08:03:14</publishTime>
     </File>
     <File Include="SweetAlert2/animations.scss">
       <publishTime>02/03/2021 22:36:37</publishTime>
@@ -7669,7 +7675,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/03/2021 22:36:37</publishTime>
     </File>
     <File Include="Views/DangKyCN/QuanLyXetTuyen.cshtml">
-      <publishTime>02/03/2021 22:36:37</publishTime>
+      <publishTime>02/04/2021 08:36:53</publishTime>
     </File>
     <File Include="Views/HocSinh/DangKy.cshtml">
       <publishTime>02/03/2021 22:36:37</publishTime>
@@ -7819,10 +7825,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/03/2021 22:36:37</publishTime>
     </File>
     <File Include="Views/TuVan/DinhHuong.cshtml">
-      <publishTime>02/04/2021 00:18:01</publishTime>
+      <publishTime>02/04/2021 07:57:55</publishTime>
     </File>
     <File Include="Views/TuVan/DuDoan.cshtml">
-      <publishTime>02/04/2021 00:24:10</publishTime>
+      <publishTime>02/04/2021 08:31:53</publishTime>
     </File>
     <File Include="Views/TuVan/TamLy.cshtml">
       <publishTime>02/03/2021 22:36:37</publishTime>

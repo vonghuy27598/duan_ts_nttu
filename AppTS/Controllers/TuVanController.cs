@@ -16,6 +16,7 @@ namespace AppTS.Controllers
         //
         // GET: /TuVan/
         dbQL_NTTDataContext db = new dbQL_NTTDataContext();
+        [HttpGet]
         public ActionResult DuDoan()
         {
 
@@ -29,6 +30,8 @@ namespace AppTS.Controllers
             }
             return View();
         }
+       
+       
         public ActionResult TuVanChonNganh()
         {
             return View();
@@ -41,6 +44,7 @@ namespace AppTS.Controllers
         {
             return View();
         }
+        [HttpGet]
         public ActionResult DinhHuong()
         {
             

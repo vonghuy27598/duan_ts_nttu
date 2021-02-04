@@ -1518,11 +1518,7 @@
             alert("Vui lòng nhập số điện thoại ");
             $("#sdt").focus();
 
-        }
-        else if (matkhau.length <= 0) {
-            alert("Vui lòng nhập mật khẩu ");
-            $("#matkhau").focus();
-        }
+        }       
         else {
             $.ajax({
                 url: "submit_DangNhap",

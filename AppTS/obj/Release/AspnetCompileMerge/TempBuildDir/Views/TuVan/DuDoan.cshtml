@@ -83,6 +83,7 @@
         </div>
     </div>
 </div>
+
 <input type="hidden" id="hd_checklogin" value="@ViewData["login"]" />
 <button type='button' class='btn btn-success btn-lg noibat' data-toggle='modal' data-target='#myModal' style='max-height: 80px; height: 60px; width: 100px; bottom: -135px; right: 0; outline: 0;display:none '> Đăng nhập </button>
 <div id="myModal" class="modal fade" role="dialog" style="z-index: 100000; overflow-y: initial !important;">
@@ -155,10 +156,7 @@
             $("#sdt").focus();
 
         }
-        else if (matkhau.length <= 0) {
-            alert("Vui lòng nhập mật khẩu ");
-            $("#matkhau").focus();
-        }
+       
         else {
             $.ajax({
                 url: "submit_DangNhap",
@@ -197,7 +195,7 @@
         });
 
     });
-    function show_result()
+    function show_result(e)
     {
         var toan = ($('#txtToan').val()).trim();
         var ntoan = parseFloat(toan);
@@ -281,12 +279,9 @@
                 }
             });
 
-
-
-
             // Make sure this.hash has a value before overriding default behavior
             // Prevent default anchor click behavior
-            event.preventDefault();
+            e.preventDefault();
 
             // Store hash
             var hash = this.hash;
@@ -295,7 +290,7 @@
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
-            }, 100, function () {
+            }, 1000, function () {
 
                 // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
