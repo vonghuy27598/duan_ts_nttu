@@ -311,7 +311,14 @@
     <Content Include="Content\css\main\images\icon_tracnghiem_nganh.png" />
     <Content Include="Content\css\main\images\icon_tuvan.png" />
     <Content Include="Content\css\ringring_phone.css" />
+    <Content Include="Content\css\vienquocte.css" />
+    <Content Include="Content\img\1 - Hoc-phi-uu-dai.png" />
+    <Content Include="Content\img\2 - Dao-tao-song-ngu.png" />
+    <Content Include="Content\img\3 - 6 lop tieng anh.png" />
+    <Content Include="Content\img\4 - co hoi du hoc.png" />
     <Content Include="Content\img\4sao.jpg" />
+    <Content Include="Content\img\5 - Mo hinh lop hoc.png" />
+    <Content Include="Content\img\6 - 100 co hoi viec lam.png" />
     <Content Include="Content\img\anh.jpg" />
     <Content Include="Content\img\anh0.jpg" />
     <Content Include="Content\img\anh1.jpg" />
@@ -2657,6 +2664,7 @@
     <Content Include="Areas\Admin\Views\GiangVien\GiangVienDoanhNghiep.cshtml" />
     <Content Include="Areas\Admin\Views\XetTuyen\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ThanhVien\SinhVien.cshtml" />
+    <Content Include="PrecompiledApp.config" />
     <None Include="Properties\PublishProfiles\AppTS.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\chatbot.js" />
