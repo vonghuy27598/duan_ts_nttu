@@ -2771,6 +2771,7 @@
     <Content Include="Views\Home\Error404.cshtml" />
     <Content Include="Views\DangKyCN\QuanLyXetTuyen.cshtml" />
     <Content Include="Views\Home\ChiTietRiengSong_LienNganh.cshtml" />
+    <Content Include="Views\Home\CacChuyenganh.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

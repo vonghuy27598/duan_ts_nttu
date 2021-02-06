@@ -1013,6 +1013,7 @@ C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\ClosedXML.xml
 C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\DocumentFormat.OpenXml.xml
 C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\ExcelNumberFormat.xml
 C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\LinqToExcel.xml
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache
 D:\Work\duan_ts_nttu\AppTS\bin\AppTS.dll.config
 D:\Work\duan_ts_nttu\AppTS\bin\AppTS.dll
 D:\Work\duan_ts_nttu\AppTS\bin\AppTS.pdb
@@ -1081,5 +1082,3 @@ D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.csproj.CoreCompileInputs.cache
 D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.csproj.CopyComplete
 D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.dll
 D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.pdb
-D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.csprojAssemblyReference.cache
-C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache

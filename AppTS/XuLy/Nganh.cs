@@ -41,7 +41,24 @@ namespace AppTS.XuLy
                         };
             return model.OrderByDescending(m => m.ID_NGANH).ToList();
         }
-
+        public static List<MenuView> getChuyenNganh_byNganh(int id)
+        {
+            dbQL_NTTDataContext data = new dbQL_NTTDataContext();
+            var model = from a in data.Table_Nganhs
+                        join b in data.Table_ChuyenNganhs
+                        on a.ID_NGANH equals b.ID_NGANH
+                        where a.ID_NGANH == id
+                        select new MenuView()
+                        {
+                            ID_NGANH = a.ID_NGANH,
+                            ID_CHUYENNGANH = b.ID_CHUYENNGANH,
+                            TENCHUYENNGANH = b.TENCHUYENNGANH,
+                            TENNGANH = a.TENNGANH,
+                            MANGANH = b.MANGANH,
+                            TOHOP = b.TOHOP
+                        };
+            return model.OrderByDescending(m => m.ID_NGANH).ToList();
+        }
         // get khối ngành
         public static List<MenuView> getKhoiNganh_ddl()
         {
