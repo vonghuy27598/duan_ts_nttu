@@ -313,12 +313,19 @@
     <Content Include="Content\css\ringring_phone.css" />
     <Content Include="Content\css\vienquocte.css" />
     <Content Include="Content\img\1 - Hoc-phi-uu-dai.png" />
+    <Content Include="Content\img\1 - ke toan copy.png" />
     <Content Include="Content\img\2 - Dao-tao-song-ngu.png" />
+    <Content Include="Content\img\2 - quan tri kinh doanh copy.png" />
     <Content Include="Content\img\3 - 6 lop tieng anh.png" />
+    <Content Include="Content\img\3 - luat kinh te.png" />
     <Content Include="Content\img\4 - co hoi du hoc.png" />
+    <Content Include="Content\img\4 - qtks.png" />
     <Content Include="Content\img\4sao.jpg" />
+    <Content Include="Content\img\5 - CNTT.png" />
     <Content Include="Content\img\5 - Mo hinh lop hoc.png" />
     <Content Include="Content\img\6 - 100 co hoi viec lam.png" />
+    <Content Include="Content\img\6 - CNKT o to.png" />
+    <Content Include="Content\img\7 - logistics.png" />
     <Content Include="Content\img\anh.jpg" />
     <Content Include="Content\img\anh0.jpg" />
     <Content Include="Content\img\anh1.jpg" />
@@ -358,6 +365,7 @@
     <Content Include="Content\img\anh7.jpg" />
     <Content Include="Content\img\anh8.jpg" />
     <Content Include="Content\img\anh9.jpg" />
+    <Content Include="Content\img\arrow_right_circle.png" />
     <Content Include="Content\img\aun2.jpg" />
     <Content Include="Content\img\bacsi.jpg" />
     <Content Include="Content\img\banner_quocte.jpg" />
@@ -373,6 +381,7 @@
     <Content Include="Content\img\cntt3.jpg" />
     <Content Include="Content\img\codientu.jpg" />
     <Content Include="Content\img\congchung.jpg" />
+    <Content Include="Content\img\congnghe.png" />
     <Content Include="Content\img\congnghetaichinh.jpg" />
     <Content Include="Content\img\congnghethucpham.jpg" />
     <Content Include="Content\img\cong_nghe.jpg" />
@@ -486,6 +495,7 @@
     <Content Include="Content\img\khutuhoc.jpg" />
     <Content Include="Content\img\kientruc.jpg" />
     <Content Include="Content\img\kinhdoanhquocte.jpg" />
+    <Content Include="Content\img\kinhteicon.png" />
     <Content Include="Content\img\kinhteso.jpg" />
     <Content Include="Content\img\kn_kinhte.jpg" />
     <Content Include="Content\img\kn_kythuat.jpg" />
@@ -566,8 +576,10 @@
     <Content Include="Content\img\marketing.jpg" />
     <Content Include="Content\img\ma_truong.png" />
     <Content Include="Content\img\moitruong.jpg" />
+    <Content Include="Content\img\mythuat.png" />
     <Content Include="Content\img\nganhang.jpg" />
     <Content Include="Content\img\nhahang.jpg" />
+    <Content Include="Content\img\nhanvan.png" />
     <Content Include="Content\img\oto.jpg" />
     <Content Include="Content\img\phattrien.jpg" />
     <Content Include="Content\img\phone.png" />
@@ -579,11 +591,13 @@
     <Content Include="Content\img\qt_icon_3.png" />
     <Content Include="Content\img\qt_icon_4.png" />
     <Content Include="Content\img\qt_icon_5.png" />
+    <Content Include="Content\img\qt_icon_time.png" />
     <Content Include="Content\img\quantricongnghesinhhoc.jpg" />
     <Content Include="Content\img\quantrikinhdoanh.jpg" />
     <Content Include="Content\img\quantrinhanluc.jpg" />
     <Content Include="Content\img\quayphim.jpg" />
     <Content Include="Content\img\quocte.jpg" />
+    <Content Include="Content\img\quocte_border.png" />
     <Content Include="Content\img\sinh1.jpg" />
     <Content Include="Content\img\sinh10.jpg" />
     <Content Include="Content\img\sinh11.jpg" />
@@ -659,6 +673,7 @@
     <Content Include="Content\img\sinhhoc.jpg" />
     <Content Include="Content\img\stars.jpg" />
     <Content Include="Content\img\stars2.jpg" />
+    <Content Include="Content\img\suckhoe.png" />
     <Content Include="Content\img\taichinh.jpg" />
     <Content Include="Content\img\tamly.jpg" />
     <Content Include="Content\img\ten_truong.png" />

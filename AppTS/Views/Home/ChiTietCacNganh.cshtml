@@ -190,7 +190,7 @@
             <div style="margin-bottom:30px" class="content_auto">
                 @if (Session["ct_nganh"].Equals("1"))
                 {
-
+                    <img src="/Content/img/danhsach_nganh.jpg" style="width:100%;height:auto" />
                 }
                 else if (Session["ct_nganh"].Equals("2"))
                 {
@@ -350,45 +350,62 @@
                 {
 
                 }
-            <tbody>
-                @if (Session["ct_nganh"].Equals("1"))
-                {
-                    foreach (var item in Model)
+                <tbody>
+                    @if (Session["ct_nganh"].Equals("1"))
                     {
-                        <div class="column" onclick="window.location='/Home/CacChuyenganh?id='+@item.ID_NGANH" style="background-image:url('/Content/img/cong_nghe.png');background-repeat:no-repeat;background-position:center left">
-                            <p style=""> Khối ngành @item.TENNGANH </p>
+                        <div class="column" onclick="window.location='/Home/CacChuyenganh?id=1'" style="background-image:url('/Content/img/suckhoe.png');background-repeat:no-repeat;background-position:center left">
+                            <p style="margin: 15px 0 15px 0; font-size: 15px; font-weight: 600"> Khối ngành Sức khỏe </p>
+                            <div class="icon_arrow_right">
+                            </div>
+                        </div>
+                        <div class="column" onclick="window.location='/Home/CacChuyenganh?id=2'" style="background-image:url('/Content/img/congnghe.png');background-repeat:no-repeat;background-position:center left">
+                            <p style="margin: 15px 0 15px 0; font-size: 15px; font-weight: 600"> Khối ngành Kỹ thuật - Công nghệ </p>
+                            <div class="icon_arrow_right">
+                            </div>
+                        </div>
+                        <div class="column" onclick="window.location='/Home/CacChuyenganh?id=3'" style="background-image:url('/Content/img/kinhteicon.png');background-repeat:no-repeat;background-position:center left">
+                            <p style="margin: 15px 0 15px 0; font-size: 15px; font-weight: 600"> Khối ngành Kinh tế </p>
+                            <div class="icon_arrow_right">
+                            </div>
+                        </div>
+                        <div class="column" onclick="window.location='/Home/CacChuyenganh?id=1002'" style="background-image:url('/Content/img/nhanvan.png');background-repeat:no-repeat;background-position:center left">
+                            <p style="margin: 15px 0 15px 0; font-size: 15px; font-weight: 600"> Khối ngành Nhân văn </p>
+                            <div class="icon_arrow_right">
+                            </div>
+                        </div>
+                        <div class="column" onclick="window.location='/Home/CacChuyenganh?id=1003'" style="background-image:url('/Content/img/mythuat.png');background-repeat:no-repeat;background-position:center left">
+                            <p style="margin: 15px 0 15px 0; font-size: 15px; font-weight: 600"> Khối ngành Mỹ thuật - Nghệ thuật </p>
                             <div class="icon_arrow_right">
                             </div>
                         </div>
                     }
-                }
-                else if (Session["ct_nganh"].Equals("2"))
-                {
-                    <tr>
-                        <td>1</td>
-                        <td>Công nghệ Thông tin</td>
-                        <td>8480201</td>
+                    else if (Session["ct_nganh"].Equals("2"))
+                    {
+                        <tr>
+                            <td>1</td>
+                            <td>Công nghệ Thông tin</td>
+                            <td>8480201</td>
 
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Tài chính - Ngân hàng</td>
-                        <td>8340201</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Tài chính - Ngân hàng</td>
+                            <td>8340201</td>
 
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Quản trị kinh doanh</td>
-                        <td>8340101</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Quản trị kinh doanh</td>
+                            <td>8340101</td>
 
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Du lịch</td>
-                        <td>8810101</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Du lịch</td>
+                            <td>8810101</td>
 
-                    </tr>
-<thead style="background-color: #354f78; ">
+                        </tr>
+                    <thead style="background-color: #354f78; ">
                         <tr>
                             <th width="5%">STT</th>
                             <th width="75%">
@@ -400,122 +417,122 @@
 
                         </tr>
                     </thead>
-                        <tbody>
+                    <tbody>
 
-                            <tr>
-                                <td>1</td>
-                                <td>Quản lý chuỗi cung ứng - Supply Chain <br /><span style="font-size: 11px; color: #8c8c8c;padding-top:5px">* Bằng được cấp bởi trường ĐH Khoa học & Công nghệ Malaysia (ĐH MUST)</span> </td>
-                            </tr>
-                        </tbody>
-                        <thead style="background-color: #354f78; ">
-                            <tr>
-                                <th width="5%">STT</th>
-                                <th width="75%">
-                                    Ngành dự kiến mở
-                                </th>
-                                <th width="20%">
-                                    Mã ngành
-                                </th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            <tr>
-                                <td>1</td>
-                                <td>Kỹ thuật điều khiển & Tự động hóa (dự kiến)</td>
-                                <td>8520216</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Ngôn ngữ Anh (dự kiến)</td>
-                                <td>8220201</td>
-                            </tr>
-                        </tbody>
-                    }
-                    else if (Session["ct_nganh"].Equals("3"))
-                    {
-                        string[] lienthong = new string[] { "Dược học", "Điều dưỡng", "Kỹ thuật y sinh", "Vật lý y khoa", "Công nghệ kỹ thuật ô-tô", "Công nghệ kỹ thuật cơ điện tử", "Công nghệ kỹ thuật điện - điện tử", "Công nghệ thông tin", "Kỹ thuật xây dựng", "Công nghệ thực phẩm", "Công nghệ kỹ thuật hóa học", "Công nghệ sinh học", "Quản lý tài nguyên & môi trường", "Việt Nam học", "Quản trị khách sạn", "Quản trị nhà hàng & Dịch vụ ăn uống", "Kế toán", "Tài chính - Ngân hàng", "Quản trị kinh doanh", "Ngôn ngữ Anh", "Ngôn ngữ Trung Quốc", "Thanh nhạc" };
-                        int i = 1;
-                        foreach (var item in lienthong)
-                        {
-                            <tr>
-                                <td>@i</td>
-                                <td style="text-align:left">@item</td>
-
-                            </tr>
-                            i++;
-                        }
-
-                    }
-                    else if (Session["ct_nganh"].Equals("4"))
-                    {
-
-                        <tr class="lien_xuyennganh_tr" onclick="window.location='/Home/ChiTietRiengSong_LienNganh?id=1'">
+                        <tr>
                             <td>1</td>
-                            <td>- Du lịch số <br />- Mã ngành: 7480201 - 7810101</td>
-                            <td>- Du lịch <br />- Công nghệ thông tin</td>
-                            <td style="text-align:center">4 năm</td>
-                            <td>A00, A01, C00, D01, D07, D14, D15</td>
+                            <td>Quản lý chuỗi cung ứng - Supply Chain <br /><span style="font-size: 11px; color: #8c8c8c;padding-top:5px">* Bằng được cấp bởi trường ĐH Khoa học & Công nghệ Malaysia (ĐH MUST)</span> </td>
+                        </tr>
+                    </tbody>
+                    <thead style="background-color: #354f78; ">
+                        <tr>
+                            <th width="5%">STT</th>
+                            <th width="75%">
+                                Ngành dự kiến mở
+                            </th>
+                            <th width="20%">
+                                Mã ngành
+                            </th>
 
                         </tr>
-                        <tr class="lien_xuyennganh_tr" onclick="window.location='/Home/ChiTietRiengSong_LienNganh?id=2'">
-                            <td>2</td>
-                            <td>- Kinh tế số <br />- Mã ngành: 7480201 - 7340101</td>
-                            <td>- Quản trị kinh doanh <br />- Công nghệ thông tin</td>
-                            <td style="text-align:center">4 năm</td>
-                            <td>A00, A01, D01, D07</td>
+                    </thead>
+                    <tbody>
 
-                        </tr>
-                        <tr class="lien_xuyennganh_tr" onclick="window.location='/Home/ChiTietRiengSong_LienNganh?id=3'">
-                            <td>3</td>
-                            <td>- Công nghệ tài chính <br />- Mã ngành: 7480201 - 7340201</td>
-                            <td>- Tài chính ngân hàng <br />- Công nghệ thông tin</td>
-                            <td style="text-align:center">4 năm</td>
-                            <td>A00, A01, D01, D07</td>
-
-                        </tr>
-                        <tr class="lien_xuyennganh_tr" onclick="window.location='/Home/ChiTietRiengSong_LienNganh?id=4'">
-                            <td>4</td>
-                            <td>- Tin Sinh học <br />- Mã ngành: 7480201 - 7420201</td>
-                            <td>- Công nghệ sinh học <br />- Công nghệ thông tin</td>
-                            <td style="text-align:center">4 năm</td>
-                            <td>A00, A01, B00, D01, D07, D08</td>
-
-                        </tr>
-                        <tr class="lien_xuyennganh_tr" onclick="window.location='/Home/ChiTietRiengSong_LienNganh?id=5'">
-                            <td>5</td>
-                            <td>- Quản trị công nghệ sinh học <br />- Mã ngành: 7420201 - 7340101</td>
-                            <td>- Công nghệ sinh học <br />- Quản trị kinh doanh</td>
-                            <td style="text-align:center">4 năm</td>
-                            <td>A00, A01, B00, D01, D07, D08</td>
-
-                        </tr>
-
-                    }
-                    else if (Session["ct_nganh"].Equals("5"))
-                    {
-
-                        <tr onclick="window.location='/Home/ChiTietRiengSong_LienNganh?id=6'">
+                        <tr>
                             <td>1</td>
-                            <td><b>Vật lý Y khoa - Kỹ thuật Y sinh</b> <br /> <span style="font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1600 - 300)));">Mã ngành: 7520212 - 7520403</span></td>
-                            <td style="text-align:center">5 năm</td>
-                            <td>A00, A01, A02, B00</td>
+                            <td>Kỹ thuật điều khiển & Tự động hóa (dự kiến)</td>
+                            <td>8520216</td>
                         </tr>
-                        <tr onclick="window.location='/Home/ChiTietRiengSong_LienNganh?id=7'">
+                        <tr>
                             <td>2</td>
-                            <td><b>Kỹ thuật Hệ thống Công nghiệp - Công nghệ kỹ thuật Ô-tô</b> <br /> <span style="font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1600 - 300)));">Mã ngành: 7520118 - 7510205</span></td>
-                            <td style="text-align:center">5 năm</td>
-                            <td>A00, A01, D01, D07</td>
+                            <td>Ngôn ngữ Anh (dự kiến)</td>
+                            <td>8220201</td>
                         </tr>
-
-                    }
-                    else if (Session["ct_nganh"].Equals("6"))
+                    </tbody>
+                }
+                else if (Session["ct_nganh"].Equals("3"))
+                {
+                    string[] lienthong = new string[] { "Dược học", "Điều dưỡng", "Kỹ thuật y sinh", "Vật lý y khoa", "Công nghệ kỹ thuật ô-tô", "Công nghệ kỹ thuật cơ điện tử", "Công nghệ kỹ thuật điện - điện tử", "Công nghệ thông tin", "Kỹ thuật xây dựng", "Công nghệ thực phẩm", "Công nghệ kỹ thuật hóa học", "Công nghệ sinh học", "Quản lý tài nguyên & môi trường", "Việt Nam học", "Quản trị khách sạn", "Quản trị nhà hàng & Dịch vụ ăn uống", "Kế toán", "Tài chính - Ngân hàng", "Quản trị kinh doanh", "Ngôn ngữ Anh", "Ngôn ngữ Trung Quốc", "Thanh nhạc" };
+                    int i = 1;
+                    foreach (var item in lienthong)
                     {
-                        var list_vanbang = new
-                        {
-                            title = "văn bằng",
-                            data = new[]{
+                        <tr>
+                            <td>@i</td>
+                            <td style="text-align:left">@item</td>
+
+                        </tr>
+                        i++;
+                    }
+
+                }
+                else if (Session["ct_nganh"].Equals("4"))
+                {
+
+                    <tr class="lien_xuyennganh_tr" onclick="window.location='/Home/ChiTietRiengSong_LienNganh?id=1'">
+                        <td>1</td>
+                        <td>- Du lịch số <br />- Mã ngành: 7480201 - 7810101</td>
+                        <td>- Du lịch <br />- Công nghệ thông tin</td>
+                        <td style="text-align:center">4 năm</td>
+                        <td>A00, A01, C00, D01, D07, D14, D15</td>
+
+                    </tr>
+                    <tr class="lien_xuyennganh_tr" onclick="window.location='/Home/ChiTietRiengSong_LienNganh?id=2'">
+                        <td>2</td>
+                        <td>- Kinh tế số <br />- Mã ngành: 7480201 - 7340101</td>
+                        <td>- Quản trị kinh doanh <br />- Công nghệ thông tin</td>
+                        <td style="text-align:center">4 năm</td>
+                        <td>A00, A01, D01, D07</td>
+
+                    </tr>
+                    <tr class="lien_xuyennganh_tr" onclick="window.location='/Home/ChiTietRiengSong_LienNganh?id=3'">
+                        <td>3</td>
+                        <td>- Công nghệ tài chính <br />- Mã ngành: 7480201 - 7340201</td>
+                        <td>- Tài chính ngân hàng <br />- Công nghệ thông tin</td>
+                        <td style="text-align:center">4 năm</td>
+                        <td>A00, A01, D01, D07</td>
+
+                    </tr>
+                    <tr class="lien_xuyennganh_tr" onclick="window.location='/Home/ChiTietRiengSong_LienNganh?id=4'">
+                        <td>4</td>
+                        <td>- Tin Sinh học <br />- Mã ngành: 7480201 - 7420201</td>
+                        <td>- Công nghệ sinh học <br />- Công nghệ thông tin</td>
+                        <td style="text-align:center">4 năm</td>
+                        <td>A00, A01, B00, D01, D07, D08</td>
+
+                    </tr>
+                    <tr class="lien_xuyennganh_tr" onclick="window.location='/Home/ChiTietRiengSong_LienNganh?id=5'">
+                        <td>5</td>
+                        <td>- Quản trị công nghệ sinh học <br />- Mã ngành: 7420201 - 7340101</td>
+                        <td>- Công nghệ sinh học <br />- Quản trị kinh doanh</td>
+                        <td style="text-align:center">4 năm</td>
+                        <td>A00, A01, B00, D01, D07, D08</td>
+
+                    </tr>
+
+                }
+                else if (Session["ct_nganh"].Equals("5"))
+                {
+
+                    <tr onclick="window.location='/Home/ChiTietRiengSong_LienNganh?id=6'">
+                        <td>1</td>
+                        <td><b>Vật lý Y khoa - Kỹ thuật Y sinh</b> <br /> <span style="font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1600 - 300)));">Mã ngành: 7520212 - 7520403</span></td>
+                        <td style="text-align:center">5 năm</td>
+                        <td>A00, A01, A02, B00</td>
+                    </tr>
+                    <tr onclick="window.location='/Home/ChiTietRiengSong_LienNganh?id=7'">
+                        <td>2</td>
+                        <td><b>Kỹ thuật Hệ thống Công nghiệp - Công nghệ kỹ thuật Ô-tô</b> <br /> <span style="font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1600 - 300)));">Mã ngành: 7520118 - 7510205</span></td>
+                        <td style="text-align:center">5 năm</td>
+                        <td>A00, A01, D01, D07</td>
+                    </tr>
+
+                }
+                else if (Session["ct_nganh"].Equals("6"))
+                {
+                    var list_vanbang = new
+                    {
+                        title = "văn bằng",
+                        data = new[]{
                                  new{
                                     tennganh="Ngôn ngữ Anh",
                                     manganh="7220201"
@@ -551,50 +568,50 @@
                                 },
 
                             }
-                        };
-                        int i = 1;
-                        foreach (var item in list_vanbang.data)
-                        {
-                            <tr>
-                                <td>@i</td>
-                                <td>@item.tennganh</td>
-                                <td style="text-align:center">@item.manganh</td>
-
-                            </tr>
-                            i++;
-                        }
-
-
-
-                    }
-                    else if (Session["ct_nganh"].Equals("7"))
+                    };
+                    int i = 1;
+                    foreach (var item in list_vanbang.data)
                     {
-
                         <tr>
-                            <td>1</td>
-                            <td>Quản trị kinh doanh</td>
-                            <td style="text-align:center">7340101</td>
+                            <td>@i</td>
+                            <td>@item.tennganh</td>
+                            <td style="text-align:center">@item.manganh</td>
 
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Công nghệ thông tin</td>
-                            <td style="text-align:center">7480201</td>
-
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Quản trị nhà hàng và Dịch vụ ăn uống</td>
-                            <td style="text-align:center">7810202</td>
-
-                        </tr>
+                        i++;
                     }
-                    else if (Session["ct_nganh"].Equals("8"))
+
+
+
+                }
+                else if (Session["ct_nganh"].Equals("7"))
+                {
+
+                    <tr>
+                        <td>1</td>
+                        <td>Quản trị kinh doanh</td>
+                        <td style="text-align:center">7340101</td>
+
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Công nghệ thông tin</td>
+                        <td style="text-align:center">7480201</td>
+
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Quản trị nhà hàng và Dịch vụ ăn uống</td>
+                        <td style="text-align:center">7810202</td>
+
+                    </tr>
+                }
+                else if (Session["ct_nganh"].Equals("8"))
+                {
+                    var list_trungcap = new
                     {
-                        var list_trungcap = new
-                        {
-                            title = "trung cấp",
-                            data = new[]{
+                        title = "trung cấp",
+                        data = new[]{
                                  new{
                                     tennganh="Dược",
                                     manganh="5720201"
@@ -685,24 +702,24 @@
 
 
                             }
-                        };
-                        int i = 1;
-                        foreach (var item in list_trungcap.data)
-                        {
-                            <tr>
-                                <td>@i</td>
-                                <td>@item.tennganh</td>
-                                <td style="text-align:center">@item.manganh</td>
-
-                            </tr>
-                            i++;
-                        }
-                    }
-                    else if (Session["ct_nganh"].Equals("9"))
+                    };
+                    int i = 1;
+                    foreach (var item in list_trungcap.data)
                     {
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.tennganh</td>
+                            <td style="text-align:center">@item.manganh</td>
 
-
+                        </tr>
+                        i++;
                     }
+                }
+                else if (Session["ct_nganh"].Equals("9"))
+                {
+
+
+                }
                     </tbody>
 
                 </table>
