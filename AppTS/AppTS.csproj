@@ -314,7 +314,6 @@
     <Content Include="Content\css\vienquocte.css" />
     <Content Include="Content\img\1 - Hoc-phi-uu-dai.png" />
     <Content Include="Content\img\1 - ke toan copy.png" />
-<<<<<<< HEAD
     <Content Include="Content\img\1 - quan tri.png" />
     <Content Include="Content\img\2 - Dao-tao-song-ngu.png" />
     <Content Include="Content\img\2 - Marketing.png" />
@@ -324,13 +323,6 @@
     <Content Include="Content\img\3 - luat kinh te.png" />
     <Content Include="Content\img\4 - co hoi du hoc.png" />
     <Content Include="Content\img\4 - ke toan.png" />
-=======
-    <Content Include="Content\img\2 - Dao-tao-song-ngu.png" />
-    <Content Include="Content\img\2 - quan tri kinh doanh copy.png" />
-    <Content Include="Content\img\3 - 6 lop tieng anh.png" />
-    <Content Include="Content\img\3 - luat kinh te.png" />
-    <Content Include="Content\img\4 - co hoi du hoc.png" />
->>>>>>> 768d491e11824df9d03c3c95bbfb25c8f3cb34f9
     <Content Include="Content\img\4 - qtks.png" />
     <Content Include="Content\img\4sao.jpg" />
     <Content Include="Content\img\5 - CNTT.png" />
@@ -398,8 +390,15 @@
     <Content Include="Content\img\congnghetaichinh.jpg" />
     <Content Include="Content\img\congnghethucpham.jpg" />
     <Content Include="Content\img\cong_nghe.jpg" />
+    <Content Include="Content\img\ct_cntt.jpg" />
+    <Content Include="Content\img\ct_kd.jpg" />
+    <Content Include="Content\img\ct_ketoan.jpg" />
+    <Content Include="Content\img\ct_ks.jpg" />
     <Content Include="Content\img\ct_lienxuyen.jpg" />
     <Content Include="Content\img\ct_lienxuyen_tieude.jpg" />
+    <Content Include="Content\img\ct_logic.jpg" />
+    <Content Include="Content\img\ct_luat.jpg" />
+    <Content Include="Content\img\ct_oto.jpg" />
     <Content Include="Content\img\ct_quocte_1.jpg" />
     <Content Include="Content\img\ct_quocte_2.jpg" />
     <Content Include="Content\img\ct_songnganh.jpg" />
@@ -608,7 +607,6 @@
     <Content Include="Content\img\qt_icon_3.png" />
     <Content Include="Content\img\qt_icon_4.png" />
     <Content Include="Content\img\qt_icon_5.png" />
-<<<<<<< HEAD
     <Content Include="Content\img\qt_icon_hocbong.png" />
     <Content Include="Content\img\qt_icon_time.png" />
     <Content Include="Content\img\qt_ic_diachi.png" />
@@ -616,9 +614,6 @@
     <Content Include="Content\img\qt_ic_hotline_oldphone.png" />
     <Content Include="Content\img\qt_ic_hotline_phone.png" />
     <Content Include="Content\img\qt_ic_web.png" />
-=======
-    <Content Include="Content\img\qt_icon_time.png" />
->>>>>>> 768d491e11824df9d03c3c95bbfb25c8f3cb34f9
     <Content Include="Content\img\quantricongnghesinhhoc.jpg" />
     <Content Include="Content\img\quantrikinhdoanh.jpg" />
     <Content Include="Content\img\quantrinhanluc.jpg" />
@@ -2815,6 +2810,7 @@
     <Content Include="Views\DangKyCN\QuanLyXetTuyen.cshtml" />
     <Content Include="Views\Home\ChiTietRiengSong_LienNganh.cshtml" />
     <Content Include="Views\Home\CacChuyenganh.cshtml" />
+    <Content Include="Views\Home\ChiTietRiengVienQuocTe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
