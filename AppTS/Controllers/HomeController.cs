@@ -83,14 +83,20 @@ namespace AppTS.Controllers
         {
             return View();
         }
+        public ActionResult CacChuyenganh(int id)
+        {
+            var model = Nganh.getChuyenNganh_byNganh(id);
+            ViewData["tohop"] = from a in db.Table_ToHops select a;
+            return View(model);
+        }
         public ActionResult ChiTietCacNganh()
         {
             var nganh = Request.QueryString["id_nganh"];
-            var model = from a in db.Table_ChuyenNganhs select a;
+            var model = from a in db.Table_Nganhs select a;
             if(nganh.Equals("1"))
             {
                 Session["ct_nganh"] = "1";
-                model = from a in db.Table_ChuyenNganhs.OrderBy(m=>m.TENCHUYENNGANH) select a;
+                model = from a in db.Table_Nganhs.OrderBy(m=>m.TENNGANH) select a;
             }
             else if (nganh.Equals("2"))
             {

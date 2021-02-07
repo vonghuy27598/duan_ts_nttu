@@ -1,0 +1,262 @@
+﻿@model IEnumerable<AppTS.ViewModels.MenuView>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChiTietCacNganh</title>
+    <link rel="stylesheet" href="~/Content/css/main/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/css/main/css/owl.theme.default.min.css">
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" type="text/css" rel="stylesheet">
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <style>
+        .owl-stage-outer {
+            z-index: -1;
+        }
+
+        .owl-dots {
+            margin-top: -25px !important;
+        }
+
+            .owl-dots span {
+                width: 20px !important;
+                outline: none;
+            }
+
+        .owl-dot {
+            outline: none;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .show__nganh thead, .show__nganh thead tr, .show__nganh thead th {
+            border-top: none;
+        }
+
+        .show__nganh thead {
+            color: #fff;
+        }
+
+            .show__nganh td, .show__nganh thead th {
+                border-left: none;
+                border-right: none;
+            }
+
+        .show__nganh th {
+            font-size: calc(15px + (18 - 15) * ((100vw - 300px) / (1600 - 300)));
+        }
+
+        .show__nganh td {
+            border-bottom: 1px solid #b6b1b1;
+            font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1600 - 300)));
+        }
+
+        .show__nganh caption {
+            text-align: left;
+            padding: 20px 10px;
+            font-weight: bold;
+            font-size: calc(16px + (19 - 16) * ((100vw - 300px) / (1600 - 300)));
+            text-transform: uppercase;
+        }
+
+        .ct-nganh {
+            margin-top: 5px;
+        }
+
+        #header {
+            height: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+
+            #header a:active {
+                outline: none;
+            }
+
+            #header img:active {
+                background-color: transparent;
+            }
+
+        .lien_xuyennganh th {
+            font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1600 - 300))) !important;
+            padding: 5px;
+        }
+
+        .show__nganh table td:first-child {
+            text-align: center;
+        }
+
+        .show__nganh table th:nth-child(2) {
+            text-align: left;
+        }
+
+        .lien_xuyennganh_tr td {
+            font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1600 - 300))) !important;
+            padding: 5px;
+        }
+
+        .ts_lydo_content {
+            display: flex;
+        }
+
+        .ts_lydo_content__left {
+            width: 20%;
+            background-size: 50%;
+            background-position: top;
+        }
+
+        .ts_lydo_content__right {
+            width: 80%;
+        }
+
+            .ts_lydo_content__right h5 {
+                font-weight: bold;
+            }
+
+        .icon_thacsi1 {
+            background-image: url('/Content/img/icon_thacsi2.png');
+            background-repeat: no-repeat;
+        }
+
+        .icon_thacsi2 {
+            background-image: url('/Content/img/icon_thacsi.png');
+            background-repeat: no-repeat;
+        }
+
+        .icon_thacsi3 {
+            background-image: url('/Content/img/icon_thacsi3.png');
+            background-repeat: no-repeat;
+        }
+        /*code address new*/
+        .column {
+            float: left;
+            width: 100%;
+            padding: 4px;
+            border-bottom: 1px solid #dfdfdf;
+            background-origin: content-box;
+            background-size: 8%;
+            padding-left: 5px;
+            position: relative;
+        }
+
+            .column p {
+                font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+                padding-left: 10%;
+                padding-right: 25px
+            }
+
+        .icon_arrow_right {
+            background-image: url(/Content/img/arrow_right.png);
+            background-position: center right;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 10px;
+            height: 15px;
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            right: 15px;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="ct-nganh">
+        <section id="header">
+            <div class="header-logo" style="padding-left:10px">
+                <a onclick="goBack()"><img src="~/Content/img/arrow_left.png" alt="" class="go_back" style="width:30px"></a>
+            </div>
+            <script>
+                function goBack() {
+                    window.history.back();
+                }
+            </script>
+        </section>
+
+        <div style="margin-top: 60px;">
+            <table width="100%" border="0" cellpadding="10" cellspacing="0" style="background-color: #f0f0f0;text-align:center" class="show__nganh">
+                <caption style="color: #2da1de;">CHƯƠNG TRÌNH ĐÀO TẠO BẬC ĐẠI HỌC</caption>
+                <thead style="background-color: #2da1de; ">
+                    <tr>
+                        <th width="5%">STT</th>
+                        <th width="45%">
+                            Tên ngành
+                        </th>
+                        <th width="20%">
+                            Mã ngành
+                        </th>
+                        <th width="30%">
+                            Tổ hợp xét tuyển
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        int i = 1;
+                        <tr onclick="window.location='/Home/ChiTietRiengCacNganh?id='+@item.ID_CHUYENNGANH">
+                            <td>@i</td>
+                            <td>@item.TENCHUYENNGANH  <img src="~/Content/img/icon-open.png" /></td>
+                            <td>@item.MANGANH</td>
+                            <td>@item.TOHOP</td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tohop">
+            <table width="100%" border="0" cellpadding="10" cellspacing="0" style="background-color: #fcecd6;" class="show__nganh">
+                <caption style="color: #cb1313;">Tổ hợp xét tuyển</caption>
+                @foreach (var item in ViewData["tohop"] as IEnumerable<AppTS.Models.Table_ToHop>)
+                {
+                    <tr>
+                        <td>@item.TENTOHOP</td>
+                        <td>@item.MONTOHOP</td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+
+    </div>
+    <script src="~/Content/css/main/js/jquery-2.2.4.min.js"></script>
+
+    <script src="~/Content/css/main/js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                loop: true,
+                margin: 10,
+                dots: true,
+                items: 1,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
