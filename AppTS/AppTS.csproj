@@ -253,6 +253,7 @@
     <Compile Include="ViewModels\THPT.cs" />
     <Compile Include="ViewModels\ToHop.cs" />
     <Compile Include="ViewModels\TrungTuyen.cs" />
+    <Compile Include="ViewModels\VienQuocTe.cs" />
     <Compile Include="XuLy\CNganh.cs" />
     <Compile Include="XuLy\DHNN.cs" />
     <Compile Include="XuLy\HocSinh.cs" />
@@ -2702,7 +2703,6 @@
     <Content Include="Areas\Admin\Views\GiangVien\GiangVienDoanhNghiep.cshtml" />
     <Content Include="Areas\Admin\Views\XetTuyen\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ThanhVien\SinhVien.cshtml" />
-    <Content Include="PrecompiledApp.config" />
     <None Include="Properties\PublishProfiles\AppTS.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\chatbot.js" />

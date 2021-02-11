@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -11,12 +10,12 @@
     <title>ChiTietRiengVienQuocTe</title>
     <link href="~/Content/css/style.css" rel="stylesheet" />
     <link href="~/Content/css/vienquocte.css" rel="stylesheet" />
-    
+
     <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <section id="header">
+    <section id="header" style="width:100%">
         <div class="header-logo" style="padding-left:10px">
             <a onclick="goBack()"><img src="~/Content/img/arrow_left.png" alt="" class="go_back" style="width:30px"></a>
         </div>
@@ -26,26 +25,34 @@
             }
         </script>
     </section>
-    <div class="content_chitiet">
+   
+    @foreach (var item in ViewData["QuocTe"] as IEnumerable<AppTS.ViewModels.VienQuocTe>)
+    {
+
+    var list_cohoi = item.cohoi.Split(',').ToList();
+    int so_cohoi = 0;
+    var list_tohop = item.tohop.Split(',').ToList();
+    var list_monhoc = item.monhocchuyennganh.Split(',').ToList();
+    <div class="content_chitiet" style="width:100%">
         <div class="bgr_area">
             <div class="icon_bgr">
-                <img src="/Content/img/1 - ke toan copy.png" />
+                <img src="/Content/img/@item.hinhanh" />
             </div>
             <div class="content_bgr">
-                <h4>Kế toán</h4>
-                <span>Chuyên ngành: <b>Kế toán tài chính</b></span>
-                <p>Tổ hợp xét tuyển: <b>A00, A01, D01, D07</b></p>
+                <h4>@item.tennganh</h4>
+                <span>Chuyên ngành: <b>@item.chuyennganh</b></span>
+                <p>Tổ hợp xét tuyển: <b>@item.tohop</b></p>
             </div>
         </div>
         <div class="area_img_chitiet">
-            <img src="/Content/img/ct_ketoan.jpg"/>
+            <img src="/Content/img/ct_ketoan.jpg" />
         </div>
         <div class="area_gioithieu">
             <div class="area_gioithieu__title bgr_title_ct">
                 <h4>GIỚI THIỆU NGÀNH HỌC</h4>
             </div>
             <div class="area_gioithieu__content">
-                Kế toán được xem là ngành học tiềm năng cho sự chuyển dịch lao động
+                @item.gioithieu
             </div>
         </div>
         <div class="area_cohoi">
@@ -55,14 +62,23 @@
             <div class="area_cohoi__content">
                 <div class="area_cohoi__content-left">
                     <ul>
-                        <li>1.</li>
-                        <li>2.</li>
+                        @foreach (var stt_cohoi in list_cohoi)
+                        {
+                            so_cohoi++;
+                            <li>@so_cohoi.</li>
+
+                        }
+
                     </ul>
                 </div>
                 <div class="area_cohoi__content-right">
                     <ul>
-                        <li>Kế toán viên</li>
-                        <li>Kế toán tổng hợp</li>
+                        @foreach (var data_cohoi in list_cohoi)
+                        {
+                            <li>@data_cohoi</li>
+
+                        }
+
                     </ul>
                 </div>
             </div>
@@ -72,46 +88,59 @@
                 <h4>Tổ hợp xét tuyển</h4>
             </div>
             <div class="area_tohop__content">
-                <div class="item__tohop">
-                    <div class="item__tohop-title"> 
-                        <h3>A00</h3>     
+                @foreach (var data_tohop in list_tohop.Distinct())
+                {
+                    <div class="item__tohop">
+                        <div class="item__tohop-title">
+                            <h3>@data_tohop</h3>
+                        </div>
+                        <div class="item__tohop-content">
+
+                            @if (data_tohop.Trim().Equals("A00"))
+                            {
+                                var list_tohopmon = item.tohopmon[0].Split(',').ToList();
+                                foreach (var dt_tohopmon in list_tohopmon)
+                                {
+                                    <span> @dt_tohopmon.Trim() </span>
+                                }
+
+                            }
+                            @if (data_tohop.Trim().Equals("A01"))
+                            {
+                                var list_tohopmon = item.tohopmon[1].Split(',').ToList();
+                                foreach (var dt_tohopmon in list_tohopmon)
+                                {
+                                    <span> @dt_tohopmon.Trim() </span>
+                                }
+                            }
+                            @if (data_tohop.Trim().Equals("D01"))
+                            {
+                                var list_tohopmon = item.tohopmon[2].Split(',').ToList();
+                                foreach (var dt_tohopmon in list_tohopmon)
+                                {
+                                    <span> @dt_tohopmon.Trim() </span>
+                                }
+                            }
+                            @if (data_tohop.Trim().Equals("D07"))
+                            {
+                                var list_tohopmon = item.tohopmon[3].Split(',').ToList();
+                                foreach (var dt_tohopmon in list_tohopmon)
+                                {
+                                    <span> @dt_tohopmon.Trim() </span>
+                                }
+                            }
+                            @if (data_tohop.Trim().Equals("C00"))
+                            {
+                                var list_tohopmon = item.tohopmon[4].Split(',').ToList();
+                                foreach (var dt_tohopmon in list_tohopmon)
+                                {
+                                    <span> @dt_tohopmon.Trim() </span>
+                                }
+                            }
+                        </div>
                     </div>
-                    <div class="item__tohop-content">
-                        <span>Toán</span>
-                        <span>Vật lý</span>
-                        <span>Hóa học</span>
-                    </div>
-                </div>
-                <div class="item__tohop">
-                    <div class="item__tohop-title">
-                        <h3>A00</h3>
-                    </div>
-                    <div class="item__tohop-content">
-                        <span>Toán</span>
-                        <span>Vật lý</span>
-                        <span>Hóa học</span>
-                    </div>
-                </div>
-                <div class="item__tohop">
-                    <div class="item__tohop-title">
-                        <h3>A00</h3>
-                    </div>
-                    <div class="item__tohop-content">
-                        <span>Toán</span>
-                        <span>Vật lý</span>
-                        <span>Hóa học</span>
-                    </div>
-                </div>
-                <div class="item__tohop">
-                    <div class="item__tohop-title">
-                        <h3>A00</h3>
-                    </div>
-                    <div class="item__tohop-content">
-                        <span>Toán</span>
-                        <span>Vật lý</span>
-                        <span>Hóa học</span>
-                    </div>
-                </div>
+                }
+
             </div>
             <div class="area_dangkyngay">
                 <div class="left__icon">
@@ -133,7 +162,7 @@
             </div>
             <div class="area__hotline-item_2">
                 <div class="tennganh__niie">
-                    Kế toán
+                    @item.tennganh
                 </div>
                 <div class="hotline__niie">
                     Hotline: 1900 2039 (EXT 700)
@@ -144,13 +173,19 @@
             <div class="area_monhoc__title bgr_title_ct">
                 <h4>Môn học chuyên ngành</h4>
             </div>
-            <div class="area_monhoc__content">               
+            <div class="area_monhoc__content">
                 <ul class="list__monhoc">
-                    <li>Microeconomics</li>
-                    <li>Macroeconomics</li>
-                </ul>               
+                    @foreach (var data_monhocchuyennganh in list_monhoc)
+                    {
+                        <li>@data_monhocchuyennganh</li>
+                    }
+
+                </ul>
             </div>
         </div>
     </div>
+
+}
+
 </body>
 </html>

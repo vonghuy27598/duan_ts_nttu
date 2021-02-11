@@ -170,6 +170,7 @@
     border-radius: 30px;
     width: 270px;
     margin: auto;
+    margin-top:30px;
     font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1600 - 300)));
     font-weight: bold;
 }
@@ -394,7 +395,7 @@ body {
 }
 
 .content_chitiet .bgr_area .icon_bgr {
-    width: 20%;
+    width: 22%;
     padding: 0px 5px;
     margin-right: 20px;
 }
@@ -545,7 +546,7 @@ body {
 
 .content_chitiet .area_tohop__content .item__tohop .item__tohop-content span {
     color: #fff;
-    font-size: 11px;
+    font-size: 10px;
     text-align: left;
     display: block;
     line-height: 13px;
