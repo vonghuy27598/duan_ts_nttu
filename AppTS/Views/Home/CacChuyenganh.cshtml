@@ -208,16 +208,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model)
-                    {
+                    @{
                         int i = 1;
-                        <tr onclick="window.location='/Home/ChiTietRiengCacNganh?id='+@item.ID_CHUYENNGANH">
-                            <td>@i</td>
-                            <td>@item.TENCHUYENNGANH  <img src="~/Content/img/icon-open.png" /></td>
-                            <td>@item.MANGANH</td>
-                            <td>@item.TOHOP</td>
-                        </tr>
-                        i++;
+                        foreach (var item in Model)
+                        {
+                            <tr onclick="window.location='/Home/ChiTietRiengCacNganh?id='+@item.ID_CHUYENNGANH">
+                                <td>@i</td>
+                                <td>@item.TENCHUYENNGANH  <img src="~/Content/img/icon-open.png" /></td>
+                                <td>@item.MANGANH</td>
+                                <td>@item.TOHOP</td>
+                            </tr>
+                            i++;
+                        }
                     }
                 </tbody>
             </table>
