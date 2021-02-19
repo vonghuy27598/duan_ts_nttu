@@ -59,13 +59,13 @@ namespace AppTS.XuLy
             list_nganh = new string[] { "Y khoa (Bác sỹ Đa khoa)", "Y học dự phòng (Bác sỹ Y học dự phòng)", "Dược học", "Điều dưỡng", "Kỹ thuật y sinh", "Vật lý y khoa", "Kỹ thuật xét nghiệm y học", "Công nghệ sinh học", "Công nghệ thực phẩm", "Công nghệ kỹ thuật hóa học", "Quản lý tài nguyên và môi trường", "Công nghệ kỹ thuật Ô-tô", "Công nghệ kỹ thuật cơ điện tử", "Công nghệ Kỹ thuật Điện – Điện tử", "Kỹ thuật Hệ thống Công nghiệp", "Công nghệ thông tin", "Mạng máy tính – Truyền thông dữ liệu", "Kỹ thuật phần mềm", "Kỹ thuật xây dựng", "Kiến trúc", "Thiết kế nội thất", "Kế toán", "Tài chính – Ngân hàng", "Quản trị kinh doanh", "Quản trị nhân lực", "Luật kinh tế", "Logistics và Quản lý chuỗi cung ứng", "Marketing", "Thương mại điện tử", "Kinh doanh quốc tế", "Quan hệ quốc tế", "Tâm lý học", "Quan hệ công chúng", "Quản trị khách sạn", "Quản trị nhà hàng và dịch vụ ăn uống", "Du lịch", "Việt Nam học", "Đông phương học", "Tiếng Việt và văn hóa Việt Nam", "Ngôn ngữ Anh", "Ngôn ngữ Trung Quốc", "Truyền thông đa phương tiện", "Thiết kế đồ họa", "Thanh nhạc", "Piano", "Đạo diễn Điện ảnh – Truyền hình", "Diễn viên kịch – Điện ảnh – Truyền hình", "Quay phim" };
 
             A00 = new int[] { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28, 29, 33, 34 };
-            A01 = new int[] { 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 34 };
-            A02 = new int[] { 4, 5 };
-            B00 = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 31 };
+            A01 = new int[] { 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 34 };
+            A02 = new int[] { 16, 25 };
+            B00 = new int[] { 0, 1, 7, 8, 9, 10, 15, 16, 17, 23, 25, 31 };
             C00 = new int[] { 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41 };
-            D01 = new int[] { 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41 };
-            D07 = new int[] { 2, 3, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28, 29 };
-            D08 = new int[] { 6, 7 };
+            D01 = new int[] { 2, 3, 4, 5, 6, 11, 12, 13, 14, 18, 21, 22, 24, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41 };
+            D07 = new int[] { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 21, 22, 23, 24, 26, 27, 28, 29 };
+            D08 = new int[] { 7, 17 };
             D14 = new int[] { 30, 31, 32, 35, 36, 37, 38, 39, 40, 41 };
             D15 = new int[] { 30, 35, 36, 37, 38, 39, 40, 41 };
             H00 = new int[] { 19, 20, 42 };

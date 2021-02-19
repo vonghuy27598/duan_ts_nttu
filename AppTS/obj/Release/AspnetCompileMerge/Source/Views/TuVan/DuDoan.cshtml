@@ -14,12 +14,15 @@
     .title_dudoan {
         font-size: calc(20px + (22 - 22) * ((100vw - 300px) / (1600 - 300)));
     }
+    td, th {
+        padding: 10px;
+    }
 </style>
 <div class="dudoan" style="margin-top:100px">
     <h2 class="title_dudoan">ĐỊNH HƯỚNG NGÀNH NGHỀ</h2>
     <div class="form-advisory">
         <div class="select-form">
-            <select>
+            <select style="padding: 2px 10px;">
                 <option value="1">Lớp 10</option>
                 <option value="2">Lớp 11</option>
                 <option value="3">Lớp 12</option>
@@ -95,7 +98,7 @@
                 <button type="button" id="dong" class="close" data-dismiss="modal" style="font-size:30px">&times;</button>
             </div>
             <div class="modal-body" style="overflow-x: hidden; overflow: scroll;height: 85vh;">
-                <div class="primari-box registered-account dn">
+                <div class="primari-box registered-account dn" style="width: 100%;">
                     <h3 class="box-subheading">Đăng nhập</h3>
                     <div class="form-content">
                         <div class="form-group primary-form-group">
