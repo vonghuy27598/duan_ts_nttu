@@ -1082,3 +1082,4 @@ D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.csproj.CopyComplete
 D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.dll
 D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.pdb
 D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache

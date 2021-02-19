@@ -16,7 +16,8 @@ namespace AppTS.ViewModels
         public string[] tohopmon;
         public string monhocchuyennganh { get; set; }
         public string hinhanh { get; set; }
-        public VienQuocTe(int id, string tennganh, string chuyennganh,string tohop, string gioithieu, string cohoi, string monhocchuyennganh, string hinhanh)
+        public string giaodien { get; set; }
+        public VienQuocTe(int id, string tennganh, string chuyennganh,string tohop, string gioithieu, string cohoi, string monhocchuyennganh, string hinhanh, string giaodien)
         {
             this.id = id;
             this.tennganh = tennganh;
@@ -26,6 +27,7 @@ namespace AppTS.ViewModels
             this.cohoi = cohoi;          
             this.monhocchuyennganh = monhocchuyennganh;
             this.hinhanh = hinhanh;
+            this.giaodien = giaodien;
             tohopmon = new string[] { "Toán, Vật lý, Hóa học","Toán, Vật lý, Tiếng Anh","Toán, Ngữ văn, Tiếng Anh", "Toán, Hóa học, Tiếng Anh","Ngữ văn, Lịch sử, Địa lý"};
         }
        
