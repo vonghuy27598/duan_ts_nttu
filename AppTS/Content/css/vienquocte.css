@@ -312,7 +312,7 @@
 .address__contact {
     background-image: url(/Content/img/qt_ic_diachi.png);
     background-repeat: no-repeat;
-    background-size: 26px;
+    background-size: 20px;
     background-position: top left;
     padding-left: 30px;
     clear: both;
@@ -322,7 +322,7 @@
 .hotline {
     background-image: url(/Content/img/qt_ic_hotline_oldphone.png);
     background-repeat: no-repeat;
-    background-size: 25px;
+    background-size: 20px;
     background-position: top left;
     padding-left: 30px;
 }
@@ -330,7 +330,7 @@
 .phone {
     background-image: url(/Content/img/qt_ic_hotline_phone.png);
     background-repeat: no-repeat;
-    background-size: 25px;
+    background-size: 20px;
     background-position: top left;
     padding-left: 30px;
 }
@@ -338,7 +338,7 @@
 .website {
     background-image: url(/Content/img/qt_ic_web.png);
     background-repeat: no-repeat;
-    background-size: 23px;
+    background-size: 20px;
     background-position: top left;
     padding-left: 30px;
 }
