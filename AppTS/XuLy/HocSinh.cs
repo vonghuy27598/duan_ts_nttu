@@ -25,6 +25,7 @@ namespace AppTS.XuLy
                             SDT = a.SDT,
                             EMAIL = a.EMAIL,
                             ID_CHUYENNGANH = a.ID_CHUYENNGANH,
+                            PASSWORD = b.PASSWORD,
                             ADMIN = b.ADMIN
                         };
             return model.ToList();

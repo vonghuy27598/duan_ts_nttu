@@ -2812,6 +2812,7 @@
     <Content Include="Views\Home\ChiTietRiengSong_LienNganh.cshtml" />
     <Content Include="Views\Home\CacChuyenganh.cshtml" />
     <Content Include="Views\Home\ChiTietRiengVienQuocTe.cshtml" />
+    <Content Include="Views\HocSinh\DoiMK.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

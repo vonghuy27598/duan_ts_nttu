@@ -157,6 +157,43 @@ namespace AppTS.Controllers
             }
             return View();
         }
+
+        public ActionResult DoiMK()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult DoiMK(FormCollection collection)
+        {
+            HocSinh_TK tk = (HocSinh_TK)Session["User"];
+            
+            var matkhaucu = collection["MatKhauCu"];
+            var matkhau = collection["MatKhau"];
+            var nlmatkhau = collection["NhapLaiMatKhau"];
+            var upMK = db.Table_TaiKhoans.First(m => m.ID_TK == tk.ID_TK);
+
+            if (Str_Encoder(matkhaucu) == tk.PASSWORD)
+            {
+                if(matkhau == nlmatkhau)
+                {
+                    upMK.PASSWORD = Str_Encoder(matkhau);
+                    UpdateModel(upMK);
+                    db.SubmitChanges();
+                    Response.Write("<script>alert('Đổi mật khẩu thành công')</script>");
+                    return RedirectToAction("Main", "Home");
+                }
+                else
+                {
+                    ViewData["LoiMK"] = "Mật khẩu KHÔNG trùng khớp";
+                }
+            }
+            else
+            {
+                ViewData["LoiMk1"] = "Mật khẩu cũ không đúng";
+            }    
+            return this.DoiMK();
+        }
         public ActionResult DangKy()
         {
             return View();
