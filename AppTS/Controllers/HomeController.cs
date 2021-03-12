@@ -231,6 +231,10 @@ namespace AppTS.Controllers
             }
             return View();
         }
+        public ActionResult ChiTietThacSi()
+        {            
+            return View();
+        }
         public PartialViewResult part_Thacsi()
         {
             return PartialView();
