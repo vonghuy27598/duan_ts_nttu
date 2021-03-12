@@ -250,6 +250,7 @@
     <Compile Include="ViewModels\LichSuXetTuyen.cs" />
     <Compile Include="ViewModels\MenuView.cs" />
     <Compile Include="ViewModels\NghienCuuFull.cs" />
+    <Compile Include="ViewModels\ResetPassword.cs" />
     <Compile Include="ViewModels\THPT.cs" />
     <Compile Include="ViewModels\ToHop.cs" />
     <Compile Include="ViewModels\TrungTuyen.cs" />
@@ -2813,6 +2814,8 @@
     <Content Include="Views\Home\CacChuyenganh.cshtml" />
     <Content Include="Views\Home\ChiTietRiengVienQuocTe.cshtml" />
     <Content Include="Views\HocSinh\DoiMK.cshtml" />
+    <Content Include="Views\HocSinh\QuenMK.cshtml" />
+    <Content Include="Views\HocSinh\DatLaiMK.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

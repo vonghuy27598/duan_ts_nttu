@@ -21,6 +21,6 @@ namespace AppTS.ViewModels
         public string USERNAME { get; set; }
         public string PASSWORD { get; set; }
         public bool? ADMIN { get; set; }
-        
+        public string CODE { get; set; }
     }
 }
