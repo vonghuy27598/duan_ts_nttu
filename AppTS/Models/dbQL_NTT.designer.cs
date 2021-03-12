@@ -102,7 +102,7 @@ namespace AppTS.Models
     #endregion
 		
 		public dbQL_NTTDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["QL_NTTConnectionString1"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["QL_NTTConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
