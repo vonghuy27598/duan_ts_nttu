@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "DoiMK";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--Check Pass-->
+<script type="text/javascript">
+    var check = function () {
+        if (document.getElementById('password').value ==
+            document.getElementById('confirm_password').value) {
+            document.getElementById('message').style.color = 'green';
+            document.getElementById('message').innerHTML = 'Mật Khẩu Trùng Khớp';
+        } else {
+            document.getElementById('message').style.color = 'red';
+            document.getElementById('message').innerHTML = 'Mật Khẩu KHÔNG Trùng Khớp';
+        }
+    }
+    var user = function () {
+        document.getElementById('tn').style.color = 'red';
+        document.getElementById('tn').innerHTML = 'Mật khẩu cũ không đúng';
+    }
+</script>
+<script>
+    var input = document.getElementById('thongbao');
+    input.oninvalid = function (event) {
+        event.target.setCustomValidity('Vui lòng nhập thông tin');
+    }
+</script>
+<link href="~/Content/css/dangnhap.css" rel="stylesheet" />
+<div class="primari-box registered-account dn">
+    <form class="new-account-box" id="accountLogin" method="post" action="#">
+        <h3 class="box-subheading">Đăng nhập</h3>
+        <hr style="border: 1px solid; width: 100px;margin-bottom:35px" />
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <div class="form-content">
+                <div class="form-group primary-form-group">
+                    <label for="loginemail">Mật khẩu cũ</label>
+                    @*<input type="text" value="" name="email" id="loginemail" class="">*@
+                    <div style="color:red">@Html.ViewData["LoiMK1"]</div><div id='tn'><br /></div>
+                    @Html.Password("MatKhauCu", null, new { required = "required", @class = "input-feild line-animation" })
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group" style="margin-bottom:0px">
+                    <label for="password">Mật khẩu mới</label>
+                    @*<input type="password" value="" name="password" id="password" class="form-control input-feild">*@
+                    @Html.Password("MatKhau", null, new { required = "required", id = "password", onkeyup = "check();", @class = "input-feild line-animation" })
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group" style="margin-bottom:0px">
+                    <label for="password">Nhập lại mật khẩu mới</label>
+                    @*<input type="password" value="" name="password" id="password" class="form-control input-feild">*@
+                    <div style="color:red">@Html.ViewData["LoiMK"]</div><div id='message'><br /></div>
+                    @Html.Password("NhapLaiMatKhau", null, new { required = "required", id = "confirm_password", onkeyup = "check();", @class = "input-feild line-animation" })
+                    <div class="line"></div>
+                </div>
+                <div class="submit-button">
+                    <input type="submit" value="Xác nhận" id="signinCreate" class="btn main-btn checkmobile" style="width:100%" />
+                </div>
+            </div>
+        }
+    </form>
+</div>
+<script type="text/javascript">
+    //$(document).ready(function () {
+    //    $('body').on('click', '.checkmobile', function () {
+    //        var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+    //        var mobile = $('#mobile').val();
+    //        if (mobile !== '') {
+    //            if (vnf_regex.test(mobile) == false) {
+    //                alert('Số điện thoại của bạn không đúng định dạng!');
+    //                return false;
+    //            }
+    //        }
+    //    });
+    //});
+</script>

@@ -332,7 +332,7 @@ namespace AppTS.Controllers
                 link = Request.QueryString["link"];
             }
             bool tontaisdt = db.Table_HocSinhs.Any(m => hs_tk.SDT == m.SDT);
-            bool tontaitk = db.Table_TaiKhoans.Any(m => hs_tk.USERNAME == m.USERNAME);
+            bool tontaitk = db.Table_HocSinhs.Any(m => hs_tk.EMAIL == m.EMAIL);
             if (tontaisdt)
             {
                 ViewData["LoiSDT"] = "Số điện thoại đã được sử dụng";
@@ -341,7 +341,7 @@ namespace AppTS.Controllers
             {
                 if (tontaitk)
                 {
-                    ViewData["LoiUS"] = "Tài khoản đã được sử dụng";
+                    ViewData["LoiUS"] = "Email này đã được sử dụng";
                 }
                 else
                 {
@@ -445,8 +445,6 @@ namespace AppTS.Controllers
 
             ViewBag.Nganh = new SelectList(Nganh.getKhoiNganh_ddl(), "ID_NGANH", "TENNGANH", selectedId);
         }
-
-
         //getTenNganh
         [HttpPost]
         public JsonResult getTenNganh(int id_khoinganh)

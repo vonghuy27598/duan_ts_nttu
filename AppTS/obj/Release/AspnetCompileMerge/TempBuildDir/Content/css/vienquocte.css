@@ -45,7 +45,10 @@
 .area__ct_header {
     padding: 10px;
 }
-
+pre{
+    margin: 0;
+    font-family: Arial;
+}
 .content__cunhanquocte .area__ct_header h4 {
     color: #456894;
     font-weight: bold;
@@ -573,7 +576,7 @@ body {
     background-color: #ed1d23;
     color: #fff;
     text-align: center;
-    padding: 3px 15px;
+    padding: 8px 15px;
     border-top-right-radius: 54px;
 }
 
