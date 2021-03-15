@@ -75,7 +75,7 @@
 
                 <div class="form-group primary-form-group">
                     <label for="SDT">Số điện thoại</label>
-                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried",@id="mobile", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}", placeholder = "Nhập số điện thoại" })
+                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @id = "mobile", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}", placeholder = "Nhập số điện thoại" })
                     <div class="line"></div>
                 </div>
                 <div style="color:red">@Html.ViewData["LoiSDT"]</div><div id='sdt'><br /></div>
@@ -85,6 +85,7 @@
                     @Html.TextBoxFor(m => m.DIACHI, null, new { required = "required", @class = "input-feild line-animation", placeholder = "Nhập địa chỉ" })
                     <div class="line"></div>
                 </div>
+                <div style="color:red">@Html.ViewData["LoiUS"]</div><div id='tn'><br /></div>
                 <div class="form-group primary-form-group">
                     <label for="EMAIL">Email</label>
                     @Html.TextBoxFor(m => m.EMAIL, null, new { type = "email", required = "required", @class = " input-feild line-animation", placeholder = "Nhập email" })
@@ -93,14 +94,13 @@
 
                 <h4>Thông tin đăng nhập</h4>
                 @*<div class="form-group primary-form-group">
-                    <label for="USERNAME">Tên đăng nhập</label>
-                    @Html.TextBoxFor(m => m.USERNAME, null, new { required = "required", @class = " input-feild line-animation", minlength = "6" })
-                    <div class="line"></div>
-                </div>*@
-                <div style="color:red">@Html.ViewData["LoiUS"]</div><div id='tn'><br /></div>
+                        <label for="USERNAME">Tên đăng nhập</label>
+                        @Html.TextBoxFor(m => m.USERNAME, null, new { required = "required", @class = " input-feild line-animation", minlength = "6" })
+                        <div class="line"></div>
+                    </div>*@
                 <div class="form-group primary-form-group">
                     <label for="password">Mật khẩu</label>
-                    @Html.PasswordFor(m => m.PASSWORD, new {id = "password", onkeyup = "check();", @class = " input-feild line-animation" })
+                    @Html.PasswordFor(m => m.PASSWORD, new { id = "password", onkeyup = "check();", @class = " input-feild line-animation" })
                     <div class="line"></div>
                     @*<div id="message">
                             <h4>Mật khẩu bao gồm:</h4>
@@ -114,7 +114,7 @@
 
                 <div class="form-group primary-form-group">
                     <label for="password">Nhập lại mật khẩu</label>
-                    @Html.PasswordFor(m => m.PASSWORD, new {id = "confirm_password", onkeyup = "check();", @class = " input-feild line-animation" })
+                    @Html.PasswordFor(m => m.PASSWORD, new { id = "confirm_password", onkeyup = "check();", @class = " input-feild line-animation" })
                     <div class="line"></div>
 
                 </div>
