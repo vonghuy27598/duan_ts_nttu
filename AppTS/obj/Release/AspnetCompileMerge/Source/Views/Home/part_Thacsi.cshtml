@@ -1,36 +1,54 @@
 ﻿<style>
-    .info_saudaihoc{
-        padding:20px 10px 10px
+    .info_saudaihoc {
+        padding: 20px 10px 10px;
     }
 
 
-        .info_saudaihoc h4 {
+    .info_saudaihoc h4 {
             text-align: center;
             color: #29abe2;
             font-weight: bold;
             font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
         }
-    
-    
-    
+
+
+
      .info_saudaihoc .info_saudaihoc__left p {
-        font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
-        color: #29abe2;
-        background-repeat: no-repeat;
-        background-position: center left;
-        background-size: contain;
-        line-height: 30px;
-        padding-left: 35px;
-        margin-bottom: 5px;
-    }
-    .info_saudaihoc .info_saudaihoc__left p:first-child{
-        background-image:url('/Content/img/icon_ts_1.png')
-    }
-        .info_saudaihoc .info_saudaihoc__left p:nth-child(2) {
-            background-image: url('/Content/img/icon_ts_2.png');
+            font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+            color: #29abe2;
+            background-repeat: no-repeat;
+            background-position: center left;
+            background-size: contain;
+            line-height: 30px;
+            padding-left: 35px;
+            margin-bottom: 5px;
         }
-        .info_saudaihoc .info_saudaihoc__left p:last-child {
-            background-image: url('/Content/img/icon_ts_3.png');
+
+      .info_saudaihoc .info_saudaihoc__left p:first-child {
+                background-image: url('/Content/img/icon_ts_1.png');
+       }
+
+      .info_saudaihoc .info_saudaihoc__left p:nth-child(2) {
+                background-image: url('/Content/img/icon_ts_2.png');
+       }
+
+      .info_saudaihoc .info_saudaihoc__left p:last-child {
+                background-image: url('/Content/img/icon_ts_3.png');
+       }
+
+    .linkto_gioithieu {
+        text-align: center;
+    }
+
+        .linkto_gioithieu a {
+            text-decoration: none;
+            font-size: 15px;
+            color: #f11111;
+            font-weight: bold;
+            padding: 10px 10px;
+            background-color: antiquewhite;
+            border-radius: 20px;
+            box-shadow: 0px 0px 7px 0px #b8b8b8;
         }
 </style>
 
@@ -42,7 +60,11 @@
         <p>saudaihoc.ntt.edu.vn</p>
     </div>
     <div class="info_sdh info_saudaihoc__right" style="margin-top:10px;text-align:center">
-        <img src="/Content/img/ts_luachon.png" style="width:80%;height:auto"/>
+        <img src="/Content/img/ts_luachon.png" style="width:80%;height:auto" />
     </div>
-    <img src="/Content/img/ts_thongke.jpg" style="width:100%;height:auto"/>
+    <img src="/Content/img/ts_thongke.jpg" style="width:100%;height:auto;margin-bottom:30px" />
+    <div class="linkto_gioithieu">
+        <a class="linkto_gioithieu" href="@Url.Action("/ChiTietThacSi")">GIỚI THIỆU VỀ CHƯƠNG TRÌNH >></a>
+        
+    </div>
 </div>

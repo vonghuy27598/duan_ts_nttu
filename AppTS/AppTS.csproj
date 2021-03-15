@@ -2704,7 +2704,6 @@
     <Content Include="Areas\Admin\Views\GiangVien\GiangVienDoanhNghiep.cshtml" />
     <Content Include="Areas\Admin\Views\XetTuyen\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ThanhVien\SinhVien.cshtml" />
-    <Content Include="PrecompiledApp.config" />
     <None Include="Properties\PublishProfiles\AppTS.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\chatbot.js" />
@@ -2816,6 +2815,9 @@
     <Content Include="Views\HocSinh\DoiMK.cshtml" />
     <Content Include="Views\HocSinh\QuenMK.cshtml" />
     <Content Include="Views\HocSinh\DatLaiMK.cshtml" />
+    <Content Include="Views\Home\ChiTietThacSi.cshtml">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "QuenMK";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/css/dangnhap.css" rel="stylesheet" />
+<div class="primari-box registered-account dn">
+    <form class="new-account-box" id="accountLogin" method="post" action="#">
+        <h3 class="box-subheading">Đăng nhập</h3>
+        <hr style="border: 1px solid; width: 100px;margin-bottom:35px" />
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <div class="form-content">
+                <div class="form-group primary-form-group">
+                    <label for="loginemail">Email của bạn</label>
+                    @*<input type="text" value="" name="email" id="loginemail" class="">*@
+                    @Html.TextBox("EmailCF", null, new { required = "required", @class = "input-feild line-animation" })
+                    <div class="line"></div>
+                </div>
+                <div style="color:red;text-align:center">@ViewBag.Message</div><div id='tn'><br /></div>
+                <div class="submit-button">
+                    <input type="submit" value="Gửi Email" id="signinCreate" class="btn main-btn checkmobile" style="width:100%" />
+                </div>
+            </div>
+        }
+    </form>
+</div>
+<script type="text/javascript">
+    //$(document).ready(function () {
+    //    $('body').on('click', '.checkmobile', function () {
+    //        var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+    //        var mobile = $('#mobile').val();
+    //        if (mobile !== '') {
+    //            if (vnf_regex.test(mobile) == false) {
+    //                alert('Số điện thoại của bạn không đúng định dạng!');
+    //                return false;
+    //            }
+    //        }
+    //    });
+    //});
+</script>
+

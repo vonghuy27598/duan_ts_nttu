@@ -10,7 +10,7 @@
     <title>ChiTietRiengVienQuocTe</title>
     <link href="~/Content/css/style.css" rel="stylesheet" />
     <link href="~/Content/css/vienquocte.css" rel="stylesheet" />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
@@ -25,167 +25,173 @@
             }
         </script>
     </section>
-   
+
     @foreach (var item in ViewData["QuocTe"] as IEnumerable<AppTS.ViewModels.VienQuocTe>)
     {
 
-    var list_cohoi = item.cohoi.Split(',').ToList();
-    int so_cohoi = 0;
-    var list_tohop = item.tohop.Split(',').ToList();
-    var list_monhoc = item.monhocchuyennganh.Split(',').ToList();
-    <div class="content_chitiet" style="width:100%">
-        <div class="bgr_area">
-            <div class="icon_bgr">
-                <img src="/Content/img/@item.hinhanh" />
-            </div>
-            <div class="content_bgr">
-                <h4>@item.tennganh</h4>
-                <span>Chuyên ngành: <b>@item.chuyennganh</b></span>
-                <p>Tổ hợp xét tuyển: <b>@item.tohop</b></p>
-            </div>
-        </div>
-        <div class="area_img_chitiet">
-            <img src="/Content/img/@item.giaodien" />
-        </div>
-        <div class="area_gioithieu">
-            <div class="area_gioithieu__title bgr_title_ct">
-                <h4>GIỚI THIỆU NGÀNH HỌC</h4>
-            </div>
-            <div class="area_gioithieu__content">
-                @item.gioithieu
-            </div>
-        </div>
-        <div class="area_cohoi">
-            <div class="area_cohoi__title bgr_title_ct">
-                <h4>Cơ hội nghề nghiệp</h4>
-            </div>
-            <div class="area_cohoi__content">
-                <div class="area_cohoi__content-left">
-                    <ul>
-                        @foreach (var stt_cohoi in list_cohoi)
-                        {
-                            so_cohoi++;
-                            <li>@so_cohoi.</li>
-
-                        }
-
-                    </ul>
+        var list_cohoi = item.cohoi.Split(',').ToList();
+        int so_cohoi = 0;
+        var list_tohop = item.tohop.Split(',').ToList();
+        var list_monhoc = item.monhocchuyennganh.Split(',').ToList();
+        <div class="content_chitiet" style="width:100%">
+            <div class="bgr_area">
+                <div class="icon_bgr">
+                    <img src="/Content/img/@item.hinhanh" />
                 </div>
-                <div class="area_cohoi__content-right">
-                    <ul>
-                        @foreach (var data_cohoi in list_cohoi)
-                        {
-                            <li>@data_cohoi</li>
-
-                        }
-
-                    </ul>
+                <div class="content_bgr">
+                    <h4>@item.tennganh</h4>
+                    <span>Chuyên ngành: <b>@item.chuyennganh</b></span>
+                    <p>Tổ hợp xét tuyển: <b>@item.tohop</b></p>
                 </div>
             </div>
-        </div>
-        <div class="area_tohop">
-            <div class="area_tohop__title bgr_title_ct">
-                <h4>Tổ hợp xét tuyển</h4>
+            <div class="area_img_chitiet">
+                <img src="/Content/img/@item.giaodien" />
             </div>
-            <div class="area_tohop__content">
-                @foreach (var data_tohop in list_tohop.Distinct())
-                {
-                    <div class="item__tohop">
-                        <div class="item__tohop-title">
-                            <h3>@data_tohop</h3>
-                        </div>
-                        <div class="item__tohop-content">
-
-                            @if (data_tohop.Trim().Equals("A00"))
+            <div class="area_gioithieu">
+                <div class="area_gioithieu__title bgr_title_ct">
+                    <h4>GIỚI THIỆU NGÀNH HỌC</h4>
+                </div>
+                <div class="area_gioithieu__content">
+                    @item.gioithieu
+                </div>
+            </div>
+            <div class="area_cohoi">
+                <div class="area_cohoi__title bgr_title_ct">
+                    <h4>Cơ hội nghề nghiệp</h4>
+                </div>
+                <div class="area_cohoi__content">
+                    <div class="area_cohoi__content-left">
+                        <ul>
+                            @foreach (var stt_cohoi in list_cohoi)
                             {
-                                var list_tohopmon = item.tohopmon[0].Split(',').ToList();
-                                foreach (var dt_tohopmon in list_tohopmon)
-                                {
-                                    <span> @dt_tohopmon.Trim() </span>
-                                }
-
+                                so_cohoi++;
+                                <li class="list-soch">@so_cohoi.</li>
                             }
-                            @if (data_tohop.Trim().Equals("A01"))
-                            {
-                                var list_tohopmon = item.tohopmon[1].Split(',').ToList();
-                                foreach (var dt_tohopmon in list_tohopmon)
-                                {
-                                    <span> @dt_tohopmon.Trim() </span>
-                                }
-                            }
-                            @if (data_tohop.Trim().Equals("D01"))
-                            {
-                                var list_tohopmon = item.tohopmon[2].Split(',').ToList();
-                                foreach (var dt_tohopmon in list_tohopmon)
-                                {
-                                    <span> @dt_tohopmon.Trim() </span>
-                                }
-                            }
-                            @if (data_tohop.Trim().Equals("D07"))
-                            {
-                                var list_tohopmon = item.tohopmon[3].Split(',').ToList();
-                                foreach (var dt_tohopmon in list_tohopmon)
-                                {
-                                    <span> @dt_tohopmon.Trim() </span>
-                                }
-                            }
-                            @if (data_tohop.Trim().Equals("C00"))
-                            {
-                                var list_tohopmon = item.tohopmon[4].Split(',').ToList();
-                                foreach (var dt_tohopmon in list_tohopmon)
-                                {
-                                    <span> @dt_tohopmon.Trim() </span>
-                                }
-                            }
-                        </div>
+                        </ul>
                     </div>
-                }
-
-            </div>
-            <div class="area_dangkyngay">
-                <div class="left__icon">
-                    <i class="fa fa-heart"></i>
-                </div>
-                <div class="right__content">
-                    Đăng ký xét tuyển ngay!
-                </div>
-            </div>
-        </div>
-        <div class="area__hotline">
-            <div class="area__hotline-item_1">
-                <div class="website__niie">
-                    www.niie.edu.vn
-                </div>
-                <div class="tellme__niie">
-                    Call us: <b>0934 116 244 - 0938 116 244</b>
+                    <div class="area_cohoi__content-right">
+                        <ul>
+                            @foreach (var data_cohoi in list_cohoi)
+                            {
+                                <li class="list-ch">@data_cohoi</li>
+                            }
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="area__hotline-item_2">
-                <div class="tennganh__niie">
-                    @item.tennganh
+            <div class="area_tohop">
+                <div class="area_tohop__title bgr_title_ct">
+                    <h4>Tổ hợp xét tuyển</h4>
                 </div>
-                <div class="hotline__niie">
-                    Hotline: 1900 2039 (EXT 700)
-                </div>
-            </div>
-        </div>
-        <div class="area_monhoc">
-            <div class="area_monhoc__title bgr_title_ct">
-                <h4>Môn học chuyên ngành</h4>
-            </div>
-            <div class="area_monhoc__content">
-                <ul class="list__monhoc">
-                    @foreach (var data_monhocchuyennganh in list_monhoc)
+                <div class="area_tohop__content">
+                    @foreach (var data_tohop in list_tohop.Distinct())
                     {
-                        <li>@data_monhocchuyennganh</li>
+                        <div class="item__tohop">
+                            <div class="item__tohop-title">
+                                <h3>@data_tohop</h3>
+                            </div>
+                            <div class="item__tohop-content">
+
+                                @if (data_tohop.Trim().Equals("A00"))
+                                {
+                                    var list_tohopmon = item.tohopmon[0].Split(',').ToList();
+                                    foreach (var dt_tohopmon in list_tohopmon)
+                                    {
+                                        <span> @dt_tohopmon.Trim() </span>
+                                    }
+
+                                }
+                                @if (data_tohop.Trim().Equals("A01"))
+                                {
+                                    var list_tohopmon = item.tohopmon[1].Split(',').ToList();
+                                    foreach (var dt_tohopmon in list_tohopmon)
+                                    {
+                                        <span> @dt_tohopmon.Trim() </span>
+                                    }
+                                }
+                                @if (data_tohop.Trim().Equals("D01"))
+                                {
+                                    var list_tohopmon = item.tohopmon[2].Split(',').ToList();
+                                    foreach (var dt_tohopmon in list_tohopmon)
+                                    {
+                                        <span> @dt_tohopmon.Trim() </span>
+                                    }
+                                }
+                                @if (data_tohop.Trim().Equals("D07"))
+                                {
+                                    var list_tohopmon = item.tohopmon[3].Split(',').ToList();
+                                    foreach (var dt_tohopmon in list_tohopmon)
+                                    {
+                                        <span> @dt_tohopmon.Trim() </span>
+                                    }
+                                }
+                                @if (data_tohop.Trim().Equals("C00"))
+                                {
+                                    var list_tohopmon = item.tohopmon[4].Split(',').ToList();
+                                    foreach (var dt_tohopmon in list_tohopmon)
+                                    {
+                                        <span> @dt_tohopmon.Trim() </span>
+                                    }
+                                }
+                            </div>
+                        </div>
                     }
 
-                </ul>
+                </div>
+                <div class="area_dangkyngay">
+                    <div class="left__icon">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="right__content">
+                        Đăng ký xét tuyển ngay!
+                    </div>
+                </div>
+            </div>
+            <div class="area__hotline">
+                <div class="area__hotline-item_1">
+                    <div class="website__niie">
+                        www.niie.edu.vn
+                    </div>
+                    <div class="tellme__niie">
+                        Call us: <pre><b>0934 116 244 - 0938 116 244</b></pre>
+                    </div>
+                </div>
+                <div class="area__hotline-item_2">
+                    <div class="tennganh__niie">
+                        @item.tennganh
+                    </div>
+                    <div class="hotline__niie">
+                        Hotline: <pre>1900 2039 (EXT 700)</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="area_monhoc">
+                <div class="area_monhoc__title bgr_title_ct">
+                    <h4>Môn học chuyên ngành</h4>
+                </div>
+                <div class="area_monhoc__content">
+                    <ul class="list__monhoc">
+                        @foreach (var data_monhocchuyennganh in list_monhoc)
+                        {
+                            <li>@data_monhocchuyennganh</li>
+                        }
+
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
-}
+    }
+    <script>
+        $(document).ready(function () {
+            var list_nd = $(".list-ch");
+            $.each($(".list-ch"), function (i) {
+                var leftHeight = $('.list-ch').eq(i).height();
+                $(".list-soch").eq(i).css({ 'height': leftHeight });
 
+            })
+
+        });
+    </script>
 </body>
 </html>
