@@ -36,15 +36,9 @@
             @Html.ValidationSummary(true)
             <div class="form-content">
                 <div class="form-group primary-form-group">
-<<<<<<< HEAD
-                    <label for="loginemail">Mật khẩu cũ</label>
-                    @*<input type="text" value="" name="email" id="loginemail" class="">*@
-                    <div style="color:red">@Html.ViewData["LoiMK1"]</div><div id='tn'><br /></div>
-=======
                     <div style="color:red">@Html.ViewData["LoiMK1"]</div><div id='tn'><br /></div>
                     <label for="loginemail">Mật khẩu cũ</label>
                     @*<input type="text" value="" name="email" id="loginemail" class="">*@
->>>>>>> 30afeb32511e5886d6e3f3c469410907a87d8bb6
                     @Html.Password("MatKhauCu", null, new { required = "required", @class = "input-feild line-animation" })
                     <div class="line"></div>
                 </div>
@@ -55,15 +49,9 @@
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group" style="margin-bottom:0px">
-<<<<<<< HEAD
-                    <label for="password">Nhập lại mật khẩu mới</label>
-                    @*<input type="password" value="" name="password" id="password" class="form-control input-feild">*@
-                    <div style="color:red">@Html.ViewData["LoiMK"]</div><div id='message'><br /></div>
-=======
                     <div style="color:red">@Html.ViewData["LoiMK"]</div><div id='message'><br /></div>
                     <label for="password">Nhập lại mật khẩu mới</label>
                     @*<input type="password" value="" name="password" id="password" class="form-control input-feild">*@
->>>>>>> 30afeb32511e5886d6e3f3c469410907a87d8bb6
                     @Html.Password("NhapLaiMatKhau", null, new { required = "required", id = "confirm_password", onkeyup = "check();", @class = "input-feild line-animation" })
                     <div class="line"></div>
                 </div>
