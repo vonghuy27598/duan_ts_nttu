@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_NTT" Class="dbQL_NTTDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=LAPTOP-2UG446JV\SQLEXPRESS;Initial Catalog=QL_NTT;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QL_NTTConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-12J6D6C;Initial Catalog=QL_NTT;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QL_NTTConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Table_Admin" Member="Table_Admins">
     <Type Name="Table_Admin">
       <Column Name="ID_ADMIN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -12,21 +12,17 @@
       <Association Name="Table_TaiKhoan_Table_Admin" Member="Table_TaiKhoan" ThisKey="ID_TK" OtherKey="ID_TK" Type="Table_TaiKhoan" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Table_TrungTuyen" Member="Table_TrungTuyens">
-    <Type Name="Table_TrungTuyen">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="TRUONG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="SDT" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
-      <Column Name="EMAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="NGAYDANGKY" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="TENTOHOP" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="ID_CHUYENNGANH" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MON1" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="MON2" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="MON3" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="TRUNGTUYEN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+  <Table Name="dbo.Table_TUVAN" Member="Table_TUVANs">
+    <Type Name="Table_TUVAN">
+      <Column Name="ID_CAUHOI" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_USERNAME" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CAUHOI" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CAUTRALOI" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DA_XEM" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DA_REP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NGAYHOI" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NGUOITRALOI" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Table_ChiTietKhaoSat" Member="Table_ChiTietKhaoSats">
@@ -114,6 +110,16 @@
       <Column Name="HINHANH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="ID_THANHTUUTRUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Table_ThanhTuuTruong_Table_CTTTT" Member="Table_ThanhTuuTruong" ThisKey="ID_THANHTUUTRUONG" OtherKey="ID_THANHTUUTRUONG" Type="Table_ThanhTuuTruong" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_dkThacSi" Member="Table_dkThacSis">
+    <Type Name="Table_dkThacSi">
+      <Column Name="ID_USER" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NGAYSINH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TENNGANH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Table_GiangVien" Member="Table_GiangViens">
@@ -247,6 +253,23 @@
       <Column Name="MON1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="MON2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="MON3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_TrungTuyen" Member="Table_TrungTuyens">
+    <Type Name="Table_TrungTuyen">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TRUONG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NGAYDANGKY" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TENTOHOP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_CHUYENNGANH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MON1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MON2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MON3" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TRUNGTUYEN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
