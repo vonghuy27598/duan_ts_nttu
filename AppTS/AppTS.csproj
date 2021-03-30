@@ -251,6 +251,7 @@
     <Compile Include="ViewModels\MenuView.cs" />
     <Compile Include="ViewModels\NghienCuuFull.cs" />
     <Compile Include="ViewModels\ResetPassword.cs" />
+    <Compile Include="ViewModels\ThacSi.cs" />
     <Compile Include="ViewModels\THPT.cs" />
     <Compile Include="ViewModels\ToHop.cs" />
     <Compile Include="ViewModels\TrungTuyen.cs" />
@@ -260,6 +261,7 @@
     <Compile Include="XuLy\HocSinh.cs" />
     <Compile Include="XuLy\KhaoSatHS.cs" />
     <Compile Include="XuLy\KhoiNghiep.cs" />
+    <Compile Include="XuLy\ListThacSi.cs" />
     <Compile Include="XuLy\Nganh.cs" />
     <Compile Include="XuLy\NghienCuu.cs" />
     <Compile Include="XuLy\ListTrungTuyen.cs" />
@@ -2818,6 +2820,9 @@
     <Content Include="Views\Home\ChiTietThacSi.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Views\Home\DieuKienDuThi.cshtml" />
+    <Content Include="Views\Home\QuanLyThacSi.cshtml" />
+    <Content Include="Views\Home\DangKyThacSi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

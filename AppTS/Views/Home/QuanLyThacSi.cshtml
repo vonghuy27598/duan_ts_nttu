@@ -1,4 +1,4 @@
-﻿@model IEnumerable<AppTS.ViewModels.TrungTuyen>
+﻿@model IEnumerable<AppTS.ViewModels.ThacSi>
 @{
     ViewBag.Title = "QuanLyXetTuyen";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -23,6 +23,7 @@
         font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1600 - 300)));
         padding: 15px 20px;
     }
+
     .export_file {
         font-size: 13px;
         padding: 10px;
@@ -34,7 +35,7 @@
 </style>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h5>DANH SÁCH ĐĂNG KÝ XÉT TUYỂN</h5>
+        <h5>DANH SÁCH ĐĂNG KÝ THẠC SĨ</h5>
     </div>
     @{
         var select = Request.QueryString["mySelect"];
@@ -46,6 +47,7 @@
             <label for="sort-bydate">Xếp theo</label>
             <select id="sort-bydate" name="select_sort">
                 <option value="2">Tất cả</option>
+                <option value="0">Ngày hôm nay</option>
                 <option value="1">Tự chọn</option>
 
             </select>
@@ -58,29 +60,30 @@
                         <th>STT</th>
                         <th>Họ Tên</th>
                         <th>SĐT</th>
+                        <th>Email</th>
                         <th>Tên ngành</th>
-                        <th>Tổ hợp</th>
-                        <th>Ngày đăng ký</th>
+                        <th>Năm đăng ký</th>
                     </tr>
                 </thead>
                 <tbody class="table_change" id="myTable">
                     @foreach (var item in Model)
                     {
-                        <tr id="row_@item.ID">
-                            <td>@item.ID</td>
-                            <td>@item.HOTEN</td>
+                        <tr id="row_@item.Id">
+                            <td>@item.Id</td>
+                            <td>@item.HoTen</td>
                             <td>@item.SDT</td>
-                            <td>@item.TENCHUYENNGANH</td>
-                            <td>@item.TENTOHOP</td>
-                            <td>@String.Format("{0:dd/MM/yyyy}", @item.NGAYDANGKY)</td>
+                            <td>@item.Email</td>
+                            <td>@item.TenChuyenNganh</td>
+                            <td>@String.Format("{0:dd/MM/yyyy}", @item.Nam)</td>
                         </tr>
                     }
+
                 </tbody>
             </table>
 
-            <div style="margin-top:0px;text-align:center">
-                <input type="submit" value="Xuất file Excel" class="button export_file"  />
-            </div>
+            @*<div style="margin-top:0px;text-align:center">
+                    <input type="submit" value="Xuất file Excel" class="button export_file" />
+                </div>*@
 
         </div>
 
@@ -115,28 +118,7 @@
         }
 
     });
-    function sortByDate(value) {
-        $.ajax({
-            url: "sortByDate",
-            data: { value: value },
-            datatype: "json",
-            type: "POST",
-            success: function (response) {
-                if (response.status != null) {
-                    $("#myTable").empty();
-                    var content = "";
-                    $.each(response.status, function () {
-                        var date = this.NGAYDANGKY;
-                        var nowDate = new Date(parseInt(date.substr(6)));
-                        var date_dangky = nowDate.format("dd/mm/yyyy");
-                        content += "<tr> <td> " + this.ID + " </td> <td>" + this.HOTEN + "</td> <td> " + this.SDT + " </td> <td> " + this.TENCHUYENNGANH + " </td> <td> " + this.TENTOHOP + " </td> <td>  " + date_dangky + "</td></tr>"
-                    });
-                    $("#myTable").append(content);
-                }
 
-            }
-        })
-    }
     $("#ip_date_sort").change(function () {
         var date = this.value;
         sortByDate_cus(date);
@@ -153,10 +135,7 @@
                     $("#myTable").empty();
                     var content = "";
                     $.each(response.status, function () {
-                        var date = this.NGAYDANGKY;
-                        var nowDate = new Date(parseInt(date.substr(6)));
-                        var date_dangky = nowDate.format("dd/mm/yyyy");
-                        content += "<tr> <td> " + this.ID + " </td> <td>" + this.HOTEN + "</td> <td> " + this.SDT + " </td> <td> " + this.TENCHUYENNGANH + " </td> <td> " + this.TENTOHOP + " </td> <td>  " + date_dangky + "</td></tr>"
+                        content += "<tr> <td> " + this.Id + " </td> <td>" + this.HoTen + "</td> <td> " + this.SDT + " </td> <td> " + this.Email + " </td> <td> " + this.TenChuyenNganh + " </td> <td>  " + this.Nam + "</td></tr>"
                     });
                     $("#myTable").append(content);
                 }

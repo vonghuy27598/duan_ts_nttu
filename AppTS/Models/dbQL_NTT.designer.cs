@@ -646,7 +646,7 @@ namespace AppTS.Models
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_CAUHOI", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_CAUHOI", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID_CAUHOI
 		{
 			get
@@ -686,7 +686,7 @@ namespace AppTS.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HOTEN", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HOTEN", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
 		public string HOTEN
 		{
 			get
@@ -2596,6 +2596,8 @@ namespace AppTS.Models
 		
 		private string _TENNGANH;
 		
+		private System.Nullable<int> _NAM;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2612,6 +2614,8 @@ namespace AppTS.Models
     partial void OnEMAILChanged();
     partial void OnTENNGANHChanging(string value);
     partial void OnTENNGANHChanged();
+    partial void OnNAMChanging(System.Nullable<int> value);
+    partial void OnNAMChanged();
     #endregion
 		
 		public Table_dkThacSi()
@@ -2719,7 +2723,7 @@ namespace AppTS.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENNGANH", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENNGANH", DbType="NVarChar(50)")]
 		public string TENNGANH
 		{
 			get
@@ -2735,6 +2739,26 @@ namespace AppTS.Models
 					this._TENNGANH = value;
 					this.SendPropertyChanged("TENNGANH");
 					this.OnTENNGANHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NAM", DbType="Int")]
+		public System.Nullable<int> NAM
+		{
+			get
+			{
+				return this._NAM;
+			}
+			set
+			{
+				if ((this._NAM != value))
+				{
+					this.OnNAMChanging(value);
+					this.SendPropertyChanging();
+					this._NAM = value;
+					this.SendPropertyChanged("NAM");
+					this.OnNAMChanged();
 				}
 			}
 		}

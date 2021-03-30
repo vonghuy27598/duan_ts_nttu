@@ -1,4 +1,4 @@
-﻿@model AppTS.ViewModels.HocSinh_TK
+﻿@model AppTS.ViewModels.ThacSi
 @{
     ViewBag.Title = "DangKy";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,36 +6,7 @@
 <style>
 </style>
 <link href="~/Content/css/dangnhap.css" rel="stylesheet" />
-<!--kiểm tra việc nhập password-->
-<script type="text/javascript">
-    var check = function () {
-        if (document.getElementById('password').value ==
-            document.getElementById('confirm_password').value) {
-            document.getElementById('confirm_password').style.borderColor = 'green';
-            document.getElementById('confirm_password').style.outline = 'none';
-            document.getElementById('confirm_password').setCustomValidity("");
-        } else {
-            document.getElementById('confirm_password').style.borderColor = 'red';
-            document.getElementById('confirm_password').style.outline = 'none';
-            document.getElementById('confirm_password').setCustomValidity("Nhập lại mật khẩu không đúng");
-        }
-    }
-    var user = function () {
-        document.getElementById('tn').style.color = 'red';
-        document.getElementById('tn').innerHTML = 'Tài khoản đã được sử dụng';
-    }
-    var sdt = function () {
-        document.getElementById('sdt').style.color = 'red';
-        document.getElementById('sdt').innerHTML = 'Số điện thoại đã được sử dụng';
-    }
-    var input = document.getElementById('thongbao');
-    input.oninvalid = function (event) {
-        event.target.setCustomValidity('Vui lòng nhập thông tin');
-    }
 
-
-
-</script>
 <script>
 
 </script>
@@ -50,25 +21,25 @@
                 <h4>Thông tin cá nhân</h4>
                 <div class="form-group primary-form-group">
                     <label for="HOTENHS">Họ tên</label>
-                    @Html.TextBoxFor(m => m.HOTENHS, null, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", @class = " input-feild line-animation", placeholder = "Nhập họ tên" })
+                    @Html.TextBoxFor(m => m.HoTen, null, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", @class = " input-feild line-animation", placeholder = "Nhập họ tên" })
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group">
                     <label for="NGAYSINH">Ngày sinh</label>
-                    @Html.TextBoxFor(m => m.NGAYSINH, null, new { type = "date", required = "required", @class = " input-feild line-animation" })
+                    @Html.TextBoxFor(m => m.NgaySinh, null, new { type = "date", required = "required", @class = " input-feild line-animation" })
                     <div class="line"></div>
                 </div>
                 <div class="form-group primary-form-group">
-                    <label for="GIOITINH">Giới tính</label>
-                    <div class="radiobtn">
-                        @Html.RadioButtonFor(m => m.GIOITINH, true, new { @checked = "checked" }) Nam
-                        @Html.RadioButtonFor(m => m.GIOITINH, false) Nữ
-                    </div>
-                </div>
-                <div class="form-group primary-form-group">
                     <br />
-                    <label for="TRUONGCAP3">Trường cấp 3</label>
-                    @Html.TextBoxFor(m => m.TRUONGCAP3, null, new { type = "text", id = "truong", required = "required", @class = " input-feild line-animation", placeholder = "Chỉ cần nhập tên trường gợi ý sẽ hiện lên" })
+                    <label for="NGANH">Chuyên ngành</label>
+                    @Html.DropDownListFor(m => m.TenChuyenNganh, new List<SelectListItem>
+                    {
+                    new SelectListItem {Text = "Công nghệ Thông tin", Value = "Công nghệ Thông tin"},
+                    new SelectListItem {Text = "Tài chính - Ngân hàng", Value = "Tài chính - Ngân hàng"},
+                    new SelectListItem {Text = "Quản trị kinh doanh", Value = "Quản trị kinh doanh"},
+                    new SelectListItem {Text = "Du lịch", Value = "Du lịch"},
+                    new SelectListItem {Text = "Quản lý chuỗi cung ứng - Supply Chain", Value = "Quản lý chuỗi cung ứng - Supply Chain"}
+                    }, new { type = "text", id = "nganh", required = "required", @class = " input-feild line-animation", placeholder = "Chọn ngành" })
                     <div class="line"></div>
                 </div>
                 <h4 style="margin-top:35px">Thông tin liên hệ</h4>
@@ -77,48 +48,11 @@
                     @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @id = "mobile", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}", placeholder = "Nhập số điện thoại" })
                     <div class="line"></div>
                 </div>
-                <div style="color:red">@Html.ViewData["LoiSDT"]</div><div id='sdt'><br /></div>
-                <div class="form-group primary-form-group">
-
-                    <label for="DIACHI" style="width:100%">Địa chỉ liên hệ</label>
-                    @Html.TextBoxFor(m => m.DIACHI, null, new { required = "required", @class = "input-feild line-animation", placeholder = "Nhập địa chỉ" })
-                    <div class="line"></div>
-                </div>
-                <div style="color:red">@Html.ViewData["LoiUS"]</div><div id='tn'><br /></div>
                 <div class="form-group primary-form-group">
                     <label for="EMAIL">Email</label>
-                    @Html.TextBoxFor(m => m.EMAIL, null, new { type = "email", required = "required", @class = " input-feild line-animation", placeholder = "Nhập email" })
+                    @Html.TextBoxFor(m => m.Email, null, new { type = "email", required = "required", @class = " input-feild line-animation", placeholder = "Nhập email" })
                     <div class="line"></div>
                 </div>
-
-                <h4>Thông tin đăng nhập</h4>
-                @*<div class="form-group primary-form-group">
-                        <label for="USERNAME">Tên đăng nhập</label>
-                        @Html.TextBoxFor(m => m.USERNAME, null, new { required = "required", @class = " input-feild line-animation", minlength = "6" })
-                        <div class="line"></div>
-                    </div>*@
-                <div class="form-group primary-form-group">
-                    <label for="password">Mật khẩu</label>
-                    @Html.PasswordFor(m => m.PASSWORD, new { id = "password", onkeyup = "check();", @class = " input-feild line-animation" })
-                    <div class="line"></div>
-                    @*<div id="message">
-                            <h4>Mật khẩu bao gồm:</h4>
-                            <p id="letter" class="invalid">Các kí tự chữ thường trong bảng chữ cái (a-z) </p>
-                            <p id="capital" class="invalid">Các kí tự chữ hoa trong bảng chữ cái (A-Z) </p>
-                            <p id="number" class="invalid">Chữ số cơ bản (0 - 9) </p>
-                            <p id="length" class="invalid">Độ dài từ 8 ký tự trở lên </p>
-                        </div>*@
-
-                </div>
-
-                <div class="form-group primary-form-group">
-                    <label for="password">Nhập lại mật khẩu</label>
-                    @Html.PasswordFor(m => m.PASSWORD, new { id = "confirm_password", onkeyup = "check();", @class = " input-feild line-animation" })
-                    <div class="line"></div>
-
-                </div>
-
-
                 <div class="submit-button">
                     <input type="submit" value="Đăng ký" id="signinCreate" class="btn main-btn checkmobile" style="width:100%" />
                 </div>
@@ -130,8 +64,6 @@
 {
     <script type="text/javascript">
         window.onload = function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const link = urlParams.get('link');
             Swal.fire({
                 text: "Bạn đã đăng ký thành công",
                 width: 600,
@@ -139,7 +71,7 @@
                 confirmButtonText: 'OK',
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location = "/HocSinh/DangNhapSDT?link=" + link;
+                    window.location = "/Home/Main";
                 }
             })// end_Then_child
         };
