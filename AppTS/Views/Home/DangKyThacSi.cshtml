@@ -1,0 +1,170 @@
+﻿@model AppTS.ViewModels.ThacSi
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+</style>
+<link href="~/Content/css/dangnhap.css" rel="stylesheet" />
+
+<script>
+
+</script>
+<div class="primari-box registered-account dn">
+    <form class="new-account-box" id="accountLogin" method="post" action="#">
+        <h3 class="box-subheading">Đăng ký</h3>
+        <hr style="border: 1px solid; width: 100px;margin-bottom:35px" />
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <div class="form-content">
+                <h4>Thông tin cá nhân</h4>
+                <div class="form-group primary-form-group">
+                    <label for="HOTENHS">Họ tên</label>
+                    @Html.TextBoxFor(m => m.HoTen, null, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", @class = " input-feild line-animation", placeholder = "Nhập họ tên" })
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group">
+                    <label for="NGAYSINH">Ngày sinh</label>
+                    @Html.TextBoxFor(m => m.NgaySinh, null, new { type = "date", required = "required", @class = " input-feild line-animation" })
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group">
+                    <br />
+                    <label for="NGANH">Chuyên ngành</label>
+                    @Html.DropDownListFor(m => m.TenChuyenNganh, new List<SelectListItem>
+                    {
+                    new SelectListItem {Text = "Công nghệ Thông tin", Value = "Công nghệ Thông tin"},
+                    new SelectListItem {Text = "Tài chính - Ngân hàng", Value = "Tài chính - Ngân hàng"},
+                    new SelectListItem {Text = "Quản trị kinh doanh", Value = "Quản trị kinh doanh"},
+                    new SelectListItem {Text = "Du lịch", Value = "Du lịch"},
+                    new SelectListItem {Text = "Quản lý chuỗi cung ứng - Supply Chain", Value = "Quản lý chuỗi cung ứng - Supply Chain"}
+                    }, new { type = "text", id = "nganh", required = "required", @class = " input-feild line-animation", placeholder = "Chọn ngành" })
+                    <div class="line"></div>
+                </div>
+                <h4 style="margin-top:35px">Thông tin liên hệ</h4>
+                <div class="form-group primary-form-group">
+                    <label for="SDT">Số điện thoại</label>
+                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @id = "mobile", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}", placeholder = "Nhập số điện thoại" })
+                    <div class="line"></div>
+                </div>
+                <div class="form-group primary-form-group">
+                    <label for="EMAIL">Email</label>
+                    @Html.TextBoxFor(m => m.Email, null, new { type = "email", required = "required", @class = " input-feild line-animation", placeholder = "Nhập email" })
+                    <div class="line"></div>
+                </div>
+                <div class="submit-button">
+                    <input type="submit" value="Đăng ký" id="signinCreate" class="btn main-btn checkmobile" style="width:100%" />
+                </div>
+            </div>
+        }
+    </form>
+</div>
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            Swal.fire({
+                text: "Bạn đã đăng ký thành công",
+                width: 600,
+                padding: '3em',
+                confirmButtonText: 'OK',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location = "/Home/Main";
+                }
+            })// end_Then_child
+        };
+    </script>
+}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+@*<script>
+        var myInput = document.getElementById("password");
+        var letter = document.getElementById("letter");
+        var capital = document.getElementById("capital");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+        var bool_letter = Boolean(false);
+        var bool_capital = Boolean(false);
+        var bool_number = Boolean(false);
+        var bool_length = Boolean(false);
+        // When the user clicks on the password field, show the message box
+        myInput.onfocus = function () {
+            document.getElementById("message").style.display = "block";
+        }
+
+        // When the user clicks outside of the password field, hide the message box
+        myInput.onblur = function () {
+            document.getElementById("message").style.display = "none";
+        }
+
+        // When the user starts to type something inside the password field
+        myInput.onkeyup = function () {
+            // Validate lowercase letters
+            var lowerCaseLetters = /[a-z]/g;
+            if (myInput.value.match(lowerCaseLetters)) {
+                letter.classList.remove("invalid");
+                letter.classList.add("valid");
+                document.getElementById('password').setCustomValidity("");
+                bool_letter = true;
+            } else {
+                letter.classList.remove("valid");
+                letter.classList.add("invalid");
+                bool_letter = false;
+            }
+
+            // Validate capital letters
+            var upperCaseLetters = /[A-Z]/g;
+            if (myInput.value.match(upperCaseLetters)) {
+                capital.classList.remove("invalid");
+                capital.classList.add("valid");
+                bool_capital = true;
+            } else {
+                capital.classList.remove("valid");
+                capital.classList.add("invalid");
+                bool_capital = false;
+            }
+
+            // Validate numbers
+            var numbers = /[0-9]/g;
+            if (myInput.value.match(numbers)) {
+                number.classList.remove("invalid");
+                number.classList.add("valid");
+                bool_number = true;
+            } else {
+                number.classList.remove("valid");
+                number.classList.add("invalid");
+                bool_number = false;
+            }
+
+            // Validate length
+            if (myInput.value.length >= 8) {
+                length.classList.remove("invalid");
+                length.classList.add("valid");
+                bool_length = true;
+            } else {
+                length.classList.remove("valid");
+                length.classList.add("invalid");
+                bool_length = false;
+            }
+
+            if (!bool_letter || !bool_capital || !bool_length || !bool_number) {
+                document.getElementById('password').setCustomValidity("Vui lòng nhập đúng định dạng yêu cầu");
+            }
+        }
+    </script>*@
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('body').on('click', '.checkmobile', function () {
+            var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+            var mobile = $('#mobile').val();
+            if (mobile !== '') {
+                if (vnf_regex.test(mobile) == false) {
+                    alert('Số điện thoại của bạn không đúng định dạng!');
+                    return false;
+                }
+            }
+        });
+    });
+</script>

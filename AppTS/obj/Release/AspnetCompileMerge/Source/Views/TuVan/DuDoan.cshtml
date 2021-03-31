@@ -30,7 +30,7 @@
         </div>
         <div class="content-form">
             <p style="margin-bottom:10px;color:blue">Vui lòng nhập điểm các môn học</p>
-            <table border="1" cellpadding="10">
+            <table border="1" cellpadding="10" id="tbDiem">
                 <thead>
                     <tr>
                         <th>Tên môn học</th>
@@ -120,19 +120,9 @@
                         </div>
                         <div class="forget-password" style="margin-top:20px">
                             @{
-                                var link_qs = "";
-                                if (Request.QueryString["link"] != null)
-                                {
-                                    link_qs = Request.QueryString["link"];
-                                }
-                                if (link_qs.Equals(""))
-                                {
-                                    <a href="@Url.Action("DangKy","HocSinh")">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
-                                }
-                                else
-                                {
-                                    <a href="@Url.Action("DangKy", "HocSinh", new { link=link_qs })">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
-                                }
+                                
+                                    <a href="@Url.Action("DangKy", "HocSinh", new { link="DuDoan" })">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
+                                
                             }
                         </div>
                         <div class="mess">@ViewBag.ThongBao</div>
@@ -182,6 +172,25 @@
         }
     });
     $(document).ready(function () {
+        function getCookie(c_name) {
+            var i, x, y, ARRcookies = document.cookie.split(";");
+            for (i = 0; i < ARRcookies.length; i++) {
+                x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+                y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+                x = x.replace(/^\s+|\s+$/g, "");
+                if (x == c_name) {
+                    return unescape(y);
+                }
+            }
+        }
+        var list = getCookie("listDiem");
+        if (typeof list != "undefined") {
+            var arrayA = list.split(',');
+            
+            $.each($("#tbDiem td").find("input[type='number']"), function (index) {
+                $(this).val(arrayA[index]);
+            });
+        }
         // Add smooth scrolling to all links
         $("#send_dudoan").on('click', function (event) {
             var session = $("#hd_checklogin").val();
@@ -259,7 +268,15 @@
         else if (anh < 0 || anh > 10)
             alert('Điểm anh khoảng từ 0 đến 10');
         else {
+            function setCookie(c_name, value, exdays) {
+                var exdate = new Date();
+                exdate.setDate(exdate.getDate() + exdays);
+                var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+                document.cookie = c_name + "=" + c_value;
+            }
 
+            var list = [ntoan,nly,nhoa,nvan,nsu,ndia,nsinh,nanh];
+            setCookie("listDiem", list, new Date());
             $('.result-form').css('display', 'block');
             $.ajax({
                 url: "getNganh_TheoDiem",

@@ -37,7 +37,7 @@ namespace AppTS.Controllers
             //    }
             //}
 
-            base.OnActionExecuting(filterContext);
+            //base.OnActionExecuting(filterContext);
 
         }
     }

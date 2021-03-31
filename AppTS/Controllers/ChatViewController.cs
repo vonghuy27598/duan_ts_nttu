@@ -17,6 +17,7 @@ namespace AppTS.Controllers
         public ActionResult Index()
         {
             var user = (HocSinh_TK)Session["User"];
+            HttpCookie user_noname = Request.Cookies["ID_USER_NONAME"];
             if (user != null)
             {
                 if (user.USERNAME.ToString().Equals("tvv"))
@@ -25,18 +26,35 @@ namespace AppTS.Controllers
                 }
                 else
                 {
-                    var model = db.Table_TUVANs.Where(m => m.ID_USERNAME == user.ID_HS && m.USER_DEL == false && m.DA_REP == true);
-                    ViewData["ID_USERNAME"] = model.Select(m => m.ID_USERNAME);
+                    var search_nouser = db.Table_TUVANs.Where(m => m.ID_USERNAME == user_noname.Value).Count();
+                    if(search_nouser > 0)
+                    {
+                        foreach(var item in db.Table_TUVANs.Where(m=>m.ID_USERNAME == user_noname.Value))
+                        {
+                            var updateID = db.Table_TUVANs.First(m=>m.ID_CAUHOI == item.ID_CAUHOI);
+                            updateID.ID_USERNAME = user.ID_HS.ToString();
+                            updateID.HOTEN = user.HOTENHS.ToString();
+                            UpdateModel(updateID);
+                            db.SubmitChanges();
+                        }                      
+                    }
+                    var model = db.Table_TUVANs.Where(m => m.ID_USERNAME == user.ID_HS.ToString() && m.USER_DEL == false && m.DA_REP == true);                   
                     return View(model);
                 }
             }
+            else
+            {
+               
+                var model = db.Table_TUVANs.Where(m => m.ID_USERNAME == user_noname.Value.ToString() && m.USER_DEL == false && m.DA_REP == true);
+                return View(model);
+            }
 
-            return View();
+            
         }
 
 
         [HttpPost]
-        public JsonResult seenRep(int ID_USERNAME)
+        public JsonResult seenRep(string ID_USERNAME)
         {
             
             foreach(var item in db.Table_TUVANs.Where(m=>m.ID_USERNAME == ID_USERNAME && m.DA_REP == true))
@@ -79,7 +97,7 @@ namespace AppTS.Controllers
 
             if (user != null)
             {
-                tv.ID_USERNAME = user.ID_HS;
+                tv.ID_USERNAME = user.ID_HS.ToString();
                 tv.HOTEN = user.HOTENHS;
                 tv.DA_XEM = false;
                 tv.DA_REP = false;
@@ -89,6 +107,23 @@ namespace AppTS.Controllers
                 tv.NGAYHOI = DateTime.Now;
                 db.Table_TUVANs.InsertOnSubmit(tv);
                 db.SubmitChanges();
+            }
+            else
+            {
+                HttpCookie user_noname = Request.Cookies["ID_USER_NONAME"];
+                if (user_noname != null)
+                {
+                    tv.ID_USERNAME = user_noname.Value.ToString();
+                    tv.HOTEN = "NO NAME";
+                    tv.DA_XEM = false;
+                    tv.DA_REP = false;
+                    tv.ADMIN_DEL = false;
+                    tv.USER_DEL = false;
+                    tv.CAUHOI = text;
+                    tv.NGAYHOI = DateTime.Now;
+                    db.Table_TUVANs.InsertOnSubmit(tv);
+                    db.SubmitChanges();
+                }
             }
             return Json(new
             {

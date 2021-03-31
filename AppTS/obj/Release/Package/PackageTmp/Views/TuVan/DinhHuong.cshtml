@@ -297,6 +297,7 @@
                                             </table>
                                             <div class="button-row d-flex mt-4">
                                                 <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -1303,7 +1304,7 @@
             </div>
         </div>
     </div>
-    <input type="hidden" id="hd_checklogin" value="@ViewData["login"]"/>
+    <input type="hidden" id="hd_checklogin" value="@ViewData["login"]" />
 </section>
 <button type='button' class='btn btn-success btn-lg noibat' data-toggle='modal' data-target='#myModal' style='max-height: 80px; height: 60px; width: 100px; bottom: -135px; right: 0; outline: 0;display:none '> Đăng nhập </button>
 <div id="myModal" class="modal fade" role="dialog" style="z-index: 100000; overflow-y: initial !important;">
@@ -1337,19 +1338,10 @@
                         </div>
                         <div class="forget-password" style="margin-top:20px">
                             @{
-                                var link_qs = "";
-                                if (Request.QueryString["link"] != null)
-                                {
-                                    link_qs = Request.QueryString["link"];
-                                }
-                                if (link_qs.Equals(""))
-                                {
-                                    <a href="@Url.Action("DangKy","HocSinh")">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
-                                }
-                                else
-                                {
-                                    <a href="@Url.Action("DangKy", "HocSinh", new { link=link_qs })">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
-                                }
+                                
+                                
+                                    <a href="@Url.Action("DangKy", "HocSinh", new { link="DinhHuong" })">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
+                                
                             }
                         </div>
                         <div class="mess">@ViewBag.ThongBao</div>
@@ -1376,7 +1368,93 @@
 </script>
 
 <script>
+
+    $('.js-btn-next').eq(0).click(function()
+    {
+        setTableCookie("tableA");
+        
+    })
+    $('.js-btn-next').eq(1).click(function()
+    {
+        setTableCookie("tableB");
+        
+    })
+    $('.js-btn-next').eq(2).click(function()
+    {
+        setTableCookie("tableC");
+        
+    })
+    $('.js-btn-next').eq(3).click(function()
+    {
+        setTableCookie("tableD");
+        
+    })
+    $('.js-btn-next').eq(4).click(function()
+    {
+        setTableCookie("tableE");
+        
+    })
+    $('.js-btn-next').eq(5).click(function()
+    {
+        setTableCookie("tableF");
+        
+    })
+   
+    function setTableCookie(tableName){
+        function setCookie(c_name, value, exdays) {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + exdays);
+            var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+            document.cookie = c_name + "=" + c_value;
+        }
+       
+        var list = [];
+        $.each($('#'+tableName).find('.question'),function()
+        {
+            var diem =  $(this).find("input[type='radio']:checked").val();
+            if(diem != isNaN)
+            {
+                list.push(parseInt(diem)+1);
+            }
+            
+
+        });
+        if(list.length > 0)
+            setCookie(tableName,list,new Date());
+    }
+    function getTableCookie(tableName){
+        function getCookie(c_name) {
+            var i, x, y, ARRcookies = document.cookie.split(";");
+            for (i = 0; i < ARRcookies.length; i++) {
+                x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+                y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+                x = x.replace(/^\s+|\s+$/g, "");
+                if (x == c_name) {
+                    return unescape(y);
+                }
+            }
+        }
+        var list = getCookie(tableName);        
+        if( typeof list != "undefined")
+        {
+            var arrayA =  list.split(',');
+            $.each($('#'+tableName).find('.question'),function(index)
+            {
+                $(this).find("input[type=radio]").eq(parseInt(arrayA[index]) - 1).attr("checked",true);
+            });
+        }
+    }
     $(document).ready(function () {
+        
+
+        getTableCookie("tableA");
+        getTableCookie("tableB");
+        getTableCookie("tableC");
+        getTableCookie("tableD");
+        getTableCookie("tableE");
+        getTableCookie("tableF");
+
+
         var nametable_A = "#tableA";
         var result_A = "#sum_A";
         var final_A = "#result_A";
@@ -1412,7 +1490,7 @@
             $(this).text(so);
 
         });
-       
+
         var point_A = parseInt($("#sum_A").text());
         var point_B = parseInt($("#sum_B").text());
         var point_C = parseInt($("#sum_C").text());
@@ -1424,7 +1502,7 @@
 
 
 
-        if (point_A > 0 || point_B > 0 || point_C > 0 || point_D > 0 || point_E > 0 || point_F > 0) {
+        if (point_F > 0) {
             const setActiveStep = activeStepNum => {
 
                 //remove active state from all the state
@@ -1460,9 +1538,22 @@
 
     setActiveStep(6);
     setActivePanel(6);
-    $("#resultForm").click();
+    function getCookie(c_name) {
+        var i, x, y, ARRcookies = document.cookie.split(";");
+        for (i = 0; i < ARRcookies.length; i++) {
+            x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+            y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+            x = x.replace(/^\s+|\s+$/g, "");
+            if (x == c_name) {
+                return unescape(y);
+            }
+        }
     }
-
+    var checkLogin = $('#hd_checklogin').val();   
+    
+    if(checkLogin == "true")
+        $("#resultForm").click();   
+    }
     })
     function loadPoint(table_name, result_name, final_name) {
         var sum = parseInt("0");
@@ -1510,36 +1601,7 @@
         }
         return positon;
     }
-    $("#signinCreate").click(function () {
-        var sdt = $("#sdt").val();
-        var matkhau = $("#matkhau").val();
-
-        if (sdt.length <= 0) {
-            alert("Vui lòng nhập số điện thoại ");
-            $("#sdt").focus();
-
-        }       
-        else {
-            $.ajax({
-                url: "submit_DangNhap",
-                data: { sdt: sdt, matkhau: matkhau },
-                datatype: "json",
-                type: "POST",
-                success: function (response) {
-                    if (response.success == 1) {
-                        $("#dong").click();
-                        $("#dong").click();
-                        $("#hd_checklogin").val("true");
-                        showresult();
-                    }
-                    else {
-                        alert(response.message);
-
-                    }
-                }
-            });
-        }
-    });
+   
     function showresult()
     {
         var point_A = parseInt($("#sum_A").text());
@@ -1597,43 +1659,48 @@
     }
 </script>
 @*@if (Session["User"] == null)
-{*@
-    <script>
-        $("#resultForm").click(function () {
-            var point_A = parseInt($("#sum_A").text());
-            var point_B = parseInt($("#sum_B").text());
-            var point_C = parseInt($("#sum_C").text());
-            var point_D = parseInt($("#sum_D").text());
-            var point_E = parseInt($("#sum_E").text());
-            var point_F = parseInt($("#sum_F").text());
-            if (point_A == 0 && point_B == 0 && point_C == 0 && point_D == 0 && point_E == 0 && point_F == 0) {
-                alert("Vui lòng khảo sát trắc nghiệm trước khi xem kết quả!");
-                return;
-            }
-            var session = $("#hd_checklogin").val();
-            if(session == "false")
+    {*@
+<script>
+    $("#resultForm").click(function () {
+        
+        var point_A = parseInt($("#sum_A").text());
+        var point_B = parseInt($("#sum_B").text());
+        var point_C = parseInt($("#sum_C").text());
+        var point_D = parseInt($("#sum_D").text());
+        var point_E = parseInt($("#sum_E").text());
+        var point_F = parseInt($("#sum_F").text());
+        if (point_A == 0 && point_B == 0 && point_C == 0 && point_D == 0 && point_E == 0 && point_F == 0) {
+            alert("Vui lòng khảo sát trắc nghiệm trước khi xem kết quả!");
+            return;
+        }
+        window.history.replaceState(null, null, "?link=DinhHuong");    
+      
+        
+        var session = $('#hd_checklogin').val();
+        
+        if(session == "true")
+        {
+            showresult();
+        }else{
+            var q = confirm("Vui lòng đăng nhập trước khi xem kết quả");
+            if(q == true)
             {
-                var q = confirm("Vui lòng đăng nhập trước khi xem kết quả");
-                if(q == true)
-                {
-                    $(".noibat").click();
-                }
-                $(".only_one").empty();
-                $(".result-dinhhuong").empty();
-                //$(".result-dinhhuong").append(result_dinhhuong);
-                //$(".result_survey").css("display", "block");
-                goToByScroll("resultForm");
-            }else{
-                showresult();
+                $(".noibat").click();
             }
+            $(".only_one").empty();
+            $(".result-dinhhuong").empty();
+            //$(".result-dinhhuong").append(result_dinhhuong);
+            //$(".result_survey").css("display", "block");
+            goToByScroll("resultForm");
+           
+        }
 
-
-        });
-    </script>
+    });
+</script>
 @*}
-else
-{*@
-    @*<script>
+    else
+    {*@
+@*<script>
         $("#resultForm").click(function () {
 
             showresult();

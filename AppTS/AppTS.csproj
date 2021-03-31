@@ -251,6 +251,7 @@
     <Compile Include="ViewModels\MenuView.cs" />
     <Compile Include="ViewModels\NghienCuuFull.cs" />
     <Compile Include="ViewModels\ResetPassword.cs" />
+    <Compile Include="ViewModels\ThacSi.cs" />
     <Compile Include="ViewModels\THPT.cs" />
     <Compile Include="ViewModels\ToHop.cs" />
     <Compile Include="ViewModels\TrungTuyen.cs" />
@@ -260,6 +261,7 @@
     <Compile Include="XuLy\HocSinh.cs" />
     <Compile Include="XuLy\KhaoSatHS.cs" />
     <Compile Include="XuLy\KhoiNghiep.cs" />
+    <Compile Include="XuLy\ListThacSi.cs" />
     <Compile Include="XuLy\Nganh.cs" />
     <Compile Include="XuLy\NghienCuu.cs" />
     <Compile Include="XuLy\ListTrungTuyen.cs" />
@@ -2530,11 +2532,6 @@
     <Content Include="lib\ionicons\fonts\ionicons.ttf" />
     <Content Include="lib\ionicons\fonts\ionicons.woff" />
     <Content Include="lib\owlcarousel\LICENSE" />
-    <Content Include="Models\dbQL_NTT.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>dbQL_NTT.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Content\Admin\scss\navs\_global.scss" />
     <Content Include="Content\Admin\scss\navs\_sidebar.scss" />
     <Content Include="Content\Admin\scss\navs\_topbar.scss" />
@@ -2708,6 +2705,11 @@
     <Content Include="Areas\Admin\Views\GiangVien\GiangVienDoanhNghiep.cshtml" />
     <Content Include="Areas\Admin\Views\XetTuyen\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ThanhVien\SinhVien.cshtml" />
+    <Content Include="Models\dbQL_NTT.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbQL_NTT.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Properties\PublishProfiles\AppTS.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\chatbot.js" />
@@ -2823,6 +2825,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="Views\ChatView\TuVanVien.cshtml" />
+    <Content Include="Views\Home\DieuKienDuThi.cshtml" />
+    <Content Include="Views\Home\QuanLyThacSi.cshtml" />
+    <Content Include="Views\Home\DangKyThacSi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

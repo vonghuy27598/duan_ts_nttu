@@ -24,17 +24,17 @@ namespace AppTS.Controllers
         }
         public ActionResult Main()
         {
-            //HttpCookie user_noname = Request.Cookies["ID_USER_NONAME"];
-            //if (user_noname == null)
-            //{
-            //    Guid CartGUID = Guid.NewGuid();
-            //    HttpCookie UserCookie = new HttpCookie("ID_USER_NONAME", CartGUID.ToString());
-            //    UserCookie.HttpOnly = true;
-            //    //Đặt thời hạn cho cookie
-            //    UserCookie.Expires = DateTime.MaxValue;
-            //    //Lưu thông tin vào cookie
-            //    HttpContext.Response.SetCookie(UserCookie);
-            //}
+            HttpCookie user_noname = Request.Cookies["ID_USER_NONAME"];
+            if (user_noname == null)
+            {
+                Guid CartGUID = Guid.NewGuid();
+                HttpCookie UserCookie = new HttpCookie("ID_USER_NONAME", CartGUID.ToString());
+                UserCookie.HttpOnly = true;
+                //Đặt thời hạn cho cookie
+                UserCookie.Expires = DateTime.MaxValue;
+                //Lưu thông tin vào cookie
+                HttpContext.Response.SetCookie(UserCookie);
+            }
             //get Cookie          
             HttpCookie User = Request.Cookies["user"];
             if (User != null )
@@ -244,6 +244,52 @@ namespace AppTS.Controllers
         }
         public ActionResult ChiTietThacSi()
         {            
+            return View();
+        }
+        public ActionResult DieuKienDuThi()
+        {
+            return View();
+        }
+        public ActionResult QuanLyThacSi()
+        {
+            Session["check"] = "ok";
+            var model = ListThacSi.getDanhSach();
+            return View(model);
+        }
+        [HttpPost]
+        public JsonResult sortByDate_cus(DateTime date)
+        {
+
+            var result = ListThacSi.getDanhSach_byDate(date);
+            Session["download"] = "cus";
+            Session["cus_date"] = date;
+            return Json(new
+            {
+                status = result
+            }, JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult DangKyThacSi()
+        {
+            string[] list = new string[] { "Công nghệ Thông tin", "Tài chính - Ngân hàng", "Quản trị kinh doanh", "Du lịch" };
+            var getList = list.ToList();
+            SelectList setList = new SelectList(getList);
+            ViewBag.MajorName = setList;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult DangKyThacSi(ThacSi ts)
+        {
+            Table_dkThacSi dk = new Table_dkThacSi();
+            dk.HOTEN = ts.HoTen;
+            dk.NGAYSINH = ts.NgaySinh;
+            dk.SDT = ts.SDT;
+            dk.EMAIL = ts.Email;
+            dk.TENNGANH = ts.TenChuyenNganh;
+            dk.NAM = DateTime.Now.Year;
+            db.Table_dkThacSis.InsertOnSubmit(dk);
+            db.SubmitChanges();
+            ViewBag.Message = "Bạn đã đăng ký thành công.";
+
             return View();
         }
         public PartialViewResult part_Thacsi()

@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<AppTS.Models.Table_TUVAN>
+@{
     Layout = null;
 }
 
@@ -14,11 +15,6 @@
     <link href="~/Content/css/chat.css" rel="stylesheet" />
     <link href="~/Content/css/ringring_phone.css" rel="stylesheet" />
     <style>
-
-       
-
-       
-
         .area-chat, .header-chat, .body-chat, #chatbox, #formInput {
             display: block !important;
         }
@@ -26,15 +22,29 @@
         html {
             height: -webkit-fill-available;
         }
-        .wrapper{
-            position:absolute;
-            bottom:0;
-            right:0
+
+        .wrapper {
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
+
+        .box__rep {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+        }
+
+        .mail_disabled {
+            opacity: 0.8;
+            /*background-color:rgb(128, 128, 128,0.5);*/
+        }
+
         #CallButton {
             touch-action: manipulation;
         }
     </style>
+    <link href="~/Content/css/modal.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -53,20 +63,67 @@
                         <div class="coccoc-alo-ph-circle"></div>
                         <div class="coccoc-alo-ph-circle-fill"></div>
                         <a id="CallButton" href="tel:19002039">
-                        <div class="coccoc-alo-ph-img-circle"></div>
+                            <div class="coccoc-alo-ph-img-circle"></div>
                         </a>
                     </div>
                 </div>
             </div>
+            <div class="box__rep">
+                @if (Model != null)
+                {
+                    if (Model.Count() != 0)
+                    {
+                        <img src="/Content/img/icon_mail_ping.png" class="mail_active" />
+
+                        <button id="myBtn" style="display:none">Open Modal</button>
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Hộp thư</h2>
+                                    <span class="close">&times;</span>
+
+                                </div>
+                                <div class="modal-body" >
+                                    <input type="hidden" id="hd_iduser" value="@Model.Select(m=>m.ID_USERNAME).First()" />
+                                    @foreach (var item in Model)
+                                    {
+                                        <p class="text_quest">Hỏi: @item.CAUHOI</p>
+                                        <p class="text_quest">Trả lời: @item.CAUTRALOI</p>
+                                    }
+                                </div>
+                                <div class="modal-footer">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                    else
+                    {
+                        <img src="/Content/img/icon_mail.png" class="mail_disabled" />
+                    }
+                }
+                else
+                {
+                    <img src="/Content/img/icon_mail.png" class="mail_disabled" />
+                }
+
+
+            </div>
             <div id="chatbox">
-               
+
                 <p class="text-right"><img src="/Content/static/messenger.png" height="31" width="27">&nbsp;&nbsp;<span class="bg-success text-white rounded p-1" style="">Đào tạo</span></p>
                 <p class="text-left"><img src="/Content/static/chatbot.jpg" height="31" width="27">&nbsp;&nbsp;<span class="bg-info text-white rounded p-1" style="">Các hệ thống đào tạo của trường gồm: Đại học, Liên thông, Thạc sĩ, tiến sĩ</span></p>
                 <p class="text-right"><img src="/Content/static/messenger.png" height="31" width="27">&nbsp;&nbsp;<span class="bg-success text-white rounded p-1" style="">Hồ sơ nhập học</span></p>
                 <p class="text-left"><img src="/Content/static/chatbot.jpg" height="31" width="27">&nbsp;&nbsp;<span class="bg-info text-white rounded p-1" style="">1. Bản chính giấy chứng nhận kết quả thi THPT Quốc Gia 2020 2. Học phí lệ phí học kì 1 3. CMND(2 bản photo) 4. Thẻ BHYT (1 bản photo) nếu có</span></p>
 
             </div>
-         
+
             <div id="formInput">
                 <input type="text" id="textInput" class="form-control" name="msg">
 
@@ -84,10 +141,51 @@
 
     </div>
     <script type="text/javascript" src="~/Scripts/chatbot.js"></script>
+    <script>
+        $(".mail_active").click(function () {
+            $("#myBtn").click();
+            var id_user = $("#hd_iduser").val();
+            $.ajax({
+                url: "seenRep",
+                data: { ID_USERNAME: id_user },
+                datatype: "json",
+                type: "POST",
+                success: function (response) {
+                    if (response.status != null) {
+                        $(".mail_active").attr("src", "/Content/img/icon_mail.png");
+                        $(".mail_active").addClass("mail_disabled");
+                        $(".mail_disabled").removeClass("mail_active");
+                        $("#myBtn").attr("disabled", "disabled");
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        var modal = document.getElementById("myModal");
 
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
-
-
-
-

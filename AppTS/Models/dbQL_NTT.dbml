@@ -15,7 +15,7 @@
   <Table Name="dbo.Table_TUVAN" Member="Table_TUVANs">
     <Type Name="Table_TUVAN">
       <Column Name="ID_CAUHOI" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ID_USERNAME" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_USERNAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="HOTEN" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="CAUHOI" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="CAUTRALOI" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
@@ -121,8 +121,8 @@
       <Column Name="NGAYSINH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
       <Column Name="EMAIL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="ID_NGANH" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NAM" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TENNGANH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NAM" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Table_GiangVien" Member="Table_GiangViens">

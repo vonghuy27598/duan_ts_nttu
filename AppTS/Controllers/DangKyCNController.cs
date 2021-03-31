@@ -92,7 +92,7 @@ namespace AppTS.Controllers
         {
             return View();
         }
-        public ActionResult QuanLyXetTuyen(TrungTuyen from)
+        public ActionResult QuanLyXetTuyen()
         {
             Session["check"] = "ok";
             var model = ListTrungTuyen.getDanhSach();

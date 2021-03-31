@@ -8,6 +8,7 @@ namespace AppTS.Areas.Admin.Models.DAO
     public class XuLyDAO
     {
         public static dbQL_NTTDataContext db = new dbQL_NTTDataContext();
+        
         public bool DeleteChuyenNganh(int id)
         {
             try

@@ -601,7 +601,7 @@ namespace AppTS.Models
 		
 		private int _ID_CAUHOI;
 		
-		private System.Nullable<int> _ID_USERNAME;
+		private string _ID_USERNAME;
 		
 		private string _HOTEN;
 		
@@ -627,7 +627,7 @@ namespace AppTS.Models
     partial void OnCreated();
     partial void OnID_CAUHOIChanging(int value);
     partial void OnID_CAUHOIChanged();
-    partial void OnID_USERNAMEChanging(System.Nullable<int> value);
+    partial void OnID_USERNAMEChanging(string value);
     partial void OnID_USERNAMEChanged();
     partial void OnHOTENChanging(string value);
     partial void OnHOTENChanged();
@@ -674,8 +674,8 @@ namespace AppTS.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USERNAME", DbType="Int")]
-		public System.Nullable<int> ID_USERNAME
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USERNAME", DbType="VarChar(100)")]
+		public string ID_USERNAME
 		{
 			get
 			{
@@ -2642,9 +2642,9 @@ namespace AppTS.Models
 		
 		private string _EMAIL;
 		
-		private System.Nullable<int> _ID_NGANH;
+		private string _TENNGANH;
 		
-		private System.Nullable<System.DateTime> _NAM;
+		private System.Nullable<int> _NAM;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2660,9 +2660,9 @@ namespace AppTS.Models
     partial void OnSDTChanged();
     partial void OnEMAILChanging(string value);
     partial void OnEMAILChanged();
-    partial void OnID_NGANHChanging(System.Nullable<int> value);
-    partial void OnID_NGANHChanged();
-    partial void OnNAMChanging(System.Nullable<System.DateTime> value);
+    partial void OnTENNGANHChanging(string value);
+    partial void OnTENNGANHChanged();
+    partial void OnNAMChanging(System.Nullable<int> value);
     partial void OnNAMChanged();
     #endregion
 		
@@ -2771,28 +2771,28 @@ namespace AppTS.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_NGANH", DbType="Int")]
-		public System.Nullable<int> ID_NGANH
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENNGANH", DbType="NVarChar(50)")]
+		public string TENNGANH
 		{
 			get
 			{
-				return this._ID_NGANH;
+				return this._TENNGANH;
 			}
 			set
 			{
-				if ((this._ID_NGANH != value))
+				if ((this._TENNGANH != value))
 				{
-					this.OnID_NGANHChanging(value);
+					this.OnTENNGANHChanging(value);
 					this.SendPropertyChanging();
-					this._ID_NGANH = value;
-					this.SendPropertyChanged("ID_NGANH");
-					this.OnID_NGANHChanged();
+					this._TENNGANH = value;
+					this.SendPropertyChanged("TENNGANH");
+					this.OnTENNGANHChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NAM", DbType="Date")]
-		public System.Nullable<System.DateTime> NAM
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NAM", DbType="Int")]
+		public System.Nullable<int> NAM
 		{
 			get
 			{

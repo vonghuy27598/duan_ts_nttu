@@ -84,6 +84,8 @@
     right: 0;
 }
 
+
+
 @media all and (max-height:300px) {
     #chatbox {
         height: 55vh;

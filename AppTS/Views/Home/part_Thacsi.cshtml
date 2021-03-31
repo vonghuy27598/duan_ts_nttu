@@ -63,8 +63,22 @@
         <img src="/Content/img/ts_luachon.png" style="width:80%;height:auto" />
     </div>
     <img src="/Content/img/ts_thongke.jpg" style="width:100%;height:auto;margin-bottom:30px" />
+    <div style="margin-bottom:30px" class="linkto_gioithieu">
+        <a class="linkto_gioithieu" href="@Url.Action("/ChiTietThacSi")">GIỚI THIỆU VỀ CHƯƠNG TRÌNH >></a><br />
+    </div>
+    <div style="margin-bottom:30px" class="linkto_gioithieu">
+        <a class="linkto_gioithieu" href="@Url.Action("/DieuKienDuThi")">ĐIỀU KIỆN DỰ THI >></a><br />
+    </div>
     <div class="linkto_gioithieu">
-        <a class="linkto_gioithieu" href="@Url.Action("/ChiTietThacSi")">GIỚI THIỆU VỀ CHƯƠNG TRÌNH >></a>
-        
+        @{var session = (AppTS.ViewModels.HocSinh_TK)Session["User"];
+            if (session == null)
+            {
+                <a class="linkto_gioithieu" href="@Url.Action("/DangKyThacSi")">ĐĂNG KÝ HỌC THẠC SĨ >></a>
+            }
+            else if (session.HOTENHS == "Admin Thac Si")
+            {
+                <a class="linkto_gioithieu" href="@Url.Action("/QuanLyThacSi")">DANH SÁCH ỨNG TUYỂN THẠC SĨ >></a>
+            }
+        }
     </div>
 </div>
