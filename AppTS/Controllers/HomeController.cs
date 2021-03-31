@@ -24,6 +24,17 @@ namespace AppTS.Controllers
         }
         public ActionResult Main()
         {
+            //HttpCookie user_noname = Request.Cookies["ID_USER_NONAME"];
+            //if (user_noname == null)
+            //{
+            //    Guid CartGUID = Guid.NewGuid();
+            //    HttpCookie UserCookie = new HttpCookie("ID_USER_NONAME", CartGUID.ToString());
+            //    UserCookie.HttpOnly = true;
+            //    //Đặt thời hạn cho cookie
+            //    UserCookie.Expires = DateTime.MaxValue;
+            //    //Lưu thông tin vào cookie
+            //    HttpContext.Response.SetCookie(UserCookie);
+            //}
             //get Cookie          
             HttpCookie User = Request.Cookies["user"];
             if (User != null )

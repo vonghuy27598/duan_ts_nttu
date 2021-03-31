@@ -297,7 +297,7 @@
                                             </table>
                                             <div class="button-row d-flex mt-4">
                                                 <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
-                                                <div class="testA">Thử</div>
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -1338,19 +1338,10 @@
                         </div>
                         <div class="forget-password" style="margin-top:20px">
                             @{
-                                var link_qs = "";
-                                if (Request.QueryString["link"] != null)
-                                {
-                                    link_qs = Request.QueryString["link"];
-                                }
-                                if (link_qs.Equals(""))
-                                {
-                                    <a href="@Url.Action("DangKy","HocSinh")">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
-                                }
-                                else
-                                {
-                                    <a href="@Url.Action("DangKy", "HocSinh", new { link=link_qs })">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
-                                }
+                                
+                                
+                                    <a href="@Url.Action("DangKy", "HocSinh", new { link="DinhHuong" })">Nếu bạn chưa có tài khoản thì <b style="color:#000">Đăng ký</b></a>
+                                
                             }
                         </div>
                         <div class="mess">@ViewBag.ThongBao</div>
@@ -1558,11 +1549,11 @@
             }
         }
     }
-    var loginUser = getCookie("user");
-    if(loginUser != null && loginUser == true)
-        $("#resultForm").click();
+    var checkLogin = $('#hd_checklogin').val();   
+    
+    if(checkLogin == "true")
+        $("#resultForm").click();   
     }
-
     })
     function loadPoint(table_name, result_name, final_name) {
         var sum = parseInt("0");
@@ -1671,17 +1662,7 @@
     {*@
 <script>
     $("#resultForm").click(function () {
-        function getCookie(c_name) {
-            var i, x, y, ARRcookies = document.cookie.split(";");
-            for (i = 0; i < ARRcookies.length; i++) {
-                x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
-                y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
-                x = x.replace(/^\s+|\s+$/g, "");
-                if (x == c_name) {
-                    return unescape(y);
-                }
-            }
-        }
+        
         var point_A = parseInt($("#sum_A").text());
         var point_B = parseInt($("#sum_B").text());
         var point_C = parseInt($("#sum_C").text());
@@ -1692,11 +1673,12 @@
             alert("Vui lòng khảo sát trắc nghiệm trước khi xem kết quả!");
             return;
         }
-
-       
-       
-        var session = getCookie("user");
-        if(session != null && session == true)
+        window.history.replaceState(null, null, "?link=DinhHuong");    
+      
+        
+        var session = $('#hd_checklogin').val();
+        
+        if(session == "true")
         {
             showresult();
         }else{
@@ -1712,6 +1694,7 @@
             goToByScroll("resultForm");
            
         }
+
     });
 </script>
 @*}

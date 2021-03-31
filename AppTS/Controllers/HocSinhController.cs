@@ -66,11 +66,15 @@ namespace AppTS.Controllers
                         {
                             return RedirectToAction("DangKyXetTuyen", "HocSinh");
                         }
-                        else if (link.Equals("dudoan"))
+                        else if (link.Equals("DuDoan"))
                         {
                             return RedirectToAction("DuDoan", "TuVan");
                         }
-                        else if (link.Equals(""))
+                        else if (link.Equals("DinhHuong"))
+                        {
+                            return RedirectToAction("DinhHuong", "TuVan");
+                        }
+                        else if (link.Equals("") || link.Equals("null"))
                         {
                             return RedirectToAction("Main", "Home");
                         }
@@ -143,9 +147,13 @@ namespace AppTS.Controllers
                             return RedirectToAction("DangKyXetTuyen", "HocSinh");
                         }
                     }
-                    else if (link.Equals("dudoan"))
+                    else if (link.Equals("DuDoan"))
                     {
                         return RedirectToAction("DuDoan", "TuVan");
+                    }
+                    else if (link.Equals("DinhHuong"))
+                    {
+                        return RedirectToAction("DinhHuong", "TuVan");
                     }
                     else if (link.Equals("") || link.Equals("null"))
                     {

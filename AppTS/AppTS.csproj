@@ -312,6 +312,7 @@
     <Content Include="Content\css\main\images\icon_tienich.png" />
     <Content Include="Content\css\main\images\icon_tracnghiem_nganh.png" />
     <Content Include="Content\css\main\images\icon_tuvan.png" />
+    <Content Include="Content\css\modal.css" />
     <Content Include="Content\css\ringring_phone.css" />
     <Content Include="Content\css\vienquocte.css" />
     <Content Include="Content\img\1 - Hoc-phi-uu-dai.png" />
@@ -479,11 +480,14 @@
     <Content Include="Content\img\icon-open-book.png" />
     <Content Include="Content\img\icon-open.png" />
     <Content Include="Content\img\icon_anh.png" />
+    <Content Include="Content\img\icon_close.png" />
     <Content Include="Content\img\icon_fb.png" />
     <Content Include="Content\img\icon_hoa.jpg" />
     <Content Include="Content\img\icon_hotline.png" />
     <Content Include="Content\img\icon_liennganh.png" />
     <Content Include="Content\img\icon_lienthong.png" />
+    <Content Include="Content\img\icon_mail.png" />
+    <Content Include="Content\img\icon_mail_ping.png" />
     <Content Include="Content\img\icon_oldphone_footer.png" />
     <Content Include="Content\img\icon_quocte.png" />
     <Content Include="Content\img\icon_sinhhoc.png" />
@@ -2818,6 +2822,7 @@
     <Content Include="Views\Home\ChiTietThacSi.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Views\ChatView\TuVanVien.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

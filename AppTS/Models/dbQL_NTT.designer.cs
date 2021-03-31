@@ -617,6 +617,10 @@ namespace AppTS.Models
 		
 		private string _NGUOITRALOI;
 		
+		private System.Nullable<bool> _ADMIN_DEL;
+		
+		private System.Nullable<bool> _USER_DEL;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -639,6 +643,10 @@ namespace AppTS.Models
     partial void OnNGAYHOIChanged();
     partial void OnNGUOITRALOIChanging(string value);
     partial void OnNGUOITRALOIChanged();
+    partial void OnADMIN_DELChanging(System.Nullable<bool> value);
+    partial void OnADMIN_DELChanged();
+    partial void OnUSER_DELChanging(System.Nullable<bool> value);
+    partial void OnUSER_DELChanged();
     #endregion
 		
 		public Table_TUVAN()
@@ -646,7 +654,7 @@ namespace AppTS.Models
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_CAUHOI", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_CAUHOI", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID_CAUHOI
 		{
 			get
@@ -822,6 +830,46 @@ namespace AppTS.Models
 					this._NGUOITRALOI = value;
 					this.SendPropertyChanged("NGUOITRALOI");
 					this.OnNGUOITRALOIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ADMIN_DEL", DbType="Bit")]
+		public System.Nullable<bool> ADMIN_DEL
+		{
+			get
+			{
+				return this._ADMIN_DEL;
+			}
+			set
+			{
+				if ((this._ADMIN_DEL != value))
+				{
+					this.OnADMIN_DELChanging(value);
+					this.SendPropertyChanging();
+					this._ADMIN_DEL = value;
+					this.SendPropertyChanged("ADMIN_DEL");
+					this.OnADMIN_DELChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USER_DEL", DbType="Bit")]
+		public System.Nullable<bool> USER_DEL
+		{
+			get
+			{
+				return this._USER_DEL;
+			}
+			set
+			{
+				if ((this._USER_DEL != value))
+				{
+					this.OnUSER_DELChanging(value);
+					this.SendPropertyChanging();
+					this._USER_DEL = value;
+					this.SendPropertyChanged("USER_DEL");
+					this.OnUSER_DELChanged();
 				}
 			}
 		}
@@ -2594,7 +2642,9 @@ namespace AppTS.Models
 		
 		private string _EMAIL;
 		
-		private string _TENNGANH;
+		private System.Nullable<int> _ID_NGANH;
+		
+		private System.Nullable<System.DateTime> _NAM;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2610,8 +2660,10 @@ namespace AppTS.Models
     partial void OnSDTChanged();
     partial void OnEMAILChanging(string value);
     partial void OnEMAILChanged();
-    partial void OnTENNGANHChanging(string value);
-    partial void OnTENNGANHChanged();
+    partial void OnID_NGANHChanging(System.Nullable<int> value);
+    partial void OnID_NGANHChanged();
+    partial void OnNAMChanging(System.Nullable<System.DateTime> value);
+    partial void OnNAMChanged();
     #endregion
 		
 		public Table_dkThacSi()
@@ -2719,22 +2771,42 @@ namespace AppTS.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENNGANH", DbType="NVarChar(100)")]
-		public string TENNGANH
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_NGANH", DbType="Int")]
+		public System.Nullable<int> ID_NGANH
 		{
 			get
 			{
-				return this._TENNGANH;
+				return this._ID_NGANH;
 			}
 			set
 			{
-				if ((this._TENNGANH != value))
+				if ((this._ID_NGANH != value))
 				{
-					this.OnTENNGANHChanging(value);
+					this.OnID_NGANHChanging(value);
 					this.SendPropertyChanging();
-					this._TENNGANH = value;
-					this.SendPropertyChanged("TENNGANH");
-					this.OnTENNGANHChanged();
+					this._ID_NGANH = value;
+					this.SendPropertyChanged("ID_NGANH");
+					this.OnID_NGANHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NAM", DbType="Date")]
+		public System.Nullable<System.DateTime> NAM
+		{
+			get
+			{
+				return this._NAM;
+			}
+			set
+			{
+				if ((this._NAM != value))
+				{
+					this.OnNAMChanging(value);
+					this.SendPropertyChanging();
+					this._NAM = value;
+					this.SendPropertyChanged("NAM");
+					this.OnNAMChanged();
 				}
 			}
 		}
