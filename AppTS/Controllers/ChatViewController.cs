@@ -26,6 +26,8 @@ namespace AppTS.Controllers
                 }
                 else
                 {
+                    ViewBag.User = user.ID_HS.ToString();
+                     
                     var search_nouser = db.Table_TUVANs.Where(m => m.ID_USERNAME == user_noname.Value).Count();
                     if(search_nouser > 0)
                     {
@@ -38,14 +40,17 @@ namespace AppTS.Controllers
                             db.SubmitChanges();
                         }                      
                     }
-                    var model = db.Table_TUVANs.Where(m => m.ID_USERNAME == user.ID_HS.ToString() && m.USER_DEL == false && m.DA_REP == true);                   
+                    var model = db.Table_TUVANs.Where(m => m.ID_USERNAME == user.ID_HS.ToString() && m.USER_DEL == false);                   
+                  
+                   
                     return View(model);
                 }
             }
             else
             {
-               
-                var model = db.Table_TUVANs.Where(m => m.ID_USERNAME == user_noname.Value.ToString() && m.USER_DEL == false && m.DA_REP == true);
+                ViewBag.User = user_noname.Value.ToString();
+                var model = db.Table_TUVANs.Where(m => m.ID_USERNAME == user_noname.Value.ToString() && m.USER_DEL == false);
+
                 return View(model);
             }
 
@@ -56,18 +61,24 @@ namespace AppTS.Controllers
         [HttpPost]
         public JsonResult seenRep(string ID_USERNAME)
         {
-            
-            foreach(var item in db.Table_TUVANs.Where(m=>m.ID_USERNAME == ID_USERNAME && m.DA_REP == true))
+            ////Nếu xem xong ko xóa thì sửa tại đây
+            foreach (var item in db.Table_TUVANs.Where(m => m.ID_USERNAME == ID_USERNAME))
             {
-                 var tv = db.Table_TUVANs.First(m => m.ID_CAUHOI == item.ID_CAUHOI);
-                 tv.USER_DEL = true;
-                 UpdateModel(tv);
-                 db.SubmitChanges();
+                if (item.DA_REP == true)
+                {
+                    var tv = db.Table_TUVANs.First(m => m.ID_CAUHOI == item.ID_CAUHOI);
+                    tv.USER_DA_XEM = true;
+                    UpdateModel(tv);
+                    db.SubmitChanges();
+                }
+
             }
-           
+            var model = db.Table_TUVANs.Where(m => m.ID_USERNAME == ID_USERNAME);
+            var count = model.Count();
             return Json(new
             {
-                status = true
+                status = model,
+                count = count,
             }, JsonRequestBehavior.AllowGet);
         }
 
@@ -103,6 +114,7 @@ namespace AppTS.Controllers
                 tv.DA_REP = false;
                 tv.ADMIN_DEL = false;
                 tv.USER_DEL = false;
+                tv.USER_DA_XEM = false;
                 tv.CAUHOI = text;
                 tv.NGAYHOI = DateTime.Now;
                 db.Table_TUVANs.InsertOnSubmit(tv);
@@ -119,6 +131,7 @@ namespace AppTS.Controllers
                     tv.DA_REP = false;
                     tv.ADMIN_DEL = false;
                     tv.USER_DEL = false;
+                    tv.USER_DA_XEM = false;
                     tv.CAUHOI = text;
                     tv.NGAYHOI = DateTime.Now;
                     db.Table_TUVANs.InsertOnSubmit(tv);

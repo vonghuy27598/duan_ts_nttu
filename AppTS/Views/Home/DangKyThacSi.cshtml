@@ -4,6 +4,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
+    .dn select {
+        padding: 5px 0;
+        font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        max-width: 100%;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .dn option {
+        font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1600 - 300)));
+    }
 </style>
 <link href="~/Content/css/dangnhap.css" rel="stylesheet" />
 
@@ -77,6 +91,12 @@
         };
     </script>
 }
+<script>
+    $(document).ready(function()
+    {
+        document.getElementById("NgaySinh").defaultValue = "2000-01-01";
+    })
+</script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @*<script>

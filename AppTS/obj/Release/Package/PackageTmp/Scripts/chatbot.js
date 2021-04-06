@@ -42,7 +42,11 @@ function getBotResponse() {
 	                    datatype: "json",
 	                    type: "POST",
 	                    success: function (kq) {
-	                        
+	                        if(kq.status != null)
+	                        {
+	                           
+	                            
+	                        }
 	                    }
 	                });
 	            }

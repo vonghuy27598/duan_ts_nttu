@@ -88,54 +88,91 @@
 
 @media all and (max-height:300px) {
     #chatbox {
-        height: 55vh;
+        height: 48vh;
+    }
+    .body-chat{
+        height:55vh
     }
 }
 
 @media all and (min-height:300px) {
     #chatbox {
-        height: 60vh;
+        height: 53vh;
+    }
+    .body-chat{
+        height:60vh
     }
 }
 
+
 @media all and (min-height:370px) {
     #chatbox {
-        height: 70vh;
+        height: 63vh;
+    }
+    .body-chat{
+        height:70vh
     }
 }
 
 @media all and (min-height:460px) {
     #chatbox {
-        height: 75vh;
+        height: 68vh;
+    }
+    .body-chat{
+        height:75vh
     }
 }
 
 @media all and (min-height:510px) {
     #chatbox {
-        height: 78vh;
+        height: 70vh;
+    }
+    .body-chat{
+        height:78vh
     }
 }
 
 @media all and (min-height:565px) {
     #chatbox {
-        height: 80vh;
+        height: 66vh;
+    }
+     .body-chat{
+        height: 78vh
     }
 }
 
 @media all and (min-height:612px) {
     #chatbox {
-        height: 81vh;
+        height: 70vh;
+    }
+     .body-chat{
+        height: 80vh
+    }
+}
+
+@media all and (min-height:667px) {
+    #chatbox {
+        height: 74vh;
+    }
+     .body-chat{
+        height: 83vh;
     }
 }
 
 @media all and (min-height:700px) {
     #chatbox {
-        height: 85vh;
+        height: 78vh;
+    }
+     .body-chat{
+        height:85vh
     }
 }
 
 @media all and (min-height:800px) {
     #chatbox {
-        height: 87vh;
+        height: 80vh;
+    }
+    .body-chat{
+        height:87vh
     }
 }
