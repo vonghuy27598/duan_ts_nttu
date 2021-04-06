@@ -803,6 +803,10 @@
     <Content Include="Content\img\ts2.jpg" />
     <Content Include="Content\img\ts3.jpg" />
     <Content Include="Content\img\ts4.jpg" />
+    <Content Include="Content\img\tscntt.jpg" />
+    <Content Include="Content\img\tsdulich.jpg" />
+    <Content Include="Content\img\tskinhdoanh.jpg" />
+    <Content Include="Content\img\tsnganhang.jpg" />
     <Content Include="Content\img\ts_luachon.png" />
     <Content Include="Content\img\ts_thongke.jpg" />
     <Content Include="Content\img\tuyendung.jpg" />
@@ -2828,6 +2832,10 @@
     <Content Include="Views\Home\DieuKienDuThi.cshtml" />
     <Content Include="Views\Home\QuanLyThacSi.cshtml" />
     <Content Include="Views\Home\DangKyThacSi.cshtml" />
+    <Content Include="Views\Home\ThacSiCNTT.cshtml" />
+    <Content Include="Views\Home\ThacSiQTKD.cshtml" />
+    <Content Include="Views\Home\ThacSiTCNH.cshtml" />
+    <Content Include="Views\Home\ThacSiDuLich.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

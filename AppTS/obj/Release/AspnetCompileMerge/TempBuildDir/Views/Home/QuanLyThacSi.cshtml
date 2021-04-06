@@ -47,7 +47,6 @@
             <label for="sort-bydate">Xếp theo</label>
             <select id="sort-bydate" name="select_sort">
                 <option value="2">Tất cả</option>
-                <option value="0">Ngày hôm nay</option>
                 <option value="1">Tự chọn</option>
 
             </select>
@@ -74,7 +73,7 @@
                             <td>@item.SDT</td>
                             <td>@item.Email</td>
                             <td>@item.TenChuyenNganh</td>
-                            <td>@String.Format("{0:dd/MM/yyyy}", @item.Nam)</td>
+                            <td>@item.Nam</td>
                         </tr>
                     }
 

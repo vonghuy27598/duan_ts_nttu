@@ -71,7 +71,7 @@
     </div>
     <div class="linkto_gioithieu">
         @{var session = (AppTS.ViewModels.HocSinh_TK)Session["User"];
-            if (session == null)
+            if (session.HOTENHS != "Admin Thac Si")
             {
                 <a class="linkto_gioithieu" href="@Url.Action("/DangKyThacSi")">ĐĂNG KÝ HỌC THẠC SĨ >></a>
             }

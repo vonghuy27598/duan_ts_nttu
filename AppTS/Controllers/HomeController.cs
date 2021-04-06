@@ -94,6 +94,22 @@ namespace AppTS.Controllers
         {
             return View();
         }
+        public ActionResult ThacSiCNTT()
+        {
+            return View();
+        }
+        public ActionResult ThacSiQTKD()
+        {
+            return View();
+        }
+        public ActionResult ThacSiTCNH()
+        {
+            return View();
+        }
+        public ActionResult ThacSiDuLich()
+        {
+            return View();
+        }
         public ActionResult CacChuyenganh(int id)
         {
             var model = Nganh.getChuyenNganh_byNganh(id);

@@ -617,9 +617,9 @@ namespace AppTS.Models
 		
 		private string _NGUOITRALOI;
 		
-		private System.Nullable<bool> _ADMIN_DEL;
-		
 		private System.Nullable<bool> _USER_DEL;
+		
+		private System.Nullable<bool> _ADMIN_DEL;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -643,10 +643,10 @@ namespace AppTS.Models
     partial void OnNGAYHOIChanged();
     partial void OnNGUOITRALOIChanging(string value);
     partial void OnNGUOITRALOIChanged();
-    partial void OnADMIN_DELChanging(System.Nullable<bool> value);
-    partial void OnADMIN_DELChanged();
     partial void OnUSER_DELChanging(System.Nullable<bool> value);
     partial void OnUSER_DELChanged();
+    partial void OnADMIN_DELChanging(System.Nullable<bool> value);
+    partial void OnADMIN_DELChanged();
     #endregion
 		
 		public Table_TUVAN()
@@ -694,7 +694,7 @@ namespace AppTS.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HOTEN", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HOTEN", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
 		public string HOTEN
 		{
 			get
@@ -834,26 +834,6 @@ namespace AppTS.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ADMIN_DEL", DbType="Bit")]
-		public System.Nullable<bool> ADMIN_DEL
-		{
-			get
-			{
-				return this._ADMIN_DEL;
-			}
-			set
-			{
-				if ((this._ADMIN_DEL != value))
-				{
-					this.OnADMIN_DELChanging(value);
-					this.SendPropertyChanging();
-					this._ADMIN_DEL = value;
-					this.SendPropertyChanged("ADMIN_DEL");
-					this.OnADMIN_DELChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USER_DEL", DbType="Bit")]
 		public System.Nullable<bool> USER_DEL
 		{
@@ -870,6 +850,26 @@ namespace AppTS.Models
 					this._USER_DEL = value;
 					this.SendPropertyChanged("USER_DEL");
 					this.OnUSER_DELChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ADMIN_DEL", DbType="Bit")]
+		public System.Nullable<bool> ADMIN_DEL
+		{
+			get
+			{
+				return this._ADMIN_DEL;
+			}
+			set
+			{
+				if ((this._ADMIN_DEL != value))
+				{
+					this.OnADMIN_DELChanging(value);
+					this.SendPropertyChanging();
+					this._ADMIN_DEL = value;
+					this.SendPropertyChanged("ADMIN_DEL");
+					this.OnADMIN_DELChanged();
 				}
 			}
 		}
