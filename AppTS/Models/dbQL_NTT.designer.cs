@@ -621,6 +621,8 @@ namespace AppTS.Models
 		
 		private System.Nullable<bool> _USER_DEL;
 		
+		private System.Nullable<bool> _USER_DA_XEM;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -647,6 +649,8 @@ namespace AppTS.Models
     partial void OnADMIN_DELChanged();
     partial void OnUSER_DELChanging(System.Nullable<bool> value);
     partial void OnUSER_DELChanged();
+    partial void OnUSER_DA_XEMChanging(System.Nullable<bool> value);
+    partial void OnUSER_DA_XEMChanged();
     #endregion
 		
 		public Table_TUVAN()
@@ -870,6 +874,26 @@ namespace AppTS.Models
 					this._USER_DEL = value;
 					this.SendPropertyChanged("USER_DEL");
 					this.OnUSER_DELChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USER_DA_XEM", DbType="Bit")]
+		public System.Nullable<bool> USER_DA_XEM
+		{
+			get
+			{
+				return this._USER_DA_XEM;
+			}
+			set
+			{
+				if ((this._USER_DA_XEM != value))
+				{
+					this.OnUSER_DA_XEMChanging(value);
+					this.SendPropertyChanging();
+					this._USER_DA_XEM = value;
+					this.SendPropertyChanged("USER_DA_XEM");
+					this.OnUSER_DA_XEMChanged();
 				}
 			}
 		}
