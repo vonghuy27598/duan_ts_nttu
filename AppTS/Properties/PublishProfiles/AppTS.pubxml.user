@@ -7,7 +7,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>D:\AppTS</_PublishTargetUrl>
-    <History>True|2021-04-01T03:08:10.7478253Z;</History>
+    <History>True|2021-04-07T02:03:27.1726904Z;True|2021-04-01T10:08:10.7478253+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/Admin/Views/Admin/HeaderAdmin.cshtml">
@@ -103,29 +103,29 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/AppTS.dll">
       <publishTime>03/14/2021 23:06:04</publishTime>
-      <publishTime>04/02/2021 08:34:18</publishTime>
+      <publishTime>04/07/2021 09:03:03</publishTime>
     </File>
     <File Include="bin/AppTS.pdb">
-      <publishTime>04/02/2021 08:34:18</publishTime>
+      <publishTime>04/07/2021 09:03:03</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>04/02/2021 08:34:24</publishTime>
+      <publishTime>04/07/2021 09:03:09</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>04/02/2021 08:34:24</publishTime>
+      <publishTime>04/07/2021 09:03:09</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>04/02/2021 08:34:24</publishTime>
+      <publishTime>04/07/2021 09:03:09</publishTime>
     </File>
     <File Include="bin/ClosedXML.dll">
       <publishTime>03/11/2021 21:45:28</publishTime>
       <publishTime>03/15/2021 09:58:05</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>04/02/2021 08:34:24</publishTime>
+      <publishTime>04/07/2021 09:03:09</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>04/02/2021 08:34:24</publishTime>
+      <publishTime>04/07/2021 09:03:09</publishTime>
     </File>
     <File Include="bin/ClosedXML.dll">
       <publishTime>03/15/2021 09:58:05</publishTime>
@@ -11077,7 +11077,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2021 09:58:00</publishTime>
     </File>
     <File Include="Content/css/chat.css">
-      <publishTime>04/01/2021 09:51:43</publishTime>
+      <publishTime>04/07/2021 06:54:49</publishTime>
     </File>
     <File Include="Content/css/dangnhap.css">
       <publishTime>03/15/2021 09:58:00</publishTime>
@@ -11105,7 +11105,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2021 09:58:00</publishTime>
     </File>
     <File Include="Content/css/chat.css">
-      <publishTime>04/01/2021 09:51:43</publishTime>
+      <publishTime>04/07/2021 06:54:49</publishTime>
     </File>
     <File Include="Content/css/dangnhap.css">
       <publishTime>03/15/2021 09:58:00</publishTime>
@@ -11247,7 +11247,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2021 09:58:00</publishTime>
     </File>
     <File Include="Content/css/modal.css">
-      <publishTime>04/01/2021 09:51:43</publishTime>
+      <publishTime>04/07/2021 06:54:49</publishTime>
     </File>
     <File Include="Content/css/ringring_phone.css">
       <publishTime>03/15/2021 09:58:00</publishTime>
@@ -14374,6 +14374,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/img/ts4.jpg">
       <publishTime>03/15/2021 09:58:01</publishTime>
     </File>
+    <File Include="Content/img/tscntt.jpg">
+      <publishTime>04/07/2021 06:43:07</publishTime>
+    </File>
+    <File Include="Content/img/tsdulich.jpg">
+      <publishTime>04/07/2021 06:43:31</publishTime>
+    </File>
+    <File Include="Content/img/tskinhdoanh.jpg">
+      <publishTime>04/07/2021 06:42:28</publishTime>
+    </File>
+    <File Include="Content/img/tsnganhang.jpg">
+      <publishTime>04/07/2021 06:42:48</publishTime>
+    </File>
     <File Include="Content/img/ts_luachon.png">
       <publishTime>03/15/2021 09:58:01</publishTime>
     </File>
@@ -14762,13 +14774,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2021 09:58:01</publishTime>
     </File>
     <File Include="Models/dbQL_NTT.dbml">
-      <publishTime>04/01/2021 11:39:38</publishTime>
+      <publishTime>04/07/2021 08:50:43</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>03/15/2021 09:58:05</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>04/02/2021 08:34:20</publishTime>
+      <publishTime>04/07/2021 09:03:05</publishTime>
     </File>
     <File Include="Scripts/auto_complete_Truong.js">
       <publishTime>03/15/2021 09:58:01</publishTime>
@@ -14780,7 +14792,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2021 09:58:01</publishTime>
     </File>
     <File Include="Scripts/chatbot.js">
-      <publishTime>04/01/2021 09:51:43</publishTime>
+      <publishTime>04/07/2021 06:54:49</publishTime>
     </File>
     <File Include="Scripts/DangNhap.js">
       <publishTime>03/30/2021 17:48:57</publishTime>
@@ -14891,7 +14903,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2021 09:58:01</publishTime>
     </File>
     <File Include="Views/ChatView/Index.cshtml">
-      <publishTime>04/01/2021 11:04:59</publishTime>
+      <publishTime>04/07/2021 09:00:26</publishTime>
     </File>
     <File Include="Views/ChatView/TuVanVien.cshtml">
       <publishTime>04/01/2021 09:51:43</publishTime>
@@ -14909,7 +14921,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/01/2021 11:00:34</publishTime>
     </File>
     <File Include="Views/HocSinh/DangKy.cshtml">
-      <publishTime>03/30/2021 21:59:05</publishTime>
+      <publishTime>04/07/2021 06:54:49</publishTime>
     </File>
     <File Include="Views/HocSinh/DangKyXetTuyen.cshtml">
       <publishTime>03/30/2021 21:45:39</publishTime>
@@ -15090,13 +15102,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2021 09:58:01</publishTime>
     </File>
     <File Include="Models/dbQL_NTT.dbml">
-      <publishTime>04/01/2021 11:39:38</publishTime>
+      <publishTime>04/07/2021 08:50:43</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>03/15/2021 09:58:05</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>04/02/2021 08:34:20</publishTime>
+      <publishTime>04/07/2021 09:03:05</publishTime>
     </File>
     <File Include="Scripts/auto_complete_Truong.js">
       <publishTime>03/15/2021 09:58:01</publishTime>
@@ -15108,7 +15120,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2021 09:58:01</publishTime>
     </File>
     <File Include="Scripts/chatbot.js">
-      <publishTime>04/01/2021 09:51:43</publishTime>
+      <publishTime>04/07/2021 06:54:49</publishTime>
     </File>
     <File Include="Scripts/DangNhap.js">
       <publishTime>03/30/2021 17:48:57</publishTime>
@@ -15219,7 +15231,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2021 09:58:01</publishTime>
     </File>
     <File Include="Views/ChatView/Index.cshtml">
-      <publishTime>04/01/2021 11:04:59</publishTime>
+      <publishTime>04/07/2021 09:00:26</publishTime>
     </File>
     <File Include="Views/DangKyCN/CheckLogin.cshtml">
       <publishTime>03/15/2021 09:58:01</publishTime>
@@ -15234,7 +15246,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/01/2021 11:00:34</publishTime>
     </File>
     <File Include="Views/HocSinh/DangKy.cshtml">
-      <publishTime>03/30/2021 21:59:05</publishTime>
+      <publishTime>04/07/2021 06:54:49</publishTime>
     </File>
     <File Include="Views/HocSinh/DangKyXetTuyen.cshtml">
       <publishTime>03/30/2021 21:45:39</publishTime>
@@ -15291,7 +15303,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2021 09:58:01</publishTime>
     </File>
     <File Include="Views/Home/DangKyThacSi.cshtml">
-      <publishTime>03/30/2021 22:25:43</publishTime>
+      <publishTime>04/07/2021 06:54:49</publishTime>
     </File>
     <File Include="Views/Home/DieuKienDuThi.cshtml">
       <publishTime>03/30/2021 18:06:16</publishTime>
@@ -15348,7 +15360,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2021 09:58:01</publishTime>
     </File>
     <File Include="Views/Home/part_Thacsi.cshtml">
-      <publishTime>03/30/2021 22:38:11</publishTime>
+      <publishTime>04/07/2021 06:56:59</publishTime>
     </File>
     <File Include="Views/Home/part_Toan.cshtml">
       <publishTime>03/15/2021 09:58:01</publishTime>
@@ -15363,16 +15375,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/01/2021 11:00:49</publishTime>
     </File>
     <File Include="Views/Home/ThacSiCNTT.cshtml">
-      <publishTime>04/01/2021 11:55:28</publishTime>
+      <publishTime>04/07/2021 06:47:17</publishTime>
     </File>
     <File Include="Views/Home/ThacSiDuLich.cshtml">
-      <publishTime>04/01/2021 11:54:36</publishTime>
+      <publishTime>04/07/2021 06:47:43</publishTime>
     </File>
     <File Include="Views/Home/ThacSiQTKD.cshtml">
-      <publishTime>04/01/2021 11:52:18</publishTime>
+      <publishTime>04/07/2021 06:48:27</publishTime>
     </File>
     <File Include="Views/Home/ThacSiTCNH.cshtml">
-      <publishTime>04/01/2021 11:55:19</publishTime>
+      <publishTime>04/07/2021 06:48:47</publishTime>
     </File>
     <File Include="Views/Home/TienIchHocTap.cshtml">
       <publishTime>03/15/2021 09:58:01</publishTime>
@@ -15517,7 +15529,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2021 09:58:01</publishTime>
     </File>
     <File Include="Views/Home/part_Thacsi.cshtml">
-      <publishTime>03/30/2021 22:38:11</publishTime>
+      <publishTime>04/07/2021 06:56:59</publishTime>
     </File>
     <File Include="Views/Home/part_Toan.cshtml">
       <publishTime>03/15/2021 09:58:01</publishTime>

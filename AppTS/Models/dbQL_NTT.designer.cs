@@ -617,9 +617,11 @@ namespace AppTS.Models
 		
 		private string _NGUOITRALOI;
 		
+		private System.Nullable<bool> _ADMIN_DEL;
+		
 		private System.Nullable<bool> _USER_DEL;
 		
-		private System.Nullable<bool> _ADMIN_DEL;
+		private System.Nullable<bool> _USER_DA_XEM;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -643,10 +645,12 @@ namespace AppTS.Models
     partial void OnNGAYHOIChanged();
     partial void OnNGUOITRALOIChanging(string value);
     partial void OnNGUOITRALOIChanged();
-    partial void OnUSER_DELChanging(System.Nullable<bool> value);
-    partial void OnUSER_DELChanged();
     partial void OnADMIN_DELChanging(System.Nullable<bool> value);
     partial void OnADMIN_DELChanged();
+    partial void OnUSER_DELChanging(System.Nullable<bool> value);
+    partial void OnUSER_DELChanged();
+    partial void OnUSER_DA_XEMChanging(System.Nullable<bool> value);
+    partial void OnUSER_DA_XEMChanged();
     #endregion
 		
 		public Table_TUVAN()
@@ -694,7 +698,7 @@ namespace AppTS.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HOTEN", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HOTEN", DbType="NVarChar(100)")]
 		public string HOTEN
 		{
 			get
@@ -834,6 +838,26 @@ namespace AppTS.Models
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ADMIN_DEL", DbType="Bit")]
+		public System.Nullable<bool> ADMIN_DEL
+		{
+			get
+			{
+				return this._ADMIN_DEL;
+			}
+			set
+			{
+				if ((this._ADMIN_DEL != value))
+				{
+					this.OnADMIN_DELChanging(value);
+					this.SendPropertyChanging();
+					this._ADMIN_DEL = value;
+					this.SendPropertyChanged("ADMIN_DEL");
+					this.OnADMIN_DELChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USER_DEL", DbType="Bit")]
 		public System.Nullable<bool> USER_DEL
 		{
@@ -854,22 +878,22 @@ namespace AppTS.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ADMIN_DEL", DbType="Bit")]
-		public System.Nullable<bool> ADMIN_DEL
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USER_DA_XEM", DbType="Bit")]
+		public System.Nullable<bool> USER_DA_XEM
 		{
 			get
 			{
-				return this._ADMIN_DEL;
+				return this._USER_DA_XEM;
 			}
 			set
 			{
-				if ((this._ADMIN_DEL != value))
+				if ((this._USER_DA_XEM != value))
 				{
-					this.OnADMIN_DELChanging(value);
+					this.OnUSER_DA_XEMChanging(value);
 					this.SendPropertyChanging();
-					this._ADMIN_DEL = value;
-					this.SendPropertyChanged("ADMIN_DEL");
-					this.OnADMIN_DELChanged();
+					this._USER_DA_XEM = value;
+					this.SendPropertyChanged("USER_DA_XEM");
+					this.OnUSER_DA_XEMChanged();
 				}
 			}
 		}
