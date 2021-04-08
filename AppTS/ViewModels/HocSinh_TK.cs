@@ -9,9 +9,8 @@ namespace AppTS.ViewModels
     {
         public int? ID_HS { get; set; }
         public string HOTENHS { get; set; }
-       
         public bool? GIOITINH { get; set; }
-        public DateTime NGAYSINH { get; set; }
+        public DateTime? NGAYSINH { get; set; }
         public string SDT { get; set; }
         public string EMAIL { get; set; }
         public string DIACHI { get; set; }
@@ -22,5 +21,6 @@ namespace AppTS.ViewModels
         public string PASSWORD { get; set; }
         public bool? ADMIN { get; set; }
         public string CODE { get; set; }
+        public string TENCHUYENNGANH { get; set; }
     }
 }

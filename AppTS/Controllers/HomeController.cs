@@ -12,10 +12,10 @@ namespace AppTS.Controllers
     public class HomeController : BaseController
     {
         dbQL_NTTDataContext db = new dbQL_NTTDataContext();
-        
+
         public ActionResult Index()
         {
-            
+
             return View();
         }
         public ActionResult Error404()
@@ -37,11 +37,11 @@ namespace AppTS.Controllers
             }
             //get Cookie          
             HttpCookie User = Request.Cookies["user"];
-            if (User != null )
-            {                
+            if (User != null)
+            {
                 Session["User"] = (HocSinh.GetInfoHS_byIDTK(int.Parse(User.Value))).SingleOrDefault();
             }
-                return View();
+            return View();
         }
         public ActionResult DangKyXetTuyen()
         {
@@ -120,30 +120,30 @@ namespace AppTS.Controllers
         {
             var nganh = Request.QueryString["id_nganh"];
             var model = from a in db.Table_Nganhs select a;
-            if(nganh.Equals("1"))
+            if (nganh.Equals("1"))
             {
                 Session["ct_nganh"] = "1";
-                model = from a in db.Table_Nganhs.OrderBy(m=>m.TENNGANH) select a;
+                model = from a in db.Table_Nganhs.OrderBy(m => m.TENNGANH) select a;
             }
             else if (nganh.Equals("2"))
             {
                 Session["ct_nganh"] = "2";
-               
+
             }
             else if (nganh.Equals("3"))
             {
                 Session["ct_nganh"] = "3";
-               
+
             }
             else if (nganh.Equals("4"))
             {
                 Session["ct_nganh"] = "4";
-              
+
             }
             else if (nganh.Equals("5"))
             {
                 Session["ct_nganh"] = "5";
-               
+
             }
             else if (nganh.Equals("6"))
             {
@@ -171,11 +171,11 @@ namespace AppTS.Controllers
 
         public ActionResult ChiTietRiengCacNganh(int id)
         {
-            var model = Nganh.getChiTietNganh(id);       
+            var model = Nganh.getChiTietNganh(id);
             return View(model);
         }
-      
-       
+
+
         public ActionResult ChiTietRiengSong_LienNganh(int id)
         {
 
@@ -185,15 +185,15 @@ namespace AppTS.Controllers
         public ActionResult ChiTietRiengVienQuocTe(int id)
         {
             List<VienQuocTe> listdata = new List<VienQuocTe>();
-            if(id == 1)
+            if (id == 1)
             {
                 listdata.Add(new VienQuocTe(1, "Kế toán", "Kế toán tài chính", "A00, A01, D01, D07", "Kế toán được xem là ngành học tiềm năng cho sự chuyển dịch lao động trong khối ASEAN. Sinh viên theo học ngành Kế toán - Tài chính sẽ được cung cấp những kiến thức về khung pháp lý, hệ thống chuẩn mực kế toán kiểm toán, các quy định về đạo đức nghề nghiệp như: Dự toán, phân bổ ngân sách, quản lý doanh thu.", "Kế toán viên, Kế toán tổng hợp, Nhân viên thủ quỹ, Chuyên viên kiểm toán, Chuyển viên tín dụng, Chuyên viên tư vấn thuế, Chuyên viên tài chính", "Microeconomics, Macroeconomics, Business and the Business Environment, Principles of Accounting, Business Law, Management Accounting, Marketing Essentials, Business Statistics, Corporate Finance, Intermediate Accounting 1, Information System Management/ Management, Information System, Ethics in Accounting, Financial Markets, Intermediate Accounting 2, International Accounting, Auditing, Cost Accounting, Monetary and Banking, Taxation, Accounting Software, Banking Accounting, Merging And Acquistion", "1 - ke toan copy.png", "ct_ketoan.jpg"));
             }
-            else if(id == 2)
+            else if (id == 2)
             {
                 listdata.Add(new VienQuocTe(2, "Quản trị kinh doanh", "Kinh doanh quốc tế, Marketing", "A00, A01, D01, D07", "Trong môi trường cạnh tranh toàn cầu, Quản trị kinh doanh là ngành học cực kỳ quan trọng cho các nhà quản trị tương lai. Chương trình học cung cấp cho bạn những kiến thức nền tảng liên quan đến lĩnh vực kinh tế, môi trường kinh doanh, quản lý doanh nghiệp, các kỹ năng tự duy, phân tích, đàm phán, xây dựng chiến lược cũng như quản trị nhân sự.", "Chuyên viên đối ngoại, Chuyên viên xuất nhập khẩu, Chuyên viên marketing, Chuyên viên nghiên cứu thị trường, Chuyên viên hoạch định tài chính, Quản lý nguồn nhân lực", "Microeconomics, Macroeconomics, Business and the Business Environment, Principles of Accounting, Business Law, Management Accounting, Marketing Essentials, Business Statistics,Financial Management, Organizational Behavior, Information System Management/ Management, Information System, Human Resource Management, Operations Management, Managing a Successful Business Project, Strategic Management, Business Event Management, International Bussiness, Sales Management, Taxation, Exporting and Importing Documentation and Procedures, Managerial Decision Making, Understanding and Leading Change", "2 - quan tri kinh doanh copy.png", "ct_kd.jpg"));
             }
-            else if(id == 3)
+            else if (id == 3)
             {
                 listdata.Add(new VienQuocTe(3, "Luật kinh tế", "Luật kinh tế", "A00, A01, D01, D07", "Luật kinh tế là ngành học “đắt giá” trước ngưỡng cửa hội nhập. Sinh viên ngành Luật Kinh tế được cung cấp kiến thức và kỹ năng chuyên sâu về pháp luật, thực tiễn pháp lý, pháp luật trong kinh doanh, khả năng nghiên cứu và xử lý những vấn đề pháp lý đặt ra trong thực tiễn hoạt động kinh doanh của doanh nghiệp và quản lý nhà nước đối với doanh nghiệp.", "Chuyên viên tư vấn pháp luật tại các doanh nghiệp, Chuyên viên thực hiện dịch vụ pháp lý tại các tổ chức dịch vụ pháp luật, Chuyên viên lập pháp; hành pháp; tư pháp trong các cơ quan nhà nước; luật sư kinh tế", "Microeconomics, Legal Logic, Macroeconomics, Business and the Business Environment, Principles of Accounting, Civil Law 1, Constitutional Law, Administrative Law, Civil Law 2, Commercial Law 1, Criminal Law, Public International Law, Law on Civil Procedure, Commercial Law 2, Labour Law, Law on Criminal Procedure, English for Lawyer, Private International Law, Comparative Law, Intellectual Property Law, International Trade Law, Law on Environment and Land, Banking Law, Competition Law, Law on Im-Export and Customs", "3 - luat kinh te.png", "ct_luat.jpg"));
             }
@@ -222,7 +222,7 @@ namespace AppTS.Controllers
         }
         public ActionResult DangCapNhat()
         {
-          
+
             return View();
         }
         public ActionResult TienIchHocTap()
@@ -259,7 +259,7 @@ namespace AppTS.Controllers
             return View();
         }
         public ActionResult ChiTietThacSi()
-        {            
+        {
             return View();
         }
         public ActionResult DieuKienDuThi()
@@ -286,27 +286,37 @@ namespace AppTS.Controllers
         }
         public ActionResult DangKyThacSi()
         {
-            string[] list = new string[] { "Công nghệ Thông tin", "Tài chính - Ngân hàng", "Quản trị kinh doanh", "Du lịch" };
-            var getList = list.ToList();
-            SelectList setList = new SelectList(getList);
-            ViewBag.MajorName = setList;
-            return View();
+
+            if (Session["User"] != null)
+            {
+                HocSinh_TK tk = (HocSinh_TK)Session["User"];
+                string[] list = new string[] { "Công nghệ Thông tin", "Tài chính - Ngân hàng", "Quản trị kinh doanh", "Du lịch" };
+                var getList = list.ToList();
+                SelectList setList = new SelectList(getList);
+                ViewBag.MajorName = setList;
+                return View(tk);
+            }
+            else
+            {
+                return View();
+            }
         }
         [HttpPost]
-        public ActionResult DangKyThacSi(ThacSi ts)
+        public ActionResult DangKyThacSi(HocSinh_TK tk)
         {
             Table_dkThacSi dk = new Table_dkThacSi();
-            dk.HOTEN = ts.HoTen;
-            dk.NGAYSINH = ts.NgaySinh;
-            dk.SDT = ts.SDT;
-            dk.EMAIL = ts.Email;
-            dk.TENNGANH = ts.TenChuyenNganh;
+            dk.HOTEN = tk.HOTENHS;
+            dk.NGAYSINH = tk.NGAYSINH;
+            dk.SDT = tk.SDT;
+            dk.EMAIL = tk.EMAIL;
+            dk.TENNGANH = tk.TENCHUYENNGANH;
             dk.NAM = DateTime.Now.Year;
             db.Table_dkThacSis.InsertOnSubmit(dk);
             db.SubmitChanges();
             ViewBag.Message = "Bạn đã đăng ký thành công.";
 
-            return View();
+            return View(tk);
+            //return RedirectToAction("Main","Home");
         }
         public PartialViewResult part_Thacsi()
         {
@@ -352,7 +362,7 @@ namespace AppTS.Controllers
         {
             return View();
         }
-       
-        
+
+
     }
 }

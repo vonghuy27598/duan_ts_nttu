@@ -27,6 +27,7 @@ namespace AppTS.XuLy
                             ID_CHUYENNGANH = a.ID_CHUYENNGANH,
                             PASSWORD = b.PASSWORD,
                             ADMIN = b.ADMIN,
+                            NGAYSINH = a.NGAYSINH,
                             USERNAME = b.USERNAME
                         };
             return model.ToList();
@@ -46,6 +47,7 @@ namespace AppTS.XuLy
                             TRUONGCAP3 = a.TRUONGCAP3,
                             SDT = a.SDT,
                             EMAIL = a.EMAIL,
+                            NGAYSINH = a.NGAYSINH,
                             ID_CHUYENNGANH = a.ID_CHUYENNGANH
                         };
             return model.ToList();
