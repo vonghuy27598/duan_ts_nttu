@@ -45,7 +45,7 @@
     }
 
     .tag_lichsu {
-        display: block !important;
+        display: none !important;
     }
 
     .table__history th {
@@ -61,7 +61,7 @@
     }
 
     .swal2-title {
-        font-size: 14px
+        font-size: 14px;
     }
 </style>
 <link href="~/Content/css/dangnhap.css" rel="stylesheet" />
@@ -87,7 +87,7 @@
                     </div>
                     <div class="form-group primary-form-group">
                         <label for="NGAYSINH">Ngày sinh</label>
-                        @Html.TextBoxFor(m => m.NGAYSINH, Model.NGAYSINH.ToString(), new { type = "date", required = "required", @class = " input-feild line-animation" })
+                        @Html.TextBoxFor(m => m.NGAYSINH, null, new { type = "date", required = "required", @class = " input-feild line-animation" })
                         <div class="line"></div>
                     </div>
                     <div class="form-group primary-form-group">
@@ -114,6 +114,11 @@
                         @Html.TextBoxFor(m => m.EMAIL, Model.EMAIL, new { type = "email", required = "required", @class = " input-feild line-animation", placeholder = "Nhập email" })
                         <div class="line"></div>
                     </div>
+                     <script>
+                        $(document).ready(function () {
+                            document.getElementById("NGAYSINH").defaultValue = '@String.Format("{0:yyyy-MM-dd}", @Model.NGAYSINH)';
+                        })
+                    </script>
                 }
                 else
                 {
@@ -151,16 +156,17 @@
                         @Html.TextBoxFor(m => m.EMAIL, null, new { type = "email", required = "required", @class = " input-feild line-animation", placeholder = "Nhập email" })
                         <div class="line"></div>
                     </div>
+                    <script>
+                        $(document).ready(function () {
+                            document.getElementById("NGAYSINH").defaultValue = "2000-01-01";
+                        })
+                    </script>
                 }
                 <div class="submit-button">
                     <input type="submit" value="Đăng ký" id="signinCreate" class="btn main-btn checkmobile" style="width:100%" />
                 </div>
             </div>
-            <script>
-                $(document).ready(function () {
-                    document.getElementById("NgaySinh").defaultValue = "2000-01-01";
-                })
-            </script>
+
         }
     </form>
 </div>
@@ -176,8 +182,8 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     window.location = "/Home/Main";
-                }
-            })// end_Then_child
+        }
+        })// end_Then_child
         };
     </script>
 }

@@ -1,9 +1,18 @@
-﻿@model AppTS.ViewModels.ThacSi
+﻿@model AppTS.ViewModels.HocSinh_TK
 @{
     ViewBag.Title = "DangKy";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
+    .dn h5 {
+        color: #02add7;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        font-size: calc(17px + (18 - 17) * ((100vw - 300px) / (1600 - 300)));
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
     .dn select {
         padding: 5px 0;
         font-size: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
@@ -17,6 +26,42 @@
 
     .dn option {
         font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1600 - 300)));
+    }
+
+        .dn option[value=""] {
+            background: #dddddd;
+        }
+
+    .d-lg-none {
+        display: none;
+    }
+
+    #admission:focus {
+        color: #fff !important;
+    }
+
+    #intro {
+        padding: 0;
+    }
+
+    .tag_lichsu {
+        display: none !important;
+    }
+
+    .table__history th {
+        font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+        text-align: center;
+        padding: 10px;
+    }
+
+    .table__history td {
+        font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1600 - 300)));
+        text-align: center;
+        padding: 10px;
+    }
+
+    .swal2-title {
+        font-size: 14px;
     }
 </style>
 <link href="~/Content/css/dangnhap.css" rel="stylesheet" />
@@ -33,44 +78,95 @@
             @Html.ValidationSummary(true)
             <div class="form-content">
                 <h4>Thông tin cá nhân</h4>
-                <div class="form-group primary-form-group">
-                    <label for="HOTENHS">Họ tên</label>
-                    @Html.TextBoxFor(m => m.HoTen, null, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", @class = " input-feild line-animation", placeholder = "Nhập họ tên" })
-                    <div class="line"></div>
-                </div>
-                <div class="form-group primary-form-group">
-                    <label for="NGAYSINH">Ngày sinh</label>
-                    @Html.TextBoxFor(m => m.NgaySinh, null, new { type = "date", required = "required", @class = " input-feild line-animation" })
-                    <div class="line"></div>
-                </div>
-                <div class="form-group primary-form-group">
-                    <br />
-                    <label for="NGANH">Chuyên ngành</label>
-                    @Html.DropDownListFor(m => m.TenChuyenNganh, new List<SelectListItem>
-                    {
-                    new SelectListItem {Text = "Công nghệ Thông tin", Value = "Công nghệ Thông tin"},
-                    new SelectListItem {Text = "Tài chính - Ngân hàng", Value = "Tài chính - Ngân hàng"},
-                    new SelectListItem {Text = "Quản trị kinh doanh", Value = "Quản trị kinh doanh"},
-                    new SelectListItem {Text = "Du lịch", Value = "Du lịch"},
-                    new SelectListItem {Text = "Quản lý chuỗi cung ứng - Supply Chain", Value = "Quản lý chuỗi cung ứng - Supply Chain"}
-                    }, new { type = "text", id = "nganh", required = "required", @class = " input-feild line-animation", placeholder = "Chọn ngành" })
-                    <div class="line"></div>
-                </div>
-                <h4 style="margin-top:35px">Thông tin liên hệ</h4>
-                <div class="form-group primary-form-group">
-                    <label for="SDT">Số điện thoại</label>
-                    @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @id = "mobile", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}", placeholder = "Nhập số điện thoại" })
-                    <div class="line"></div>
-                </div>
-                <div class="form-group primary-form-group">
-                    <label for="EMAIL">Email</label>
-                    @Html.TextBoxFor(m => m.Email, null, new { type = "email", required = "required", @class = " input-feild line-animation", placeholder = "Nhập email" })
-                    <div class="line"></div>
-                </div>
+                @if (Session["User"] != null)
+                {
+                    <div class="form-group primary-form-group">
+                        <label for="HOTENHS">Họ tên</label>
+                        @Html.TextBoxFor(m => m.HOTENHS, Model.HOTENHS, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", @class = " input-feild line-animation", placeholder = "Nhập họ tên" })
+                        <div class="line"></div>
+                    </div>
+                    <div class="form-group primary-form-group">
+                        <label for="NGAYSINH">Ngày sinh</label>
+                        @Html.TextBoxFor(m => m.NGAYSINH, null, new { type = "date", required = "required", @class = " input-feild line-animation" })
+                        <div class="line"></div>
+                    </div>
+                    <div class="form-group primary-form-group">
+                        <br />
+                        <label for="NGANH">Chuyên ngành</label>
+                        @Html.DropDownListFor(m => m.TENCHUYENNGANH, new List<SelectListItem>
+                        {
+                        new SelectListItem {Text = "Công nghệ Thông tin", Value = "Công nghệ Thông tin"},
+                        new SelectListItem {Text = "Tài chính - Ngân hàng", Value = "Tài chính - Ngân hàng"},
+                        new SelectListItem {Text = "Quản trị kinh doanh", Value = "Quản trị kinh doanh"},
+                        new SelectListItem {Text = "Du lịch", Value = "Du lịch"},
+                        new SelectListItem {Text = "Quản lý chuỗi cung ứng - Supply Chain", Value = "Quản lý chuỗi cung ứng - Supply Chain"}
+                        }, new { type = "text", id = "nganh", required = "required", @class = " input-feild line-animation", placeholder = "Chọn ngành" })
+                        <div class="line"></div>
+                    </div>
+                    <h4 style="margin-top:35px">Thông tin liên hệ</h4>
+                    <div class="form-group primary-form-group">
+                        <label for="SDT">Số điện thoại</label>
+                        @Html.TextBoxFor(m => m.SDT, Model.SDT, new { required = "required", title = "LabourCost is requried", @id = "mobile", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}", placeholder = "Nhập số điện thoại" })
+                        <div class="line"></div>
+                    </div>
+                    <div class="form-group primary-form-group">
+                        <label for="EMAIL">Email</label>
+                        @Html.TextBoxFor(m => m.EMAIL, Model.EMAIL, new { type = "email", required = "required", @class = " input-feild line-animation", placeholder = "Nhập email" })
+                        <div class="line"></div>
+                    </div>
+                     <script>
+                        $(document).ready(function () {
+                            document.getElementById("NGAYSINH").defaultValue = '@String.Format("{0:yyyy-MM-dd}", @Model.NGAYSINH)';
+                        })
+                    </script>
+                }
+                else
+                {
+                    <div class="form-group primary-form-group">
+                        <label for="HOTENHS">Họ tên</label>
+                        @Html.TextBoxFor(m => m.HOTENHS, null, new { title = "Vui lòng nhập thông tin", id = "thongbao1", required = "required", @class = " input-feild line-animation", placeholder = "Nhập họ tên" })
+                        <div class="line"></div>
+                    </div>
+                    <div class="form-group primary-form-group">
+                        <label for="NGAYSINH">Ngày sinh</label>
+                        @Html.TextBoxFor(m => m.NGAYSINH, null, new { type = "date", required = "required", @class = " input-feild line-animation" })
+                        <div class="line"></div>
+                    </div>
+                    <div class="form-group primary-form-group">
+                        <br />
+                        <label for="NGANH">Chuyên ngành</label>
+                        @Html.DropDownListFor(m => m.TENCHUYENNGANH, new List<SelectListItem>
+                        {
+                        new SelectListItem {Text = "Công nghệ Thông tin", Value = "Công nghệ Thông tin"},
+                        new SelectListItem {Text = "Tài chính - Ngân hàng", Value = "Tài chính - Ngân hàng"},
+                        new SelectListItem {Text = "Quản trị kinh doanh", Value = "Quản trị kinh doanh"},
+                        new SelectListItem {Text = "Du lịch", Value = "Du lịch"},
+                        new SelectListItem {Text = "Quản lý chuỗi cung ứng - Supply Chain", Value = "Quản lý chuỗi cung ứng - Supply Chain"}
+                        }, new { type = "text", @id = "dropdownlist_chonkhoinganh", required = "required", @class = " input-feild line-animation", placeholder = "Chọn ngành" })
+                        <div class="line"></div>
+                    </div>
+                    <h4 style="margin-top:35px">Thông tin liên hệ</h4>
+                    <div class="form-group primary-form-group">
+                        <label for="SDT">Số điện thoại</label>
+                        @Html.TextBoxFor(m => m.SDT, null, new { required = "required", title = "LabourCost is requried", @id = "mobile", @class = " input-feild line-animation", type = "tel", maxlength = "10", pattern = "[0-9]{10}", placeholder = "Nhập số điện thoại" })
+                        <div class="line"></div>
+                    </div>
+                    <div class="form-group primary-form-group">
+                        <label for="EMAIL">Email</label>
+                        @Html.TextBoxFor(m => m.EMAIL, null, new { type = "email", required = "required", @class = " input-feild line-animation", placeholder = "Nhập email" })
+                        <div class="line"></div>
+                    </div>
+                    <script>
+                        $(document).ready(function () {
+                            document.getElementById("NGAYSINH").defaultValue = "2000-01-01";
+                        })
+                    </script>
+                }
                 <div class="submit-button">
                     <input type="submit" value="Đăng ký" id="signinCreate" class="btn main-btn checkmobile" style="width:100%" />
                 </div>
             </div>
+
         }
     </form>
 </div>
@@ -86,17 +182,12 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     window.location = "/Home/Main";
-                }
-            })// end_Then_child
+        }
+        })// end_Then_child
         };
     </script>
 }
-<script>
-    $(document).ready(function()
-    {
-        document.getElementById("NgaySinh").defaultValue = "2000-01-01";
-    })
-</script>
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @*<script>

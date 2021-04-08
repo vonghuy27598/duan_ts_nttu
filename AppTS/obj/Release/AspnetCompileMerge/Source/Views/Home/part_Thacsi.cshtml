@@ -4,7 +4,7 @@
     }
 
 
-    .info_saudaihoc h4 {
+        .info_saudaihoc h4 {
             text-align: center;
             color: #29abe2;
             font-weight: bold;
@@ -13,7 +13,7 @@
 
 
 
-     .info_saudaihoc .info_saudaihoc__left p {
+        .info_saudaihoc .info_saudaihoc__left p {
             font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
             color: #29abe2;
             background-repeat: no-repeat;
@@ -24,17 +24,17 @@
             margin-bottom: 5px;
         }
 
-      .info_saudaihoc .info_saudaihoc__left p:first-child {
+            .info_saudaihoc .info_saudaihoc__left p:first-child {
                 background-image: url('/Content/img/icon_ts_1.png');
-       }
+            }
 
-      .info_saudaihoc .info_saudaihoc__left p:nth-child(2) {
+            .info_saudaihoc .info_saudaihoc__left p:nth-child(2) {
                 background-image: url('/Content/img/icon_ts_2.png');
-       }
+            }
 
-      .info_saudaihoc .info_saudaihoc__left p:last-child {
+            .info_saudaihoc .info_saudaihoc__left p:last-child {
                 background-image: url('/Content/img/icon_ts_3.png');
-       }
+            }
 
     .linkto_gioithieu {
         text-align: center;
@@ -71,13 +71,17 @@
     </div>
     <div class="linkto_gioithieu">
         @{var session = (AppTS.ViewModels.HocSinh_TK)Session["User"];
-            if (session.HOTENHS != "Admin Thac Si")
+            if (session == null)
             {
                 <a class="linkto_gioithieu" href="@Url.Action("/DangKyThacSi")">ĐĂNG KÝ HỌC THẠC SĨ >></a>
             }
             else if (session.HOTENHS == "Admin Thac Si")
             {
                 <a class="linkto_gioithieu" href="@Url.Action("/QuanLyThacSi")">DANH SÁCH ỨNG TUYỂN THẠC SĨ >></a>
+            }
+            else if (session.HOTENHS != "Admin Thac Si")
+            {
+                <a class="linkto_gioithieu" href="@Url.Action("/DangKyThacSi")">ĐĂNG KÝ HỌC THẠC SĨ >></a>
             }
         }
     </div>
