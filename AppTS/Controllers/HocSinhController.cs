@@ -251,9 +251,9 @@ namespace AppTS.Controllers
             var vrfURL = "/HocSinh/" + emailFor + "/" + CodeXN;
             var link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, vrfURL);
             //gui thu
-            var fromEmail = new MailAddress("qunag7190@gmail.com", "Quang Vlogs");
+            var fromEmail = new MailAddress("nttutuyensinh@gmail.com", "Đặt lại mật khẩu NTTU");
             var toEmail = new MailAddress(emailXN);
-            var fromEmailPass = "270134275";
+            var fromEmailPass = "Ntt@2020";
             //noi dung
             var subject = "";
             var body = "";
