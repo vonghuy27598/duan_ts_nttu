@@ -215,15 +215,15 @@ namespace AppTS.Controllers
             string messe = " ";
             bool status = false;
             var account = from a in db.Table_HocSinhs
-                        join b in db.Table_TaiKhoans on a.ID_TK equals b.ID_TK
-                        where a.EMAIL == EmailCF
-                        select new HocSinh_TK()
-                        {
-                            ID_HS = a.ID_HS,
-                            ID_TK = a.ID_TK,
-                            EMAIL = a.EMAIL,
-                            CODE = b.CODE
-                        };
+                          join b in db.Table_TaiKhoans on a.ID_TK equals b.ID_TK
+                          where a.EMAIL == EmailCF
+                          select new HocSinh_TK()
+                          {
+                              ID_HS = a.ID_HS,
+                              ID_TK = a.ID_TK,
+                              EMAIL = a.EMAIL,
+                              CODE = b.CODE
+                          };
             var tk = account.Where(m => m.EMAIL == EmailCF).FirstOrDefault();
             var user = db.Table_TaiKhoans.Where(m => m.ID_TK == tk.ID_TK).FirstOrDefault();
             if (account != null)
@@ -340,48 +340,42 @@ namespace AppTS.Controllers
                 link = Request.QueryString["link"];
             }
             bool tontaisdt = db.Table_HocSinhs.Any(m => hs_tk.SDT == m.SDT);
-            bool tontaitk = db.Table_HocSinhs.Any(m => hs_tk.EMAIL == m.EMAIL);
             if (tontaisdt)
             {
                 ViewData["LoiSDT"] = "Số điện thoại đã được sử dụng";
             }
             else
             {
-                if (tontaitk)
+
+                Table_TaiKhoan tk = new Table_TaiKhoan();
+                tk.USERNAME = hs_tk.SDT;
+                if (hs_tk.PASSWORD != null)
                 {
-                    ViewData["LoiUS"] = "Email này đã được sử dụng";
+                    tk.PASSWORD = Str_Encoder(hs_tk.PASSWORD);
                 }
                 else
                 {
-                    Table_TaiKhoan tk = new Table_TaiKhoan();
-                    tk.USERNAME = hs_tk.SDT;
-                    if (hs_tk.PASSWORD != null)
-                    {
-                        tk.PASSWORD = Str_Encoder(hs_tk.PASSWORD);
-                    }
-                    else
-                    {
-                        tk.PASSWORD = null;
-                    }
-
-                    tk.ADMIN = false;
-                    db.Table_TaiKhoans.InsertOnSubmit(tk);
-                    db.SubmitChanges();
-                    Table_HocSinh hs = new Table_HocSinh();
-                    hs.ID_TK = tk.ID_TK;
-                    hs.HOTENHS = hs_tk.HOTENHS;
-                    hs.TRUONGCAP3 = hs_tk.TRUONGCAP3;
-                    hs.GIOITINH = hs_tk.GIOITINH;
-                    hs.EMAIL = hs_tk.EMAIL;
-                    hs.NGAYSINH = hs_tk.NGAYSINH;
-                    hs.SDT = hs_tk.SDT;
-                    hs.DIACHI = hs_tk.DIACHI;
-                    db.Table_HocSinhs.InsertOnSubmit(hs);
-                    db.SubmitChanges();
-                    ViewBag.Message = "Bạn đã đăng ký thành công.";
-
-                    return View();
+                    tk.PASSWORD = null;
                 }
+
+                tk.ADMIN = false;
+                db.Table_TaiKhoans.InsertOnSubmit(tk);
+                db.SubmitChanges();
+                Table_HocSinh hs = new Table_HocSinh();
+                hs.ID_TK = tk.ID_TK;
+                hs.HOTENHS = hs_tk.HOTENHS;
+                hs.TRUONGCAP3 = hs_tk.TRUONGCAP3;
+                hs.GIOITINH = hs_tk.GIOITINH;
+                hs.EMAIL = hs_tk.EMAIL;
+                hs.NGAYSINH = hs_tk.NGAYSINH;
+                hs.SDT = hs_tk.SDT;
+                hs.DIACHI = hs_tk.DIACHI;
+                db.Table_HocSinhs.InsertOnSubmit(hs);
+                db.SubmitChanges();
+                ViewBag.Message = "Bạn đã đăng ký thành công.";
+
+                return View();
+
             }
 
             return this.DangKy();
