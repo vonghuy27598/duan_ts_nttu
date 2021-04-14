@@ -1,0 +1,167 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChiTietBoDeThi</title>
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <style>
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        #header {
+            height: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+
+            #header a:active {
+                outline: none;
+            }
+
+            #header img:active {
+                background-color: transparent;
+            }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <div class="header-logo" style="padding-left:10px">
+            <a href="@Url.Action("ChiTietTienIch", "Home", new { id_tienich = 7 })"><img src="~/Content/img/arrow_left.png" alt="" class="go_back" style="width:30px"></a>
+        </div>
+    </section>
+    <div style="margin-top:60px">
+        @if (Session["id_chitietdethi"].Equals("1"))
+        {
+            @*Toán*@
+            <img src="/Content/img/bodethi/toan_1.jpg" />
+            <img src="/Content/img/bodethi/toan_2.jpg" />
+            <img src="/Content/img/bodethi/toan_3.jpg" />
+            <img src="/Content/img/bodethi/toan_4.jpg" />
+            <img src="/Content/img/bodethi/toan_5.jpg" />
+        }
+        else if (Session["id_chitietdethi"].Equals("2"))
+        {
+            @*văn*@
+            <img src="/Content/img/bodethi/van.jpg" />
+        }
+        else if (Session["id_chitietdethi"].Equals("3"))
+        {
+            @*lý*@
+            <img src="/Content/img/bodethi/ly_1.jpg" />
+            <img src="/Content/img/bodethi/ly_2.jpg" />
+            <img src="/Content/img/bodethi/ly_3.jpg" />
+            <img src="/Content/img/bodethi/ly_4.jpg" />
+        }
+        else if (Session["id_chitietdethi"].Equals("4"))
+        {
+            @*hóa*@
+            <img src="/Content/img/bodethi/hoa_1.jpg" />
+            <img src="/Content/img/bodethi/hoa_2.jpg" />
+            <img src="/Content/img/bodethi/hoa_3.jpg" />
+            <img src="/Content/img/bodethi/hoa_4.jpg" />
+        }
+        else if (Session["id_chitietdethi"].Equals("5"))
+        {
+            @*sinh*@
+            <img src="/Content/img/bodethi/sinh_1.jpg" />
+            <img src="/Content/img/bodethi/sinh_2.jpg" />
+            <img src="/Content/img/bodethi/sinh_3.jpg" />
+            <img src="/Content/img/bodethi/sinh_4.jpg" />
+        }
+        else if (Session["id_chitietdethi"].Equals("6"))
+        {
+            @*sử*@
+            <img src="/Content/img/bodethi/su_1.jpg" />
+            <img src="/Content/img/bodethi/su_2.jpg" />
+            <img src="/Content/img/bodethi/su_3.jpg" />
+            <img src="/Content/img/bodethi/su_4.jpg" />
+        }
+        else if (Session["id_chitietdethi"].Equals("7"))
+        {
+            @*địa*@
+            <img src="/Content/img/bodethi/dia_1.jpg" />
+            <img src="/Content/img/bodethi/dia_2.jpg" />
+            <img src="/Content/img/bodethi/dia_3.jpg" />
+            <img src="/Content/img/bodethi/dia_4.jpg" />
+        }
+        else if (Session["id_chitietdethi"].Equals("8"))
+        {
+            @*giáo dục*@
+            <img src="/Content/img/bodethi/gd_1.jpg" />
+            <img src="/Content/img/bodethi/gd_2.jpg" />
+            <img src="/Content/img/bodethi/gd_3.jpg" />
+            <img src="/Content/img/bodethi/gd_4.jpg" />
+        }
+        else if (Session["id_chitietdethi"].Equals("9"))
+        {
+            @*anh*@
+            <img src="/Content/img/bodethi/anh_1.jpg" />
+            <img src="/Content/img/bodethi/anh_2.jpg" />
+            <img src="/Content/img/bodethi/anh_3.jpg" />
+            <img src="/Content/img/bodethi/anh_4.jpg" />
+            <img src="/Content/img/bodethi/anh_5.jpg" />
+        }
+        else if (Session["id_chitietdethi"].Equals("10"))
+        {
+            @*đức*@
+            <img src="/Content/img/bodethi/duc_1.jpg" />
+            <img src="/Content/img/bodethi/duc_2.jpg" />
+            <img src="/Content/img/bodethi/duc_3.jpg" />
+            <img src="/Content/img/bodethi/duc_4.jpg" />
+        }
+        else if (Session["id_chitietdethi"].Equals("11"))
+        {
+            @*nga*@
+            <img src="/Content/img/bodethi/nga_1.jpg" />
+            <img src="/Content/img/bodethi/nga_2.jpg" />
+            <img src="/Content/img/bodethi/nga_3.jpg" />
+            <img src="/Content/img/bodethi/nga_4.jpg" />
+        }
+        else if (Session["id_chitietdethi"].Equals("12"))
+        {
+            @*nhật*@
+            <img src="/Content/img/bodethi/nhat_1.jpg" />
+            <img src="/Content/img/bodethi/nhat_2.jpg" />
+            <img src="/Content/img/bodethi/nhat_3.jpg" />
+            <img src="/Content/img/bodethi/nhat_4.jpg" />
+            <img src="/Content/img/bodethi/nhat_5.jpg" />
+        }
+        else if (Session["id_chitietdethi"].Equals("13"))
+        {
+            @*pháp*@
+            <img src="/Content/img/bodethi/phap_1.jpg" />
+            <img src="/Content/img/bodethi/phap_2.jpg" />
+            <img src="/Content/img/bodethi/phap_3.jpg" />
+            <img src="/Content/img/bodethi/phap_4.jpg" />
+        }
+        else if (Session["id_chitietdethi"].Equals("14"))
+        {
+            @*trung*@
+            <img src="/Content/img/bodethi/trung_1.jpg" />
+            <img src="/Content/img/bodethi/trung_2.jpg" />
+            <img src="/Content/img/bodethi/trung_3.jpg" />
+        }
+        else if (Session["id_chitietdethi"].Equals("15"))
+        {
+            @*hàn*@
+            <img src="/Content/img/bodethi/han_1.jpg" />
+            <img src="/Content/img/bodethi/han_2.jpg" />
+            <img src="/Content/img/bodethi/han_3.jpg" />
+            <img src="/Content/img/bodethi/han_4.jpg" />
+        }
+
+    </div>
+
+</body>
+</html>

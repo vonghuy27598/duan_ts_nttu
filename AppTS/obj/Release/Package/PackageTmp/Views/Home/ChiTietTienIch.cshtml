@@ -170,7 +170,15 @@
                 {
                     @Html.Action("part_Toan", "Home")
                 }
-
+                else if (Session["ct_tienich"].Equals("6"))
+                {
+                    <p style="text-align:center;font-weight:bold;font-size:20px;margin-top:65px;margin-bottom:30px;color:red">LỊCH THI TỐT NGHIỆP THPT 2021</p>
+                    <img src="/Content/img/lichthi_thpt.jpg" width="100%"/>
+                }
+                else if (Session["ct_tienich"].Equals("7"))
+                {
+                    @Html.Action("part_BoDeThi", "Home")
+                }
             </div>
         </div>
     </div>
