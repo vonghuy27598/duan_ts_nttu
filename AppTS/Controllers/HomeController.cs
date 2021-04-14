@@ -256,6 +256,16 @@ namespace AppTS.Controllers
                 Session["ct_tienich"] = "5";
 
             }
+            else if (nganh.Equals("6"))
+            {
+                Session["ct_tienich"] = "6";
+
+            }
+            else if (nganh.Equals("7"))
+            {
+                Session["ct_tienich"] = "7";
+
+            }
             return View();
         }
         public ActionResult ChiTietThacSi()
@@ -318,6 +328,8 @@ namespace AppTS.Controllers
             return View(tk);
             //return RedirectToAction("Main","Home");
         }
+
+      
         public PartialViewResult part_Thacsi()
         {
             return PartialView();
@@ -358,6 +370,16 @@ namespace AppTS.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult part_BoDeThi()
+        {
+            return PartialView();
+        }
+        public ActionResult ChiTietBoDeThi(string id)
+        {
+            Session["id_chitietdethi"] = id;
+            return View();
+        }
+
         public ActionResult VongQuanhNTTU()
         {
             return View();
