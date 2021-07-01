@@ -54,6 +54,14 @@
       <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Remotion, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
       <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.dll</HintPath>
     </Reference>
@@ -224,6 +232,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ChatViewController.cs" />
     <Compile Include="Controllers\DangKyCNController.cs" />
+    <Compile Include="Controllers\DeskTopController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HocSinhController.cs" />
     <Compile Include="Controllers\KhaoSatController.cs" />
@@ -377,6 +386,7 @@
     <Content Include="Content\img\arrow_right_circle.png" />
     <Content Include="Content\img\aun2.jpg" />
     <Content Include="Content\img\bacsi.jpg" />
+    <Content Include="Content\img\banner.png" />
     <Content Include="Content\img\banner_quocte.png" />
     <Content Include="Content\img\bg_trungcap.jpg" />
     <Content Include="Content\img\bodethi\anh_1.jpg" />
@@ -589,6 +599,7 @@
     <Content Include="Content\img\kythuathethong.jpg" />
     <Content Include="Content\img\lichthi_thpt.jpg" />
     <Content Include="Content\img\lienhe.jpg" />
+    <Content Include="Content\img\logo_desktop.png" />
     <Content Include="Content\img\luatkinhte.jpg" />
     <Content Include="Content\img\ly1.jpg" />
     <Content Include="Content\img\ly10.jpg" />
@@ -2901,6 +2912,7 @@
     <Content Include="Views\Home\ThacSiDuLich.cshtml" />
     <Content Include="Views\Home\part_BoDeThi.cshtml" />
     <Content Include="Views\Home\ChiTietBoDeThi.cshtml" />
+    <Content Include="Views\DeskTop\traLoiChatBot.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
