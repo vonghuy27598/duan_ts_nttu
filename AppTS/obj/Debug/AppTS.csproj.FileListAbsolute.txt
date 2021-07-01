@@ -1087,3 +1087,7 @@ C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\PagedList.dll
 C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\PagedList.Mvc.dll
 C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\PagedList.xml
 C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\PagedList.Mvc.xml
+D:\Work\duan_ts_nttu\AppTS\bin\PagedList.dll
+D:\Work\duan_ts_nttu\AppTS\bin\PagedList.Mvc.dll
+D:\Work\duan_ts_nttu\AppTS\bin\PagedList.xml
+D:\Work\duan_ts_nttu\AppTS\bin\PagedList.Mvc.xml

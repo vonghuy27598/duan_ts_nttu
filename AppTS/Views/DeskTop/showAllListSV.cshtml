@@ -1,0 +1,205 @@
+﻿@model PagedList.PagedList<AppTS.ViewModels.TrungTuyen>
+@using PagedList.Mvc;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NTTU Tuyển Sinh</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f1f8ff;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .title-header {
+            background-color: #024282;
+            padding: 5px;
+        }
+
+            .title-header h2 {
+                font-weight: bold;
+                text-align: center;
+                color: #fff;
+            }
+
+        .main {
+            margin-top: 20px;
+        }
+
+        .table_listQuest {
+            width: 100%;
+        }
+
+            .table_listQuest th, td {
+                text-align: center;
+                padding: 5px;
+            }
+
+            .table_listQuest tbody tr:hover {
+                background-color: #eff0f1 !important;
+            }
+
+        .select_sortList {
+            padding: 5px 10px;
+            margin-bottom: 10px
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="banner">
+                <img src="~/Content/img/logo_desktop.png" style="width:30%" />
+                <img src="~/Content/img/banner.png" style="width:70%" />
+            </div>
+            <div class="title-header">
+                <h2>DANH SÁCH KHẢO SÁT  </h2>
+            </div>
+        </div>
+        <div class="main">
+            <div style="background-color:#fff;padding:5px 0">
+                @{
+                    int i = 1;
+                    if (Model.PageNumber > 1)
+                    {
+                        i = 1 + (Model.PageNumber - 1) * 20;
+                    }
+                }
+                <table class="table_listQuest" border="1">
+                    <thead>
+                        <tr>
+                            <th>
+                                Họ tên
+                            </th>
+                            <th>
+                                Địa chỉ
+                            </th>
+                            <th>
+                                Trường
+                            </th>
+                            <th>
+                                SDT
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            <th>
+                                Tổ hợp
+                            </th>
+                            <th>
+                                Chuyên ngành
+                            </th>
+                            <th>
+                                Tổng điểm
+                            </th>
+                            <th>
+                                Trúng tuyển
+                            </th>
+                            <th>
+
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="content_quest">
+                        @foreach (var item in Model)
+                        {
+                            <tr class="item_quest" id="row_questID-@item.ID">
+                                <td>@item.HOTEN</td>
+                                <td>@item.DiaChi</td>
+                                <td>@item.Truong</td>
+                                <td>@item.SDT</td>
+                                <td>@item.Email</td>
+                                <td>@item.TENTOHOP</td>
+                                <td>@item.TENCHUYENNGANH</td>
+                                <td>@item.TongDiem</td>
+                                <td>@(item.Flag == true? "Trúng tuyển" : "Trượt")</td>
+                                <td><a onclick="delete_data(@item.ID)" style="cursor:pointer">Xóa</a></td>
+                            </tr>
+                        }
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="10">
+                                <p>
+                                    @Html.PagedListPager(Model, page => Url.Action("traLoiChatBot", new { page = page }))
+                                </p>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="footer">
+            <ul style="list-style:none">
+                <li>
+                    <strong>Thông tin liên hệ</strong>
+                </li>
+                <li>Trụ sở chính: <strong>300A – Nguyễn Tất Thành, Phường 13, Quận 4, TP. Hồ Chí Minh, Việt Nam</strong></li>
+                <li>Điện thoại: <strong>1900 2039 Fax: 028 39 404 759</strong></li>
+                <li>Hotline: <strong>0902 298 300 – 0906 298 300 – 0912 298 300 – 0914 298 300</strong></li>
+                <li>Email: <strong>tuyensinh@ntt.edu.vn – ntt@ntt.edu.vn</strong></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var number = $(".item_quest").length;
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            let sort = urlParams.get('sort');
+            if (sort != null)
+                $(".select_sortList").val(sort);
+            if (number == 0) {
+                $(".content_quest").append("<tr class='no_quest'><td colspan='6' style='text-align:center'>Hiện không có câu hỏi nào</td></tr>")
+            }
+        });
+    </script>
+    <script>
+        var id;
+        function delete_data(ID) {
+            var r = confirm("Bạn có chắc xóa tin nhắn này?");
+            if (r == true) {
+                $.ajax({
+                    url: "deleteData",
+                    data: { ID: ID },
+                    datatype: "json",
+                    type: "POST",
+                    success: function (response) {
+                        if (response.status != null) {
+                            $("#row_questID-" + ID).remove();
+                            var number = $(".item_quest").length;
+                            if (number == 0) {
+                                $(".content_quest").append("<tr class='no_quest'><td colspan='6' style='text-align:center'>Hiện không có câu hỏi nào</td></tr>")
+                            }
+                            location.reload();
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
