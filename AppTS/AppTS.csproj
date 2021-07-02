@@ -2914,6 +2914,7 @@
     <Content Include="Views\Home\ChiTietBoDeThi.cshtml" />
     <Content Include="Views\DeskTop\traLoiChatBot.cshtml" />
     <Content Include="Views\DeskTop\showAllListSV.cshtml" />
+    <Content Include="Views\DeskTop\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

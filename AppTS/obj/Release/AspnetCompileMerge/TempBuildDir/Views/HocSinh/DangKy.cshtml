@@ -84,7 +84,6 @@
                     @Html.TextBoxFor(m => m.DIACHI, null, new { required = "required", @class = "input-feild line-animation", placeholder = "Nhập địa chỉ" })
                     <div class="line"></div>
                 </div>
-                <div style="color:red">@Html.ViewData["LoiUS"]</div><div id='tn'><br /></div>
                 <div class="form-group primary-form-group">
                     <label for="EMAIL">Email</label>
                     @Html.TextBoxFor(m => m.EMAIL, null, new { type = "email", required = "required", @class = " input-feild line-animation", placeholder = "Nhập email" })
@@ -145,11 +144,23 @@
         };
     </script>
 }
+@if (Html.ViewData["LoiSDT"] != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            Swal.fire({
+                text: "Số điện thoại đã được sử dụng",
+                width: 600,
+                padding: '3em',
+                confirmButtonText: 'OK',
+            })// end_Then_child
+        };
+    </script>
+}
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
-    $(document).ready(function()
-    {
+    $(document).ready(function () {
         document.getElementById("NGAYSINH").defaultValue = "2003-01-01";
     })
 </script>

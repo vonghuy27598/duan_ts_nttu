@@ -1082,7 +1082,6 @@ D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.csproj.CopyComplete
 D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.dll
 D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.pdb
 C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\obj\Debug\AppTS.csprojResolveAssemblyReference.cache
-D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.csprojAssemblyReference.cache
 C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\PagedList.dll
 C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\PagedList.Mvc.dll
 C:\Users\Admin\Desktop\DuAn-NTTU\duan_ts_nttu\AppTS\bin\PagedList.xml
@@ -1091,3 +1090,4 @@ D:\Work\duan_ts_nttu\AppTS\bin\PagedList.dll
 D:\Work\duan_ts_nttu\AppTS\bin\PagedList.Mvc.dll
 D:\Work\duan_ts_nttu\AppTS\bin\PagedList.xml
 D:\Work\duan_ts_nttu\AppTS\bin\PagedList.Mvc.xml
+D:\Work\duan_ts_nttu\AppTS\obj\Debug\AppTS.csproj.AssemblyReference.cache

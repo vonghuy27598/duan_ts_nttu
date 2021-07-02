@@ -51,11 +51,9 @@ namespace AppTS.Controllers
                         db.Table_ChiTietKhaoSats.InsertOnSubmit(ct_ks);
                         db.SubmitChanges();
                     }
-
                 }
                 else
                 {
-
                     foreach (var item in getCauHoi)
                     {
                         Table_ChiTietKhaoSat ct_ks = new Table_ChiTietKhaoSat();
@@ -71,9 +69,6 @@ namespace AppTS.Controllers
                 return Json(new { Status = "success", Message = "Cảm ơn bạn đã thực hiện bảng khảo sát này" });
             }
             return RedirectToAction("Index", "Home");
-
-
-
         }
 
         public PartialViewResult GoiYKhaoSat(int ID_KS)
